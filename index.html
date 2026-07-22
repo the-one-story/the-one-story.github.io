@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>One Story</title>
+<style>
+  :root {
+    --bg: #fbfbf9; --fg: #1a1a1a; --muted: #6b6b6b; --accent: #b4472e;
+    --rule: #e5e3dd; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111110; --fg: #ececea; --muted: #9a9a95; --accent: #e0785c;
+      --rule: #2a2a28; --card: #191918;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 40rem; margin: 0 auto;
+    padding: clamp(2rem, 8vw, 5rem) 1.5rem 4rem;
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+  .kicker {
+    font-family: -apple-system, system-ui, sans-serif;
+    text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.7rem;
+    color: var(--muted); margin: 0 0 2.5rem;
+  }
+  .kicker b { color: var(--accent); font-weight: 700; }
+  h1 {
+    font-size: clamp(2rem, 7vw, 3.1rem); line-height: 1.1; font-weight: 700;
+    margin: 0 0 1.25rem; letter-spacing: -0.01em;
+  }
+  .lede {
+    font-size: clamp(1.05rem, 3.2vw, 1.3rem); color: var(--fg);
+    margin: 0 0 2rem; font-style: italic;
+  }
+  .hero {
+    display: inline-block; font-family: -apple-system, system-ui, sans-serif;
+    font-size: 0.95rem; font-weight: 600; text-decoration: none;
+    color: var(--bg); background: var(--accent);
+    padding: 0.7rem 1.2rem; border-radius: 0.4rem; margin-bottom: 2rem;
+  }
+  .hero:hover { opacity: 0.9; }
+  .hero .src { opacity: 0.8; font-weight: 400; }
+  .coverage {
+    font-family: -apple-system, system-ui, sans-serif; font-size: 0.95rem;
+    color: var(--muted); border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule); padding: 1rem 0; margin: 0 0 2rem;
+  }
+  .why {
+    font-family: -apple-system, system-ui, sans-serif; font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  .why summary {
+    cursor: pointer; color: var(--accent); font-weight: 600;
+    padding: 0.5rem 0; user-select: none;
+  }
+  .why-body { color: var(--muted); padding-top: 0.5rem; }
+  .why-body p { margin: 0 0 1rem; }
+  .why-body code { font-size: 0.85em; color: var(--fg); }
+  .why-body em { color: var(--fg); font-style: italic; }
+  table.comp { border-collapse: collapse; margin: 0 0 1rem; width: 100%;
+    max-width: 18rem; }
+  table.comp th, table.comp td {
+    text-align: left; padding: 0.3rem 0.6rem 0.3rem 0;
+    border-bottom: 1px solid var(--rule); }
+  table.comp th { color: var(--fg); font-weight: 600; }
+  .note { font-size: 0.85rem; font-style: italic; }
+  h3 { color: var(--fg); font-size: 0.95rem; margin: 1.5rem 0 0.5rem; }
+  ol.runners { padding-left: 1.2rem; margin: 0; }
+  ol.runners li { margin-bottom: 0.9rem; }
+  ol.runners a { color: var(--fg); text-decoration: none;
+    border-bottom: 1px solid var(--accent); }
+  .ru-meta { display: block; color: var(--muted); font-size: 0.78rem;
+    margin-top: 0.15rem; }
+  footer {
+    margin-top: auto; padding-top: 3rem;
+    font-family: -apple-system, system-ui, sans-serif; font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .stale {
+    font-family: -apple-system, system-ui, sans-serif; font-size: 0.85rem;
+    background: var(--accent); color: var(--bg); padding: 0.6rem 1rem;
+    border-radius: 0.4rem; margin-bottom: 2rem;
+  }
+  a.hero:focus-visible, .why summary:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 3px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    
+    <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the single most
+       important story of the last 24 hours</p>
+    <h1>US signs landmark nuclear deal with Saudi Arabia</h1>
+    <p class="lede">The US Department of Energy says the &quot;peaceful&quot; co-operation agreement will give US firms &quot;great access&quot; to the Saudi nuclear energy programme.</p>
+    <a class="hero" href="https://www.bbc.co.uk/news/articles/cj03r59z73po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">
+      Read the fullest account <span class="src">&mdash; BBC News - World</span></a>
+    <p class="coverage">Running across 8 outlets in 4 countries, spanning 3 sides of the political spectrum.</p>
+    
+    <details class="why">
+      <summary>Why this story?</summary>
+      <div class="why-body">
+        <p>The winner is chosen by a fully deterministic score -
+           <code>coverage &times; diversity &times; recency &times; novelty</code> -
+           with no editorial judgement and no AI. Diversity (spread across
+           countries <em>and</em> the political spectrum) is weighted most
+           heavily, to stop a story that is merely loud in one national press
+           from winning on volume alone.</p>
+        <table class="comp">
+          <thead><tr><th>Component</th><th>Score (0-1)</th></tr></thead>
+          <tbody><tr><td>coverage</td><td>1.00</td></tr><tr><td>diversity</td><td>0.69</td></tr><tr><td>recency</td><td>0.64</td></tr><tr><td>novelty</td><td>1.00</td></tr></tbody>
+        </table>
+        
+        <h3>Today's runners-up</h3>
+        <ol class="runners"><li><a href='https://www.bbc.co.uk/news/articles/c204p64pqzno?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Mamdani backs off pledge to arrest Netanyahu citing lack of authority</a><span class='ru-meta'>BBC News - World &middot; score 0.258 &middot; 5 outlets, 3 countries, 4 leans</span></li><li><a href='https://www.theguardian.com/world/2026/jul/22/france-recorded-more-than-5700-excess-deaths-during-june-heatwave' target='_blank' rel='noopener'>France records more than 5,700 excess deaths during June heatwave</a><span class='ru-meta'>The Guardian - World &middot; score 0.206 &middot; 3 outlets, 3 countries, 3 leans</span></li><li><a href='https://www.nbcnews.com/news/us-news/nolan-wells-independent-autopsy-results-undetermined-cause-manner-deat-rcna588578' target='_blank' rel='noopener'>Nolan Wells’ independent autopsy results in ‘undetermined’ cause and manner of death</a><span class='ru-meta'>NBC News (US) &middot; score 0.160 &middot; 4 outlets, 2 countries, 3 leans</span></li><li><a href='https://www.bbc.co.uk/news/articles/cy5d36e752yo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Police station opens at Hitler&#x27;s birthplace in bid to rid site of Nazi link</a><span class='ru-meta'>BBC News - World &middot; score 0.147 &middot; 4 outlets, 3 countries, 2 leans</span></li><li><a href='https://www.bbc.co.uk/news/articles/cp8en38vpd3o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Modelling scout linked to Epstein found dead in Paris</a><span class='ru-meta'>BBC News - World &middot; score 0.138 &middot; 3 outlets, 3 countries, 2 leans</span></li></ol>
+      </div>
+    </details>
+    <footer>
+      Updated 23/07/2026 09:12 AEST. Next update in ~24 hours.<br>
+      One story a day. No feed, no scroll. Ranked deterministically from public
+      news feeds - no AI, no editorial hand.
+    </footer>
+  </div>
+</body>
+</html>

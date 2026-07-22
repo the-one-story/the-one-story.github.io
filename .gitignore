@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+# Intermediate stage output is regenerated each run; keep it out of git.
+data/articles.json
+data/clusters.json
+data/ranked.json
+# NOTE: data/recent_leads.json IS committed - it is the decay ledger state
+# the scheduled job needs to carry between runs. Force-track it explicitly.
+!data/recent_leads.json

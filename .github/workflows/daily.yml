@@ -1,0 +1,49 @@
+name: Daily One Story
+
+# Runs once a day and on manual dispatch. GitHub Actions cron is UTC and does
+# NOT observe daylight saving, so this fixed time drifts ~1h in Sydney terms:
+#   20:00 UTC == 06:00 AEST (winter) / 07:00 AEDT (summer).
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch: {}
+
+# Let the job commit the regenerated page + the decay ledger back to the repo.
+permissions:
+  contents: write
+
+# Never let two daily runs race on the commit.
+concurrency:
+  group: one-story-daily
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        run: python run.py
+
+      - name: Commit regenerated page + ledger
+        run: |
+          git config user.name  "one-story-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html data/recent_leads.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Daily update: $(date -u +'%Y-%m-%d %H:%MZ')"
+            git push
+          fi

@@ -1,0 +1,90 @@
+# One Story - RSS seed feeds.
+#
+# Each feed is tagged with {country, lean} so the SCORE stage can measure how
+# far a story has spread across geography AND the political spectrum. The
+# diversity term is the whole point of this project, so the seed list is
+# deliberately balanced: multiple countries, and clear left- and right-leaning
+# US outlets so "both leans" is actually measurable.
+#
+# Adding/removing a feed is trivial: add a list item with url + tags below.
+#
+# country : ISO-ish code of the outlet's primary desk. Genuinely transnational
+#           wire services are tagged "INT".
+# lean    : one of {left, centre-left, centre, centre-right, right} - the
+#           OUTLET's editorial lean, used only to reward a story that crosses
+#           the spectrum. Not a claim about any individual article.
+# via     : optional. "gnews" = this feed is a Google News site-scoped search
+#           (used for outlets that have retired their own public RSS, e.g.
+#           Reuters/AP/AFR). For these, fetch.py strips the " - Source" title
+#           suffix and blanks the (junk) description snippet.
+
+feeds:
+  # --- International wire services (via Google News; own RSS retired) ---
+  - name: Reuters
+    url: https://news.google.com/rss/search?q=site:reuters.com+when:1d&hl=en-AU&gl=AU&ceid=AU:en
+    country: INT
+    lean: centre
+    via: gnews
+  - name: Associated Press
+    url: https://news.google.com/rss/search?q=site:apnews.com+when:1d&hl=en-AU&gl=AU&ceid=AU:en
+    country: INT
+    lean: centre
+    via: gnews
+
+  # --- United Kingdom ---
+  - name: BBC News - World
+    url: https://feeds.bbci.co.uk/news/world/rss.xml
+    country: GB
+    lean: centre
+  - name: The Guardian - World
+    url: https://www.theguardian.com/world/rss
+    country: GB
+    lean: centre-left
+
+  # --- Middle East / Qatar ---
+  - name: Al Jazeera English
+    url: https://www.aljazeera.com/xml/rss/all.xml
+    country: QA
+    lean: centre-left
+
+  # --- Australia ---
+  - name: ABC News (AU) - Top Stories
+    url: https://www.abc.net.au/news/feed/2942460/rss.xml
+    country: AU
+    lean: centre
+  - name: Australian Financial Review
+    url: https://news.google.com/rss/search?q=site:afr.com+when:1d&hl=en-AU&gl=AU&ceid=AU:en
+    country: AU
+    lean: centre-right
+    via: gnews
+
+  # --- United States (deliberately spanning left to right) ---
+  - name: The Nation (US, left)
+    url: https://www.thenation.com/feed/?post_type=article
+    country: US
+    lean: left
+  - name: Common Dreams (US, left)
+    url: https://www.commondreams.org/feeds/news.rss
+    country: US
+    lean: left
+  - name: MSNBC (US, left)
+    url: https://news.google.com/rss/search?q=site:msnbc.com+when:1d&hl=en-US&gl=US&ceid=US:en
+    country: US
+    lean: left
+    via: gnews
+  - name: NBC News (US)
+    url: https://feeds.nbcnews.com/nbcnews/public/news
+    country: US
+    lean: centre-left
+  - name: NPR News (US)
+    url: https://feeds.npr.org/1001/rss.xml
+    country: US
+    lean: centre-left
+  - name: Fox News (US, right)
+    url: https://moxie.foxnews.com/google-publisher/latest.xml
+    country: US
+    lean: right
+  - name: The Daily Wire (US, right)
+    url: https://www.dailywire.com/feeds/rss.xml
+    country: US
+    lean: right

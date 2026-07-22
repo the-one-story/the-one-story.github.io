@@ -1,0 +1,54 @@
+# One Story - pipeline settings.
+# Everything here is a tunable input. The scoring weights especially are meant
+# to be experimented with - see README "How the scoring works".
+
+# --- Time window ---
+timezone: Australia/Sydney   # window + display timezone (IANA name)
+window_hours: 24             # rolling lookback ending at run time
+
+# --- Fetch ---
+snippet_cap_words: 25        # COPYRIGHT guard: hard cap on feed description words
+fetch_timeout_secs: 15       # per-feed network timeout; a dead feed never kills the run
+
+# --- Cluster ---
+# v1 clustering is TF-IDF + cosine similarity over title + snippet.
+# similarity_threshold: two articles join the same story if cosine >= this.
+similarity_threshold: 0.18
+min_df: 1                    # TF-IDF: ignore terms in fewer than this many docs
+
+# --- Score ---
+# score = coverage^w_coverage * diversity^w_diversity
+#         * recency^w_recency * novelty^w_novelty
+# Weights are exponents (relative emphasis). Diversity is deliberately the
+# heaviest by default - it is how we fight raw-volume bias.
+weights:
+  coverage: 1.0
+  diversity: 1.6    # THE key term - spread across countries AND leans
+  recency: 0.8
+  novelty: 1.0
+
+scoring:
+  # diversity = (countries_norm ** country_share) * (leans_norm ** lean_share)
+  # country_share + lean_share should sum to 1.0; tilt toward whichever axis
+  # matters more to you.
+  country_share: 0.5
+  lean_share: 0.5
+  # recency half-life (hours): a cluster whose centroid publish time is this
+  # many hours old scores 0.5 on the recency term. Shorter = favours breaking.
+  recency_half_life_hours: 10
+  # novelty: multiplier applied when today's winner-candidate matches a story
+  # that led on a recent prior day. 1.0 = no penalty, 0.0 = fully suppressed.
+  # penalty_floor is the strongest penalty (most-recent prior lead); it decays
+  # back toward 1.0 over novelty_decay_days.
+  novelty_penalty_floor: 0.35
+  novelty_decay_days: 4
+  # a candidate must match a prior lead at cosine >= this to be penalised.
+  novelty_match_threshold: 0.30
+
+# --- Decay ledger ---
+ledger_days: 7               # how many days of prior winners to remember
+ledger_path: data/recent_leads.json
+
+# --- Output ---
+ranked_json_path: data/ranked.json
+output_html: index.html
