@@ -30,9 +30,12 @@ def _clean_source(name: str) -> str:
     return _SRC_CLEAN.sub("", name).strip() or name
 
 
-# Map five-point lean to three display buckets (Ground-News style).
-_LEAN_BUCKET = {"left": "Left", "centre-left": "Left", "centre": "Centre",
-                "centre-right": "Right", "right": "Right"}
+# Group the source list by the actual 5-point lean, so the headers match the
+# coverage line's span wording (a centre-left outlet reads as "Centre-left",
+# not lumped under "Left").
+_LEAN_BUCKET = {"left": "Left", "centre-left": "Centre-left", "centre": "Centre",
+                "centre-right": "Centre-right", "right": "Right"}
+_BUCKET_ORDER = ["Left", "Centre-left", "Centre", "Centre-right", "Right"]
 
 
 def _fmt_local(iso: str, tzname: str) -> tuple[str, str]:
@@ -165,12 +168,12 @@ def _sources_section(winner: dict) -> str:
     for m in members:
         by_source.setdefault(m["source"], m)
 
-    buckets: dict[str, list[dict]] = {"Left": [], "Centre": [], "Right": []}
+    buckets: dict[str, list[dict]] = {b: [] for b in _BUCKET_ORDER}
     for m in by_source.values():
         buckets[_LEAN_BUCKET.get(m["lean"], "Centre")].append(m)
 
     blocks = []
-    for label in ("Left", "Centre", "Right"):
+    for label in _BUCKET_ORDER:
         items = sorted(buckets[label], key=lambda x: _clean_source(x["source"]))
         if not items:
             continue
