@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-07-23T16:40:46.964997+10:00",
+  "run_time": "2026-07-23T16:51:31.477437+10:00",
   "run_date": "2026-07-23",
   "locked": true,
   "weights": {
@@ -19,16 +19,16 @@
   "winner": {
     "title": "Tankers make sharp U-turns after Houthi shipping threat",
     "source": "BBC News - World",
-    "score": 0.31317413455498067,
+    "score": 0.17958356050854737,
     "components": {
-      "coverage": 1.0,
-      "diversity": 0.6156,
-      "recency": 0.6182,
+      "coverage": 0.9592,
+      "diversity": 0.4382,
+      "recency": 0.6414,
       "novelty": 1.0
     },
     "outlet_count": 15,
     "countries": [
-      "AU",
+      "AE",
       "CA",
       "CN",
       "DE",
@@ -43,11 +43,10 @@
     ],
     "leans": [
       "centre",
-      "centre-left",
-      "centre-right"
+      "centre-left"
     ]
   },
-  "n_articles": 903,
+  "n_articles": 1094,
   "articles": [
     {
       "title": "WHAT WE’RE WATCHING: Award-winning documentary witnesses local wildlife experts take on lion cub rescue mission",
@@ -60,7 +59,117 @@
       "snippet": "In local nature documentary Bucket: The Lion Cub, wildlife filmmaker and safari expert Brent Leo-Smith navigates the delicate balance of conservation and human empathy…"
     },
     {
-      "title": "10 Dead in Zacatecas Massacre as Mexico Sends Troops",
+      "title": "Hong Kong police officers lose appeal over framing homeless man, evidence cover-up",
+      "source": "South China Morning Post",
+      "country": "CN",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://www.scmp.com/news/hong-kong/law-and-crime/article/3361565/hong-kong-police-officers-lose-appeal-over-framing-homeless-man-evidence-cover?utm_source=rss_feed",
+      "published_at": "2026-07-23T06:49:06+00:00",
+      "snippet": "Four disgraced Hong Kong police officers have lost their appeal against convictions and jail terms for framing a homeless man for drug possession and destroying…"
+    },
+    {
+      "title": "From slab to house in 20 days: nation’s biggest builder tests prefab",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOb1dOZ1BSTU4zVXdRaUVJWFlaQVljdXI1YXlJbVJxUHQ3b1ptejctQ1BPclNzanN5RVoyd2hRTGo5REpMRFl0bUQ3Zy1XZGl4TVBXY0JwUktMNTBNTTJQTUtlYm9xLVpqTUhiXzVXdHppcEpsLUc5Z2YxYTFLa01uVHJhTGRKbDZTYk5fdzBfZUpvU1YtZVo2d2pBaEZsSHN3cVoxc1BHOWVvaHUwWUZxYmxRaDBrRW9EaEhxX1NmZ202dw?oc=5",
+      "published_at": "2026-07-23T06:46:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Southwest Papua backs broader free meals rollout under Sudaryono",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423715/southwest-papua-backs-broader-free-meals-rollout-under-sudaryono",
+      "published_at": "2026-07-23T06:43:26+00:00",
+      "snippet": "The Southwest Papua provincial government voiced hope that new leadership at the National Nutrition Agency (BGN) would ..."
+    },
+    {
+      "title": "Worried about the economy? WAM says water is a very good bet",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNEZCalZyR3dobHZBdi1UdnEtaFpFdGZmTjFwMnlfWHByMkppWEtRZ2FjakFkOGphbHllVng5eUFoNWNmMERaUmdncUR4NGJLMnpRUEh5ZldkQ0tDWjFzZEdzcDFSaGZoeElDWWU5cEd0MjhMbDNGV1ZvM3pxTnZkeDYxVEF0dWFYMGktYkpoVkhaQzFIdGVOOVUxbU5jZjZpdEF2bkZjSjdhVDloWTk1WEhIbWFDUWlxNUE?oc=5",
+      "published_at": "2026-07-23T06:43:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Channel Tunnel operator says EU software issues could delay biometric checks",
+      "source": "Channel News Asia (Singapore)",
+      "country": "SG",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.channelnewsasia.com/business/channel-tunnel-operator-says-eu-software-issues-could-delay-biometric-checks-6272896",
+      "published_at": "2026-07-23T06:41:19+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Australia news live: Origin Energy says hackers accessed customers’ partial bank details; WA court dismisses Woodside case against activists",
+      "source": "The Guardian - World",
+      "country": "GB",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://www.theguardian.com/australia-news/live/2026/jul/23/australia-news-live-china-penny-wong-asean-labor-conference-anthony-albanese-one-nation-pauline-hanson-ntwnfb",
+      "published_at": "2026-07-23T06:39:38+00:00",
+      "snippet": "Follow the day’s news live Get our breaking news email , free app or daily news podcast Self-reported domestic violence incidents declining in NSW…"
+    },
+    {
+      "title": "Andy Burnham to cut tax for pubs, clubs and live music in England and make vape shops pay more – business live",
+      "source": "The Guardian - World",
+      "country": "GB",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://www.theguardian.com/business/live/2026/jul/23/andy-burnham-business-rates-pubs-clubs-live-music-vape-shops-european-central-bank-ecb-interest-rates-latest-news-updates",
+      "published_at": "2026-07-23T06:39:00+00:00",
+      "snippet": "Live, rolling coverage of business, economics and financial markets as government says it will review reliefs for ‘anti-social’ businesses Andy Burnham has cut business rates…"
+    },
+    {
+      "title": "BYD rides global plug-in hybrid boom with Sealion 6",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10818093",
+      "published_at": "2026-07-23T06:35:20+00:00",
+      "snippet": "BYD is betting that plug-in hybrids will become the next major growth engine in the global electrified vehicle market, with its Sealion 6 DM-i emerging…"
+    },
+    {
+      "title": "S. Korea seeks to cut reliance on foreign defense chips",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10818092",
+      "published_at": "2026-07-23T06:35:15+00:00",
+      "snippet": "South Korea’s arms procurement agency outlined a plan Thursday to accelerate the domestic development and production of defense semiconductors, with an aim to reduce…"
+    },
+    {
+      "title": "Renault Korea puts summer comfort at heart of Filante",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10818091",
+      "published_at": "2026-07-23T06:35:14+00:00",
+      "snippet": "Renault Korea said Thursday it has expanded the summer comfort features of its flagship crossover Filante, introducing a powered sunshade for the panoramic glass roof…"
+    },
+    {
+      "title": "Yemen’s Houthis claim attacks on Red Sea tankers as US launches 12th night of strikes on Iran – Middle East crisis live",
+      "source": "The Guardian - World",
+      "country": "GB",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://www.theguardian.com/world/live/2026/jul/23/us-iran-war-live-updates-strikes-houthis-red-sea-saudi-nuclear-deal-middle-east-crisis-latest-news",
+      "published_at": "2026-07-23T06:33:46+00:00",
+      "snippet": "US military says it is degrading Tehran’s ability to threaten ships in strait of Hormuz; Houthis say tankers violated their blockade; US signs nuclear deal…"
+    },
+    {
+      "title": "10 Dead in Mexico’s Zacatecas as Cartel War Escalates",
       "source": "The Rio Times (Brazil)",
       "country": "BR",
       "lean": "centre",
@@ -80,7 +189,7 @@
       "snippet": "A cooler consumer climate and a disappointing World Cup sales bump pushed Walmex to trim its 2026 outlook after a flat profit quarter."
     },
     {
-      "title": "US Visa Freeze Hits Colombian Immigrant Applications",
+      "title": "US Visa Freeze Halts Colombian Immigrant Applications",
       "source": "The Rio Times (Brazil)",
       "country": "BR",
       "lean": "centre",
@@ -100,7 +209,7 @@
       "snippet": "Spain’s Banco Santander reported a first-half attributable profit of nearly €9 billion, with Brazil cementing its role as the group’s second-largest profit engine."
     },
     {
-      "title": "União Brasil Federation Steps Back From Flávio Bolsonaro",
+      "title": "Brazil’s União Brasil Drops Flávio Bolsonaro’s 2026 Bid",
       "source": "The Rio Times (Brazil)",
       "country": "BR",
       "lean": "centre",
@@ -108,6 +217,16 @@
       "url": "https://www.riotimesonline.com/uniao-brasil-federation-steps-back-from-flavio-bolsonaro/",
       "published_at": "2026-07-23T06:30:42+00:00",
       "snippet": "The PP-União Brasil federation reversed its recent alignment with Flávio Bolsonaro's presidential campaign, adopting a stance of national neutrality that allows state-level alliances but denies…"
+    },
+    {
+      "title": "KiiiKiii, AKMU top Billboard's best K-pop songs and albums of 2026 lists",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10818075",
+      "published_at": "2026-07-23T06:30:42+00:00",
+      "snippet": "Rookie girl group KiiiKiii and sibling duo AKMU topped Billboard's editorial picks for the best K-pop releases of 2026 so far, with KiiiKiii's \"404 (New…"
     },
     {
       "title": "Oncoclínicas Debt Crisis Deepens as Goldman Sachs Exits",
@@ -180,24 +299,14 @@
       "snippet": ""
     },
     {
-      "title": "Yemen’s Houthis claim attacks on Red Sea tankers as US launches 12th night of strikes on Iran – Middle East crisis live",
-      "source": "The Guardian - World",
-      "country": "GB",
-      "lean": "centre-left",
+      "title": "[Photo News] Cooking up K-chicken",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
       "paywall": "none",
-      "url": "https://www.theguardian.com/world/live/2026/jul/23/us-iran-war-live-updates-strikes-houthis-red-sea-saudi-nuclear-deal-middle-east-crisis-latest-news",
-      "published_at": "2026-07-23T06:24:36+00:00",
-      "snippet": "US military says it is degrading Tehran’s ability to threaten ships in strait of Hormuz; Houthis say tankers violated their blockade; US signs nuclear deal…"
-    },
-    {
-      "title": "Australia news live: Origin Energy says hackers accessed customers’ partial bank details; WA court dismisses Woodside case against activists",
-      "source": "The Guardian - World",
-      "country": "GB",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://www.theguardian.com/australia-news/live/2026/jul/23/australia-news-live-china-penny-wong-asean-labor-conference-anthony-albanese-one-nation-pauline-hanson-ntwnfb",
-      "published_at": "2026-07-23T06:23:23+00:00",
-      "snippet": "Follow the day’s news live Get our breaking news email , free app or daily news podcast Self-reported domestic violence incidents declining in NSW…"
+      "url": "https://www.koreaherald.com/article/10818059",
+      "published_at": "2026-07-23T06:24:37+00:00",
+      "snippet": "Tourists from 13 countries participate in Kyochon F&B's Kyochon 1991 School in Seoul ahead of chobok."
     },
     {
       "title": "Australia's Origin Energy confirms customer data breach",
@@ -240,6 +349,16 @@
       "snippet": "Ukrainian drones have hit several retail warehouses belonging to Russia's biggest online retailer Wildberries in a matter of days."
     },
     {
+      "title": "Killed for being a journalist: Another attack on press freedom in Mexico",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/international/2026-07-23/killed-for-being-a-journalist-another-attack-on-press-freedom-in-mexico.html",
+      "published_at": "2026-07-23T06:15:29+00:00",
+      "snippet": "Alejandro Leyva had reported death threats to both state and federal authorities a year ago, but no measures were taken to protect him."
+    },
+    {
       "title": "Modi vows punishment for exam fraud fuelling India protests",
       "source": "Channel News Asia (Singapore)",
       "country": "SG",
@@ -258,6 +377,16 @@
       "url": "https://www.premiumtimesng.com/sports/football/897530-the-winning-mentality-starts-here-awoniyi-targets-strong-nottingham-forest-season-after-pre-season-goal.html",
       "published_at": "2026-07-23T06:13:07+00:00",
       "snippet": "Awoniyi, who endured a frustrating 2025/26 campaign due to injuries and inconsistent form, delivered another encouraging display as he continued his resurgence ahead…"
+    },
+    {
+      "title": "Indonesia hastens irrigation recovery across disaster-hit Sumatra",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423713/indonesia-hastens-irrigation-recovery-across-disaster-hit-sumatra",
+      "published_at": "2026-07-23T06:11:09+00:00",
+      "snippet": "Indonesia’s Ministry of Public Works reinforced its commitment to expediting recovery measures to rehabilitate ..."
     },
     {
       "title": "Hong Kong gears up for city’s first test run of fully driverless vehicles",
@@ -280,6 +409,26 @@
       "snippet": "Yemenis fear a maritime embargo on Saudi Arabia could reignite war, deepen shortages and worsen hunger."
     },
     {
+      "title": "S. Korea urges stronger ASEAN+3 supply chain cooperation, seeks support for Korean Peninsula peace",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10818026",
+      "published_at": "2026-07-23T06:07:12+00:00",
+      "snippet": "South Korea on Thursday called for stronger regional cooperation to bolster supply chain resilience and energy security while seeking continued support for the efforts…"
+    },
+    {
+      "title": "Hyundai Motor Q2 profit falls despite record revenue",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10818025",
+      "published_at": "2026-07-23T06:06:56+00:00",
+      "snippet": "Hyundai Motor said Thursday that its second-quarter operating profit dropped about 21 percent as rising raw materials costs and production disruptions outweighed record-breaking revenue…"
+    },
+    {
       "title": "IMPLEMENTATION OF SCHEME - company-announcements.afr.com",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -287,6 +436,16 @@
       "paywall": "hard",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZlVwUkFnMTQtMWhwZVNJUFRoaWpZbWkxTkphV2x3SV9MX2JESU5pR1lNRjRkS1lCRTlremljcUR6REZfWlV4RmhzSW9Tc0tLZC0yczJDWUdSMEdFYUtDbG9kQThobTltWlFLYXlFcWU1b3YtR29lamVjSzBkelg1YWFaQkpsZ2ZsV1pRMEVRTQ?oc=5",
       "published_at": "2026-07-23T06:06:44+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Oil rises above $96 per barrel after Houthi attacks on Saudi ships in Red Sea",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/business/energy/2026/07/23/oil-rises-above-96-per-barrel-after-houthi-attacks-on-saudi-ships-in-red-sea/",
+      "published_at": "2026-07-23T06:06:12+00:00",
       "snippet": ""
     },
     {
@@ -298,6 +457,16 @@
       "url": "https://www.thehindu.com/news/national/indias-ambassador-kwatra-meets-us-senator-sheehy-discusses-defence-ties/article71256651.ece",
       "published_at": "2026-07-23T06:05:44+00:00",
       "snippet": "India’s envoy to the U.S. Vinay Mohan Kwatra discussed the vital defence partnership between the two nations and appreciated U.S."
+    },
+    {
+      "title": "Prabowo, FBI's Patel discuss return of smuggled Indonesian artifacts",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423712/prabowo-fbis-patel-discuss-return-of-smuggled-indonesian-artifacts",
+      "published_at": "2026-07-23T06:03:55+00:00",
+      "snippet": "President Prabowo Subianto received a courtesy call from the Director of the United States Federal Bureau of ..."
     },
     {
       "title": "Thailand launches manhunt after 5 soldiers killed, civilians injured in deep south",
@@ -360,6 +529,16 @@
       "snippet": ""
     },
     {
+      "title": "Former KBO foreign scout fired after secretly filming opposing coach",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10818018",
+      "published_at": "2026-07-23T05:59:41+00:00",
+      "snippet": "Justin Prinstein, who previously worked as a foreign player scout for the KIA Tigers and LG Twins in the Korean Baseball Organization, has been fired…"
+    },
+    {
       "title": "Modi vows 'stringent punishment' for exam fraud fuelling India's youth-led 'Cockroach' protests",
       "source": "France 24",
       "country": "FR",
@@ -390,6 +569,56 @@
       "snippet": ""
     },
     {
+      "title": "LG Energy Solution seeks US import ban on EVE batteries",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10818009",
+      "published_at": "2026-07-23T05:54:37+00:00",
+      "snippet": "LG Energy Solution has filed patent infringement complaints in the US against Chinese battery maker EVE Energy, seeking to block imports of allegedly infringing cylindrical…"
+    },
+    {
+      "title": "Lee Jung-hoo hits fourth triple of season, but Giants lose to Royals",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10818005",
+      "published_at": "2026-07-23T05:53:38+00:00",
+      "snippet": "San Francisco Giants' Lee Jung-hoo recorded his fourth triple of the season. Lee started in right field and batted sixth in the Giants' road game…"
+    },
+    {
+      "title": "Five security personnel killed in attack in Thailand's south",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPeU5aLXdWekFjU1haYnkxWEY0LWlFLXQ2cllDaTJFZW5GOUFoNDE1Ny13bEpZUmdLYnpzSDM3NkMxLWRSWEdwUEc0dUlKdlp5c3lRSVVsZzdDNVY5Y25peEpWMW8xM2I4cVVycVNNWXY0LU1pcEF5S1czVmd2ZjdKOFVORFVyVDFSME1rSW5qcjJDY0VJSS1TdkZZNHlmUFBENGdzTzRyRnd1UmRZ?oc=5",
+      "published_at": "2026-07-23T05:52:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Anthony Joshua vs Kristian Prenga: Date, time, how to watch in UAE and will Tyson Fury be next?",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/sport/combat-sports/2026/07/23/anthony-joshua-vs-kristian-prenga-date-time-how-to-watch-in-uae-and-will-tyson-fury-be-next/",
+      "published_at": "2026-07-23T05:51:04+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Chip boom lifts Korea's income growth to 38-year high",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817998",
+      "published_at": "2026-07-23T05:49:54+00:00",
+      "snippet": "South Korea's economy extended its growth in the second quarter, weathering oil price volatility sparked by conflict in the Middle East, as robust chip exports…"
+    },
+    {
       "title": "‘Cockroach’ protests: India’s Modi promises to punish corrupt officials in bid to quell anger",
       "source": "The Guardian - World",
       "country": "GB",
@@ -408,6 +637,16 @@
       "url": "https://www.theguardian.com/australia-news/2026/jul/23/pauline-hanson-said-domestic-violence-prevented-police-from-dealing-with-real-in-2025-podcast-ntwnfb",
       "published_at": "2026-07-23T05:47:48+00:00",
       "snippet": "One Nation leader labels family violence leave ‘ridiculous’ and decries ‘woke’ support of women’s rights in November podcast Get our breaking news email , free…"
+    },
+    {
+      "title": "Korean hits record $3.9 m Vietnam lottery jackpot",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817985",
+      "published_at": "2026-07-23T05:46:40+00:00",
+      "snippet": "A South Korean national residing in Vietnam has won the country's 102.8 billion Vietnamese dong ($3.9 million) lottery jackpot, the largest prize ever awarded…"
     },
     {
       "title": "Blocked by censors, China's animal lovers take fight against abuse offline and overseas",
@@ -430,6 +669,26 @@
       "snippet": ""
     },
     {
+      "title": "Lee Kang-in set for Atletico Madrid",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817983",
+      "published_at": "2026-07-23T05:45:50+00:00",
+      "snippet": "Lee Kang-in could be on the verge of a transfer, according to a report from a Spanish outlet."
+    },
+    {
+      "title": "Indonesia achieves self-sufficiency in eight food commodities: Gov't",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423711/indonesia-achieves-self-sufficiency-in-eight-food-commodities-govt",
+      "published_at": "2026-07-23T05:45:06+00:00",
+      "snippet": "Agriculture Minister Andi Amran Sulaiman announced that Indonesia has achieved self-sufficiency in eight strategic ..."
+    },
+    {
       "title": "Will the war on Iran affect ASEAN’s efforts to tackle regional issues?",
       "source": "Al Jazeera English",
       "country": "QA",
@@ -448,6 +707,26 @@
       "url": "https://www.premiumtimesng.com/news/more-news/897526-transfers-akor-adams-seals-move-to-newly-promoted-italian-club-venezia.html",
       "published_at": "2026-07-23T05:42:33+00:00",
       "snippet": "Adams arrives in Venice after an eventful journey across Norway, France and Spain, bringing with him a proven goalscoring pedigree and valuable top-flight experience…"
+    },
+    {
+      "title": "Mexico navigates USMCA review amid threat of new US tariffs",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/economy-and-business/2026-07-23/mexico-navigates-usmca-review-amid-threat-of-new-us-tariffs.html",
+      "published_at": "2026-07-23T05:42:05+00:00",
+      "snippet": "Mexican President Claudia Sheinbaum is set to meet on Thursday with Trade Representative Jamieson Greer, who says provisional agreements could be reached this year"
+    },
+    {
+      "title": "Samsung, LG Display pitch OLED for humanoid face",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817979",
+      "published_at": "2026-07-23T05:41:41+00:00",
+      "snippet": "Samsung Display and LG Display each unveiled OLED panels designed for humanoid robot faces at K-Display 2026 in Seoul on Wednesday, marking an attempt…"
     },
     {
       "title": "Hyundai Motor reports 21% drop in Q2 operating profit, misses forecasts",
@@ -487,7 +766,7 @@
       "paywall": "none",
       "url": "https://www.theguardian.com/business/2026/jul/23/business-rates-to-be-cut-by-20-for-england-pubs-clubs-and-music-venues",
       "published_at": "2026-07-23T05:37:23+00:00",
-      "snippet": "No 10 announces reprieve after Andy Burnham previously pledged to raise tax from e-commerce warehouses and channel it to cutting hospitality sector’s bills Business rates…"
+      "snippet": "No 10 announces reprieve after Andy Burnham previously pledged to raise tax from e-commerce warehouses and channel it to cutting hospitality sector’s bills Pubs, clubs…"
     },
     {
       "title": "Thousands forced to evacuate as wildfires sweep across southern France",
@@ -540,6 +819,26 @@
       "snippet": "The Japan Fair Trade Commission aims to curb the market dominance of companies like Google and Apple and ensure fairer transactions for small businesses."
     },
     {
+      "title": "Trump trades new threats with Iran, alternative routes to Strait of Hormuz, and Saudi Arabia's nuclear deal",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/podcasts/trending-middle-east/2026/07/23/trump-trades-new-threats-with-iran-alternative-routes-to-hormuz-and-saudi-arabias-nuclear-deal/",
+      "published_at": "2026-07-23T05:30:43+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "ASEAN-ID Blue delegation gains insights into Banyuwangi's blue economy",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423708/asean-id-blue-delegation-gains-insights-into-banyuwangis-blue-economy",
+      "published_at": "2026-07-23T05:30:14+00:00",
+      "snippet": "The ASEAN-ID Blue delegation explored community-based blue economy initiatives in Banyuwangi during visits to the Red ..."
+    },
+    {
       "title": "Ondo Assembly Crisis: 21 lawmakers ask Speaker to resign or be forced out",
       "source": "Premium Times (Nigeria)",
       "country": "NG",
@@ -548,6 +847,36 @@
       "url": "https://www.premiumtimesng.com/news/top-news/897521-ondo-assembly-crisis-21-lawmakers-ask-speaker-to-resign-or-be-forced-out.html",
       "published_at": "2026-07-23T05:29:03+00:00",
       "snippet": "The lawmakers accused Speaker Olamide Oladiji of collecting N44 million from the Ondo State Oil Producing Areas Development Commission(OSOPADEC) on their behalf without sharing it…"
+    },
+    {
+      "title": "Korean-backed UNESCO vocational training helps African youth start businesses",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817943",
+      "published_at": "2026-07-23T05:27:25+00:00",
+      "snippet": "A South Korea-backed vocational education program is helping young Africans turn skills in agriculture, food processing and beauty services into jobs and small businesses, according…"
+    },
+    {
+      "title": "HD Hyundai XiteSolution halves paint-process emissions",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817941",
+      "published_at": "2026-07-23T05:27:08+00:00",
+      "snippet": "HD Hyundai XiteSolution said Thursday it has developed a low-temperature curing paint that cuts carbon emissions generated during the manufacturing process by more than half."
+    },
+    {
+      "title": "Shinsegae's AI paper accepted at ICML",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817940",
+      "published_at": "2026-07-23T05:27:07+00:00",
+      "snippet": "Shinsegae Department Store said Thursday that its AI-powered hyperpersonalization technology, developed jointly with Seoul National University, has been accepted for presentation at the International Conference…"
     },
     {
       "title": "Japanese firm acts to stop 7-Eleven store staff scalping anime, game merchandise",
@@ -568,6 +897,16 @@
       "url": "https://www.dw.com/en/peru-10-killed-in-housefire-in-capital-lima/a-78078367?maca=en-rss-en-all-1573-rdf",
       "published_at": "2026-07-23T05:27:00+00:00",
       "snippet": "The fire was reportedly started by extortionists. Investigators are trying \"to determine the point of origin, the circumstances, and the causes of this fire.\""
+    },
+    {
+      "title": "Samsung Electro-Mechanics books W750b in AI server orders",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817939",
+      "published_at": "2026-07-23T05:25:47+00:00",
+      "snippet": "Samsung Electro-Mechanics said Thursday it has signed a supply contract worth about 300 billion won ($204 million) for multilayer ceramic capacitors used in artificial intelligence…"
     },
     {
       "title": "Indian police accused of using pellet guns in crackdown on India’s protests",
@@ -620,6 +959,16 @@
       "snippet": "Jordan, chair of the House Judiciary Committee, accused Smith of lying in his testimony before the committee in December."
     },
     {
+      "title": "Krafton invests in Neon to build game payment ecosystem",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817929",
+      "published_at": "2026-07-23T05:19:58+00:00",
+      "snippet": "Krafton said Thursday it has made a strategic investment in Neon Commerce, a global game commerce infrastructure firm, as the Korean game developer moves…"
+    },
+    {
       "title": "PLA conducts 2 days of live-fire drills in Taiwan Strait off Fujian island",
       "source": "South China Morning Post",
       "country": "CN",
@@ -658,6 +1007,16 @@
       "url": "https://www.aljazeera.com/news/2026/7/23/israel-building-earthen-barrier-in-gaza-to-entrench-division-of-the-enclave?traffic_source=rss",
       "published_at": "2026-07-23T05:15:27+00:00",
       "snippet": "The construction of the barrier has fuelled Palestinian fears that most of Gaza will never be relinquished by Israel."
+    },
+    {
+      "title": "GM Korea reaches first auto wage deal of the year",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817916",
+      "published_at": "2026-07-23T05:14:56+00:00",
+      "snippet": "GM Korea became the first automaker to reach a tentative wage agreement this year, easing immediate strike concerns as labor disputes intensify across South Korea's…"
     },
     {
       "title": "Zinedine Zidane to be officially appointed as France manager on Tuesday",
@@ -730,6 +1089,26 @@
       "snippet": "Bernhard Sutter, 58, collapsed while ascending Japan's tallest mountain with his son via the Fujinomiya route — the shortest way up."
     },
     {
+      "title": "BTS' V raises a glass for Jinro's global push",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817900",
+      "published_at": "2026-07-23T05:07:44+00:00",
+      "snippet": "HiteJinro said Thursday it had launched its first global campaign for Jinro featuring BTS member V as the brand's global ambassador, as it steps up…"
+    },
+    {
+      "title": "‘Are you sure he’s the father?’ Jeju gynecologist faces backlash over alleged remarks",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817896",
+      "published_at": "2026-07-23T05:06:52+00:00",
+      "snippet": "A male gynecologist on Jeju Island has come under fire after multiple women accused him online of making insulting remarks during consultations, according to local…"
+    },
+    {
       "title": "Dassault Systèmes confirms 2026 outlook, bets on AI with $1.8 billion ArisGlobal deal",
       "source": "Channel News Asia (Singapore)",
       "country": "SG",
@@ -758,6 +1137,16 @@
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA1SElmUnNoaE55Rlc3N2dUMFRlRWRreXBVTzF3SkNjQlFGdzZ2ZURnTVM1by1aNGxFcF9ZZTNmdDhiYi1VSDlsbWVfLUpFY3NpNUZzNHlDc1F4dw?oc=5",
       "published_at": "2026-07-23T05:05:20+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Trump set to escalate trade war with new tariffs on dozens of countries",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/usa/2026-07-23/trump-set-to-escalate-trade-war-with-new-tariffs-on-dozens-of-countries.html",
+      "published_at": "2026-07-23T05:04:13+00:00",
+      "snippet": "The United States is preparing to approve a new round of import duties to replace the tariffs introduced after the Supreme Court ruling, which expire…"
     },
     {
       "title": "India: Modi orders fast-track courts for paper leaks amid protests",
@@ -820,6 +1209,36 @@
       "snippet": ""
     },
     {
+      "title": "Firefighters battle one of Spain's biggest-ever wildfires during heat wave across the Mediterranean",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817887",
+      "published_at": "2026-07-23T04:56:57+00:00",
+      "snippet": "BARCELONA, Spain (AP) — Firefighters in central Spain battled a wildfire Wednesday that has burned over 32,000 hectares in one of the country's largest blazes…"
+    },
+    {
+      "title": "Pakistani man arrested for trying to lure girls with watermelon",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817886",
+      "published_at": "2026-07-23T04:56:38+00:00",
+      "snippet": "A Pakistani man has been arrested on suspicion of attempting to lure two middle school girls into his car by offering them watermelon, police said…"
+    },
+    {
+      "title": "US Senate panel approves bill cracking down on the sale of Chinese vehicles",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817884",
+      "published_at": "2026-07-23T04:55:42+00:00",
+      "snippet": "The US Senate Commerce Committee approved legislation Wednesday to toughen a government ban on Chinese automakers entering the American market that could bar German automaker…"
+    },
+    {
       "title": "Trump returns to Georgia with election claims, worrying some Republicans",
       "source": "Daily Maverick (South Africa)",
       "country": "ZA",
@@ -828,6 +1247,16 @@
       "url": "https://www.dailymaverick.co.za/article/2026-07-23-trump-returns-to-georgia-with-election-claims-worrying-some-republicans/",
       "published_at": "2026-07-23T04:55:29+00:00",
       "snippet": "MARIETTA, Georgia, July 22 (Reuters) - President Donald Trump rallied supporters in Georgia on Wednesday to press for stricter nationwide voting requirements, leaning…"
+    },
+    {
+      "title": "US House Republicans adopt $95 billion package for the Iran war and Trump's priorities",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817881",
+      "published_at": "2026-07-23T04:54:08+00:00",
+      "snippet": "WASHINGTON (AP) — The House adopted a Republican-only $95 billion budget proposal Wednesday, a long-shot effort to fund the Iran war and other White House…"
     },
     {
       "title": "US Education Department probes five medical schools over admissions practices",
@@ -870,6 +1299,26 @@
       "snippet": ""
     },
     {
+      "title": "AI will not trigger employment collapse, staffing company Adecco Group says",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMXdwQnd0TXI0QlNVTHV4LWRxcm9WejU1V0g4bzVLdEpfYV83NnBPTFpWMWE4RndCVDdfdmViNEZtWHJZXzdxSnd2M2E3Q0ZjZmtVN1J2YmR5Qm1vRHRCY19ZaWxhT014eC1sRVJadm4wX0VRQlhOdzlBX2NBTkJVS3hwbVJBOTN6Nm0zOGdocWhoSC1fUmtXS0JsZ215ZmZiV3BROUVkLU16RFJqdFFGcjVDVlFIdHdLMUR3?oc=5",
+      "published_at": "2026-07-23T04:48:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Convicted child abusers, service members could lose pension credits",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817869",
+      "published_at": "2026-07-23T04:47:05+00:00",
+      "snippet": "South Korea plans to block national pension credits for parents convicted of child abuse and conscripts sentenced to at least 18 months in prison…"
+    },
+    {
       "title": "South Africa’s data center ‘gold rush’ risks resource crunch",
       "source": "The Japan Times",
       "country": "JP",
@@ -890,6 +1339,26 @@
       "snippet": ""
     },
     {
+      "title": "Public officials face tougher penalties for inaction, hate speech",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817868",
+      "published_at": "2026-07-23T04:45:31+00:00",
+      "snippet": "The Ministry of Personnel Management is seeking tougher disciplinary standards for public officials who neglect their duties, engage in passive administration or use hate speech…"
+    },
+    {
+      "title": "Halifax's IMAX 70mm projector awakens for The Odyssey",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9IQm90Q01QeGlwbFdIOU1lYUw1LXFWNTZWVmtOMFoyQ2RwdnRqMWlxV05uV2lmTk0tLXB0QXZOY09qTjgwVEJmamVvR1ZqZ2NjVkhocFlXN0Y2Zw?oc=5",
+      "published_at": "2026-07-23T04:41:55+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Why locals are gatekeeping their favourite travel spots",
       "source": "Channel News Asia (Singapore)",
       "country": "SG",
@@ -900,6 +1369,16 @@
       "snippet": "As overtourism transforms neighbourhoods from Mexico City to Copenhagen, more residents are keeping their best beaches, bars, markets and hiking trails off visitors' itineraries."
     },
     {
+      "title": "Opposition confirms standing committee chairs, ends boycott",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817858",
+      "published_at": "2026-07-23T04:40:32+00:00",
+      "snippet": "The main opposition People Power Party on Thursday confirmed a list of their lawmakers as chairs of standing committees, moving to normalize parliamentary operations…"
+    },
+    {
       "title": "Nicaragua's parliament plans to eliminate elections to codify President Ortega's declaration",
       "source": "Fox News (US, right)",
       "country": "US",
@@ -908,6 +1387,26 @@
       "url": "https://www.foxnews.com/world/nicaraguas-parliament-plans-eliminate-elections-codify-president-ortegas-declaration",
       "published_at": "2026-07-23T04:39:53+00:00",
       "snippet": "Nicaragua's congress moves to abolish elections after President Daniel Ortega declared no more elections, drawing condemnation from the international community."
+    },
+    {
+      "title": "Hybe, Korea Fashion Association partner to expand K-pop-based fashion business",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817851",
+      "published_at": "2026-07-23T04:39:25+00:00",
+      "snippet": "Hybe has partnered with the Korea Fashion Association to promote collaboration between the entertainment and fashion industries in a bid to expand K-pop-inspired fashion products…"
+    },
+    {
+      "title": "BTS showcases luxury brands' custom-made outfits for Paris stage",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817848",
+      "published_at": "2026-07-23T04:39:15+00:00",
+      "snippet": "Six luxury houses supplied custom stage looks for BTS at the Paris leg of the group's \"Arirang\" world tour, held Friday and Saturday at Stade…"
     },
     {
       "title": "NEW-YYYYMMDD MOT NTA Announcement_IMD.xlsm - company-announcements.afr.com",
@@ -950,6 +1449,16 @@
       "snippet": "Samsung has owned the market for foldable phones. Now Apple is getting in on it. NBC News chief tech analyst Joanna Stern breaks it down."
     },
     {
+      "title": "PHOTO ESSAY: By a dark, dangerous highway in Nepal, aid workers fired by USAID cuts turn to sex work",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOYXFnUmNadGZjdFdiNE80dldXLXk1UVJNdi0yOExkclFsUXpJU2lsM1kzeC1JNEQwQnVtNE8yUm43WEV1LVBTQ3I1Q2ktQm42OHBwTjlhdWdGYXZXRW1kYzVlTllPWVhuSXpFb19JaG1CbjJtQU0ycmdrQi1qZ25RSnk0QzdfNlZaeWtVNkVxZ3c3MGVqajFkemFDR0hEV25hNy01dDc3b0NmWTFQbXgwMk1n?oc=5",
+      "published_at": "2026-07-23T04:30:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "An intimate portrait of Babajide Sanwo-Olu as governor, By Kunle Ajibade",
       "source": "Premium Times (Nigeria)",
       "country": "NG",
@@ -980,6 +1489,16 @@
       "snippet": ""
     },
     {
+      "title": "Authorities seek owner of Siamese crocodile found in stream",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817810",
+      "published_at": "2026-07-23T04:19:30+00:00",
+      "snippet": "Police in Yeoju, Gyeonggi Province, have launched an investigation into how a critically endangered Siamese crocodile ended up in a local stream and who previously…"
+    },
+    {
       "title": "3 Vietnam Airlines managers charged with taking bribes linked to excess baggage charges",
       "source": "Channel News Asia (Singapore)",
       "country": "SG",
@@ -1000,6 +1519,16 @@
       "snippet": "Officials say 76 of the roughly 179 people believed to have been aboard survived, and 53 bodies have been found so far."
     },
     {
+      "title": "Turning waste into power, value, and sustainable growth",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423705/turning-waste-into-power-value-and-sustainable-growth",
+      "published_at": "2026-07-23T04:16:11+00:00",
+      "snippet": "Indonesia is accelerating Waste-to-Energy (WtE) development under a new presidential regulation, aiming to turn waste ..."
+    },
+    {
       "title": "Houthis say they attacked Saudi tankers in the Red Sea, threatening new chokepoint in Iran war",
       "source": "Reuters",
       "country": "INT",
@@ -1008,6 +1537,16 @@
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOck9rMklSSHp1Z0E2UmlqZUJHSWNxRXNSZGtZd1JTOFdSbUE2amI3RHFmaUNuSS1nU1NzaThJdVIwVzZFcXVIaXNjU3lrSVYtaDF5THNwWkpqUHVwTEFsWklsbnp4ZllTMndIYWhRM0RZa09qaTNiVXVCNmh5a2p6MnBidG1kWkJSUVJnb1RuOXdUcU5MRDVxbzJmcDE2UWZsaVZYRDdCdHlYcG1kUTdKT093ZXI4b3VkWjZNRzdDUDIwWEFWMHRia2FIY3dIdw?oc=5",
       "published_at": "2026-07-23T04:15:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Man beats ex-girlfriend to death because ‘she didn’t look sorry’ after breakup",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817804",
+      "published_at": "2026-07-23T04:14:52+00:00",
+      "snippet": "A 24-year-old man accused of killing his former girlfriend admitted to the charges at the first hearing of his trial at the Seoul Eastern District…"
     },
     {
       "title": "Victoria’s jobless rate hits highest level since COVID-19 lockdowns",
@@ -1027,16 +1566,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNY1Qyb1JXajMtYVVMdUhQYWItTHhkc2NkcmNybWdkYUhUblNUU3lrQUUtbFVJWE9VbmtzMHU5TWhGTzdjZWlhTE1wZDM5Wm1PVkkwdkd1Q0VsMFVIVllKYzJQY29UcVhMVmpyWDl6dGg1SHNDMmswQjlwN2lGem1sbS16T2k4c3RDTzAxVVM2cnR4cXZBa1JkMUFnbFRRMXpzdEEzdGZGY2xjb1N5NFRfRXJHeFh4cEJ0a0tFbnNBLWs4alVhT283cHY2ZTY1VFhmWV9mTmptTDBSM3JyZENqS29yVHgzYUdC?oc=5",
       "published_at": "2026-07-23T04:12:44+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Untitled - company-announcements.afr.com",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMWhteTlIQVlVYm90bm9UT0xua0JxaEcyRlpiTUYzWWJSSWdscldyVGg1M3k1TUVvRHhQMkZ2SldSQlJNUmhaYjlMckF2c0MwalBKTGZwLUo5cFVnSzVPOHMtRGt5cVVpdWhkaWpobDBORFQtWUpPLURfOW45WTNTcUcyLXBQaU9qbFBCQ3oyNA?oc=5",
-      "published_at": "2026-07-23T04:11:46+00:00",
       "snippet": ""
     },
     {
@@ -1070,16 +1599,6 @@
       "snippet": "The cafe will open on Jul 31 and will feature a cosy dine-in area and cakes in fresh flavours like peanut butter and chocolate banana."
     },
     {
-      "title": "BOJ to raise rates again by December as weak yen revives inflation risks: Reuters poll",
-      "source": "Channel News Asia (Singapore)",
-      "country": "SG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.channelnewsasia.com/business/boj-raise-rates-again-december-weak-yen-revives-inflation-risks-reuters-poll-6272566",
-      "published_at": "2026-07-23T04:07:55+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Hawaii raises truck bed-riding age to 16 as roads get faster, testing a cherished island tradition",
       "source": "Associated Press",
       "country": "INT",
@@ -1087,16 +1606,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYkd0RmF2WTBFMEpLeVk2eFRRTlBDNEpKMElCMXJHWElmWVpyd0hIUXFaSllzbUFscnVNWVBZUDNXODV0QkQtSFd1TE9NUTBoX1FXSVp1T2lUT0R2UHFiejR0RWlyRmRNQ2lCUmU2UmRoM2J0Y0xOX3FBVEMxLXMxbVo1eUNnNE0wYzNfSXFSZFd2QQ?oc=5",
       "published_at": "2026-07-23T04:04:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "- AFR",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNZEtucE9FMlg2UzJ6cWVMMlRVUk5HelpwUEMwTW1MbXo1MVg1UHY5VWZ4aDZjUnluWDkzU0lXb1JMY3d0NE43YUxncklSa3JZR1ZDWXhldlIwaXZ1Y1RPa3Vad0k5V1cyakdGSW5Tc0dHMUdUUlYtV0lTdVNfN1hZRXVIazZzOFNmMWxaWXUtQ0dFR29YUHp6bExITUVaTVQ5WXBLWnZjTi1QRU00WWdOU1d5OXRTNm1USFRZRy1sU1JEWWlUM3RuTVdPWElKOFVFREJCQTNMVVBsYW9qanVvODdGMldELWwtNlE?oc=5",
-      "published_at": "2026-07-23T04:03:06+00:00",
       "snippet": ""
     },
     {
@@ -1158,6 +1667,16 @@
       "url": "https://www.scmp.com/news/china/diplomacy/article/3361495/us-china-trade-war-reaches-indias-streets-modi-weighs-risks-washington-bet?utm_source=rss_feed",
       "published_at": "2026-07-23T04:00:14+00:00",
       "snippet": "Indian Prime Minister Narendra Modi is facing mounting domestic backlash over a potential trade deal with the United States that would place India…"
+    },
+    {
+      "title": "Mo Amer and Morgan Jay to headline Abu Dhabi Comedy Season",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/arts-culture/2026/07/23/mo-amer-and-morgan-jay-to-headline-abu-dhabi-comedy-season/",
+      "published_at": "2026-07-23T04:00:00+00:00",
+      "snippet": ""
     },
     {
       "title": "Border K9 sniffs out 99 pounds of prohibited meat, plants and monitor lizard in suitcase from Thailand",
@@ -1400,6 +1919,16 @@
       "snippet": "Caitlin Clark posted 27 points and 11 assists as the Indiana Fever set a franchise scoring record in a 123-88 blowout of the Connecticut Sun."
     },
     {
+      "title": "China begins two days of live-fire drills in Taiwan Strait",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQejZfZS1QLTgtdG5SWUNpTlZsTmN0emFuTDBLZU1id0dyeXZrdl9Wc0lHYTc2VnBYcXo5ZzREUEM4QUpyMmNUT21NaWJlN3lqUng1am9Mdm1NUlVUdGdORDA5Ujd5TGZEb3JNb1lpS0EzM2ZIUnJzdUxjNEJMWTZxRGFNTXdobThjOUtoUll2Q2tma29xZ1FwTmFGVzlDa2tUaGVv?oc=5",
+      "published_at": "2026-07-23T03:29:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "What to know about the autopsy and investigation into Nolan Wells’ death",
       "source": "Associated Press",
       "country": "INT",
@@ -1490,6 +2019,16 @@
       "snippet": "The attacks reflect a surge in violence as armed gangs continue raiding villages in northwest and central Nigeria."
     },
     {
+      "title": "Indonesia calls for stronger ASEAN-US cooperation as stability anchor",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423703/indonesia-calls-for-stronger-asean-us-cooperation-as-stability-anchor",
+      "published_at": "2026-07-23T03:18:28+00:00",
+      "snippet": "Indonesian Foreign Affairs Minister Sugiono outlined the importance of strengthening the partnership between ASEAN ..."
+    },
+    {
       "title": "Koizumi calls for breaking taboo on nuclear debate",
       "source": "The Japan Times",
       "country": "JP",
@@ -1520,14 +2059,24 @@
       "snippet": ""
     },
     {
-      "title": "Halifax's IMAX 70mm projector awakens for The Odyssey",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
+      "title": "Congo's Ebola outbreak has killed over 1,000 people",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
       "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9IQm90Q01QeGlwbFdIOU1lYUw1LXFWNTZWVmtOMFoyQ2RwdnRqMWlxV05uV2lmTk0tLXB0QXZOY09qTjgwVEJmamVvR1ZqZ2NjVkhocFlXN0Y2Zw?oc=5",
-      "published_at": "2026-07-23T03:11:55+00:00",
-      "snippet": ""
+      "url": "https://www.koreaherald.com/article/10817775",
+      "published_at": "2026-07-23T03:11:18+00:00",
+      "snippet": "BUNIA, Congo (AP) — More than 1,000 people have died in the Ebola outbreak in Congo, according to Africa's top health body, a grim toll…"
+    },
+    {
+      "title": "Zelenskyy speaks to US envoys, discusses weapons",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817772",
+      "published_at": "2026-07-23T03:10:01+00:00",
+      "snippet": "Ukrainian President Volodymyr Zelenskyy and US envoys Steve Witkoff and Jared Kushner spoke Wednesday about the prospects ‌for pursuing more active diplomacy and moving towards…"
     },
     {
       "title": "Red Sox match club record of 15 straight wins, then lose nightcap of doubleheader with Orioles",
@@ -1550,6 +2099,16 @@
       "snippet": "Human-caused climate change has intensified Europe's drought by making extreme heat, rather than low rainfall, the main driver of exceptionally dry conditions, an international team…"
     },
     {
+      "title": "US and Saudi Arabia sign new nuclear agreement",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817771",
+      "published_at": "2026-07-23T03:08:29+00:00",
+      "snippet": "WASHINGTON (AP) — The US and Saudi Arabia on Wednesday forged a new agreement that could potentially provide the kingdom with uranium enrichment capability…"
+    },
+    {
       "title": "Macquarie orders ‘integrity’ review amid questions over KPMG audit win",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -1570,6 +2129,16 @@
       "snippet": "Psychological wounds compound Najwa's physical injuries after losing her daughter in an Israeli air strike."
     },
     {
+      "title": "Passengers in Texas ICE shooting say officers not in danger, driver was parking when shots fired",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817769",
+      "published_at": "2026-07-23T03:06:51+00:00",
+      "snippet": "The immigration officer who shot and killed 52-year-old Lorenzo Salgado Araujo in Houston was not in danger of being run over, two passengers…"
+    },
+    {
       "title": "Rebel Wilson cleared of defaming an actor who starred in her directorial debut",
       "source": "Associated Press",
       "country": "INT",
@@ -1577,6 +2146,36 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTnZ5WWtFTkZoRTN4NzRySWNjVnZ4N2RZLXNNSFBYYjFOVUtnLXczWUxtVS1pZDNQZVhYX3VzNnZiVmVHbHBpX1Znd1Jha3ROUzBFOGRlQzFTY25kZVR4cUxwWHhNUk1tZ3JxWmFPSlpZWlpwOEdieHRQZHgyZi1DUGZxa0tEMmR3ZEVRbUo0d1k1V0FqdDZlMmhCNWk?oc=5",
       "published_at": "2026-07-23T03:06:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Lebanon PM says Beirut working for 'complete Israeli withdrawal'",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817768",
+      "published_at": "2026-07-23T03:04:37+00:00",
+      "snippet": "Lebanon is working toward a \"complete Israeli withdrawal\" from areas it occupies, Prime Minister Nawaf Salam said Wednesday on a visit to a village where…"
+    },
+    {
+      "title": "Gaza shows what truces without rules look like",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/opinion/editorial/2026/07/23/gaza-palestine-israel-middle-east/",
+      "published_at": "2026-07-23T03:00:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "From long-distance truck driver to restaurant owner: How cricket shaped the life of UAE’s Matiullah Khan",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/sport/cricket/2026/07/23/from-long-distance-truck-driver-to-restaurant-owner-how-cricket-shaped-the-life-of-uaes-matiullah-khan/",
+      "published_at": "2026-07-23T03:00:00+00:00",
       "snippet": ""
     },
     {
@@ -1650,6 +2249,16 @@
       "snippet": ""
     },
     {
+      "title": "HRM floats new idea to treat water quality",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1OcU8yS3p6UWVvajAyeUJIdG5DRk0xT0Y1aVNucEEybnBSTlBlQjNqcEU1cG9CNnlVR1Z0eVhHVnBQc2lGNk1mTGFFTDFqeDJ1d3pPdHljV0xxZw?oc=5",
+      "published_at": "2026-07-23T02:41:12+00:00",
+      "snippet": ""
+    },
+    {
       "title": "OpenAI models pulled off hack in hours that usually takes weeks",
       "source": "The Japan Times",
       "country": "JP",
@@ -1658,6 +2267,16 @@
       "url": "https://www.japantimes.co.jp/business/2026/07/23/tech/openai-hack-hours-weeks/",
       "published_at": "2026-07-23T02:41:00+00:00",
       "snippet": "OpenAI said in a blog post that the \"unprecedented\" hack at Hugging Face occurred after its own AI models escaped a testing environment to reach…"
+    },
+    {
+      "title": "S. Korea, Japan lead Asia in life expectancy at 84.1 years: study",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817748",
+      "published_at": "2026-07-23T02:40:18+00:00",
+      "snippet": "The high-income Asia-Pacific region, which includes South Korea and Japan, recorded Asia’s highest average life expectancy at 84.1 years in 2023, a study showed."
     },
     {
       "title": "Kesha surprises Newfoundland singer on stage | The Moment",
@@ -1720,6 +2339,16 @@
       "snippet": "Saudi Arabia says one of its ships hit in Red Sea, causing fire, though crew safe * US House approves $1 trillion defense bill…"
     },
     {
+      "title": "Central Sulawesi forum ready to advance sustainable palm oil",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423699/central-sulawesi-forum-ready-to-advance-sustainable-palm-oil",
+      "published_at": "2026-07-23T02:33:49+00:00",
+      "snippet": "The Central Sulawesi Sustainable Palm Oil Multi-Stakeholder Forum (FMPSB-Sulteng) was officially launched on Tuesday ..."
+    },
+    {
       "title": "- AFR",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -1758,6 +2387,26 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRmlLUmxUdC1vcDA4RHpZNlY5MHRtcWxWWkJidjZ2M1VsVzRYaWw4eHdXZmN3NERJQmNaVzNpNjZMdXFGb1pKTHlsWXRGNlBGendTMXM0bDZFWlBuLXFKb1d0azRrYTZYbi1GY082aUJIa2FlWmljMkx2V2N6TTJTOTRmSnN1Vjk1MXFsRlZJUzAxOGp1ZW50akstVXgzRE5YVDNjNkNFeVRLRjdFYXc1bFlhMmNDNzZRMHF5M0oxdw?oc=5",
       "published_at": "2026-07-23T02:31:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Stray Kids hint at retro kitsch with 10th EP teaser",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817710",
+      "published_at": "2026-07-23T02:30:56+00:00",
+      "snippet": "Stray Kids uploaded a series of teaser photos for its upcoming 10th EP “This & That” on Thursday via label JYP Entertainment."
+    },
+    {
+      "title": "Comic-Con 2026: Marvel returns to Hall H and 'Spaceballs' sequel hype begins",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817701",
+      "published_at": "2026-07-23T02:29:33+00:00",
+      "snippet": "SAN DIEGO (AP) -- The Avengers appear set to return to Hall H as Marvel Studios uses Comic-Con International to build hype for the December…"
     },
     {
       "title": "Two Chinese supertankers with Saudi oil head to Bab el-Mandeb for Red Sea exit",
@@ -1810,6 +2459,16 @@
       "snippet": ""
     },
     {
+      "title": "New York Mayor Mamdani urges US to enforce ICC arrest warrant for 'war criminal' Netanyahu",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/us/2026/07/23/new-york-mayor-mamdani-urges-us-to-enforce-icc-arrest-warrant-for-war-criminal-netanyahu/",
+      "published_at": "2026-07-23T02:15:34+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Louvre reopens Apollo Gallery after a brazen heist, but no jewels are on display",
       "source": "Associated Press",
       "country": "INT",
@@ -1838,6 +2497,16 @@
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPX1c0TDYydFZDcGo4SHNSLWJPbEtXaVRYRWxQWEJmX2lKR0tMS2V4RVNXN2wzeXBDQTNVUWFTcm9CdzhGX2V6XzR6NnpaZFpJZldwNk1jQUlmMm5SQnhVNWlseTc2X0FvTlVQdjh3Sm5JWW5RSDJhNEN3LVFBWnFhQ2VneTRlNF9qc0s1VlRGbFdlamhxNE9pTk9uQUkxb0pjaml4N3d2dldxTG5SRmRz?oc=5",
       "published_at": "2026-07-23T02:14:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Woodz cast in Joseon-era actioner 'Nambeol'",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817638",
+      "published_at": "2026-07-23T02:13:02+00:00",
+      "snippet": "Woodz is picking up a bow and arrow for his next screen outing. Production company Hive Media Corp said Thursday that the singer-songwriter, whose real…"
     },
     {
       "title": "Top diplomats gather for security forum in Southeast Asia",
@@ -1870,7 +2539,7 @@
       "snippet": "Controlling the yield curve to tamp down borrowing costs is a tactic Japan has deployed in the past, between 2016 and 2024."
     },
     {
-      "title": "Like Jacinta Price, algorithm could halt Pauline Hanson’s rise",
+      "title": "The algorithm could halt Pauline Hanson’s rise, as it did for Jacinta Price",
       "source": "Australian Financial Review",
       "country": "AU",
       "lean": "centre-right",
@@ -1878,6 +2547,16 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbzIzWmc3YkRScXFUbG5RTk5mYzlfTHNHWEg5TWFLQVYzdl9fSE5URmdSYXp6YTgyMjM0ZTRmb0IzVWdrUnVZdEdCTkJjNHhGOHFkSGdDbmg4RnpIRnhkb0NEaTR5ODRvMlk5T2J3YTB1UGVvTjlHTURWWXNWNVpJTTBHRkpnd050UVVxTjRtb253eURpWE8wNlo2eDVUdWE4ZVVfOE1qQmdRdXE0X0E0bGFJcmI?oc=5",
       "published_at": "2026-07-23T02:11:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Lee pledges to confront housing bubble, even at ‘political cost’",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817629",
+      "published_at": "2026-07-23T02:10:18+00:00",
+      "snippet": "President Lee Jae Myung pledged to push ahead with housing policy reforms despite expected “conflict and resistance” and even at a “political cost,” warning…"
     },
     {
       "title": "Firefighters battle one of Spain's biggest-ever wildfires during heat wave across the Mediterranean",
@@ -2040,6 +2719,26 @@
       "snippet": ""
     },
     {
+      "title": "Lotte World to widen IP-based attractions with Kong x Godzilla debut",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817557",
+      "published_at": "2026-07-23T01:50:40+00:00",
+      "snippet": "Lotte World Adventure will gradually expand attractions built around outside intellectual property, its chief executive said Wednesday, as the Seoul theme park prepared to open…"
+    },
+    {
+      "title": "15th Inuit Circumpolar Council General Assembly gets underway in Iqaluit",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBndE9VRmlvN0g0UUMxUkV4WXNoVHhjOU5MeGk0Y3BaNzdUQkRSVXRURDU4XzlhR0otTGM5WTMxS3ZjX3VHekJOcC1YNlhkUzE5NXFRdzU3LTNHZw?oc=5",
+      "published_at": "2026-07-23T01:48:46+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Liberty's Sabrina Ionescu addresses absence from WNBA 3-point contest: 'Never officially got invited'",
       "source": "Fox News (US, right)",
       "country": "US",
@@ -2100,7 +2799,17 @@
       "snippet": ""
     },
     {
-      "title": "Gold off two-week peak as oil advances; Fed meeting in focus",
+      "title": "Fifty Fifty to visit Manila for 1st fan concert tour",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817525",
+      "published_at": "2026-07-23T01:38:16+00:00",
+      "snippet": "Fifty Fifty will head to Manila, Philippines, in September for its first fan concert tour, its agency Attract announced Thursday."
+    },
+    {
+      "title": "Gold slips from two-week peak as oil advances; Fed meeting in focus",
       "source": "Reuters",
       "country": "INT",
       "lean": "centre",
@@ -2150,6 +2859,16 @@
       "snippet": "National emergency test alert will be sent to all mobile devices on 27 July, with domestic violence advocates advising how to turn off safe phones…"
     },
     {
+      "title": "Canadian woman works as Matt Damon's stunt double in The Odyssey",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5PdUFLaExHbF9nS3lWemk2RmpodkpSdXoza1pmdWM2MWpPa2NsbGFEeGJoaUJFUWJPc2dPNlRVNHRrZjVBczNCcVN1UXJSbmdNY1VfN1l6SkNjZw?oc=5",
+      "published_at": "2026-07-23T01:31:14+00:00",
+      "snippet": ""
+    },
+    {
       "title": "China’s crackdown on AI companions won’t fill the emotional void",
       "source": "South China Morning Post",
       "country": "CN",
@@ -2178,6 +2897,16 @@
       "url": "https://www.japantimes.co.jp/news/2026/07/23/world/heat-war-europe-grain-harvest/",
       "published_at": "2026-07-23T01:30:00+00:00",
       "snippet": "High temperatures are expected to cut the region's corn crop to the smallest in 19 years, as the Middle East conflict conflict has pushed up…"
+    },
+    {
+      "title": "Samsung vows to keep Galaxy foldables cheapest at home",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817502",
+      "published_at": "2026-07-23T01:27:44+00:00",
+      "snippet": "LONDON — Samsung Electronics said Wednesday it would continue to offer its most competitive Galaxy foldable pricing in Korea, even as soaring memory costs threaten…"
     },
     {
       "title": "Police officer fatally shoots man in Madison, Wisconsin, sparking protests",
@@ -2260,6 +2989,16 @@
       "snippet": "With Lula polling ahead and tariffs squeezing Brazil's economy, the Bolsonaro family's Washington strategy is faltering."
     },
     {
+      "title": "Seventeen rakes up 300m views with ‘Super’ music video",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817477",
+      "published_at": "2026-07-23T01:19:46+00:00",
+      "snippet": "Seventeen garnered 300 million hits on YouTube with the music video for “Super,” its agency Pledis Entertainment said Wednesday."
+    },
+    {
       "title": "CEBL: Edmonton at Calgary",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -2268,6 +3007,16 @@
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBCdDdROTBTdE9Ha2x5OUNwXzc3X0swOEMzejhFZlZhYm1wTmR0ZEhHY1JWdDhiRXFOUl9SV2FqVWRIbjBYaUc0aEttcURfMjY2d3Q5WTRwemg1QQ?oc=5",
       "published_at": "2026-07-23T01:18:58+00:00",
       "snippet": ""
+    },
+    {
+      "title": "TXT’s Yeonjun hits career high in Japan with second solo set",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817469",
+      "published_at": "2026-07-23T01:17:23+00:00",
+      "snippet": "Yeonjun of Tomorrow X Together ranked No. 2 on Oricon’s Weekly Combined Album Ranking with his second solo EP, according to the latest chart published…"
     },
     {
       "title": "Pichai pushes back on claims Google is losing ground in AI race",
@@ -2307,6 +3056,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5YVHVMRHRJMFJBYjZPWFZ0S0twamoyeGtzQS1vTkF3bE1LMlQxTjM2NzRKT0dGZWd1ckdHMnNnUDZwTERnYm84QWo1Qko3Yjlo?oc=5",
       "published_at": "2026-07-23T01:15:13+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "2 central Alberta tornadoes confirmed as 'significant' EF-2 twisters as active season continues",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNaEtEVWI0cElBRmZCSXpMMlNLQ3FESGs2SW1PMTIyTWtMcXdjZVZZN2Y5R2VzOUliWURrdkwzdHQ0TFphN1lGblB4NFZ2NE93Tmd6N2d2emlva3JiZFFwNE1mTjAxWW5Oc2VWeWVOY2pDb3N4UmliN0tKR1ZOR0p5TzR6MWlxMHVIS1gtb3lqRQ?oc=5",
+      "published_at": "2026-07-23T01:15:00+00:00",
       "snippet": ""
     },
     {
@@ -2367,16 +3126,6 @@
       "paywall": "hard",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUkZ2aWF0YWV3NWNuQndvYzRXWkZXVDlZOE1GcVRFelhUcnBwdFE0aEtWbXR5c2FDa2JSbXRBRnBXaDhvdzMyUmZNc2JsODNfVEZtWVRpVzFKSlRTWmk1QklOWkZ0RWNtQ1U4bkdjMmR3RXdiWDQyRzRYc3R6RzBkbzBSZkROUkt2X2QtbWI2bw?oc=5",
       "published_at": "2026-07-23T01:11:28+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "HRM floats new idea to treat water quality",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1OcU8yS3p6UWVvajAyeUJIdG5DRk0xT0Y1aVNucEEybnBSTlBlQjNqcEU1cG9CNnlVR1Z0eVhHVnBQc2lGNk1mTGFFTDFqeDJ1d3pPdHljV0xxZw?oc=5",
-      "published_at": "2026-07-23T01:11:12+00:00",
       "snippet": ""
     },
     {
@@ -2458,6 +3207,16 @@
       "url": "https://www.scmp.com/news/asia/east-asia/article/3361522/south-korea-charges-former-us-diplomat-defaming-lee-jae-myung?utm_source=rss_feed",
       "published_at": "2026-07-23T01:05:12+00:00",
       "snippet": "South Korean prosecutors have charged Korean-American professor Morse Tan for criminal defamation over false claims targeting President Lee Jae Myung."
+    },
+    {
+      "title": "Indonesia, China prioritize key projects under Twin Parks scheme",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423696/indonesia-china-prioritize-key-projects-under-twin-parks-scheme",
+      "published_at": "2026-07-23T01:05:06+00:00",
+      "snippet": "Indonesia and China agreed to accelerate the implementation of the Two Countries Twin Parks (TCTP) initiative by ..."
     },
     {
       "title": "US military carries out strikes on Iran as both sides threaten civilian infrastructure",
@@ -2560,6 +3319,26 @@
       "snippet": "China has brought online a record-breaking particle accelerator that can produce the world’s most intense beams of charged atoms."
     },
     {
+      "title": "Reform Party floor leader slams DCC for 'hiding' defense minister's military records",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817429",
+      "published_at": "2026-07-23T00:59:14+00:00",
+      "snippet": "Reform Party Floor Leader Rep. Chun Ha-ram on Tuesday upped the attack against Defense Minister Ahn Gyu-back, raising questions over Ahn's military service and against…"
+    },
+    {
+      "title": "Pyongyang: One of the great centers of Goguryeo civilization",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10817428",
+      "published_at": "2026-07-23T00:59:07+00:00",
+      "snippet": "For centuries, historians have debated a deceptively simple question: Where was the capital of Goguryeo?"
+    },
+    {
       "title": "Iran strikes on CIA facilities prompt questions about possible Russian role",
       "source": "The Japan Times",
       "country": "JP",
@@ -2660,16 +3439,6 @@
       "snippet": ""
     },
     {
-      "title": "15th Inuit Circumpolar Council General Assembly gets underway in Iqaluit",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBndE9VRmlvN0g0UUMxUkV4WXNoVHhjOU5MeGk0Y3BaNzdUQkRSVXRURDU4XzlhR0otTGM5WTMxS3ZjX3VHekJOcC1YNlhkUzE5NXFRdzU3LTNHZw?oc=5",
-      "published_at": "2026-07-23T00:45:00+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Workforce capability holds the key to Australia’s AI success",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -2730,7 +3499,7 @@
       "snippet": "Mazal Tazazo said a video NYC Mayor Zohran Mamdani released calling Israeli Prime Minister Benjamin Netanyahu a \"war criminal\" is \"dangerous.\""
     },
     {
-      "title": "Oil prices rise to six-week high as US-Iran tensions escalate",
+      "title": "Oil prices rise for a fifth day on supply concerns amid chokepoint threats",
       "source": "Reuters",
       "country": "INT",
       "lean": "centre",
@@ -2890,6 +3659,16 @@
       "snippet": "The US is carrying out its 12th night of strikes on Iran. Meanwhile, Yemen's Houthis are claiming attacks on Saudi oil tankers in the Red…"
     },
     {
+      "title": "ICE drops plan to convert 2 Pennsylvania warehouses into detention centers",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWlRVb1ljWmFjNmE4dUd1VDFBajF5a05paG1SQ0t5bUQ5NkFjZWx4Q1pjaUVrRFBxam1RQ2QydnNhSkZBSGktQlJ0RXhMNENuUG1kZmFOY0I3Z2pWeGthX085cnZWbllXWHowWTluaGt0ZldCSVpxcklzTklnZjZoTHFsRmFjZFQyV3ZQTGNMQkZ3dmRLZmVRbjNNSDQ4STRMTTRTVDdMZkxUZmZJV0E?oc=5",
+      "published_at": "2026-07-23T00:19:07+00:00",
+      "snippet": ""
+    },
+    {
       "title": "CATAPULT LAUNCHES IMPECT VIDEO SCOUTING - company-announcements.afr.com",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -2940,24 +3719,14 @@
       "snippet": "Canada's dairy supply management system is in the spotlight after the US president singled it out as one of three main irritants used to justify…"
     },
     {
-      "title": "ICE drops plan to convert 2 Pennsylvania warehouses into detention centers",
-      "source": "Associated Press",
-      "country": "INT",
+      "title": "Record Launches \"Record Amanah\" Sharia-Compliant Investment Platform",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
       "lean": "centre",
       "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWlRVb1ljWmFjNmE4dUd1VDFBajF5a05paG1SQ0t5bUQ5NkFjZWx4Q1pjaUVrRFBxam1RQ2QydnNhSkZBSGktQlJ0RXhMNENuUG1kZmFOY0I3Z2pWeGthX085cnZWbllXWHowWTluaGt0ZldCSVpxcklzTklnZjZoTHFsRmFjZFQyV3ZQTGNMQkZ3dmRLZmVRbjNNSDQ4STRMTTRTVDdMZkxUZmZJV0E?oc=5",
-      "published_at": "2026-07-23T00:09:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "National Guard deploys as flash floods in West Virginia inundate homes and businesses",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRk5zQXRqY2FRR0FtRWJNcHJQLUJIQ2NqMU5tWHR5bmlYLTU2Q3hGclFSWTgyN3ZXT3h5NWJUWGJmc05sbXBiU0M4bEJVQVVxZnVpbmxkY2h1aUd4OU1TZHp3bG9SWFRvMWhqLXpDc1kycTl3VFhHU3pORkQySHpvalNtdTJ5ZHlWUWNPRHk1Mk8xdw?oc=5",
-      "published_at": "2026-07-23T00:08:00+00:00",
-      "snippet": ""
+      "url": "https://en.antaranews.com/news/423692/record-launches-record-amanah-sharia-compliant-investment-platform",
+      "published_at": "2026-07-23T00:14:18+00:00",
+      "snippet": "-Record Asset Management GmbH (RAM), subsidiary of London-listed Record plc (Record Financial Group), is pleased to ..."
     },
     {
       "title": "Houthis target Saudi tankers in Red Sea, threatening another Iran war chokepoint",
@@ -2987,6 +3756,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQY1NlZGd1NmVsLVpmTzJfSnZBeDJCUXR5MG02WDMzcF9RMFVxY005bWNmS1BIRk5SWW1zVko4VnFTQ2JqQ0psMG9ndEFBR2VhY1FnY3dRMXV0cXR2ZWJsdnEyeGE4X2FqaVVFaktRZHpJTXZlcXRrYmZQeWtFTkRGZFlpMS1SOVlKM1BkSFpWTjdRUnAzako2M1FFM1NFSEVaazYyTzBmRQ?oc=5",
       "published_at": "2026-07-23T00:02:01+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Cartoon for July 23, 2026",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/opinion/cartoon/2026/07/23/us-iran-war/",
+      "published_at": "2026-07-23T00:01:00+00:00",
       "snippet": ""
     },
     {
@@ -3410,6 +4189,26 @@
       "snippet": ""
     },
     {
+      "title": "Community-focused journalism: The strategy for countering Donald Trump",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/usa/2026-07-22/community-focused-journalism-the-strategy-for-countering-donald-trump.html",
+      "published_at": "2026-07-22T23:10:52+00:00",
+      "snippet": "At the largest Hispanic journalism conference, EL PAÍS hosts a conversation on the challenges facing the press in the U.S."
+    },
+    {
+      "title": "Jan Martínez Ahrens: ‘Rarely has a free press been under greater threat’",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/usa/2026-07-22/jan-martinez-ahrens-rarely-has-a-free-press-been-under-greater-threat.html",
+      "published_at": "2026-07-22T23:10:38+00:00",
+      "snippet": "The editor-in-chief of EL PAÍS emphasizes the newspaper’s commitment to the United States at the NAHJ annual conference: ‘We see the U.S."
+    },
+    {
       "title": "Press Release July 22, 2026 James Hardie Announces Preliminary First Quarter FY 2027 Results, Exceeding Prior Guidance on Stren - company-announcements.afr.com",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -3468,6 +4267,16 @@
       "url": "https://www.theguardian.com/uk-news/2026/jul/23/uk-mosque-attacks-british-muslim-trust",
       "published_at": "2026-07-22T23:01:27+00:00",
       "snippet": "More than 70 attacks have been recorded over past year, including acts of violence, property damage and vandalism One mosque is attacked in Britain every…"
+    },
+    {
+      "title": "Alphabet increases spending outlook as it races to build AI data centres",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/business/2026/07/22/alphabet-increases-spending-outlook-as-it-races-to-build-ai-data-centres/",
+      "published_at": "2026-07-22T23:00:20+00:00",
+      "snippet": ""
     },
     {
       "title": "Morena rolls out anti-corruption screening for 2027 candidates",
@@ -3630,6 +4439,16 @@
       "snippet": "Amid allegations of mismanagement, Gayton McKenzie aims to stop a forensic investigation into his Central Karoo fundraising efforts, questioning the legitimacy of the probe’s duration…"
     },
     {
+      "title": "Tesla profit falls short of expectations as operating costs rise",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/business/2026/07/22/tesla-profit-falls-short-of-expectations-as-costs-rise/",
+      "published_at": "2026-07-22T22:36:24+00:00",
+      "snippet": ""
+    },
+    {
       "title": "How did TTC service fare during Toronto's World Cup match days? Here's what the data shows",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -3688,6 +4507,16 @@
       "url": "https://www.aljazeera.com/video/newsfeed/2026/7/22/austrian-home-where-hitler-was-born-reopened-as-police-station?traffic_source=rss",
       "published_at": "2026-07-22T22:30:44+00:00",
       "snippet": "For decades, neo-Nazis and far-right extremists flocked to the Austrian home where Adolf Hitler."
+    },
+    {
+      "title": "JUSTICE, WHAT JUSTICE: Controversial Gauteng DPP Andrew Chauke cleared by Nkabinde Inquiry",
+      "source": "Daily Maverick (South Africa)",
+      "country": "ZA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://www.dailymaverick.co.za/article/2026-07-22-controversial-gauteng-dpp-andrew-chauke-cleared-by-nkabinde-inquiry/",
+      "published_at": "2026-07-22T22:30:00+00:00",
+      "snippet": "President Cyril Ramaphosa has cleared South Gauteng Director of Public Prosecutions Andrew Chauke to return to work after the Nkabinde Inquiry found no evidence…"
     },
     {
       "title": "WASPAN challenges FCCPC’s digital lending powers at Court of Appeal",
@@ -4220,6 +5049,16 @@
       "snippet": "The governor said that education is the most powerful instrument for reducing poverty, promoting peace, strengthening security, stimulating economic growth, and preparing future generations…"
     },
     {
+      "title": "Can the premiers stay united against Trump's tariff threat?",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBvVks0ZFdISmd1NU4wTE1vQnlyYThwUTNNSGFuWFBKWU1vWEFQc0dLUmRoMkdBdkMxa2ZDdDdPVVdKak10cEwxQVJwTWJyTTc0R1hVdFRkVVUtQQ?oc=5",
+      "published_at": "2026-07-22T21:45:01+00:00",
+      "snippet": ""
+    },
+    {
       "title": "As Trump Renews Assault on Iran, Dems Prepare Another War Powers Resolution",
       "source": "Common Dreams (US, left)",
       "country": "US",
@@ -4500,6 +5339,16 @@
       "snippet": "The water supplier (SIAPA), the Jalisco state Congress and the state Human Rights Commission are all involved in compensating residents for not receiving the clean…"
     },
     {
+      "title": "US-Canada bridge has been years in the making. But tension between countries is sapping the joy",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVEY3d2FsWndBQkgzSk9pdE5vS3duWTRuV1ZScWU4ZjRQYTJRaFJuUVRabEJQRTZ2VnNpclVIcTVvS0lTTFZhTG42NlBXa3EyY29KQ3Y3ZlVvbmJpREpOQ05LM3ozR1NYcGdTelNxQVB1azN2aHRYWTdoU1h3UXRDTmJpVi0zZHpvcklDX0xGbkpZM2ZPZnVXZXpNSUM?oc=5",
+      "published_at": "2026-07-22T21:12:54+00:00",
+      "snippet": ""
+    },
+    {
       "title": "European Union gives its greenlight to Paramount and Warner's mega merger with some conditions",
       "source": "Associated Press",
       "country": "INT",
@@ -4580,16 +5429,6 @@
       "snippet": "The man convicted of trying to kill Salman Rushdie spent years researching the writer’s whereabouts before stabbing him on a lecture stage, federal prosecutors said…"
     },
     {
-      "title": "US-Canada bridge has been years in the making. But tension between countries is sapping the joy",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVEY3d2FsWndBQkgzSk9pdE5vS3duWTRuV1ZScWU4ZjRQYTJRaFJuUVRabEJQRTZ2VnNpclVIcTVvS0lTTFZhTG42NlBXa3EyY29KQ3Y3ZlVvbmJpREpOQ05LM3ozR1NYcGdTelNxQVB1azN2aHRYWTdoU1h3UXRDTmJpVi0zZHpvcklDX0xGbkpZM2ZPZnVXZXpNSUM?oc=5",
-      "published_at": "2026-07-22T21:04:00+00:00",
-      "snippet": ""
-    },
-    {
       "title": "BC Today - July 22, 2026",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -4628,6 +5467,66 @@
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Fa1V6OVh3LWJCQlBvVGtOeVBrM0QyU2RReGJRNm9xNURnNzlQbnBxZGtZdkthYjl3cF9iV2JqWGNBYnVDcEpmeDNEcDVIQXF4dGp6ZEwzbEl5QQ?oc=5",
       "published_at": "2026-07-22T21:01:32+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Will Gachagua’s revenge last?",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/blogs-opinion/opinion/will-gachagua-s-revenge-last--5534704",
+      "published_at": "2026-07-22T21:00:00+00:00",
+      "snippet": "Some people have been quick to declare President Ruto's goose cooked."
+    },
+    {
+      "title": "Stop utterances that sabotage prosperity",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/blogs-opinion/editorials/stop-utterances-that-sabotage-prosperity-5534890",
+      "published_at": "2026-07-22T21:00:00+00:00",
+      "snippet": "Political competition should be rational and not a zero-sum game."
+    },
+    {
+      "title": "Psychosocial wellbeing is vital for operational safety",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/psychosocial-wellbeing-is-vital-for-operational-safety-5534646",
+      "published_at": "2026-07-22T21:00:00+00:00",
+      "snippet": "A safe workplace is not only one that protects people from physical harm, but also one that..."
+    },
+    {
+      "title": "Enhance transparency",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/blogs-opinion/editorials/enhance-transparency-5534892",
+      "published_at": "2026-07-22T21:00:00+00:00",
+      "snippet": "Transparency must be enhanced in all judicial proceedings."
+    },
+    {
+      "title": "Commissioner Sharawe, a true public servant",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/commissioner-sharawe-a-true-public-servant-5534688",
+      "published_at": "2026-07-22T21:00:00+00:00",
+      "snippet": "Thank you for your guidance, mentorship, and the invaluable lessons."
+    },
+    {
+      "title": "AI influence in education",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/blogs-opinion/blogs/ai-influence-in-education-5534668",
+      "published_at": "2026-07-22T21:00:00+00:00",
+      "snippet": "Perhaps, the greatest benefit of inculcating AI into learning and teaching is that it saves time."
     },
     {
       "title": "La Caisse pours $300m into Costa family-backed agriculture fund",
@@ -4670,6 +5569,16 @@
       "snippet": "Moving, tragic, surprising, inspiring, terrifying, shocking... This is a selection of images from our planet, over the past seven days."
     },
     {
+      "title": "EACC targets politicians splashing millions in empowerment programmes",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/news/eacc-targets-politicians-splashing-millions-in-empowerment-programmes-5534788",
+      "published_at": "2026-07-22T20:56:35+00:00",
+      "snippet": "The anti-graft agency questioned whether some leaders are living beyond their known legitimate..."
+    },
+    {
       "title": "Fire kills 10 members of same family in Peru, police say",
       "source": "BBC News - World",
       "country": "GB",
@@ -4678,6 +5587,16 @@
       "url": "https://www.bbc.co.uk/news/articles/cm2g11ng7j2o?at_medium=RSS&at_campaign=rss",
       "published_at": "2026-07-22T20:56:26+00:00",
       "snippet": "Authorities are investigating the cause of the blaze in Lima as local media report it may have been arson."
+    },
+    {
+      "title": "US Treasury signals years-long plan to rebuild Iraq banking sector",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/business/banking/2026/07/22/us-treasury-signals-years-long-plan-to-rebuild-iraq-banking-sector/",
+      "published_at": "2026-07-22T20:51:35+00:00",
+      "snippet": ""
     },
     {
       "title": "Congo’s Ebola outbreak has killed over 1,000 people",
@@ -4750,6 +5669,16 @@
       "snippet": "Israeli report says US told Jerusalem it will step up strikes in coming days, will likely hit Pickaxe nuclear site; Trump pledges to target bridge…"
     },
     {
+      "title": "Senate committee backs Trump nominee to lead US Middle East policy",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/us/2026/07/22/senate-committee-backs-trump-nominee-to-lead-us-middle-east-policy/",
+      "published_at": "2026-07-22T20:34:46+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Sask. businesses grapple with latest U.S. tariff threat",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -4798,6 +5727,16 @@
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMEdqUmdHQ3Jyc2xnMHZxZG1NOGlQaEp1Ry1rTlRNdllGZmlDYkM1dVp0aXowT1ZYNVhaWno1N24tWVJxbWVBZmZ1V1hvNHp2WlNPU0kyZ1N1TUcwNEdaMWIwd0p3MWpQQlJGWTNrdk03aWs2TEJpamJJVzZXZllrY1lsRnZGYzdfOENuRDBWVDVfM3l5MWVwY0lhLVVjTHphaFhkdkhYbVF6a2NyWW5xdzhTUXpkaHM?oc=5",
       "published_at": "2026-07-22T20:22:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Jaime Alemán, the first man to travel to all 193 UN member states, the polar regions and outer space: ‘Tanzania is the place where God started the world’",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/travel/2026-07-22/jaime-aleman-the-first-man-to-travel-to-all-193-un-member-states-the-polar-regions-and-outer-space-tanzania-is-the-place-where-god-started-the-world.html",
+      "published_at": "2026-07-22T20:21:16+00:00",
+      "snippet": "The 72-year-old Panamanian is a former minister, lawyer and diplomat. And, right now, he is focused on a new adventure: telling his story."
     },
     {
       "title": "Commonwealth Games Channel: DAY 1, Glasgow 2026",
@@ -4950,16 +5889,6 @@
       "snippet": ""
     },
     {
-      "title": "Zelenskiy speaks to US envoys, discusses weapons",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbXN0MFFZcnlnTjhuZXJuNVNhNElEejlVWVRGdnJmMU5rckhXNDdSQTFtV0tPa2kyTG9hOWhXamw3ZGs5V1Z5SGxfZUk3N0lSNnFWczFqdzBJclRVbTNOSjdHLU9WbWsyRmVoRVlBcGFYb20xeVAtMEhMOWxNMUJMS1VQMmVIc0owNGhwUVJHb1puMlU0bk55OA?oc=5",
-      "published_at": "2026-07-22T19:57:09+00:00",
-      "snippet": ""
-    },
-    {
       "title": "The best ways to avoid (and treat) heat rash and sun poisoning, according to derms",
       "source": "NBC News (US)",
       "country": "US",
@@ -4988,6 +5917,16 @@
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQSVdjZXNFbFZLb3U5eTZGQVhVRDBoWTlIanA1dTJQVXh0QzJxUV9lRFIyczRTZWp1NnotRXQwZzY1SW9hcm1ndWMxWmNfWmRGYUVVVUVQam5idnJPN00tQ2F2MVp3VThvSHA1MjFHUDZlOFBISXZRRTZESk9xUTljU21LTGV3WGZYYWlkVFVrNzl4T0RlMHlld18yb0hCSmNTZHJrai0ybEg2SzA1V0ktOEhjcw?oc=5",
       "published_at": "2026-07-22T19:51:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Trump’s new conditions on funding the fight against HIV/AIDS require service restrictions",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/health/2026-07-22/trumps-new-conditions-on-funding-the-fight-against-hivaids-require-service-restrictions.html",
+      "published_at": "2026-07-22T19:50:40+00:00",
+      "snippet": "Study reveals that 77% of US partners had to adapt their work to Washington’s latest policies, with conditions surrounding care for the LGBTQ+ community…"
     },
     {
       "title": "NYC can’t arrest Netanyahu but the federal government should, Mamdani says",
@@ -5098,6 +6037,16 @@
       "url": "https://www.france24.com/en/video/20260722-sex-trafficking-in-fashion-outrageous-that-french-legal-system-hasn-t-done-anything-by-now-1",
       "published_at": "2026-07-22T19:33:44+00:00",
       "snippet": "François Picard is pleased to welcome Dana Thomas, Paris-based journalist, specialising in fashion and culture, and author of \"Deluxe: How Luxury Lost Its Luster\"."
+    },
+    {
+      "title": "Food-related scams are flooding social media with hyper-realistic AI-generated videos",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/health/2026-07-22/food-related-scams-are-flooding-social-media-with-hyper-realistic-ai-generated-videos.html",
+      "published_at": "2026-07-22T19:32:40+00:00",
+      "snippet": "How this kind of content can compromise our health — not to mention, our wallet"
     },
     {
       "title": "Step inside the new ER at the Health Sciences Centre in St. John's",
@@ -5218,6 +6167,16 @@
       "url": "https://www.dailywire.com/news/police-say-teen-was-tortured-for-months-before-death",
       "published_at": "2026-07-22T19:01:39+00:00",
       "snippet": "A North Carolina man is accused of torturing his 19-year-old girlfriend for months before she was found dead inside an apartment, according to court documents."
+    },
+    {
+      "title": "Maduro back in court: criminal trial set to begin in June 2027",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/usa/2026-07-22/maduro-back-in-court-criminal-trial-set-to-begin-in-june-2027.html",
+      "published_at": "2026-07-22T19:01:24+00:00",
+      "snippet": "The deposed Venezuelan president was brought before Judge Alvin Hellerstein for his third pre-trial hearing in Manhattan"
     },
     {
       "title": "Cueva twins dominate Zapopan Diving Cup, cinching gold over China for the first time ever",
@@ -5640,6 +6599,16 @@
       "snippet": ""
     },
     {
+      "title": "The federal prosecutor fired by Trump less than an hour after taking office files a lawsuit",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/usa/2026-07-22/the-federal-prosecutor-fired-by-trump-less-than-an-hour-after-taking-office-files-a-lawsuit.html",
+      "published_at": "2026-07-22T18:02:18+00:00",
+      "snippet": "Roger Rogoff is seeking reinstatement as U.S. attorney for the Western District of Washington, arguing that his dismissal violated the law and the Constitution"
+    },
+    {
       "title": "What to know about Ukraine's military shakeup",
       "source": "NPR News (US)",
       "country": "US",
@@ -5668,6 +6637,16 @@
       "url": "https://www.dw.com/en/louvre-s-apollo-gallery-reopens-9-months-after-heist/a-78076701?maca=en-rss-en-all-1573-rdf",
       "published_at": "2026-07-22T17:58:00+00:00",
       "snippet": "The 17th-century Apollo Gallery reopened to the public without precious jewels or other objects previously on display."
+    },
+    {
+      "title": "Ford and Geely strike deal for EV production at Spanish plant, newspaper reports",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQb0tCY1kyVmU2SmI4WWhXQm11ZC1RNU1fTi1OOGoybHd5aDMtMjN2cFlKalNfTmRRekFUUVR1VERJMHgwX0FyVFRxQ25zd1hYbmZrT2RKWXN1WXQ1bkpCMGpnRWMzeXJUdnBfWTN0bnYyWk9YLXYtWDRqdU1VQ0otN1pMMExkYjJnSEFyOEdFTThSVTlMZGxLNFV2bFcwbWV3akRZRGUxZ2toVFdQZ0dxTm5SaU9fNFQ0RXFjNTh0dnJzNk9GSkZn?oc=5",
+      "published_at": "2026-07-22T17:57:00+00:00",
+      "snippet": ""
     },
     {
       "title": "Mamdani backs off pledge to arrest Netanyahu citing lack of authority",
@@ -5707,6 +6686,16 @@
       "paywall": "hard",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNU2ZnY2c2eWRzU201c2ltSkNhZnk2TEljSDRBSTZjUDJZdHdscFN4andfM1F4a01ONHRhMlF1Vk50ZzlCcXEwbUZzVEZzcFczUzFnLU9MNHZneks4cnRBZExGVThpRzhwWEY2akJiRGRuYWNaanNQSGV2UVRjcldZYUxqVTVpYzB3cWRDUjlmQVZnU1BLZ3VCTERTV2J5cUpva2dpRzZ3LVlobWJUdUNva3F2cVEwV1pyMl83dnNDRGFKWFhj?oc=5",
       "published_at": "2026-07-22T17:52:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Iran war latest: Houthis claim attacks on oil tankers as US completes 12th night of strikes on Iran",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/live-us-iran-strikes-hormuz-ships/",
+      "published_at": "2026-07-22T17:46:36+00:00",
       "snippet": ""
     },
     {
@@ -5750,6 +6739,16 @@
       "snippet": "Ukraine's president said he discussed reinvigorating diplomacy with US envoys Witkoff and Kushner. The talk followed strikes by Ukraine's military on warehouses belonging to Wildberries…"
     },
     {
+      "title": "Yemen's STC says rise in Houthi smuggling set stage for Red Sea blockade",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/gulf/2026/07/23/yemens-stc-says-rise-in-houthi-smuggling-set-stage-for-red-sea-blockade/",
+      "published_at": "2026-07-22T17:35:29+00:00",
+      "snippet": ""
+    },
+    {
       "title": "A Disease Once Thought Defeated Is Spreading Across America",
       "source": "The Daily Wire (US, right)",
       "country": "US",
@@ -5780,16 +6779,6 @@
       "snippet": "For more than a decade, there's been something fishy going on in a lake that straddles Vermont and the province of Quebec."
     },
     {
-      "title": "Porsche supervisory board backs tougher restructuring",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVlB3aWVZMmFYVEpGeGtmVU9XQ3ZoXzdfcUI2UEMzVUEyaGp3T19PaWU2OVRMQVlRY2JBa1pyaDdpd0pJVk1xUmxkQWtnazdLRXBYdDQ4VktXT0dEU1c4MzZyc1VXRkdiR2I5dTk3RGhMeDc5c0gzZFFnZ0J2VE0yZ3VGWDBOM01seG8tV2w2SXJaN3JyRERoWURfYzR4bnliVUg1aV9EOGJfZ0V4NmpFeG1DODI?oc=5",
-      "published_at": "2026-07-22T17:32:40+00:00",
-      "snippet": ""
-    },
-    {
       "title": "BofA equities traders say buy momentum stocks",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -5798,6 +6787,16 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxON1hVREN3ZXZWVUZ5dTJfWko2aHJnQlE0dkl2d0pCMHVlZjVuRTdlNzctNks5aGZxQmtRMDk0S3VVQThxZzRHalV2RWdFQjB2VG14Z0pDdkVlYUpjT0R2WWdDMmZ2em5uUEdmRTlMZ2thSjdxOEh1dDE1TUV0WlpBa3FVdmhKTmRVcHhMR3VuWDRoOTF1UUtsVFdoSEM0TC1TOTVXRWV2Zw?oc=5",
       "published_at": "2026-07-22T17:27:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Culture Ministry, ANTARA explore culture collaboration",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423689/culture-ministry-antara-explore-culture-collaboration",
+      "published_at": "2026-07-22T17:26:23+00:00",
+      "snippet": "The Indonesian Ministry of Culture and ANTARA News Agency explored opportunities for collaboration to support the ..."
     },
     {
       "title": "Author Charles Gaines, who popularized the world of bodybuilding with 'Pumping Iron,' dies at 84",
@@ -5818,6 +6817,16 @@
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdy1pekNQNmtROFlBSWxsbk9DR2FtbHZPZzdtVEVxYlFocnhiQWphU2Vma3ZvcDFmLWFGeDJadFQtNkRjb1lTaVhTY2h1M2h3bjZHM3pQMzI1TlFkZ2xSdmo1dUE5Ul9QY254UTRkOHBMVXVYT1ZfX29TYXVLRWdsLURld3dKMDZMT2tGd3BFWUtPYXIxWWdBNQ?oc=5",
       "published_at": "2026-07-22T17:23:56+00:00",
       "snippet": ""
+    },
+    {
+      "title": "BNPT calls for stronger community resilience against radicalism",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423685/bnpt-calls-for-stronger-community-resilience-against-radicalism",
+      "published_at": "2026-07-22T17:20:42+00:00",
+      "snippet": "The Indonesian National Counter-Terrorism Agency (BNPT) is focusing on strengthening community resilience to prevent ..."
     },
     {
       "title": "Tropical Storm Bertha Makes Landfall, Bringing Flood, Wind Threats",
@@ -5870,6 +6879,16 @@
       "snippet": "New York City Mayor Zohran Mamdani on Wednesday announced he was appointing Lina Khan, a leading champion of enforcing US antitrust laws, to serve…"
     },
     {
+      "title": "Court twist in SDA Church row with senior leaders",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/news/court-twist-in-sda-church-row-with-senior-leaders--5534018",
+      "published_at": "2026-07-22T17:15:00+00:00",
+      "snippet": "Judge reckons church dispute shouldn't have been heard by lower court."
+    },
+    {
       "title": "Ukraine overhauls its military top brass for the fight against Russia",
       "source": "Associated Press",
       "country": "INT",
@@ -5878,6 +6897,16 @@
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNODJpMnNybVUtamlPZzM2ZEJDU3dEQXV3T1NSXzBQOWI2R2ljNTltbE9VYzhqWVp3eVRZdHNFYWJ5SHc3Z29BR2ZNWGNsVk1ESjlfWEllQkNEeU1qMmt5cFVGbWh4d2lBeFU3NDhISVhCRmtFLTM1WEZBNm1DU05ZNmlZdjZUbmw1SFNGNFhVVjAyRDR0ZHA3REd3ZGdjV0hh?oc=5",
       "published_at": "2026-07-22T17:15:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Inside Sifuna-Matiang’i meeting ahead of homecoming jamboree",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/news/politics/inside-sifuna-matiang-i-meeting-ahead-of-homecoming-jamboree-5534532",
+      "published_at": "2026-07-22T17:14:17+00:00",
+      "snippet": "The Linda Mwananchi brigade will be in Kitale before a mega rally on Sunday."
     },
     {
       "title": "The Trump Admin Will Not Intervene On Behalf Of The Tate Brothers",
@@ -5980,6 +7009,16 @@
       "snippet": "Texas Democratic Senate candidate James Talarico is facing a growing revolt from black activists who are threatening to tank his campaign over what they describe…"
     },
     {
+      "title": "Behind symbolism of Lebanon's flag-planting, doubts persist over US peace plan",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/behind-symbolism-of-lebanons-flag-planting-doubts-persist-over-us-peace-plan/",
+      "published_at": "2026-07-22T17:01:22+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Iran war drains U.S. blood and treasure",
       "source": "Reuters",
       "country": "INT",
@@ -5998,16 +7037,6 @@
       "url": "https://www.dailywire.com/news/former-nfl-player-arrested-after-accidental-shooting-involving-toddler",
       "published_at": "2026-07-22T16:55:30+00:00",
       "snippet": "Former Miami Dolphins and Texas A&M University running back Le’Veon Moss was arrested on a charge alleging cruelty to juveniles Monday in Baton Rouge, Louisiana."
-    },
-    {
-      "title": "Alaska Air says its underlying business strengthened despite fuel-hit quarter",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPXzVINHdQc1V6aXRiU2lycE11WjFWYjB2aS1FMWpUcE5vaTRsSTFGMTFvNXBWX3Y3ZDZROWVBY29fWFFPOGxVNUhFa1VUNHdnZ3piX243ZlRUNDFrU0oxVGNyVUF3LWxoWjZoSlB0N3FtTk1MS1pyTVZHU3c4T1dsQUxFLUd0T2JGTjIxRG9zeEg0M2YtTHQ3R2JJdERwR0lNSmtfeXVXT2RQUExkYVV0Xzd3bnpkNGtSa0E?oc=5",
-      "published_at": "2026-07-22T16:55:19+00:00",
-      "snippet": ""
     },
     {
       "title": "Watch: Louvre reopens gallery after jewellery heist",
@@ -6060,6 +7089,26 @@
       "snippet": ""
     },
     {
+      "title": "Balinese Hindus perform Nangluk Merana ritual",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/photo/423701/balinese-hindus-perform-nangluk-merana-ritual",
+      "published_at": "2026-07-22T16:46:01+00:00",
+      "snippet": "Hindu devotees take part in the Nangluk Merana ritual in Penarungan Village, Badung, Bali, on Wednesday (July 22, ..."
+    },
+    {
+      "title": "Government: Palestinian deportation followed Interpol notice",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423683/government-palestinian-deportation-followed-interpol-notice",
+      "published_at": "2026-07-22T16:45:54+00:00",
+      "snippet": "The Indonesian government has emphasized that its action against Palestinian national Abdul Karim Raed Miqdad was ..."
+    },
+    {
       "title": "Ahead of NDAA Vote, AOC Warns Amendment to Integrate US and Israeli Military Is 'Existential Threat'",
       "source": "Common Dreams (US, left)",
       "country": "US",
@@ -6068,6 +7117,16 @@
       "url": "https://www.commondreams.org/news/ndaa-israel",
       "published_at": "2026-07-22T16:44:45+00:00",
       "snippet": "With a US House committee refusing to include a bipartisan amendment to strike the integration of parts of the Israeli and American militaries…"
+    },
+    {
+      "title": "Etihad Rail brings forward Madinat Zayed and Liwa station opening date to November 30",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/uae/2026/07/22/etihad-rail-brings-forward-madinat-zayed-and-liwa-station-opening-date-to-november-30/",
+      "published_at": "2026-07-22T16:43:41+00:00",
+      "snippet": ""
     },
     {
       "title": "Mainland Chinese dental clinics in Hong Kong come under scrutiny of authorities",
@@ -6088,6 +7147,16 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPV191dEFMZWNRN3Itdy1BbzVXOEtZTnd3Z19kT1YyMC1sZXRua05nQXRqMjNfZU9wV1FHS2ZKTTFscjVOSmdkOXk5UEl3c0ZQVTJaYkJrZVRsMkJ0TGllV1NfVjF3ZnRhVmptWURYRTl6VVJCSzNpVE9zM3dRZnMzTnBPRkUzLU95TE9EMGFyT293RlZXODl1LWJhYlREalJqbmRB0gGoAUFVX3lxTE9QN3E5SXRud3RIYmlEWkJUZ0VMZ1pqeTVRZEFsRm9IUjNPMTA3WWhZemJTaW5ENTRkbGVhWlpTd2VqU2k2Um54cDZiWU9kUTZacFVfbWxzLV8wd2dnQjFZdk1oY2dNT0VwNlUwcEFrdE9QcTd6c3puRmFHbHhkZzhQS0V5el9GLWgwZG8tblplZEc1SVdjdU1BNlc3TzB4ejJQS0Y1bHBBSA?oc=5",
       "published_at": "2026-07-22T16:41:17+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Conflicting court orders fuel Uchumi tenant eviction row",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/news/conflicting-court-orders-fuel-uchumi-tenant-eviction-row-5534700",
+      "published_at": "2026-07-22T16:38:21+00:00",
+      "snippet": "Questions arise over how the eviction proceeded and the status of the earlier legal protections."
     },
     {
       "title": "US court orders Argentina pay over US$390 million in Aerolíneas Argentinas case",
@@ -6150,6 +7219,16 @@
       "snippet": "A Florida pastor has sued OpenAI, alleging ChatGPT repeatedly discouraged him from seeking professional medical care before he nearly died from a pulmonary embolism."
     },
     {
+      "title": "UK Prime Minister Burnham signals higher defence spending",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/uk/2026/07/22/uk-prime-minister-burnham-signals-higher-defence-spending/",
+      "published_at": "2026-07-22T16:28:13+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Now you know: Reid Maxwell",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -6187,6 +7266,16 @@
       "paywall": "soft",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeUNoWnIwTXFNN1dzSk4yWVVQeEtNcjg1bEQxd1J6Q19qR3EwNkphNmF3VXg3NjJ6SjZ5WGVtUzkwVDFuS1FnOHRXUFR5YldNeW5kd2doV0VrZnhCTHBEZWROT1g2WGdFajRRNzd3Z1c5QTdkQmppdGR4S3ZkWWluNGUtVDB0UGhkeDFaeE40OHNFRUs3aGZtTVFvUUtsa1E4c0x1MG4yVm5TRGRXaS1lbmtfdnQ?oc=5",
       "published_at": "2026-07-22T16:24:32+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Tour de France 2026: Philipsen wins thrilling Stage 17 after breakaway battle as Pogacar maintains lead",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/sport/cycling/2026/07/22/tour-de-france-2026-philipsen-wins-thrilling-stage-17-after-breakaway-battle-as-pogacar-maintains-lead/",
+      "published_at": "2026-07-22T16:23:48+00:00",
       "snippet": ""
     },
     {
@@ -6238,6 +7327,16 @@
       "url": "https://www.commondreams.org/news/homan-ice-comply-or-die",
       "published_at": "2026-07-22T16:19:47+00:00",
       "snippet": "As US Immigration and Customs Enforcement deals with the fallout of two fatal shootings, President Donald Trump's border czar Tom Homan has said the deaths…"
+    },
+    {
+      "title": "Over 8.8 million students join free health check program",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423680/over-88-million-students-join-free-health-check-program",
+      "published_at": "2026-07-22T16:15:39+00:00",
+      "snippet": "At least 8,824,185 students participated in the Free Health Check-up (CKG) program in schools between January 1 ..."
     },
     {
       "title": "Houston Astros ship Nate Pearson to Kansas City after DFA, landing prospect Max Martin",
@@ -6370,6 +7469,26 @@
       "snippet": "Yet another champion of the common man is raking in millions off his political brand."
     },
     {
+      "title": "TNI pursues OPM members after three civilians killed in Papua",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423677/tni-pursues-opm-members-after-three-civilians-killed-in-papua",
+      "published_at": "2026-07-22T16:02:55+00:00",
+      "snippet": "The Habema Joint Regional Defense Command (Koops TNI Habema) is pursuing suspected members of the Free Papua Movement ..."
+    },
+    {
+      "title": "Why a former US diplomat backs Ali Al Zaidi to pull off Iraq's balancing act",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/why-a-former-us-diplomat-backs-ali-al-zaidi-to-pull-off-iraqs-balancing-act/",
+      "published_at": "2026-07-22T16:02:52+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Lindsey Graham’s Sister Surges To Frontrunner Status On Back Of Trump Endorsement",
       "source": "The Daily Wire (US, right)",
       "country": "US",
@@ -6470,6 +7589,16 @@
       "snippet": "The Israeli military said it had only fired \"warning shots into the air\" after Lebanese soldiers entered an area that was \"not part…"
     },
     {
+      "title": "Petition for release of jeweler who killed robbers rejected",
+      "source": "ANSA English (Italy)",
+      "country": "IT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.ansa.it/english/news/general_news/2026/07/22/petition-for-release-of-jeweler-who-killed-robbers-rejected_d7cdf69b-ac54-44bb-b170-19552f8da625.html",
+      "published_at": "2026-07-22T15:50:21+00:00",
+      "snippet": "Meloni, Salvini and Musk say Roggero has been unjustly treated"
+    },
+    {
       "title": "Wreckage of Pan Am plane that shaped aviation safety found 74 years on",
       "source": "BBC News - World",
       "country": "GB",
@@ -6498,6 +7627,16 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQ1ZUVm55NzlPSHFiMTJRUUFDdDNNZzRtNEZqSlZOeWRKbjVIaTBCMkpPX0hiVWdmYXRjMG9kZVM4R29ZVktvNDI1REFEUDhUS1JlUk9NS0pUY0RQc1k1eXpDWHFVcXNydmhreXlqdG15Ni1VX3FBdnRwaXYzRlZpZkZ2RDdtZW9oVTBkRlZCYUNMUkV6MlE5M2RGSlNYSFZDTUFkbVdzMA?oc=5",
       "published_at": "2026-07-22T15:49:43+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Indonesia to set up independent personal data protection agency",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423673/indonesia-to-set-up-independent-personal-data-protection-agency",
+      "published_at": "2026-07-22T15:49:33+00:00",
+      "snippet": "The Indonesian government is currently finalizing the establishment of a special authority for personal data ..."
     },
     {
       "title": "New Ukraine army chief vows to step up counteroffensive as EU bids to finalise fresh Russia sanctions – as it happened",
@@ -6560,6 +7699,16 @@
       "snippet": "It's not just watching paint dry. The twists and turns of the Reflecting Pool repairs, originally a two-week project, have kept bloggers and viewers busy…"
     },
     {
+      "title": "New passport centres provide relief for Indians in UAE after weeks of delays",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/uae/2026/07/22/new-passport-centres-provide-relief-for-indians-in-uae-after-weeks-of-delays/",
+      "published_at": "2026-07-22T15:35:53+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Philipsen wins Tour de France 17th stage as Pogacar retains overall lead",
       "source": "France 24",
       "country": "FR",
@@ -6590,6 +7739,26 @@
       "snippet": ""
     },
     {
+      "title": "Indonesia targets 500 People's School by 2029",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423672/indonesia-targets-500-peoples-school-by-2029",
+      "published_at": "2026-07-22T15:33:28+00:00",
+      "snippet": "The Indonesian government aims to establish up to 200 additional Sekolah Rakyat (People's Schools) between 2027 and ..."
+    },
+    {
+      "title": "On the trail of a new dinosaur species in Spain’s premier wine region",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/science-tech/2026-07-22/on-the-trail-of-a-new-dinosaur-species-in-spains-premier-wine-region.html",
+      "published_at": "2026-07-22T15:32:38+00:00",
+      "snippet": "The remains found in the village of Igea, in La Rioja, support the hypothesis that a large herbivorous specimen lived there 120 million years ago"
+    },
+    {
       "title": "Artistic Gymnastics - Floor Exercise, Session 1, Glasgow 2026",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -6607,6 +7776,16 @@
       "paywall": "soft",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdkQtS0lHSVM5ZnlBd05WU003NW92NWU0MWVHYVVBVFlFYUpjWEd3NTdIUU5UT05fUVFGT19JTkdRTEktZG1Cc1Mxd3ZEekRiUVl2aFNjY1dYUnhxWU1kMjNILWh5UlgwcktaN3JEV3g2Q2hrNTF6c1U2MmFPSnppdW1PZWdZN1ZZZnpoNVFuS05jVjJ2WkZEZ0RyWHE0YUttVWhhOVllbkI0anhMZjROUjBTeTY1N1VR?oc=5",
       "published_at": "2026-07-22T15:30:10+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "DP World signs deal to build two UAE container terminals outside Strait of Hormuz",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/business/2026/07/22/dp-world-signs-deal-to-build-two-uae-container-terminals-outside-strait-of-hormuz/",
+      "published_at": "2026-07-22T15:29:26+00:00",
       "snippet": ""
     },
     {
@@ -6650,6 +7829,16 @@
       "snippet": "Alican Uludag was freed Wednesday, a day after being taken back into custody on new charges."
     },
     {
+      "title": "Five dead after Narok mine collapse",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/counties/narok/five-dead-after-narok-mine-collapse-5534610",
+      "published_at": "2026-07-22T15:18:19+00:00",
+      "snippet": "Trans Mara South Deputy County Commissioner said some miners were trapped inside."
+    },
+    {
       "title": "Rome to offer free cinema screenings as refuge from summer heat",
       "source": "Reuters",
       "country": "INT",
@@ -6678,16 +7867,6 @@
       "url": "https://www.dailywire.com/news/israel-wants-to-surround-hamas-prisoners-with-one-of-the-worlds-most-dangerous-reptiles",
       "published_at": "2026-07-22T15:12:33+00:00",
       "snippet": "Israeli Environmental Protection Minister Idit Silman reclassified crocodiles from wild animals to “cultivated wild animals,” opening the door for them to be used to guard…"
-    },
-    {
-      "title": "Now you know: Ellie Black",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAzeFlHU0dkOHFoNUpCUFVWbDk5T1NJbklmMUhzMWM2TXlTMlBXQUQ2UkZONzlUN3BzUXBNeEdIMDgxblkxd1FTZW1aMDB1T25BS3I5bENoLU9RQQ?oc=5",
-      "published_at": "2026-07-22T15:11:40+00:00",
-      "snippet": ""
     },
     {
       "title": "Need backup power? Automakers want you to look no further than their vehicles in your driveway",
@@ -6740,6 +7919,16 @@
       "snippet": "Thorsten Frei, a close confidant of German Chancellor Friedrich Merz, is taking over the role as parliamentary group leader for the conservative CDU/CSU bloc."
     },
     {
+      "title": "Trump threatens to strike Tehran if Hormuz attacks continue",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/us/2026/07/22/trump-iran-strikes-bridges/",
+      "published_at": "2026-07-22T15:01:44+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Why are OpenAI and Anthropic cheering on regulation in Australia? The answer has global reach",
       "source": "The Guardian - World",
       "country": "GB",
@@ -6780,6 +7969,26 @@
       "snippet": ""
     },
     {
+      "title": "National Guard deploys as flash floods in West Virginia inundate homes and businesses",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRk5zQXRqY2FRR0FtRWJNcHJQLUJIQ2NqMU5tWHR5bmlYLTU2Q3hGclFSWTgyN3ZXT3h5NWJUWGJmc05sbXBiU0M4bEJVQVVxZnVpbmxkY2h1aUd4OU1TZHp3bG9SWFRvMWhqLXpDc1kycTl3VFhHU3pORkQySHpvalNtdTJ5ZHlWUWNPRHk1Mk8xdw?oc=5",
+      "published_at": "2026-07-22T14:58:19+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "La Liga chief Tebas accuses Fifa of 'destroying football industry', calls for Infantino to quit",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/sports/football/la-liga-chief-tebas-accuses-fifa-of-destroying-football-industry-calls-for-infantino-to-quit-5534592",
+      "published_at": "2026-07-22T14:56:15+00:00",
+      "snippet": "He accuses Fifa of expanding international competitions at the expense of domestic leagues."
+    },
+    {
       "title": "Hegseth Is Demanding US Households Pay $5,000 More Per Year to Fund the Pentagon, Economist Says",
       "source": "Common Dreams (US, left)",
       "country": "US",
@@ -6788,6 +7997,16 @@
       "url": "https://www.commondreams.org/news/pete-hegseth-budget-request",
       "published_at": "2026-07-22T14:53:12+00:00",
       "snippet": "Critics lit into US Defense Secretary Pete Hegseth after he demanded on Tuesday that Congress pass President Donald Trump's plan for a $1.5 trillion military…"
+    },
+    {
+      "title": "Positive relations with Meloni will continue with Burnham - British ambassador",
+      "source": "ANSA English (Italy)",
+      "country": "IT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.ansa.it/english/news/politics/2026/07/22/positive-relations-with-meloni-will-continue-with-burnham-british-ambassador_9cf688a6-0597-44ec-a024-0667848d7a87.html",
+      "published_at": "2026-07-22T14:52:59+00:00",
+      "snippet": "We have the same challenges, interests and priorities Stephen Hickey tells ANSA"
     },
     {
       "title": "Independent autopsy 'inconclusive' on cause of death for 18-year-old Nolan Wells in Mississippi",
@@ -6808,6 +8027,16 @@
       "url": "https://www.bbc.co.uk/news/articles/cm2g14lzy17o?at_medium=RSS&at_campaign=rss",
       "published_at": "2026-07-22T14:47:32+00:00",
       "snippet": "The environmental agency has warned people to avoid going near the substance as it could pose a health risk."
+    },
+    {
+      "title": "UI Professor: Batteries hold the key to renewable energy future",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423671/ui-professor-batteries-hold-the-key-to-renewable-energy-future",
+      "published_at": "2026-07-22T14:46:16+00:00",
+      "snippet": "University of Indonesia (UI) Professor Rinaldy Dalimi said battery technology is key to the transition to renewable ..."
     },
     {
       "title": "'Unprecedented': France records 5,764 excess deaths during June-July heatwave period",
@@ -6870,6 +8099,16 @@
       "snippet": "US President Donald Trump threatened on Wednesday to destroy an Iranian bridge or power plant each time Tehran attacks a vessel in the Strait…"
     },
     {
+      "title": "US reaches deal with Saudi Arabia on civilian nuclear programme",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/us/2026/07/22/trump-administration-reaches-deal-over-saudi-civilian-nuclear-programme-reports-say/",
+      "published_at": "2026-07-22T14:41:15+00:00",
+      "snippet": ""
+    },
+    {
       "title": "​Andy Burnham’s ​domestic ​revolution ​could ​unobtrusively pull Britain ​closer to Europe",
       "source": "The Guardian - World",
       "country": "GB",
@@ -6900,6 +8139,16 @@
       "snippet": ""
     },
     {
+      "title": "Engine oil shortage deepens Gaza's water crisis as pumps and tankers grind to halt",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/engine-oil-shortage-deepens-gazas-water-crisis-as-pumps-and-tankers-grind-to-halt/",
+      "published_at": "2026-07-22T14:33:47+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Vatican defends secrecy in sensitive abuse case involving ex-Jesuit artist Marko Rupnik",
       "source": "Associated Press",
       "country": "INT",
@@ -6908,6 +8157,16 @@
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQWGhjUWlzVExjdnVaYWc3WGdmUXNkck1JYy1FM2JJYkVDamo1QWVzTGZVbEc0SmRfQnJQR01ubldmQUFxYXpWVEdKWFdaMTNnQ3VQdXc1Y05YczcwUm5rTjFwNXdiZUs2dXpmNi0xRHdLZmk4czdCZnNNYkxUZHJkR2YyUlhNZHdvMTVfNEhFT2JlbVhUaVIzZTJtMXNOdw?oc=5",
       "published_at": "2026-07-22T14:33:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "The oil magnate Gulbenkian’s lavish collection returns to its origins in Lisbon",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/culture/2026-07-22/the-oil-magnate-gulbenkians-lavish-collection-returns-to-its-origins-in-lisbon.html",
+      "published_at": "2026-07-22T14:32:00+00:00",
+      "snippet": "The museum that houses the legacy of the man once considered the richest in the world reopens after a restoration that recovers the original 1969…"
     },
     {
       "title": "France: Macron refuses environment minister's resignation over pesticide law",
@@ -6930,6 +8189,16 @@
       "snippet": "A married Singapore minister’s sudden resignation amid revelations he had exchanged inappropriate messages with a woman has rocked the city state’s establishment circles…"
     },
     {
+      "title": "Education ministry, police expand AI literacy training for students",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423669/education-ministry-police-expand-ai-literacy-training-for-students",
+      "published_at": "2026-07-22T14:30:23+00:00",
+      "snippet": "Indonesia's Education Ministry and National Police are expanding cooperation to promote AI literacy among students ..."
+    },
+    {
       "title": "Kennedy arrives early to lead Australia into Glasgow opening ceremony",
       "source": "ABC News (AU) - Top Stories",
       "country": "AU",
@@ -6940,6 +8209,16 @@
       "snippet": "Reigning Commonwealth Games gold medallists Nina Kennedy and Tim Hodge will carry the Australian flag and King's baton at the Glasgow 2026 opening ceremony."
     },
     {
+      "title": "Kertajati Airport MRO hub targeted to begin operations in 2026",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423668/kertajati-airport-mro-hub-targeted-to-begin-operations-in-2026",
+      "published_at": "2026-07-22T14:27:24+00:00",
+      "snippet": "State Secretary Prasetyo Hadi said the government is moving forward with plans to develop Kertajati International ..."
+    },
+    {
       "title": "Moody’s raises Argentina’s debt rating, revises outlook to ‘positive’",
       "source": "Buenos Aires Herald",
       "country": "AR",
@@ -6948,6 +8227,16 @@
       "url": "https://buenosairesherald.com/economics/moodys-raises-argentinas-debt-rating-revises-outlook-to-positive",
       "published_at": "2026-07-22T14:26:34+00:00",
       "snippet": "The credit rating agency cited lower default risk in line with macroeconomic stabilization due to ‘improving governance’ La entrada Moody’s raises Argentina’s debt rating, revises…"
+    },
+    {
+      "title": "IG Kanja, DIG Lagat, PS Ololoituaa summoned over Gatoto School dispute",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/news/ig-kanja-dig-lagat-ps-ololoituaa-summoned-over-gatoto-school-dispute-5534482",
+      "published_at": "2026-07-22T14:25:26+00:00",
+      "snippet": "Officials expected to explain why privatisation of the school has not been effected."
     },
     {
       "title": "China, EU pushing ahead on joint research despite trade tensions",
@@ -7070,14 +8359,14 @@
       "snippet": "Isabel Rose was convicted of trying to extort £100,000 from the UK banker and perverting the course of justice."
     },
     {
-      "title": "Food price fears after Europe’s heatwave destroys estimated €2bn of crops",
-      "source": "The Guardian - World",
-      "country": "GB",
-      "lean": "centre-left",
+      "title": "New BGN chief denies owning MBG kitchens, pledges transparency",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
       "paywall": "none",
-      "url": "https://www.theguardian.com/environment/2026/jul/22/europe-heatwave-june-farming-lost-revenue-crop-damage",
-      "published_at": "2026-07-22T14:12:47+00:00",
-      "snippet": "Record June temperatures expected to cut grain harvest by 9m tonnes to its lowest level since 2018 The heatwave that swept across Europe in June…"
+      "url": "https://en.antaranews.com/news/423664/new-bgn-chief-denies-owning-mbg-kitchens-pledges-transparency",
+      "published_at": "2026-07-22T14:12:35+00:00",
+      "snippet": "Head of the National Nutrition Agency (BGN) Sudaryono emphasized his commitment to integrity and accountability in the ..."
     },
     {
       "title": "EXCLUSIVE: Diageo teams face up to 30% reductions as CEO 'Drastic Dave' slashes costs",
@@ -7090,24 +8379,24 @@
       "snippet": ""
     },
     {
-      "title": "- AP News",
-      "source": "Associated Press",
-      "country": "INT",
+      "title": "UFC Abu Dhabi: Ankalaev targets Pereira heavyweight trilogy bout if he gets past Guskov",
+      "source": "The National (UAE)",
+      "country": "AE",
       "lean": "centre",
       "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbHEzU3ZnVEhzeG9BZFpJSGU3bHItaEN5N1BLNUgtcVF4NzFTeFplbTZ4NVE4X2ZtanpXZkZoU0tYdTBNRWZJUXdvalpmQUF5VnV3UkJwc1B3UTh2N0xISDF6MURxLTAyY0l4X2pwY2s3aFFabHQyUVpQUU5HUW0zY0V0NTNhRnJ0UEJOUDlRNjFrWDRuYnI4WQ?oc=5",
-      "published_at": "2026-07-22T14:10:36+00:00",
+      "url": "https://www.thenationalnews.com/sport/combat-sports/2026/07/23/ufc-abu-dhabi-ankalaev-targets-pereira-heavyweight-trilogy-bout-if-he-gets-past-guskov/",
+      "published_at": "2026-07-22T14:11:52+00:00",
       "snippet": ""
     },
     {
-      "title": "- AP News",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
+      "title": "‘Captchas’: Has Google got us training its AI without knowing it?",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
       "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPaFRhUXJPaDFUY1M4VWdaa3J1MEZ0eWRDRFd3QVU1R2M3Y1lkUTc5LVYwbEJaRkE0blZLN2lTeE9XaUNsc2xVQThrV1d4VUp4Y3RnbkotR0lIM1lVWGlvUmZzeWxuTU5XcmVNazlMTHlUcElBdVNmelhCaTdDM2VKY25paUdsRnBWZ2lFVHJaTUZjTkRvekY1UjdFYVdPY3RBaEE?oc=5",
-      "published_at": "2026-07-22T14:07:45+00:00",
-      "snippet": ""
+      "url": "https://english.elpais.com/technology/2026-07-22/captchas-has-google-got-us-training-its-ai-without-knowing-it.html",
+      "published_at": "2026-07-22T14:10:51+00:00",
+      "snippet": "The service was created 15 years ago with a dual purpose: as a security filter against bots and as a generator of datasets to train…"
     },
     {
       "title": "J&J enters US robotic surgery market after device gets marketing authorization",
@@ -7118,6 +8407,26 @@
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQVVpjMUw4VHZSOHZQSHRIUDZBTmk0REsydlNkZ2p0QWtBMVNBajY0Vl9fRGFvVUZPaEF4elVXNm9kb2pNdlB6UElma0tkZDZpVEdtLUZUUnRYa0Y3enYwVEN4cHMzZ0pzTllrZGtqRHRkRkVscjBENDVtVnNlZFRWMUNFU245U1ZvT2djWXd1VWEwWHhBbUhlLTRNVHhfclh0NExWWXVRWmh6RW04MlNMYWtqR1VGZnBWbExsQjRGZnc5bng2by1uZlQ3OHJXbkNzV01QZzVQa25DVXB2Nzlhcw?oc=5",
       "published_at": "2026-07-22T14:07:42+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Israeli president warns of threats to October election",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/israeli-president-warns-of-threats-to-october-election/",
+      "published_at": "2026-07-22T14:07:26+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Two charged over Sh4m cocaine haul in Mombasa",
+      "source": "Daily Nation (Kenya)",
+      "country": "KE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://nation.africa/kenya/counties/mombasa/two-charged-over-sh4m-cocaine-haul-in-mombasa-5534406",
+      "published_at": "2026-07-22T14:07:22+00:00",
+      "snippet": "Suspects deny trafficking charges as prosecutors oppose bail."
     },
     {
       "title": "Philippines’ impeachment trial: court ruling heightens stakes for VP Sara",
@@ -7138,6 +8447,16 @@
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1TQzlMa0NkMTNhbTFwcTRtbVJNWEpYNnR4RnJSM3JWMDAyTXVjazZQeU1OaGdEMktncEdVMFZQUVpBblZuU1N4ZUxkUUs2ZEJfNjFOT25QeFRadGI3YnNBdXBMT0lsSXRneFVXdFpB?oc=5",
       "published_at": "2026-07-22T14:05:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Woman, 55, dies two months after being hit in Modena car attack",
+      "source": "ANSA English (Italy)",
+      "country": "IT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.ansa.it/english/news/general_news/2026/07/22/woman-55-dies-two-months-after-being-hit-in-modena-car-attack_3644f5fc-3054-4fc0-ab52-f5e9b280caf5.html",
+      "published_at": "2026-07-22T14:04:12+00:00",
+      "snippet": "Monica Esposito never regained consciousness after the attack"
     },
     {
       "title": "EXCLUSIVE: Illegal Immigrant With Rap Sheet Accused Of Killing 3 In Hit-And-Run Crash",
@@ -7168,6 +8487,16 @@
       "url": "https://www.scmp.com/news/china/military/article/3361476/why-chinas-polar-expedition-arctic-ocean-has-drawn-us-ire?utm_source=rss_feed",
       "published_at": "2026-07-22T14:00:11+00:00",
       "snippet": "The United States Coast Guard said it closely tracked Chinese polar expedition vessels transiting the Bering Sea on their way to the Arctic Ocean last…"
+    },
+    {
+      "title": "Global water governance is fragmented. We have a chance to fix this in Abu Dhabi",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/opinion/comment/2026/07/22/un-water-conference-uae-senegal-abu-dhabi/",
+      "published_at": "2026-07-22T14:00:00+00:00",
+      "snippet": ""
     },
     {
       "title": "Renewables sector tells data centres to pay up",
@@ -7310,13 +8639,13 @@
       "snippet": ""
     },
     {
-      "title": "SIRT investigating fatal crash in Antigonish County that followed attempted traffic stop",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
+      "title": "Fears British Muslim women will be misled about marriage reforms",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
       "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE00VU05OFZjaWJlbF9KZ0lhR1FKOGhEd2VDWlMxaDhKTkcyZS0wWHFzUFlaSF9ydVVhS3NjcWhQVFBkVGF5LVRwMjl6bXJQSEo1?oc=5",
-      "published_at": "2026-07-22T13:29:51+00:00",
+      "url": "https://www.thenationalnews.com/news/uk/2026/07/22/fears-british-muslim-women-will-be-misled-about-marriage-reforms/",
+      "published_at": "2026-07-22T13:30:01+00:00",
       "snippet": ""
     },
     {
@@ -7328,6 +8657,16 @@
       "url": "https://www.dailywire.com/news/the-terrorist-meldown-over-ice-is-an-extension-of-mamdanis-mentality",
       "published_at": "2026-07-22T13:24:54+00:00",
       "snippet": "This piece is part of MI x DW, a collaboration that brings Daily Wire readers exclusive commentary and research from the Manhattan Institute’s world-class team…"
+    },
+    {
+      "title": "Red Cross volunteers shocked, distressed after Moroccan man's death - lawyer",
+      "source": "ANSA English (Italy)",
+      "country": "IT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.ansa.it/english/news/general_news/2026/07/22/red-cross-volunteers-shocked-distressed-after-moroccan-mans-death-lawyer_22339d8b-7bf9-41ea-b7bd-27161b2876c4.html",
+      "published_at": "2026-07-22T13:24:51+00:00",
+      "snippet": "Paramedics did try to Resuscitate Fakir says CRI"
     },
     {
       "title": "CINDERELLA STORIES: 2026 has become the year of the underdog in sports",
@@ -7350,6 +8689,16 @@
       "snippet": ""
     },
     {
+      "title": "Abu Dhabi home prices surge in first half of 2026 despite Iran war uncertainty",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/business/property/2026/07/22/abu-dhabi-home-prices-surge-in-first-half-of-2026-despite-iran-war-uncertainty/",
+      "published_at": "2026-07-22T13:18:31+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Can India become the next semiconductor hub after Taiwan?",
       "source": "Deutsche Welle",
       "country": "DE",
@@ -7358,6 +8707,16 @@
       "url": "https://www.dw.com/en/can-india-become-the-next-semiconductor-hub-after-taiwan/a-78066491?maca=en-rss-en-all-1573-rdf",
       "published_at": "2026-07-22T13:17:00+00:00",
       "snippet": "India is investing billions to build a domestic semiconductor industry as major industrial powers seek to diversify supply chains beyond Taiwan."
+    },
+    {
+      "title": "Indonesia boosts corn output with new high-yield seed",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423660/indonesia-boosts-corn-output-with-new-high-yield-seed",
+      "published_at": "2026-07-22T13:14:54+00:00",
+      "snippet": "Agriculture Minister Andi Amran Sulaiman has called for increased Indonesian corn production by using high-yield seed ..."
     },
     {
       "title": "SA is optimising for the wrong economy — it needs to own ideas, not export rocks",
@@ -7430,6 +8789,26 @@
       "snippet": ""
     },
     {
+      "title": "Abu Dhabi Festival 2026 reveals full line-up with Hans Zimmer and UAE National Orchestra",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/arts-culture/music-stage/2026/07/22/abu-dhabi-festival-2026-reveals-full-line-up-with-hans-zimmer-and-uae-national-orchestra/",
+      "published_at": "2026-07-22T13:03:04+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Abu Dhabi scientists offer new hope for people with Huntington's disease",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/uae/2026/07/22/abu-dhabi-scientists-offer-new-hope-for-people-with-huntingtons-disease/",
+      "published_at": "2026-07-22T13:02:24+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Japan's policy doom loop sends yen to 40-year low",
       "source": "Reuters",
       "country": "INT",
@@ -7440,6 +8819,16 @@
       "snippet": ""
     },
     {
+      "title": "Berau, Seychelles explore candlenut cultivation on post-mining lands",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423659/berau-seychelles-explore-candlenut-cultivation-on-post-mining-lands",
+      "published_at": "2026-07-22T13:02:06+00:00",
+      "snippet": "Authorities in Berau District, East Kalimantan, and the Republic of Seychelles are exploring the potential development ..."
+    },
+    {
       "title": "Sperm whales change ‘vowel’ sounds when boats are nearby, scientists discover",
       "source": "The Guardian - World",
       "country": "GB",
@@ -7448,6 +8837,16 @@
       "url": "https://www.theguardian.com/environment/2026/jul/22/sperm-whales-dominica-clicks-vowels-language-changes-shipping-noise-project-ceti",
       "published_at": "2026-07-22T13:00:15+00:00",
       "snippet": "Researchers listening off the Caribbean island of Dominica found variations in the mammals’ audible clicks when marine traffic was close Sperm whales produce a specific…"
+    },
+    {
+      "title": "Samsung Unpacked: Galaxy Z Fold8 unveils pricey new foldables",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/future/technology/2026/07/22/samsung-unpacked-galaxy-z-fold8-headlines-new-pricey-foldables/",
+      "published_at": "2026-07-22T13:00:00+00:00",
+      "snippet": ""
     },
     {
       "title": "What’s it like to actually use Samsung’s new-shaped folding phone",
@@ -7510,6 +8909,26 @@
       "snippet": ""
     },
     {
+      "title": "Indonesia partners with OceanX to protect marine national parks",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423657/indonesia-partners-with-oceanx-to-protect-marine-national-parks",
+      "published_at": "2026-07-22T12:52:46+00:00",
+      "snippet": "The Indonesian Ministry of Forestry is collaborating with global research organization OceanX to strengthen the ..."
+    },
+    {
+      "title": "Indonesia prepares survey to map white hydrogen in Sulawesi",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423655/indonesia-prepares-survey-to-map-white-hydrogen-in-sulawesi",
+      "published_at": "2026-07-22T12:52:36+00:00",
+      "snippet": "The Ministry of Energy and Mineral Resources is targeting potential sources of naturally occurring hydrogen, also known ..."
+    },
+    {
       "title": "SA’s pursuit of equality through handing out screens in class risks educational quality",
       "source": "Daily Maverick (South Africa)",
       "country": "ZA",
@@ -7550,6 +8969,16 @@
       "snippet": "A threat by the Iranian backed Houthis to blockade Saudi-linked shipping in the Bab el-Mandeb Strait has raised the prospect of the Middle East’s two…"
     },
     {
+      "title": "- AP News",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZm1qU0VXUzhjcUZSS0tPbzNGSjBSSGtWZ25JWVlpUVVsTWVMUmpRMjhXcnQ5MjhqSndSUnNzUTJWLTd0THctVkpXb2FKUzJhclljZGhseWozUFRyQ3N3a0ZqakNHa213b3hZOE5wWEh5REhWTGRTTVllWlgydjJMSWFfdjkzXzZxZkRQUDhsNElPb2lfNC11eg?oc=5",
+      "published_at": "2026-07-22T12:46:51+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Canada's flag & baton-bearers ready to lead the Commonwealth Games team into the opening ceremony",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -7568,6 +8997,16 @@
       "url": "https://www.egyptindependent.com/how-a-youtube-video-accidentally-proved-the-existence-of-libyas-desert-ghosts/",
       "published_at": "2026-07-22T12:43:42+00:00",
       "snippet": "It’s not every day that a YouTube video triggers a major wildlife discovery, yet that’s exactly what Mohammed Almuntasir unknowingly did when he hit upload…"
+    },
+    {
+      "title": "Floating health centers in the Brazilian Amazon: Medical care in the world’s largest tropical forest",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/international/2026-07-22/floating-health-centers-in-the-brazilian-amazon-medical-care-in-the-worlds-largest-tropical-forest.html",
+      "published_at": "2026-07-22T12:43:39+00:00",
+      "snippet": "While the health debate focuses on innovation, the Amazon experience invites us to look at another indicator: the effort of a team willing to sail…"
     },
     {
       "title": "Why a week of protests pushed Zelensky to bring in a younger military chief",
@@ -7597,6 +9036,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNeEQzejRDRWFhVDY3Z0RoRmZSTzl5dTFRMzJ5bUtlcDZidndWUExDUHpuLVdnRm1qTWMxblNpUmJHNDhsU0hxbVI0TUMtVEEyVGVjbDl2dFlwVTZJLXY2enZjeTRwaGNpSXJYQ2l5ZVlIODFmNHRhQktxaW0xWmVIRnlRUDROUXVidGdZZnJ5VGZSYmhCeE9VTzBmaW83WEgxTlHSAacBQVVfeXFMTXJINk5fVktrbWpEWnFId3hBdGl1RkhDN0k0TUdha19nOEhNRFRReU9NX0ZuX0tJYW1uRl9SWVZHSmdpeTZGaDgzVkIxaTB6NURPUl9nNEh1aV9GZjVOWFplUW1fdHFoYlNGQ2ZMZVlNdS1pMUFHa1dKQXlWTTZYdURjLUFENW5IeWF3dmk5Q29aejNPYnYwbkZGcnk3TERWMWtMVm9hekU?oc=5",
       "published_at": "2026-07-22T12:36:46+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Italy FA confirm talks with Pep Guardiola to become next manager",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/sport/2026/07/22/italy-fa-confirm-talks-with-pep-guardiola-to-become-next-manager/",
+      "published_at": "2026-07-22T12:36:34+00:00",
       "snippet": ""
     },
     {
@@ -7630,6 +9079,16 @@
       "snippet": "The opening follows years of controversy about what to do with the 17th-Century former inn, where the Nazi dictator was born."
     },
     {
+      "title": "Indonesia aims to become top exporter of downstream coconut goods",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423653/indonesia-aims-to-become-top-exporter-of-downstream-coconut-goods",
+      "published_at": "2026-07-22T12:32:04+00:00",
+      "snippet": "Indonesia is strengthening its coconut industry to boost the commodity's added value and competitiveness, aiming to ..."
+    },
+    {
       "title": "Trump approves deal with Saudi Arabia that could allow kingdom to enrich nuclear fuel, official says",
       "source": "Egypt Independent",
       "country": "EG",
@@ -7658,16 +9117,6 @@
       "url": "https://www.scmp.com/tech/article/3361482/worlds-first-ai-model-earn-perfect-score-maths-olympiad-comes-chinas-rednote?utm_source=rss_feed",
       "published_at": "2026-07-22T12:30:15+00:00",
       "snippet": "For the first time, an artificial intelligence model has achieved a perfect score at the International Mathematical Olympiad (IMO) – and it was developed…"
-    },
-    {
-      "title": "Russia’s grinding war in Ukraine shows the impotence of nuclear weapons",
-      "source": "South China Morning Post",
-      "country": "CN",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://www.scmp.com/opinion/world-opinion/article/3361013/russias-grinding-war-ukraine-shows-impotence-nuclear-weapons?utm_source=rss_feed",
-      "published_at": "2026-07-22T12:30:07+00:00",
-      "snippet": "Why haven’t Ukraine’s drone and missile attacks on Russia triggered Moscow’s use of tactical nuclear weapons, as it has threatened?"
     },
     {
       "title": "Economic hardship is ‘not imagined’: PM pledges more assistance",
@@ -7750,6 +9199,36 @@
       "snippet": ""
     },
     {
+      "title": "Egypt cuts hundreds of thousands from food subsidy scheme under new eligibility criteria",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/egypt-cuts-hundreds-of-thousands-from-food-subsidy-scheme-under-new-eligibility-criteria/",
+      "published_at": "2026-07-22T12:09:27+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Lebanese PM hails 'beginning of Israeli withdrawal' from country in visit to pilot zone",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/lebanese-pm-hails-beginning-of-israeli-withdrawal-from-country-in-visit-to-pilot-zone/",
+      "published_at": "2026-07-22T12:08:51+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "New pensions 30% lower for women than men in first half of 2026 - INPS",
+      "source": "ANSA English (Italy)",
+      "country": "IT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.ansa.it/english/news/general_news/2026/07/22/new-pensions-30-lower-for-women-than-men-in-first-half-of-2026_8eabdf05-6e93-4828-a28f-ce28f1f33fa7.html",
+      "published_at": "2026-07-22T12:08:34+00:00",
+      "snippet": "Average State pension for women €1,048, compared to €1,506 for men"
+    },
+    {
       "title": "EU aviation agency adds Jordan to no-fly warning list as fighting continues",
       "source": "Reuters",
       "country": "INT",
@@ -7770,6 +9249,16 @@
       "snippet": "U.S. President Donald Trump has escalated tensions with Iran by threatening to bomb the under-construction Pickaxe Mountain nuclear site, located south of Tehran."
     },
     {
+      "title": "Morocco warns Italy of concerns over death of citizen compared to George Floyd case",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/europe/2026/07/22/morocco-warns-italy-of-concerns-over-death-of-citizen-compared-to-george-floyd-case/",
+      "published_at": "2026-07-22T12:01:02+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Trump’s Subpoenas Are Not Unprecedented Despite The Media Hysteria",
       "source": "The Daily Wire (US, right)",
       "country": "US",
@@ -7778,6 +9267,16 @@
       "url": "https://www.dailywire.com/news/trumps-subpoenas-are-not-unprecedented-despite-the-media-hysteria",
       "published_at": "2026-07-22T12:00:22+00:00",
       "snippet": "The Trump administration has issued subpoenas for four New York Times journalists, requiring them to testify before a grand jury in a criminal investigation."
+    },
+    {
+      "title": "Phil Foden signs new Manchester City contract: 'It's an unbelievable feeling'",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/sport/football/2026/07/22/phil-foden-signs-new-manchester-city-contract-its-an-unbelievable-feeling/",
+      "published_at": "2026-07-22T11:59:31+00:00",
+      "snippet": ""
     },
     {
       "title": "France: Minister quits over pesticide bill — but is staying",
@@ -7808,6 +9307,26 @@
       "url": "https://www.thehindu.com/news/international/pakistan-seeks-10-billion-us-economic-support-facility/article71252870.ece",
       "published_at": "2026-07-22T11:56:17+00:00",
       "snippet": "Pakistan Finance Minister Muhammad Aurangzeb had sought U.S. support for road-to-market strategy, higher foreign exchange reserves, and enhanced sovereign credit ratings"
+    },
+    {
+      "title": "How sugarcane is powering Indonesia's bioethanol ambition",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423649/how-sugarcane-is-powering-indonesias-bioethanol-ambition",
+      "published_at": "2026-07-22T11:56:11+00:00",
+      "snippet": "Landing at Abdulrachman Saleh Airport in Malang, passengers are greeted by sprawling green fields that look like wild ..."
+    },
+    {
+      "title": "- AP News",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZnZnSnpCWFI3dm1Qc3hKM0tjS3dLM1g4RkZfRk9hRVV0a1ZlcVpnSFdZTVpHYXUwV1VySFdsYkN6RFZ3bDRHRk85RXdSQjdVU29hSG5NdFhqbS1tckpvNHRfTzlNRTFacEVYWVZNeXJucElPeWowWUVZQlhxMFpRRTBOM0t4M18tYnBrS0ktdkM1cWI2aWlJcA?oc=5",
+      "published_at": "2026-07-22T11:45:57+00:00",
+      "snippet": ""
     },
     {
       "title": "Overstored pool chemicals and corroded sprinklers led to Georgia chemical plant fire, report says",
@@ -7850,6 +9369,16 @@
       "snippet": "OpenAI announced Tuesday that one of its trial models went off-script and hacked another AI business in an “unprecedented” move."
     },
     {
+      "title": "Spain, the first reigning champion to host a World Cup amid many uncertainties",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/sports/2026-07-22/spain-the-first-reigning-champion-to-host-a-world-cup-amid-many-uncertainties.html",
+      "published_at": "2026-07-22T11:36:33+00:00",
+      "snippet": "The 2030 World Cup, which will be held on the Iberian Peninsula and in Morocco, still has many mysteries to resolve: the venues, the stadium…"
+    },
+    {
       "title": "Ukraine agrees to export drones to US for Pentagon plan, source says",
       "source": "Reuters",
       "country": "INT",
@@ -7888,6 +9417,16 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVGdjekVHYmdMSTFrbzJ6NWhES2s1TVo2NzdaTWtpNXY5TUF3a1lCbG5hNFc2YjNaLURGQUwzZktnaUxFZC16QWZjU1ltMEVkc09IZDhQR29YdS0tcDBZUFpKdmdVdXdmbjZtbnp4YWlNN0pmNHJxMDJ6V2dWUmozQXpjQklWV0Y4bnJGT1JXNlZfRy1pTm5tVUNBRno4VjZ5d1NrT0JOYVBOUHBudHpNcm5MUFQ?oc=5",
       "published_at": "2026-07-22T11:31:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "BGN, AGO team up to strengthen oversight of free meals program",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423647/bgn-ago-team-up-to-strengthen-oversight-of-free-meals-program",
+      "published_at": "2026-07-22T11:30:41+00:00",
+      "snippet": "The National Nutrition Agency (BGN) is working with the Attorney General's Office (AGO) to strengthen oversight of ..."
     },
     {
       "title": "Epstein-Linked Model Recruiter Found Dead In France",
@@ -8000,6 +9539,26 @@
       "snippet": "Egypt strongly condemned any threats targeting the security of Saudi Arabia, which undermines the security and stability of the region and threatens the safety…"
     },
     {
+      "title": "After Washington, Aoun must persuade Lebanon to disarm Hezbollah without fear",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/opinion/comment/2026/07/22/after-washington-aoun-must-persuade-lebanon-to-disarm-hezbollah-without-fear/",
+      "published_at": "2026-07-22T11:16:32+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Sheikh Khaled views plans for Dh100bn Marsa Al Saadiyat development featuring underground Etihad Rail station",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/uae/2026/07/22/sheikh-khaled-views-plans-for-dh100bn-marsa-al-saadiyat-development-featuring-underground-etihad-rail-station/",
+      "published_at": "2026-07-22T11:07:21+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Viral TikTok Star Explains Why She Turned Against Witchcraft",
       "source": "The Daily Wire (US, right)",
       "country": "US",
@@ -8018,6 +9577,16 @@
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVlFyQjJyZlZGQnpPME5nWHp3bXBPTTl3ejNFVXhRaHJfdG92OTk5Q1h4ckJjbDNaY3Z3bWY1bDdxTjU1NFJ1OGVZb3Q2WUo3WEZWTEhDdUs1YkVDWG9pVC1TSERqRGhvRi12dGtla3dvcThzaUxsU19yNUFJWTRJRkpTbnRTN09mX0xFX1NLeVUzbG9nRmZfWQ?oc=5",
       "published_at": "2026-07-22T11:04:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Indonesia eyes coconut dowstreaming as demand surges",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423644/indonesia-eyes-coconut-dowstreaming-as-demand-surges",
+      "published_at": "2026-07-22T11:03:23+00:00",
+      "snippet": "Malaysia remains heavily reliant on Indonesia for its coconut supply, with around 80 percent of the country’s ..."
     },
     {
       "title": "New tariff threat casts shadow over premiers' annual meeting",
@@ -8070,6 +9639,16 @@
       "snippet": ""
     },
     {
+      "title": "Govt aims to lower green hydrogen prices using excess renewable power",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423643/govt-aims-to-lower-green-hydrogen-prices-using-excess-renewable-power",
+      "published_at": "2026-07-22T10:57:54+00:00",
+      "snippet": "Indonesia is looking to reduce the production costs of green hydrogen by tapping into surplus electricity generated ..."
+    },
+    {
       "title": "Lalit Modi, IPL founder and first chairman, says he will return to India after major tribunal relief",
       "source": "Agence France-Presse",
       "country": "INT",
@@ -8110,16 +9689,6 @@
       "snippet": "Officials are reportedly investigating fraudulent tax claims made by the bank's Postbank subsidiary between 2008 and 2010."
     },
     {
-      "title": "- AP News",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPT1dabDVteUFXenJlX3FzUDZlWU94YTFqTlpJUUJPT010LVdaS3ZWY1dzc3dxbXppTWc3M2tjZnlDbEtFM0t5Y0VVZklRVkRyNTU3OFQtaUN1RlEwdFFwMnFSQ3lSYUEwbzN6TWFiSExJb045UXpWbHliWEVDTU1ma1M1WTREeXhZZ2N5M25QODZyQ29vOGlVa3JURHZ1WHRDam1RaF9uTQ?oc=5",
-      "published_at": "2026-07-22T10:50:34+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Will surge in German business bankruptcies hit growth?",
       "source": "Deutsche Welle",
       "country": "DE",
@@ -8140,6 +9709,16 @@
       "snippet": "Secretary of State Marco Rubio delivered a straightforward warning on Wednesday about efforts to push communist influence inside the United States."
     },
     {
+      "title": "Over 100 evacuated as huge wildfire threatens town near Agrigento",
+      "source": "ANSA English (Italy)",
+      "country": "IT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.ansa.it/english/news/general_news/2026/07/22/over-100-evacuated-as-huge-wildfire-threatens-town-near-agrigento_c2063964-a182-44e6-8f6d-52868c3a70c9.html",
+      "published_at": "2026-07-22T10:46:16+00:00",
+      "snippet": "The situation is 'dramatic' says Santo Stefano Quisquina Mayor"
+    },
+    {
       "title": "Chief of troubled Indonesian nutrition agency replaced for second time in 2 months",
       "source": "Associated Press",
       "country": "INT",
@@ -8158,6 +9737,16 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTk04ZGdVbVZuN1hZNUJ3a0d6MUI0UUx4ZG5yclRac25lVTJzdkxIQXV5NzNWR21FekdoWi1CUTU2ZHBReTJLM0NMLTZuVEpWYUNjMjlYSnZKRnJvZXZsRzFJMWdrbEo5cTJOMVNodm5wQVFLbFNDTTVuTnViNGNCUlpDb1Z0cVJBNi1ZeHZPMUxwSjY1Q05zWlhXcUZmbHU5b0d5eDc5Zw?oc=5",
       "published_at": "2026-07-22T10:46:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Indonesia unveils 194 km green hydrogen corridor",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423639/indonesia-unveils-194-km-green-hydrogen-corridor",
+      "published_at": "2026-07-22T10:41:19+00:00",
+      "snippet": "Indonesia is laying the groundwork for a zero-emission future by launching a plan to develop a 194-kilometer Green ..."
     },
     {
       "title": "Hegseth estimates Iran war has cost $37.5B, OpenAI tech hacks another company ‘autonomously’",
@@ -8190,6 +9779,16 @@
       "snippet": ""
     },
     {
+      "title": "Indonesia pushes to finalize ASEAN-Canada free trade deal this year",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423636/indonesia-pushes-to-finalize-asean-canada-free-trade-deal-this-year",
+      "published_at": "2026-07-22T10:38:04+00:00",
+      "snippet": "Indonesia is pushing for the ASEAN-Canada Free Trade Agreement (ACAFTA) to be finalized this year to expand market ..."
+    },
+    {
       "title": "The Marriage Issue That Has Couples Asking: ‘For Love, Or Money?’",
       "source": "The Daily Wire (US, right)",
       "country": "US",
@@ -8220,6 +9819,16 @@
       "snippet": ""
     },
     {
+      "title": "Japan's Cross-Border E-Commerce \"WAFUU.COM\" Unveils Official Mascot Character \"Mochi\"",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423633/japans-cross-border-e-commerce-wafuucom-unveils-official-mascot-character-mochi",
+      "published_at": "2026-07-22T10:29:57+00:00",
+      "snippet": "-QRESTIA Inc. (Headquarters: Shibuya, Tokyo; President & CEO: Hidemasa Fukada) is pleased to announce that ..."
+    },
+    {
       "title": "Meta employees' lawsuit shows that if AI fires you, proving it is the hard part",
       "source": "Reuters",
       "country": "INT",
@@ -8228,6 +9837,16 @@
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOY0xVWTJIRjQyWEZXOGZVbHFrSnFsVG1yTUxWb0hJeklkdFZEWHRabmN4Y2trNnZlTW9rMm9hQUtUUHhfSFlGZnpISjRjWXg0UXNFSTBCdmxPOEpaa3N5VlBFblIwX2IwN3ZqeXRwT1VUY3Jzc2tlNC1MRWlBMmZnYUhSU3Eyb1JJU2tXWUJVY2pyalFUN0xVbzRYLWdtSlFRMVVveFRoWG52dmxHRXRSc3Y1QXF4S05OY0tkaFQtM0dHUUJqQnRaZVpMZk0?oc=5",
       "published_at": "2026-07-22T10:23:44+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Lower House denies prosecutors access to Delmastro's chat messages",
+      "source": "ANSA English (Italy)",
+      "country": "IT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.ansa.it/english/news/politics/2026/07/22/lower-house-denies-prosecutors-access-to-delmastros-chat-messages_6bbf65a4-2552-4202-b410-20d5466c5009.html",
+      "published_at": "2026-07-22T10:23:41+00:00",
+      "snippet": "FDI MP quit as justice undersecretary in March over links to convicted restaurateur"
     },
     {
       "title": "Many US patients opt for obesity drug injections, defying some expectations",
@@ -8248,6 +9867,26 @@
       "url": "https://www.thehindu.com/business/Industry/air-india-extends-tel-aviv-delhi-flight-suspension-until-september-end/article71252743.ece",
       "published_at": "2026-07-22T10:20:37+00:00",
       "snippet": "The suspension of Air India flights has caused major worries among more than 40,000 Indians living in Israel who wish to travel to India"
+    },
+    {
+      "title": "Where is Mojtaba Khamenei? Iran's leader offers ‘more access’ … but foreign minister has never met him",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/03/11/where-is-mojtaba-khamenei-iranian-officials-say-new-leader-is-lightly-injured/",
+      "published_at": "2026-07-22T10:15:36+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Oil prices hit six-week high on Hormuz and Red Sea supply disruption fears",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/business/energy/2026/07/22/oil-prices-hits-six-week-high-on-hormuz-and-red-sea-supply-disruption-fears/",
+      "published_at": "2026-07-22T10:10:49+00:00",
+      "snippet": ""
     },
     {
       "title": "UK's BAE enters uncrewed fighter competition with 'Brontanax'",
@@ -8410,6 +10049,26 @@
       "snippet": ""
     },
     {
+      "title": "BI calls for stronger fiscal-monetary coordination",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423632/bi-calls-for-stronger-fiscal-monetary-coordination",
+      "published_at": "2026-07-22T09:51:12+00:00",
+      "snippet": "Bank Indonesia (BI) has called for stronger coordination between fiscal and monetary policies to safeguard national ..."
+    },
+    {
+      "title": "Rome to host meeting for Two-State solution July 28-29 - Tajani",
+      "source": "ANSA English (Italy)",
+      "country": "IT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.ansa.it/english/news/politics/2026/07/22/rome-to-host-meeting-for-two-state-solution-july-28-29-tajani_f5b1c764-2825-4109-9f2a-7627c2fbc285.html",
+      "published_at": "2026-07-22T09:49:02+00:00",
+      "snippet": "Capital will also again be venue for new round of Lebanon talks says foreign minister"
+    },
+    {
       "title": "Olympic rowing great Olaf Tufte who competed at seven Summer Games has died at age 50",
       "source": "Associated Press",
       "country": "INT",
@@ -8438,6 +10097,16 @@
       "url": "https://www.egyptindependent.com/labor-minister-meets-indian-ambassador-to-expand-cooperation/",
       "published_at": "2026-07-22T09:36:03+00:00",
       "snippet": "Minister of Labor Hassan Raddad held talks on Tuesday, July 21, 2026, with Indian Ambassador to Egypt Suresh K."
+    },
+    {
+      "title": "International Criminal Court stands up to US campaign to dismantle it ‘brick by brick’",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/international/2026-07-22/international-criminal-court-stands-up-to-us-campaign-to-dismantle-it-brick-by-brick.html",
+      "published_at": "2026-07-22T09:35:28+00:00",
+      "snippet": "Marco Rubio is ramping up pressure on the institution and its staff and urging Washington’s allies to turn their backs on it as well"
     },
     {
       "title": "Egypt receives 22 tons of French medical aid for Palestinian patients",
@@ -8470,6 +10139,26 @@
       "snippet": "For a left preaching tolerance, the emotionally stunted quackery emanating from the mouths of “I’ve Had It” podcast hosts Jennifer Welch and the cackling, near-mute…"
     },
     {
+      "title": "The earthquake beyond La Guaira: Venezuelan coastal towns cling to the sea",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/international/2026-07-22/the-earthquake-beyond-la-guaira-venezuelan-coastal-towns-cling-to-the-sea.html",
+      "published_at": "2026-07-22T09:30:10+00:00",
+      "snippet": "Localities such as Chichiriviche de la Costa, Puerto Cruz, and Cepe have been almost isolated since the June 24 quake"
+    },
+    {
+      "title": "Indonesia urges ASEAN, India to deepen regional resilience",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423631/indonesia-urges-asean-india-to-deepen-regional-resilience",
+      "published_at": "2026-07-22T09:28:48+00:00",
+      "snippet": "Indonesia urged ASEAN and India to strengthen regional resilience through maritime cooperation, joint food and energy ..."
+    },
+    {
       "title": "Netanyahu 'Should Be Arrested and Tried,' Says Mamdani, But NYC Lacks Authority to Detain Him",
       "source": "Common Dreams (US, left)",
       "country": "US",
@@ -8488,6 +10177,46 @@
       "url": "https://www.theguardian.com/world/2026/jul/22/restaurant-owner-south-korea-dried-ants-dessert",
       "published_at": "2026-07-22T09:26:09+00:00",
       "snippet": "Prosecutors seek a one-year sentence and heavy fine after chef garnished dish with insects not approved for consumption Prosecutors in South Korea have asked…"
+    },
+    {
+      "title": "Indonesia eyes becoming Asia's hydrogen hub",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423629/indonesia-eyes-becoming-asias-hydrogen-hub",
+      "published_at": "2026-07-22T09:24:28+00:00",
+      "snippet": "Indonesia has a strong opportunity to become Asia’s hub for hydrogen production, trade, and development as ..."
+    },
+    {
+      "title": "Syria launches process to open consulate in Kurdistan capital",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/syria-launches-process-to-open-consulate-in-kurdistan-capital/",
+      "published_at": "2026-07-22T09:23:39+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Morgan Rogers joins 'biggest club in London' after sealing British record £117m move to Chelsea",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/sport/football/2026/07/22/morgan-rogers-joins-biggest-club-in-london-after-sealing-british-record-117m-move-to-chelsea/",
+      "published_at": "2026-07-22T09:19:58+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Indonesia backs stronger ASEAN unity through parliamentary dialogue",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423627/indonesia-backs-stronger-asean-unity-through-parliamentary-dialogue",
+      "published_at": "2026-07-22T09:19:28+00:00",
+      "snippet": "Indonesia’s House of Representatives (DPR) urged Southeast Asian parliaments to reinforce dialogue, consensus and ..."
     },
     {
       "title": "The ATO’s claim at Albanese’s Point Piper fundraiser",
@@ -8550,6 +10279,16 @@
       "snippet": ""
     },
     {
+      "title": "Ministry, Danantara partner to develop coconut downstream industry",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423623/ministry-danantara-partner-to-develop-coconut-downstream-industry",
+      "published_at": "2026-07-22T09:08:53+00:00",
+      "snippet": "Indonesia’s Agriculture Ministry and sovereign wealth fund Danantara are developing an integrated coconut ..."
+    },
+    {
       "title": "Police station opens in Hitler's birth house",
       "source": "Deutsche Welle",
       "country": "DE",
@@ -8588,6 +10327,16 @@
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE05T1FrSzdOR3RacWRUMHJha2dmbmM3VElJZmota0ZpbDNRMnJTdUIzeUFyUUtVeGZBYzY4a1lBY0RfSVlQRXNJM01POWRwNHhZS3p0V1J6bmtOZw?oc=5",
       "published_at": "2026-07-22T09:04:10+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Bengkulu, London may become sister cities to boost tourism: DPD",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423619/bengkulu-london-may-become-sister-cities-to-boost-tourism-dpd",
+      "published_at": "2026-07-22T09:03:59+00:00",
+      "snippet": "Indonesia’s Regional Representative Council (DPD) Speaker Sultan B. Najamudin proposed making Bengkulu and London ..."
     },
     {
       "title": "Jasmine Crockett’s Latest Racist Target? The World Cup",
@@ -8640,6 +10389,26 @@
       "snippet": "Pete Hegseth testified during a Senate Appropriations Committee hearing at which he defended a request for $67 billion in supplemental funding for the Pentagon"
     },
     {
+      "title": "Brazil ready to supply soybeans for Indonesia's free meal program",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423617/brazil-ready-to-supply-soybeans-for-indonesias-free-meal-program",
+      "published_at": "2026-07-22T08:50:52+00:00",
+      "snippet": "Brazil is ready to supply soybeans to support Indonesia's flagship Free Nutritious Meal (MBG) program, Agricultural ..."
+    },
+    {
+      "title": "US and Iran trade threats of more attacks on infrastructure",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/rubio-says-us-still-willing-to-negotiate-over-iran-crisis-but-doubts-tehran-is-serious/",
+      "published_at": "2026-07-22T08:50:44+00:00",
+      "snippet": ""
+    },
+    {
       "title": "South Korea's Lee to visit South America and Germany, attend AI summit in US",
       "source": "Reuters",
       "country": "INT",
@@ -8670,6 +10439,16 @@
       "snippet": ""
     },
     {
+      "title": "Iraq secures energy deals worth $200bn during Prime Minister Al Zaidi's US visit",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/business/energy/2026/07/22/iraq-secured-energy-deals-worth-200bn-during-prime-minister-al-zaidis-us-visit/",
+      "published_at": "2026-07-22T08:30:06+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Curious minds come together to make music with household objects",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -8678,6 +10457,36 @@
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9keGwzalk1a2daZWVxdU0tWXQxOTNhblNTdk5LbzF1WmF2QkZjTUpTRTFVM3otZkdRNmF4S3BiVkZFNHFycmphTk9xcUZ4RHBFV19XcGVTN1p5QQ?oc=5",
       "published_at": "2026-07-22T08:30:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Federal judge blocks revocation of asylum applications and work permits for thousands of immigrants",
+      "source": "El Pais English (Spain)",
+      "country": "ES",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://english.elpais.com/usa/2026-07-22/federal-judge-blocks-revocation-of-asylum-applications-and-work-permits-for-thousands-of-immigrants.html",
+      "published_at": "2026-07-22T08:22:41+00:00",
+      "snippet": "The order provides temporary relief for thousands of asylum seekers and Temporary Protected Status (TPS) beneficiaries with valid work authorizations"
+    },
+    {
+      "title": "UAE summer camps 2026, from art-themed activities to adventure-packed weeks",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/lifestyle/things-to-do/2026/07/08/uae-summer-camps-2026-from-art-themed-activities-to-adventure-packed-weeks/",
+      "published_at": "2026-07-22T08:20:08+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Indonesia targets 151,554 hectares for coconut downstreaming in 2026",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423615/indonesia-targets-151554-hectares-for-coconut-downstreaming-in-2026",
+      "published_at": "2026-07-22T08:15:15+00:00",
+      "snippet": "Indonesia aims to develop 151,554 hectares of coconut downstreaming areas in 2026 to strengthen raw material supplies, ..."
     },
     {
       "title": "Government stamps out chances of a gas tax any time soon",
@@ -8707,6 +10516,26 @@
       "paywall": "hard",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPb08tSFJKSExXQzFHTkV5dW11ZFVqY3NwSVVwQkVSYXR3a2FlcTA1c183NXZUZWk5dlJKejB2NkExY2dNSDZ3RktIbmMwaGxHN2sxRXdCS3p2UWdKNVA5Qy1OOW9Va3pqSFo1eS0zTEc3c2ZEWGdnYjU2b3gyWU9OMzlRdHFTRGdtRkpGX3hCZTM4Y1V4RDM2VU9LTnhZRkF4azZPUEFVNFVwSzdLWU9ZMXNycw?oc=5",
       "published_at": "2026-07-22T08:08:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Sudaryono ready to lead Indonesia’s free meals program",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423611/sudaryonoready-to-lead-indonesias-free-meals-program",
+      "published_at": "2026-07-22T08:07:02+00:00",
+      "snippet": "Deputy Agriculture Minister Sudaryono said he was ready to lead Indonesia’s Free Nutritious Meals program after ..."
+    },
+    {
+      "title": "Gone rogue: AI model escapes and hacks another company during testing",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/future/technology/2026/07/22/ai-model-escapes-and-hack-another-company-during-testing/",
+      "published_at": "2026-07-22T08:06:36+00:00",
       "snippet": ""
     },
     {
@@ -8750,6 +10579,16 @@
       "snippet": ""
     },
     {
+      "title": "Deyang vows support for free meals program after resigning",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423599/deyangvows-support-for-free-meals-program-after-resigning",
+      "published_at": "2026-07-22T08:01:29+00:00",
+      "snippet": "Nanik Sudaryati Deyang said she would continue supporting Indonesia’s Free Nutritious Meals (MBG) program after ..."
+    },
+    {
       "title": "International students scramble to find a new school after Quebec colleges shut down",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -8780,6 +10619,16 @@
       "snippet": ""
     },
     {
+      "title": "Indonesia moves to strengthen defense ties with Turkiye, Malaysia",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423595/indonesia-moves-to-strengthen-defense-ties-with-turkiye-malaysia",
+      "published_at": "2026-07-22T07:49:44+00:00",
+      "snippet": "Indonesia ratified defense cooperation agreements with Turkiye and Malaysia on Tuesday, giving the partnerships ..."
+    },
+    {
       "title": "Former NFL Kicker Backed By Trump Wins GOP Primary",
       "source": "The Daily Wire (US, right)",
       "country": "US",
@@ -8790,6 +10639,16 @@
       "snippet": "A former NFL kicker endorsed by President Donald Trump won the GOP nomination for a highly competitive House seat in Arizona on Tuesday night."
     },
     {
+      "title": "Sudan army's 'chemical weapons use' leads to new US sanctions",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/news/mena/2026/07/22/sudan-armys-chemical-weapons-use-leads-to-new-us-sanctions/",
+      "published_at": "2026-07-22T07:45:43+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Britain's new prime minister must solve the old riddle of how to reinvigorate a slow-growing economy",
       "source": "Associated Press",
       "country": "INT",
@@ -8798,6 +10657,16 @@
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOLTZlU0xDNVNBOVRuQWFYanJ2RlBNdnVQeHJKTXZVQWVka2Y1N3pXWUJYbjJCU2wzUkJsQnREOFBYbW9ncTBtVzhPN0lkb1RsVTJyOEN4b3Q3WkVxRXlubVY1aVI1QVlpdzM4bk9RV3JyQ0l6Q09aZmNuZm1WVVV6WkdfWEZmVFBLd0xTNURTa0w?oc=5",
       "published_at": "2026-07-22T07:45:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Indonesia targets 2026 rollout of 40,000-village aquaculture program",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423592/indonesia-targets-2026-rollout-of-40000-village-aquaculture-program",
+      "published_at": "2026-07-22T07:40:12+00:00",
+      "snippet": "Indonesia will launch a nationwide aquaculture expansion program in 2026 covering 40,000 thematic villages to boost ..."
     },
     {
       "title": "The real tax problem for start-ups is high-income tax not CGT concessions",
@@ -8818,6 +10687,16 @@
       "url": "https://www.dw.com/en/can-vr-help-you-achieve-your-goals/a-78034288?maca=en-rss-en-all-1573-rdf",
       "published_at": "2026-07-22T07:33:00+00:00",
       "snippet": "A Max Planck researcher has developed VR and smartphone tools that let you \"meet\" your future self."
+    },
+    {
+      "title": "Keeta teams up with Empire Entertainment to launch Sony Pictures’ Spider-Man: Brand New Day campaign in UAE",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/advertorial/2026/07/22/keeta-teams-up-with-empire-entertainment-to-launch-sony-pictures-spider-man-brand-new-day-campaign-in-uae/",
+      "published_at": "2026-07-22T07:31:46+00:00",
+      "snippet": ""
     },
     {
       "title": "Gas guzzling pick-ups win emissions reprieve as China EV threat grows",
@@ -8848,6 +10727,16 @@
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMlV4bE1qVURWYXBsNTN2UmpqVmFGRlR0eUR6cGNaZDQtci0tZnhURmxCQkVqWGo1SDdIVFBFNmF1ZWJ5aUZWUVo4cVI2aXNrQW9iT25vR2RkZ2JnWHZCUTdrY3BrdXMtYTV0QjVYT0dtcjFKZEV6RXhTQWJRWG9zbHZ4bXJNa01IUldFdjFha0tVbWdhT2loN0I1ODJkcVF2TW9TZDVIMVZzNFpEdUZmVE9BTQ?oc=5",
       "published_at": "2026-07-22T07:27:00+00:00",
       "snippet": ""
+    },
+    {
+      "title": "Over 20 International Mainstream Media Outlets Explore Innovation and Vitality in Harbin",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423588/over-20-international-mainstream-media-outlets-explore-innovation-and-vitality-in-harbin",
+      "published_at": "2026-07-22T07:24:29+00:00",
+      "snippet": "The 2026 International Mainstream Media Tour to Harbin, themed \"Step into the Summer Capital of Ice City, Feel ..."
     },
     {
       "title": "Andy Biggs wins Republican nomination to challenge Democrat Katie Hobbs for Arizona governor",
@@ -8920,6 +10809,16 @@
       "snippet": "Unlike so many professional female athletes, WNBA star Sophie Cunningham is not afraid to stand up for the protection of female athletes."
     },
     {
+      "title": "M5.5 earthquake jolts Aceh, tremors felt in neighboring province",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423584/m55-earthquake-jolts-aceh-tremors-felt-in-neighboring-province",
+      "published_at": "2026-07-22T07:16:51+00:00",
+      "snippet": "A shallow magnitude 5.5 inland earthquake struck Aceh's Gayo Lues Regency on Wednesday morning, sending strong ..."
+    },
+    {
       "title": "Houthi threats spark new oil supply fears",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -8950,6 +10849,26 @@
       "snippet": ""
     },
     {
+      "title": "Daicel Corporation HPPs SBU Unveils New DURACON (R) POM Line with 30% Recycled Content",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423583/daicel-corporation-hpps-sbu-unveils-new-duracon-r-pom-line-with-30-recycled-content",
+      "published_at": "2026-07-22T07:12:22+00:00",
+      "snippet": "Daicel Corporation's High Performance Polymers (HPPs) SBU (formerly Polyplastics Co., Ltd.), a global leader in ..."
+    },
+    {
+      "title": "Prabowo urges 1,177 new TNI, Polri officers to master AI",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/423581/prabowo-urges-1177-new-tni-polri-officers-to-master-ai",
+      "published_at": "2026-07-22T07:12:08+00:00",
+      "snippet": "President Prabowo Subianto urged 1,177 newly commissioned Indonesian military and police officers to master artificial ..."
+    },
+    {
       "title": "Nigerian gang abducts at least 40 people: local sources",
       "source": "Agence France-Presse",
       "country": "INT",
@@ -8968,6 +10887,16 @@
       "url": "https://www.thehindu.com/news/international/canada-cancels-joint-bridge-opening-event-with-us-after-president-trump-announces-tariffs/article71252258.ece",
       "published_at": "2026-07-22T07:11:19+00:00",
       "snippet": "Joint opening ceremony for bridge named after Canadian hockey great Gordie Howe between U.S.-Canada scheduled for July 24, cancelled as Mr."
+    },
+    {
+      "title": "IPL team Delhi Capitals add Saudi Arabia to global academy network",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/sport/2026/07/22/ipl-team-delhi-capitals-add-saudi-arabia-to-global-academy-network/",
+      "published_at": "2026-07-22T07:10:44+00:00",
+      "snippet": ""
     },
     {
       "title": "Malaysian tycoon Syed Mokhtar urged to revoke appointment of port chairman linked to Epstein",
@@ -9058,26 +10987,6 @@
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaENPU2VsVXh3TkNQZXIwOW1IUDVTM1ROZE1sOXhTeU5TdUdSYTJEVTV3Nlc2d3MtN2VuRU15WWFkMmk3SDY5WE1pRnNrN0xodWtIQV9GLWlrWWhvOElXbWxOdlluOHVXUENGSE1IMUFrMkk1bm5Ka1FlWlNRUVpuRGFDZEhIbmwyTWlnTUNEMm5MQmU2ZGF4VlNyZzJkYXhMZ3JDZFB6ZFEtWTR4RHROXw?oc=5",
       "published_at": "2026-07-22T06:58:07+00:00",
       "snippet": ""
-    },
-    {
-      "title": "Mideast war escalation threatens recovery in global oil refining",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNFpwamRuSUpMbzN4amZ0STVYNUtMWHBwdmQ3ZUN2MEZiZzh2R056S3dGN3JVanctSTJnYm5VeTdwbXJZd29jQndFZVh5LTBSZlZsT0xyUWxrN0JzMU4tUGtCbDlRbmVyR3RVclM4WjJITWF5dm5oR0djcWlwT29hNExiZjE5SGVRM0QzWGRIX21nYWlNLVREQmFuUU5CanNNbEFKUUhFdjRqZ3FuSHVSY2NHYw?oc=5",
-      "published_at": "2026-07-22T06:48:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Mamdani urges US government to arrest Netanyahu if Israeli PM visits US",
-      "source": "The Guardian - World",
-      "country": "GB",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://www.theguardian.com/us-news/2026/jul/21/mamdani-benjamin-netanyahu-arrest-authority",
-      "published_at": "2026-07-22T06:41:51+00:00",
-      "snippet": "New York mayor admits he does not have authority to arrest Netanyahu, adding Israeli PM is ‘architect of a horrific genocide’ Zohran Mamdani …"
     }
   ]
 }

@@ -70,7 +70,8 @@ _COUNTRY_NAME = {"INT": "Wire services", "GB": "UK", "QA": "Qatar",
                  "FR": "France", "IN": "India", "JP": "Japan", "CA": "Canada",
                  "IL": "Israel", "CN": "China", "BR": "Brazil", "ZA": "South Africa",
                  "SG": "Singapore", "AE": "UAE", "AR": "Argentina", "NG": "Nigeria",
-                 "MX": "Mexico", "EG": "Egypt", "KR": "South Korea"}
+                 "MX": "Mexico", "EG": "Egypt", "KR": "South Korea",
+                 "ID": "Indonesia", "IT": "Italy", "ES": "Spain", "KE": "Kenya"}
 
 
 def _coverage_block(winner: dict) -> str:

@@ -168,3 +168,31 @@ feeds:
     url: https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml
     country: SG
     lean: centre
+
+  # --- Korea / Gulf / Indonesia / Italy / Spain / Kenya (added 23/07) ---
+  - name: The Korea Herald
+    url: https://www.koreaherald.com/rss/newsAll
+    country: KR
+    lean: centre
+  - name: The National (UAE)
+    url: https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml
+    country: AE
+    lean: centre
+  # Antara is Indonesia's national news agency (mildly state-affiliated - a
+  # straight wire, not propaganda; treat as one voice).
+  - name: Antara (Indonesia)
+    url: https://en.antaranews.com/rss/news.xml
+    country: ID
+    lean: centre
+  - name: ANSA English (Italy)
+    url: https://www.ansa.it/english/english_rss.xml
+    country: IT
+    lean: centre
+  - name: El Pais English (Spain)
+    url: https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada
+    country: ES
+    lean: centre-left
+  - name: Daily Nation (Kenya)
+    url: https://nation.africa/kenya/rss.xml
+    country: KE
+    lean: centre
