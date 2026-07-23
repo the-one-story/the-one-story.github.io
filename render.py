@@ -126,10 +126,23 @@ def _coverage_map(winner: dict) -> str:
     if not plotted:
         return ""
     vb = wm.get("viewbox", [0, 0, 720, 360])
-    dots = "".join(
-        f'<circle cx="{x}" cy="{y}" r="11" class="mhalo"/>'
-        f'<circle cx="{x}" cy="{y}" r="4.5" class="mdot"/>'
-        for _, (x, y) in plotted)
+
+    # Outlets per country (deduped, clean names) for the hover tooltip.
+    outlets_by_country: dict[str, list[str]] = {}
+    for m in winner.get("members", []):
+        lst = outlets_by_country.setdefault(m["country"], [])
+        name = _clean_source(m["source"])
+        if name not in lst:
+            lst.append(name)
+
+    dots = ""
+    for c, (x, y) in plotted:
+        cname = _COUNTRY_NAME.get(c, c)
+        outlets = ", ".join(outlets_by_country.get(c, []))
+        tip = html.escape(f"{cname}: {outlets}" if outlets else cname)
+        dots += (f'<g class="mnode"><title>{tip}</title>'
+                 f'<circle cx="{x}" cy="{y}" r="12" class="mhalo"/>'
+                 f'<circle cx="{x}" cy="{y}" r="4.5" class="mdot"/></g>')
     note = ('<p class="mnote">Wire services (Reuters, AP, AFP) are global and '
             "aren&rsquo;t plotted.</p>" if "INT" in winner["countries"] else "")
     return (f'<div class="covmap"><svg viewBox="{vb[0]} {vb[1]} {vb[2]} {vb[3]}"'
@@ -338,8 +351,10 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   .covmap {{ margin: 0 0 1.5rem; }}
   .wmap {{ display: block; width: 100%; height: auto; }}
   .wmap .wland {{ fill: var(--land); stroke: none; }}
+  .wmap .mnode {{ cursor: help; }}
+  .wmap .mnode:hover .mhalo {{ opacity: 0.4; }}
   .wmap .mdot {{ fill: var(--accent); }}
-  .wmap .mhalo {{ fill: var(--accent); opacity: 0.18; }}
+  .wmap .mhalo {{ fill: var(--accent); opacity: 0.18; transition: opacity 0.15s; }}
   .mnote {{ color: var(--muted); font-size: 0.78rem; margin: 0.5rem 0 0;
     font-style: italic; }}
   .bucket {{ margin-bottom: 1.25rem; }}
