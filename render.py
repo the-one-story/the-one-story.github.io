@@ -293,7 +293,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <meta property="og:site_name" content="One Story">
 <meta property="og:url" content="https://the-one-story.github.io/">
 <meta property="og:title" content="One Story">
-<meta property="og:description" content="The single most important news story of the last 24 hours - ranked deterministically across the world's press. No feed, no scroll.">
+<meta property="og:description" content="The most important story of the last 24 hours.">
 <meta property="og:image" content="https://the-one-story.github.io/assets/og.png">
 <meta property="og:image:secure_url" content="https://the-one-story.github.io/assets/og.png">
 <meta property="og:image:type" content="image/png">
@@ -448,8 +448,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <body>
   <div class="wrap">
     {stale_banner}
-    <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the single most
-       important story of the last {ranked['window_hours']} hours</p>
+    <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the most important
+       story of the last {ranked['window_hours']} hours</p>
     <h1>{headline}</h1>
     {snippet_html}
     <a class="hero" href="{hero_url}" target="_blank" rel="noopener">
