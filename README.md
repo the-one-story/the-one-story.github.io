@@ -1,5 +1,7 @@
 # One Story
 
+**Live: https://the-one-story.github.io/**
+
 A website that shows exactly **one** thing: the single most important news
 story of the last 24 hours, refreshed once a day. No feed, no scroll, no second
 story. The discipline of showing one thing is the point.
