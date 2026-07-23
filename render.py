@@ -104,10 +104,44 @@ def _coverage_block(winner: dict) -> str:
     </div>"""
 
 
+_WORLDMAP = None
+
+
+def _worldmap() -> dict:
+    global _WORLDMAP
+    if _WORLDMAP is None:
+        _WORLDMAP = read_json("assets/worldmap.json", default={}) or {}
+    return _WORLDMAP
+
+
+def _coverage_map(winner: dict) -> str:
+    """A world map (Natural Earth, equirectangular) with a dot on each country
+    running the story. Built from our own coverage stats. Wire services (INT)
+    have no home country and are noted rather than plotted."""
+    wm = _worldmap()
+    cent = wm.get("centroids", {})
+    if not wm.get("land"):
+        return ""
+    plotted = [(c, cent[c]) for c in winner["countries"] if c in cent]
+    if not plotted:
+        return ""
+    vb = wm.get("viewbox", [0, 0, 720, 360])
+    dots = "".join(
+        f'<circle cx="{x}" cy="{y}" r="11" class="mhalo"/>'
+        f'<circle cx="{x}" cy="{y}" r="4.5" class="mdot"/>'
+        for _, (x, y) in plotted)
+    note = ('<p class="mnote">Wire services (Reuters, AP, AFP) are global and '
+            "aren&rsquo;t plotted.</p>" if "INT" in winner["countries"] else "")
+    return (f'<div class="covmap"><svg viewBox="{vb[0]} {vb[1]} {vb[2]} {vb[3]}"'
+            ' class="wmap" role="img" aria-label="World map with a dot on each'
+            f' country covering this story"><path class="wland" '
+            f'd="{wm["land"]}"/>{dots}</svg>{note}</div>')
+
+
 def _sources_section(winner: dict) -> str:
-    """A Ground-News-style breakdown of who is covering this story: one row per
-    outlet, grouped Left / Centre / Right, each linking to that outlet's own
-    write-up. Shows how the headlines differ and marks paywalled sources."""
+    """A Ground-News-style breakdown of who is covering this story: a coverage
+    map, then one row per outlet grouped Left / Centre / Right, each linking to
+    that outlet's own write-up. Shows how the headlines differ; marks paywalls."""
     members = winner.get("members", [])
     if not members:
         return ""
@@ -141,10 +175,11 @@ def _sources_section(winner: dict) -> str:
             f'<ul>{"".join(rows)}</ul></div>')
 
     n = len(by_source)
+    map_html = _coverage_map(winner)
     return f"""
     <details class="sources">
-      <summary>Covered by {n} outlet{"s" if n != 1 else ""} &mdash; see who</summary>
-      <div class="sources-body">{"".join(blocks)}</div>
+      <summary>Covered by {n} outlet{"s" if n != 1 else ""} &mdash; where &amp; who</summary>
+      <div class="sources-body">{map_html}{"".join(blocks)}</div>
     </details>"""
 
 
@@ -227,16 +262,13 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <meta name="robots" content="noindex">
 <title>One Story</title>
 <style>
+  /* "Ink" - a deliberate single-theme dark look (an overnight wire desk),
+     with a burnt-orange accent. Committed to dark by design. */
   :root {{
-    --bg: #fbfbf9; --fg: #1a1a1a; --muted: #6b6b6b; --accent: #b4472e;
-    --rule: #e5e3dd; --card: #ffffff;
+    --bg: #14161a; --fg: #eae7e1; --muted: #969ba1; --accent: #b5652a;
+    --rule: #2a2e34; --card: #191b1e; --land: #2b3038;
   }}
-  @media (prefers-color-scheme: dark) {{
-    :root {{
-      --bg: #111110; --fg: #ececea; --muted: #9a9a95; --accent: #e0785c;
-      --rule: #2a2a28; --card: #191918;
-    }}
-  }}
+  :root {{ color-scheme: dark; }}
   * {{ box-sizing: border-box; }}
   html {{ -webkit-text-size-adjust: 100%; }}
   body {{
@@ -303,6 +335,13 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     padding: 0.5rem 0; user-select: none;
   }}
   .sources-body {{ padding-top: 0.75rem; }}
+  .covmap {{ margin: 0 0 1.5rem; }}
+  .wmap {{ display: block; width: 100%; height: auto; }}
+  .wmap .wland {{ fill: var(--land); stroke: none; }}
+  .wmap .mdot {{ fill: var(--accent); }}
+  .wmap .mhalo {{ fill: var(--accent); opacity: 0.18; }}
+  .mnote {{ color: var(--muted); font-size: 0.78rem; margin: 0.5rem 0 0;
+    font-style: italic; }}
   .bucket {{ margin-bottom: 1.25rem; }}
   .bucket h4 {{
     margin: 0 0 0.5rem; font-size: 0.72rem; text-transform: uppercase;
