@@ -24,7 +24,7 @@
     line-height: 1.5; -webkit-font-smoothing: antialiased;
   }
   .wrap {
-    max-width: 40rem; margin: 0 auto;
+    max-width: 44rem; margin: 0 auto;
     padding: clamp(2rem, 8vw, 5rem) 1.5rem 4rem;
     min-height: 100vh; display: flex; flex-direction: column;
   }
@@ -35,8 +35,8 @@
   }
   .kicker b { color: var(--accent); font-weight: 700; }
   h1 {
-    font-size: clamp(2rem, 7vw, 3.1rem); line-height: 1.1; font-weight: 700;
-    margin: 0 0 1.25rem; letter-spacing: -0.01em;
+    font-size: clamp(2.1rem, 7.5vw, 3.6rem); line-height: 1.08; font-weight: 700;
+    margin: 0 0 1.25rem; letter-spacing: -0.015em;
   }
   .lede {
     font-size: clamp(1.05rem, 3.2vw, 1.3rem); color: var(--fg);
@@ -44,16 +44,34 @@
   }
   .hero {
     display: inline-block; font-family: -apple-system, system-ui, sans-serif;
-    font-size: 0.95rem; font-weight: 600; text-decoration: none;
-    color: var(--bg); background: var(--accent);
-    padding: 0.7rem 1.2rem; border-radius: 0.4rem; margin-bottom: 2rem;
+    font-size: 1rem; font-weight: 600; text-decoration: none;
+    color: var(--accent); margin-bottom: 2rem;
+    border-bottom: 2px solid var(--accent); padding-bottom: 2px;
   }
-  .hero:hover { opacity: 0.9; }
-  .hero .src { opacity: 0.8; font-weight: 400; }
+  .hero:hover { opacity: 0.7; }
+  .hero .arrow { font-weight: 400; }
+  .hero .src { color: var(--muted); font-weight: 400; }
   .coverage {
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.95rem;
     color: var(--muted); border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule); padding: 1rem 0; margin: 0 0 2rem;
+    border-bottom: 1px solid var(--rule); padding: 1.25rem 0; margin: 0 0 2rem;
+  }
+  .cov-line { margin: 0 0 1rem; }
+  .cov-line b { color: var(--fg); font-weight: 700; }
+  .spectrum { display: flex; gap: 4px; margin: 0 0 0.4rem; }
+  .spectrum .seg {
+    flex: 1; height: 7px; border-radius: 4px; background: var(--rule);
+  }
+  .spectrum .seg.on { background: var(--accent); }
+  .spectrum-ends {
+    display: flex; justify-content: space-between;
+    font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--muted); margin-bottom: 1rem;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .chip {
+    font-size: 0.75rem; padding: 0.15rem 0.6rem; border: 1px solid var(--rule);
+    border-radius: 1rem; color: var(--muted); white-space: nowrap;
   }
   .why {
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.9rem;
@@ -100,11 +118,19 @@
     
     <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the single most
        important story of the last 24 hours</p>
-    <h1>Mamdani backs off pledge to arrest Netanyahu citing lack of authority</h1>
-    <p class="lede">The New York City mayor instead called on US authorities to act on International Criminal Court&#x27;s arrest warrant against the Israeli prime minister.</p>
-    <a class="hero" href="https://www.bbc.co.uk/news/articles/c204p64pqzno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">
-      Read the fullest account <span class="src">&mdash; BBC News - World</span></a>
-    <p class="coverage">Running across 6 outlets in 4 countries, spanning 5 sides of the political spectrum.</p>
+    <h1>US announces landmark deal allowing Saudis to enrich nuclear fuel</h1>
+    <p class="lede">The United States on Wednesday signed a landmark civilian nuclear agreement with Saudi Arabia, pressing ahead with closer strategic ties despite the war with Iran…</p>
+    <a class="hero" href="https://www.france24.com/en/middle-east/20260722-us-announce-landmark-deal-allowing-saudis-enrich-nuclear-fuel-reports-say" target="_blank" rel="noopener">
+      Read the fullest account <span class="arrow">&rarr;</span>
+      <span class="src">France 24</span></a>
+    <div class="coverage">
+      <p class="cov-line">Running across <b>11</b> outlets in
+        <b>8</b> countries, spanning the political spectrum from the centre-left to the right.</p>
+      <div class="spectrum" role="img"
+           aria-label="Political spectrum, covered from the centre-left to the right"><span class="seg" title="left"></span><span class="seg on" title="centre-left"></span><span class="seg on" title="centre"></span><span class="seg" title="centre-right"></span><span class="seg on" title="right"></span></div>
+      <div class="spectrum-ends"><span>Left</span><span>Right</span></div>
+      <div class="chips"><span class="chip">Germany</span><span class="chip">France</span><span class="chip">UK</span><span class="chip">India</span><span class="chip">Intl wires</span><span class="chip">Japan</span><span class="chip">Qatar</span><span class="chip">USA</span></div>
+    </div>
     
     <details class="why">
       <summary>Why this story?</summary>
@@ -117,17 +143,17 @@
            from winning on volume alone.</p>
         <table class="comp">
           <thead><tr><th>Component</th><th>Score (0-1)</th></tr></thead>
-          <tbody><tr><td>coverage</td><td>0.89</td></tr><tr><td>diversity</td><td>0.89</td></tr><tr><td>recency</td><td>0.46</td></tr><tr><td>novelty</td><td>1.00</td></tr></tbody>
+          <tbody><tr><td>coverage</td><td>1.00</td></tr><tr><td>diversity</td><td>0.69</td></tr><tr><td>recency</td><td>0.61</td></tr><tr><td>novelty</td><td>1.00</td></tr></tbody>
         </table>
         
         <h3>Today's runners-up</h3>
-        <ol class="runners"><li><a href='https://www.bbc.co.uk/news/videos/cn5n725lkg7o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Watch: What we know about the US-Saudi nuclear deal</a><span class='ru-meta'>BBC News - World &middot; score 0.391 &middot; 8 outlets, 4 countries, 3 leans</span></li><li><a href='https://www.theguardian.com/world/2026/jul/22/france-recorded-more-than-5700-excess-deaths-during-june-heatwave' target='_blank' rel='noopener'>France records more than 5,700 excess deaths during June heatwave</a><span class='ru-meta'>The Guardian - World &middot; score 0.203 &middot; 3 outlets, 3 countries, 3 leans</span></li><li><a href='https://www.npr.org/2026/07/22/nx-s1-5902909/independent-autopsy-inconclusive-on-cause-of-death-for-18-year-old-nolan-wells-in-mississippi' target='_blank' rel='noopener'>Independent autopsy &#x27;inconclusive&#x27; on cause of death for 18-year-old Nolan Wells in Mississippi</a><span class='ru-meta'>NPR News (US) &middot; score 0.168 &middot; 4 outlets, 2 countries, 3 leans</span></li><li><a href='https://www.bbc.co.uk/news/articles/cy5d36e752yo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Police station opens at Hitler&#x27;s birthplace in bid to rid site of Nazi link</a><span class='ru-meta'>BBC News - World &middot; score 0.144 &middot; 4 outlets, 3 countries, 2 leans</span></li><li><a href='https://www.bbc.co.uk/news/articles/cp8en38vpd3o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Modelling scout linked to Epstein found dead in Paris</a><span class='ru-meta'>BBC News - World &middot; score 0.136 &middot; 3 outlets, 3 countries, 2 leans</span></li></ol>
+        <ol class="runners"><li><a href='https://www.japantimes.co.jp/news/2026/07/22/world/houthis-red-sea-us-military/' target='_blank' rel='noopener'>Houthi Red Sea threat would challenge a stretched U.S. military</a><span class='ru-meta'>The Japan Times &middot; score 0.255 &middot; 9 outlets, 7 countries, 3 leans</span></li><li><a href='https://www.france24.com/en/gaza-mamdani-urges-government-to-arrest-netanyahu-if-he-visits-us' target='_blank' rel='noopener'>#Gaza: #Mamdani urges government to arrest #Netanyahu if he visits #US</a><span class='ru-meta'>France 24 &middot; score 0.229 &middot; 8 outlets, 5 countries, 4 leans</span></li><li><a href='https://www.bbc.co.uk/news/articles/c70gek2kqyno?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Iran war has cost US $37.5bn so far, Hegseth says, as Pentagon seeks billions more</a><span class='ru-meta'>BBC News - World &middot; score 0.186 &middot; 8 outlets, 4 countries, 4 leans</span></li><li><a href='https://www.france24.com/en/middle-east/20260722-trump-threatens-iranian-infrastructure-over-strait-of-hormuz-attacks' target='_blank' rel='noopener'>Trump threatens Iranian infrastructure over Strait of Hormuz attacks</a><span class='ru-meta'>France 24 &middot; score 0.144 &middot; 6 outlets, 5 countries, 2 leans</span></li><li><a href='https://www.dw.com/en/us-judge-sets-maduro-trial-date-for-june-2027/a-78077318?maca=en-rss-en-all-1573-rdf' target='_blank' rel='noopener'>US judge sets Maduro trial date for June 2027</a><span class='ru-meta'>Deutsche Welle &middot; score 0.116 &middot; 5 outlets, 4 countries, 2 leans</span></li></ol>
       </div>
     </details>
     <footer>
-      Updated 23/07/2026 09:32 AEST. Next update in ~24 hours.<br>
-      One story a day. No feed, no scroll. Ranked deterministically from public
-      news feeds - no AI, no editorial hand.
+      Updated 23/07/2026 12:02 AEST. Next update in about a day.<br>
+      Today's story is simply the one being covered by the most outlets, across
+      the most countries and the widest range of viewpoints.
     </footer>
   </div>
 </body>

@@ -88,3 +88,28 @@ feeds:
     url: https://www.dailywire.com/feeds/rss.xml
     country: US
     lean: right
+
+  # --- Continental Europe / Asia / Canada (deepen the country axis so the
+  #     diversity term measures a genuinely global spread, not just Anglo) ---
+  - name: Deutsche Welle
+    url: https://rss.dw.com/rdf/rss-en-all
+    country: DE
+    lean: centre
+  - name: France 24
+    url: https://www.france24.com/en/rss
+    country: FR
+    lean: centre
+  - name: The Hindu (International)
+    url: https://www.thehindu.com/news/international/feeder/default.rss
+    country: IN
+    lean: centre-left
+  - name: The Japan Times
+    url: https://www.japantimes.co.jp/feed/
+    country: JP
+    lean: centre
+  # CBC's own feed times out from some hosts; pull via Google News instead.
+  - name: CBC News (Canada)
+    url: https://news.google.com/rss/search?q=site:cbc.ca+when:1d&hl=en-CA&gl=CA&ceid=CA:en
+    country: CA
+    lean: centre-left
+    via: gnews

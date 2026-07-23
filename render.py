@@ -36,15 +36,45 @@ def _display_snippet(winner: dict) -> str:
     return ""
 
 
-def _coverage_line(winner: dict) -> str:
+_LEAN_ORDER = ["left", "centre-left", "centre", "centre-right", "right"]
+_LEAN_NAME = {"left": "the left", "centre-left": "the centre-left",
+              "centre": "the centre", "centre-right": "the centre-right",
+              "right": "the right"}
+_COUNTRY_NAME = {"INT": "Intl wires", "GB": "UK", "QA": "Qatar",
+                 "AU": "Australia", "US": "USA", "DE": "Germany",
+                 "FR": "France", "IN": "India", "JP": "Japan", "CA": "Canada"}
+
+
+def _coverage_block(winner: dict) -> str:
+    """A mechanical coverage visual, computed entirely from our own stats:
+    a political-spectrum bar (lit where the story is being covered) and a chip
+    per covering country. No article content, so no copyright concern."""
     n_out = winner["outlet_count"]
     n_cty = len(winner["countries"])
-    n_lean = len(winner["leans"])
+    present = set(winner["leans"])
+
+    idx = [i for i, l in enumerate(_LEAN_ORDER) if l in present]
+    lo, hi = _LEAN_ORDER[idx[0]], _LEAN_ORDER[idx[-1]]
+    span = (f"all from {_LEAN_NAME[lo]}" if lo == hi
+            else f"from {_LEAN_NAME[lo]} to {_LEAN_NAME[hi]}")
+
+    segs = "".join(
+        f'<span class="seg{" on" if l in present else ""}" title="{l}"></span>'
+        for l in _LEAN_ORDER)
+    chips = "".join(
+        f'<span class="chip">{html.escape(_COUNTRY_NAME.get(c, c))}</span>'
+        for c in winner["countries"])
     out_w = "outlet" if n_out == 1 else "outlets"
     cty_w = "country" if n_cty == 1 else "countries"
-    lean_w = "side" if n_lean == 1 else "sides"
-    return (f"Running across {n_out} {out_w} in {n_cty} {cty_w}, "
-            f"spanning {n_lean} {lean_w} of the political spectrum.")
+
+    return f"""<div class="coverage">
+      <p class="cov-line">Running across <b>{n_out}</b> {out_w} in
+        <b>{n_cty}</b> {cty_w}, spanning the political spectrum {span}.</p>
+      <div class="spectrum" role="img"
+           aria-label="Political spectrum, covered {span}">{segs}</div>
+      <div class="spectrum-ends"><span>Left</span><span>Right</span></div>
+      <div class="chips">{chips}</div>
+    </div>"""
 
 
 def _why_section(winner: dict, runners: list[dict]) -> str:
@@ -107,7 +137,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     snippet = html.escape(_display_snippet(winner))
     hero_url = html.escape(winner["hero"]["url"], quote=True)
     hero_src = html.escape(winner["hero"]["source"])
-    coverage = _coverage_line(winner)
+    coverage_block = _coverage_block(winner)
 
     stale_banner = (
         "<div class='stale'>Showing yesterday's story - today's update did "
@@ -141,7 +171,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     line-height: 1.5; -webkit-font-smoothing: antialiased;
   }}
   .wrap {{
-    max-width: 40rem; margin: 0 auto;
+    max-width: 44rem; margin: 0 auto;
     padding: clamp(2rem, 8vw, 5rem) 1.5rem 4rem;
     min-height: 100vh; display: flex; flex-direction: column;
   }}
@@ -152,8 +182,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   }}
   .kicker b {{ color: var(--accent); font-weight: 700; }}
   h1 {{
-    font-size: clamp(2rem, 7vw, 3.1rem); line-height: 1.1; font-weight: 700;
-    margin: 0 0 1.25rem; letter-spacing: -0.01em;
+    font-size: clamp(2.1rem, 7.5vw, 3.6rem); line-height: 1.08; font-weight: 700;
+    margin: 0 0 1.25rem; letter-spacing: -0.015em;
   }}
   .lede {{
     font-size: clamp(1.05rem, 3.2vw, 1.3rem); color: var(--fg);
@@ -161,16 +191,34 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   }}
   .hero {{
     display: inline-block; font-family: -apple-system, system-ui, sans-serif;
-    font-size: 0.95rem; font-weight: 600; text-decoration: none;
-    color: var(--bg); background: var(--accent);
-    padding: 0.7rem 1.2rem; border-radius: 0.4rem; margin-bottom: 2rem;
+    font-size: 1rem; font-weight: 600; text-decoration: none;
+    color: var(--accent); margin-bottom: 2rem;
+    border-bottom: 2px solid var(--accent); padding-bottom: 2px;
   }}
-  .hero:hover {{ opacity: 0.9; }}
-  .hero .src {{ opacity: 0.8; font-weight: 400; }}
+  .hero:hover {{ opacity: 0.7; }}
+  .hero .arrow {{ font-weight: 400; }}
+  .hero .src {{ color: var(--muted); font-weight: 400; }}
   .coverage {{
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.95rem;
     color: var(--muted); border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule); padding: 1rem 0; margin: 0 0 2rem;
+    border-bottom: 1px solid var(--rule); padding: 1.25rem 0; margin: 0 0 2rem;
+  }}
+  .cov-line {{ margin: 0 0 1rem; }}
+  .cov-line b {{ color: var(--fg); font-weight: 700; }}
+  .spectrum {{ display: flex; gap: 4px; margin: 0 0 0.4rem; }}
+  .spectrum .seg {{
+    flex: 1; height: 7px; border-radius: 4px; background: var(--rule);
+  }}
+  .spectrum .seg.on {{ background: var(--accent); }}
+  .spectrum-ends {{
+    display: flex; justify-content: space-between;
+    font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--muted); margin-bottom: 1rem;
+  }}
+  .chips {{ display: flex; flex-wrap: wrap; gap: 0.4rem; }}
+  .chip {{
+    font-size: 0.75rem; padding: 0.15rem 0.6rem; border: 1px solid var(--rule);
+    border-radius: 1rem; color: var(--muted); white-space: nowrap;
   }}
   .why {{
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.9rem;
@@ -220,13 +268,14 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     <h1>{headline}</h1>
     {snippet_html}
     <a class="hero" href="{hero_url}" target="_blank" rel="noopener">
-      Read the fullest account <span class="src">&mdash; {hero_src}</span></a>
-    <p class="coverage">{coverage}</p>
+      Read the fullest account <span class="arrow">&rarr;</span>
+      <span class="src">{hero_src}</span></a>
+    {coverage_block}
     {_why_section(winner, runners)}
     <footer>
-      Updated {stamp} {tzabbr}. Next update in ~24 hours.<br>
-      One story a day. No feed, no scroll. Ranked deterministically from public
-      news feeds - no AI, no editorial hand.
+      Updated {stamp} {tzabbr}. Next update in about a day.<br>
+      Today's story is simply the one being covered by the most outlets, across
+      the most countries and the widest range of viewpoints.
     </footer>
   </div>
 </body>
