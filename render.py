@@ -380,7 +380,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   .covmap {{ margin: 0 0 1.5rem; }}
   .wmap {{ display: block; width: 100%; height: auto; }}
   .wmap .wland {{ fill: var(--land); stroke: none; }}
-  .wmap .mnode {{ cursor: help; }}
+  .wmap .mnode {{ cursor: default; }}
   .wmap .mnode:hover .mhalo {{ opacity: 0.4; }}
   .wmap .mdot {{ fill: var(--accent); }}
   .wmap .mhalo {{ fill: var(--accent); opacity: 0.18; transition: opacity 0.15s; }}
