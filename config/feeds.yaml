@@ -25,6 +25,7 @@ feeds:
     country: INT
     lean: centre
     via: gnews
+    paywall: soft      # metered - a few free articles then a wall
   - name: Associated Press
     url: https://news.google.com/rss/search?q=site:apnews.com+when:1d&hl=en-AU&gl=AU&ceid=AU:en
     country: INT
@@ -57,12 +58,14 @@ feeds:
     country: AU
     lean: centre-right
     via: gnews
+    paywall: hard      # hard paywall - almost all articles gated
 
   # --- United States (deliberately spanning left to right) ---
   - name: The Nation (US, left)
     url: https://www.thenation.com/feed/?post_type=article
     country: US
     lean: left
+    paywall: soft
   - name: Common Dreams (US, left)
     url: https://www.commondreams.org/feeds/news.rss
     country: US
@@ -88,6 +91,7 @@ feeds:
     url: https://www.dailywire.com/feeds/rss.xml
     country: US
     lean: right
+    paywall: soft      # news free; some content members-only
 
   # --- Continental Europe / Asia / Canada (deepen the country axis so the
   #     diversity term measures a genuinely global spread, not just Anglo) ---
@@ -103,10 +107,12 @@ feeds:
     url: https://www.thehindu.com/news/international/feeder/default.rss
     country: IN
     lean: centre-left
+    paywall: soft
   - name: The Japan Times
     url: https://www.japantimes.co.jp/feed/
     country: JP
     lean: centre
+    paywall: soft
   # CBC's own feed times out from some hosts; pull via Google News instead.
   - name: CBC News (Canada)
     url: https://news.google.com/rss/search?q=site:cbc.ca+when:1d&hl=en-CA&gl=CA&ceid=CA:en

@@ -5,6 +5,11 @@
 # --- Time window ---
 timezone: Australia/Sydney   # window + display timezone (IANA name)
 window_hours: 24             # rolling lookback ending at run time
+update_hour_utc: 20          # the daily cron hour (UTC) - render shows the next one
+                             # 20:00 UTC == 06:00 AEST / 07:00 AEDT
+# Daily lock: once a day's winner is chosen it stays that story for the rest of
+# the (local) day, refreshing only its coverage counts - "one story a day".
+daily_lock: true
 
 # --- Fetch ---
 snippet_cap_words: 25        # COPYRIGHT guard: hard cap on feed description words

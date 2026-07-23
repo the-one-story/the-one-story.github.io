@@ -113,6 +113,7 @@ def _novelty_penalties(clusters: list[dict], ledger: list[dict],
 # Hero selection                                                              #
 # --------------------------------------------------------------------------- #
 _LEAN_RANK = {"centre": 0, "centre-left": 1, "centre-right": 1, "left": 2, "right": 2}
+_PAYWALL_RANK = {"none": 0, "soft": 1, "hard": 2}
 
 
 def _is_gnews(url: str) -> bool:
@@ -120,11 +121,13 @@ def _is_gnews(url: str) -> bool:
 
 
 def choose_hero(members: list[dict]) -> dict:
-    """Best single write-up: prefer a clean (non-redirect) link, then the most
-    neutral outlet lean, then the earliest published (first to cover)."""
+    """Best single write-up: prefer a freely-readable source (no paywall), then
+    a clean (non-redirect) link, then the most neutral outlet lean, then the
+    earliest published (first to cover)."""
     return sorted(
         members,
-        key=lambda m: (_is_gnews(m["url"]),
+        key=lambda m: (_PAYWALL_RANK.get(m.get("paywall", "none"), 0),
+                       _is_gnews(m["url"]),
                        _LEAN_RANK.get(m["lean"], 2),
                        m["published_at"]),
     )[0]
@@ -231,6 +234,7 @@ def build_ranked_table(scored: list[dict], settings: dict,
         "run_time": feeds_report["run_time"],
         "window_hours": settings["window_hours"],
         "timezone": settings["timezone"],
+        "update_hour_utc": settings["update_hour_utc"],
         "winner": scored[0],
         "runners_up": [
             {k: v for k, v in c.items() if k != "members"}

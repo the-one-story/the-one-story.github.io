@@ -14,16 +14,41 @@ is HTML-escaped.
 from __future__ import annotations
 
 import html
+import re
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 from common import load_settings, read_json, rel
+
+# Strip a trailing " - Section" or " (tags)" from a feed name for clean display
+# e.g. "The Nation (US, left)" -> "The Nation", "The Guardian - World" -> "The Guardian".
+_SRC_CLEAN = re.compile(r"\s*[(\-].*$")
+
+
+def _clean_source(name: str) -> str:
+    return _SRC_CLEAN.sub("", name).strip() or name
+
+
+# Map five-point lean to three display buckets (Ground-News style).
+_LEAN_BUCKET = {"left": "Left", "centre-left": "Left", "centre": "Centre",
+                "centre-right": "Right", "right": "Right"}
 
 
 def _fmt_local(iso: str, tzname: str) -> tuple[str, str]:
     dt = datetime.fromisoformat(iso).astimezone(ZoneInfo(tzname))
     return dt.strftime("%d/%m/%Y %H:%M"), dt.tzname() or ""
+
+
+def _next_update(iso: str, tzname: str, update_hour_utc: int) -> str:
+    """Human-readable next scheduled update: the next update_hour_utc:00 UTC
+    after the run time, shown in local time (e.g. 'Fri 24 Jul, 06:00 AEST')."""
+    run = datetime.fromisoformat(iso).astimezone(timezone.utc)
+    nxt = run.replace(hour=update_hour_utc, minute=0, second=0, microsecond=0)
+    if nxt <= run:
+        nxt += timedelta(days=1)
+    local = nxt.astimezone(ZoneInfo(tzname))
+    return f"{local.strftime('%a %d %b, %H:%M')} {local.tzname()}"
 
 
 def _display_snippet(winner: dict) -> str:
@@ -40,9 +65,11 @@ _LEAN_ORDER = ["left", "centre-left", "centre", "centre-right", "right"]
 _LEAN_NAME = {"left": "the left", "centre-left": "the centre-left",
               "centre": "the centre", "centre-right": "the centre-right",
               "right": "the right"}
-_COUNTRY_NAME = {"INT": "Intl wires", "GB": "UK", "QA": "Qatar",
+_COUNTRY_NAME = {"INT": "Wire services", "GB": "UK", "QA": "Qatar",
                  "AU": "Australia", "US": "USA", "DE": "Germany",
-                 "FR": "France", "IN": "India", "JP": "Japan", "CA": "Canada"}
+                 "FR": "France", "IN": "India", "JP": "Japan", "CA": "Canada",
+                 "IL": "Israel", "CN": "China", "BR": "Brazil", "ZA": "South Africa",
+                 "SG": "Singapore", "AE": "UAE"}
 
 
 def _coverage_block(winner: dict) -> str:
@@ -75,6 +102,50 @@ def _coverage_block(winner: dict) -> str:
       <div class="spectrum-ends"><span>Left</span><span>Right</span></div>
       <div class="chips">{chips}</div>
     </div>"""
+
+
+def _sources_section(winner: dict) -> str:
+    """A Ground-News-style breakdown of who is covering this story: one row per
+    outlet, grouped Left / Centre / Right, each linking to that outlet's own
+    write-up. Shows how the headlines differ and marks paywalled sources."""
+    members = winner.get("members", [])
+    if not members:
+        return ""
+    # One row per outlet (keep the first, i.e. newest, article from each).
+    by_source: dict[str, dict] = {}
+    for m in members:
+        by_source.setdefault(m["source"], m)
+
+    buckets: dict[str, list[dict]] = {"Left": [], "Centre": [], "Right": []}
+    for m in by_source.values():
+        buckets[_LEAN_BUCKET.get(m["lean"], "Centre")].append(m)
+
+    blocks = []
+    for label in ("Left", "Centre", "Right"):
+        items = sorted(buckets[label], key=lambda x: _clean_source(x["source"]))
+        if not items:
+            continue
+        rows = []
+        for m in items:
+            url = html.escape(m["url"], quote=True)
+            src = html.escape(_clean_source(m["source"]))
+            head = html.escape(m["title"])
+            lock = (' <span class="lock" title="paywalled">&#128274;</span>'
+                    if m.get("paywall", "none") != "none" else "")
+            rows.append(
+                f'<li><a href="{url}" target="_blank" rel="noopener">{src}</a>'
+                f'{lock}<span class="src-head">{head}</span></li>')
+        blocks.append(
+            f'<div class="bucket"><h4>{label}'
+            f'<span class="bcount">{len(items)}</span></h4>'
+            f'<ul>{"".join(rows)}</ul></div>')
+
+    n = len(by_source)
+    return f"""
+    <details class="sources">
+      <summary>Covered by {n} outlet{"s" if n != 1 else ""} &mdash; see who</summary>
+      <div class="sources-body">{"".join(blocks)}</div>
+    </details>"""
 
 
 def _why_section(winner: dict, runners: list[dict]) -> str:
@@ -110,10 +181,10 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
       <div class="why-body">
         <p>The winner is chosen by a fully deterministic score -
            <code>coverage &times; diversity &times; recency &times; novelty</code> -
-           with no editorial judgement and no AI. Diversity (spread across
-           countries <em>and</em> the political spectrum) is weighted most
-           heavily, to stop a story that is merely loud in one national press
-           from winning on volume alone.</p>
+           with no editorial judgement. Diversity (spread across countries
+           <em>and</em> the political spectrum) carries the most weight, so a
+           story that everyone agrees is big rises above one that is simply
+           being shouted loudest in a single country's press.</p>
         <table class="comp">
           <thead><tr><th>Component</th><th>Score (0-1)</th></tr></thead>
           <tbody>{comp_rows}</tbody>
@@ -130,14 +201,17 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     runners = ranked.get("runners_up", [])
     tzname = ranked["timezone"]
     stamp, tzabbr = _fmt_local(ranked["run_time"], tzname)
+    next_update = _next_update(ranked["run_time"], tzname,
+                               ranked.get("update_hour_utc", 20))
 
     # Headline, snippet and link all come from the one hero article (the best
     # single write-up) so they read as a coherent unit.
     headline = html.escape(winner["hero"]["title"])
     snippet = html.escape(_display_snippet(winner))
     hero_url = html.escape(winner["hero"]["url"], quote=True)
-    hero_src = html.escape(winner["hero"]["source"])
+    hero_src = html.escape(_clean_source(winner["hero"]["source"]))
     coverage_block = _coverage_block(winner)
+    sources_block = _sources_section(winner)
 
     stale_banner = (
         "<div class='stale'>Showing yesterday's story - today's update did "
@@ -220,6 +294,34 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     font-size: 0.75rem; padding: 0.15rem 0.6rem; border: 1px solid var(--rule);
     border-radius: 1rem; color: var(--muted); white-space: nowrap;
   }}
+  .sources {{
+    font-family: -apple-system, system-ui, sans-serif; font-size: 0.9rem;
+    margin: 0 0 0.5rem;
+  }}
+  .sources summary {{
+    cursor: pointer; color: var(--accent); font-weight: 600;
+    padding: 0.5rem 0; user-select: none;
+  }}
+  .sources-body {{ padding-top: 0.75rem; }}
+  .bucket {{ margin-bottom: 1.25rem; }}
+  .bucket h4 {{
+    margin: 0 0 0.5rem; font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--muted); font-weight: 700;
+    display: flex; align-items: center; gap: 0.5rem;
+  }}
+  .bucket .bcount {{
+    background: var(--rule); color: var(--fg); border-radius: 1rem;
+    padding: 0 0.5rem; font-size: 0.7rem; letter-spacing: 0;
+  }}
+  .bucket ul {{ list-style: none; margin: 0; padding: 0; }}
+  .bucket li {{
+    padding: 0.5rem 0; border-top: 1px solid var(--rule);
+    display: flex; flex-direction: column; gap: 0.1rem;
+  }}
+  .bucket li a {{ color: var(--fg); font-weight: 600; text-decoration: none;
+    border-bottom: 1px solid var(--accent); align-self: flex-start; }}
+  .bucket .src-head {{ color: var(--muted); font-size: 0.82rem; }}
+  .lock {{ font-size: 0.7rem; opacity: 0.7; }}
   .why {{
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.9rem;
     margin-top: 0.5rem;
@@ -271,11 +373,10 @@ def render_html(ranked: dict, stale: bool = False) -> str:
       Read the fullest account <span class="arrow">&rarr;</span>
       <span class="src">{hero_src}</span></a>
     {coverage_block}
+    {sources_block}
     {_why_section(winner, runners)}
     <footer>
-      Updated {stamp} {tzabbr}. Next update in about a day.<br>
-      Today's story is simply the one being covered by the most outlets, across
-      the most countries and the widest range of viewpoints.
+      Updated {stamp} {tzabbr}.<br>Next update: {next_update}.
     </footer>
   </div>
 </body>

@@ -73,6 +73,34 @@
     font-size: 0.75rem; padding: 0.15rem 0.6rem; border: 1px solid var(--rule);
     border-radius: 1rem; color: var(--muted); white-space: nowrap;
   }
+  .sources {
+    font-family: -apple-system, system-ui, sans-serif; font-size: 0.9rem;
+    margin: 0 0 0.5rem;
+  }
+  .sources summary {
+    cursor: pointer; color: var(--accent); font-weight: 600;
+    padding: 0.5rem 0; user-select: none;
+  }
+  .sources-body { padding-top: 0.75rem; }
+  .bucket { margin-bottom: 1.25rem; }
+  .bucket h4 {
+    margin: 0 0 0.5rem; font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--muted); font-weight: 700;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .bucket .bcount {
+    background: var(--rule); color: var(--fg); border-radius: 1rem;
+    padding: 0 0.5rem; font-size: 0.7rem; letter-spacing: 0;
+  }
+  .bucket ul { list-style: none; margin: 0; padding: 0; }
+  .bucket li {
+    padding: 0.5rem 0; border-top: 1px solid var(--rule);
+    display: flex; flex-direction: column; gap: 0.1rem;
+  }
+  .bucket li a { color: var(--fg); font-weight: 600; text-decoration: none;
+    border-bottom: 1px solid var(--accent); align-self: flex-start; }
+  .bucket .src-head { color: var(--muted); font-size: 0.82rem; }
+  .lock { font-size: 0.7rem; opacity: 0.7; }
   .why {
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.9rem;
     margin-top: 0.5rem;
@@ -118,42 +146,45 @@
     
     <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the single most
        important story of the last 24 hours</p>
-    <h1>Houthi Red Sea threat would challenge a stretched U.S. military</h1>
-    <p class="lede">The possible entry of the Houthis into ​the conflict is another example of how the war continues to evolve, worsening a political headache for the…</p>
-    <a class="hero" href="https://www.japantimes.co.jp/news/2026/07/22/world/houthis-red-sea-us-military/" target="_blank" rel="noopener">
+    <h1>Tankers make sharp U-turns after Houthi shipping threat</h1>
+    <p class="lede">All of the ships were travelling to or from Saudi ports before changing course, ship-tracking data shows.</p>
+    <a class="hero" href="https://www.bbc.co.uk/news/articles/cn0n127lpzgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">
       Read the fullest account <span class="arrow">&rarr;</span>
-      <span class="src">The Japan Times</span></a>
+      <span class="src">BBC News</span></a>
     <div class="coverage">
       <p class="cov-line">Running across <b>9</b> outlets in
-        <b>7</b> countries, spanning the political spectrum from the centre-left to the centre-right.</p>
+        <b>7</b> countries, spanning the political spectrum from the centre-left to the centre.</p>
       <div class="spectrum" role="img"
-           aria-label="Political spectrum, covered from the centre-left to the centre-right"><span class="seg" title="left"></span><span class="seg on" title="centre-left"></span><span class="seg on" title="centre"></span><span class="seg on" title="centre-right"></span><span class="seg" title="right"></span></div>
+           aria-label="Political spectrum, covered from the centre-left to the centre"><span class="seg" title="left"></span><span class="seg on" title="centre-left"></span><span class="seg on" title="centre"></span><span class="seg" title="centre-right"></span><span class="seg" title="right"></span></div>
       <div class="spectrum-ends"><span>Left</span><span>Right</span></div>
-      <div class="chips"><span class="chip">Australia</span><span class="chip">Canada</span><span class="chip">Germany</span><span class="chip">UK</span><span class="chip">Intl wires</span><span class="chip">Japan</span><span class="chip">Qatar</span></div>
+      <div class="chips"><span class="chip">Canada</span><span class="chip">Germany</span><span class="chip">France</span><span class="chip">UK</span><span class="chip">Wire services</span><span class="chip">Japan</span><span class="chip">Qatar</span></div>
     </div>
+    
+    <details class="sources">
+      <summary>Covered by 9 outlets &mdash; see who</summary>
+      <div class="sources-body"><div class="bucket"><h4>Left<span class="bcount">3</span></h4><ul><li><a href="https://www.aljazeera.com/news/liveblog/2026/7/23/iran-war-live-us-launches-new-attacks-houthis-attack-2-saudi-oil-tankers?traffic_source=rss" target="_blank" rel="noopener">Al Jazeera English</a><span class="src-head">Iran war live: US launches new attacks; Houthis attack 2 Saudi oil tankers</span></li><li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1TQzlMa0NkMTNhbTFwcTRtbVJNWEpYNnR4RnJSM3JWMDAyTXVjazZQeU1OaGdEMktncEdVMFZQUVpBblZuU1N4ZUxkUUs2ZEJfNjFOT25QeFRadGI3YnNBdXBMT0lsSXRneFVXdFpB?oc=5" target="_blank" rel="noopener">CBC News</a><span class="src-head">Houthis adding to pressure on Iran conflict, as U.S. undertakes 12th consecutive night of strikes</span></li><li><a href="https://www.theguardian.com/world/live/2026/jul/23/us-iran-war-live-updates-strikes-houthis-red-sea-saudi-nuclear-deal-middle-east-crisis-latest-news" target="_blank" rel="noopener">The Guardian</a><span class="src-head">Yemen’s Houthis claim attacks on Red Sea tankers as US launches 12th night of strikes on Iran – Middle East crisis live</span></li></ul></div><div class="bucket"><h4>Centre<span class="bcount">6</span></h4><ul><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOcGdJQWJZN1VTa2lzRmx5QUxPbGduTThzZkZIQlZSQi1zY2h3OXdJa21tbGZHNDZYcFA4ME5tMXRLRm9xWk1WQ1dIeGhyNmV2X0JyQlRlb1oyNGlyMlkzZHRkNlBlXzY2dDlTNGNEM3hMYVFic2FON0o5bGttWUQ0VDQzcDlKdHNYX3lEVDYwQlBfazR4dG1rOF9zd2RZcGlROUdwOTJB?oc=5" target="_blank" rel="noopener">Associated Press</a><span class="src-head">U.S. and Pakistan condemn Houthi Red Sea threats to shipping and Saudi Arabia</span></li><li><a href="https://www.bbc.co.uk/news/articles/cn0n127lpzgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">BBC News</a><span class="src-head">Tankers make sharp U-turns after Houthi shipping threat</span></li><li><a href="https://www.dw.com/en/us-hits-iran-as-houthis-claim-strikes-on-saudi-tankers/live-78077811?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener">Deutsche Welle</a><span class="src-head">US hits Iran as Houthis claim strikes on Saudi tankers</span></li><li><a href="https://www.france24.com/en/middle-east/20260723-middle-east-live-houthi-rebels-claim-attacks-on-saudi-tankers-in-the-red-sea" target="_blank" rel="noopener">France 24</a><span class="src-head">Middle East live: Houthi rebels claim attacks on Saudi tankers in the Red Sea</span></li><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPZHZGNUJIVDM4b051ZHVfNEJYZmRlSTdLdDY5S0hLUFpCcTJFeU41bW5mMGtSbVNRNGhBdnhta3JpaFVXeGkxc1VwVmZvY19Ibm9DU0VwNWt6cWJDTm02YVJFZzV3UTZmRmpHckNTWkxGV2pCQjBqZHRDdExub2U0OGlraDNlcWFKaS14R3RDdjBRYk5mZDRoYkNfVG1tcmZybXpwZ1I4d0Z1bldT?oc=5" target="_blank" rel="noopener">Reuters</a> <span class="lock" title="paywalled">&#128274;</span><span class="src-head">Yemen&#x27;s Houthis say they targeted two Saudi tankers; source says Encelia hit by missile</span></li><li><a href="https://www.japantimes.co.jp/news/2026/07/23/world/houthis-tankers-red-sea-war/" target="_blank" rel="noopener">The Japan Times</a> <span class="lock" title="paywalled">&#128274;</span><span class="src-head">Houthis say they attacked tankers in Red Sea, widening war</span></li></ul></div></div>
+    </details>
     
     <details class="why">
       <summary>Why this story?</summary>
       <div class="why-body">
         <p>The winner is chosen by a fully deterministic score -
            <code>coverage &times; diversity &times; recency &times; novelty</code> -
-           with no editorial judgement and no AI. Diversity (spread across
-           countries <em>and</em> the political spectrum) is weighted most
-           heavily, to stop a story that is merely loud in one national press
-           from winning on volume alone.</p>
+           with no editorial judgement. Diversity (spread across countries
+           <em>and</em> the political spectrum) carries the most weight, so a
+           story that everyone agrees is big rises above one that is simply
+           being shouted loudest in a single country's press.</p>
         <table class="comp">
           <thead><tr><th>Component</th><th>Score (0-1)</th></tr></thead>
-          <tbody><tr><td>coverage</td><td>1.00</td></tr><tr><td>diversity</td><td>0.65</td></tr><tr><td>recency</td><td>0.47</td></tr><tr><td>novelty</td><td>1.00</td></tr></tbody>
+          <tbody><tr><td>coverage</td><td>0.93</td></tr><tr><td>diversity</td><td>0.53</td></tr><tr><td>recency</td><td>0.50</td></tr><tr><td>novelty</td><td>1.00</td></tr></tbody>
         </table>
         
         <h3>Today's runners-up</h3>
-        <ol class="runners"><li><a href='https://www.dw.com/en/us-and-saudi-arabia-reach-historic-nuclear-energy-deal/a-78077629?maca=en-rss-en-all-1573-rdf' target='_blank' rel='noopener'>US and Saudi Arabia reach historic nuclear energy deal</a><span class='ru-meta'>Deutsche Welle &middot; score 0.214 &middot; 8 outlets, 6 countries, 2 leans</span></li><li><a href='https://www.bbc.co.uk/news/articles/c70gek2kqyno?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Iran war has cost US $37.5bn so far, Hegseth says, as Pentagon seeks billions more</a><span class='ru-meta'>BBC News - World &middot; score 0.200 &middot; 8 outlets, 4 countries, 4 leans</span></li><li><a href='https://www.bbc.co.uk/news/articles/c204p64pqzno?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Mamdani backs off pledge to arrest Netanyahu citing lack of authority</a><span class='ru-meta'>BBC News - World &middot; score 0.193 &middot; 7 outlets, 4 countries, 4 leans</span></li><li><a href='https://www.dw.com/en/us-judge-sets-maduro-trial-date-for-june-2027/a-78077318?maca=en-rss-en-all-1573-rdf' target='_blank' rel='noopener'>US judge sets Maduro trial date for June 2027</a><span class='ru-meta'>Deutsche Welle &middot; score 0.124 &middot; 5 outlets, 4 countries, 2 leans</span></li><li><a href='https://www.bbc.co.uk/news/articles/cdrv0p37k8jo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Trump threatens to target Iran&#x27;s bridges and power plants if Hormuz attacks persist</a><span class='ru-meta'>BBC News - World &middot; score 0.119 &middot; 5 outlets, 4 countries, 2 leans</span></li></ol>
+        <ol class="runners"><li><a href='https://www.france24.com/en/middle-east/20260722-us-announce-landmark-deal-allowing-saudis-enrich-nuclear-fuel-reports-say' target='_blank' rel='noopener'>US announces landmark deal allowing Saudis to enrich nuclear fuel</a><span class='ru-meta'>France 24 &middot; score 0.366 &middot; 11 outlets, 8 countries, 3 leans</span></li><li><a href='https://www.france24.com/en/gaza-mamdani-urges-government-to-arrest-netanyahu-if-he-visits-us' target='_blank' rel='noopener'>#Gaza: #Mamdani urges government to arrest #Netanyahu if he visits #US</a><span class='ru-meta'>France 24 &middot; score 0.224 &middot; 8 outlets, 5 countries, 4 leans</span></li><li><a href='https://www.france24.com/en/middle-east/20260722-trump-threatens-iranian-infrastructure-over-strait-of-hormuz-attacks' target='_blank' rel='noopener'>Trump threatens Iranian infrastructure over Strait of Hormuz attacks</a><span class='ru-meta'>France 24 &middot; score 0.143 &middot; 6 outlets, 5 countries, 2 leans</span></li><li><a href='https://www.nbcnews.com/video/video-shows-madison-police-shoot-and-kill-man-who-allegedly-was-armed-with-a-knife-267135557707' target='_blank' rel='noopener'>Video shows Madison police shoot and kill man who allegedly was armed with a knife</a><span class='ru-meta'>NBC News (US) &middot; score 0.096 &middot; 3 outlets, 3 countries, 2 leans</span></li><li><a href='https://www.commondreams.org/news/pete-hegseth-budget-request' target='_blank' rel='noopener'>Hegseth Is Demanding US Households Pay $5,000 More Per Year to Fund the Pentagon, Economist Says</a><span class='ru-meta'>Common Dreams (US, left) &middot; score 0.096 &middot; 4 outlets, 3 countries, 4 leans</span></li></ol>
       </div>
     </details>
     <footer>
-      Updated 23/07/2026 12:14 AEST. Next update in about a day.<br>
-      Today's story is simply the one being covered by the most outlets, across
-      the most countries and the widest range of viewpoints.
+      Updated 23/07/2026 12:28 AEST.<br>Next update: Fri 24 Jul, 06:00 AEST.
     </footer>
   </div>
 </body>

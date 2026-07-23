@@ -36,18 +36,34 @@ _TAG_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"\s+")
 # Google News site-scoped titles look like "Real headline - Reuters".
 _GNEWS_SUFFIX_RE = re.compile(r"\s+-\s+[^-]+$")
+# Connecting words we don't want a truncated snippet to end on.
+_TRAILING_STOP = {
+    "the", "a", "an", "and", "or", "but", "for", "to", "of", "in", "on", "at",
+    "by", "with", "as", "that", "this", "from", "its", "their", "his", "her",
+    "is", "was", "are", "were", "has", "have", "had", "into", "over", "after",
+}
 
 
 def _clean_snippet(raw: str, cap_words: int) -> str:
-    """Strip HTML, collapse whitespace, hard-cap word count (copyright guard)."""
+    """Strip HTML, collapse whitespace, hard-cap word count (copyright guard),
+    and end gracefully - at a sentence boundary if one sits within the cap,
+    otherwise trim any dangling connecting word before the ellipsis."""
     if not raw:
         return ""
     text = html.unescape(_TAG_RE.sub(" ", raw))
     text = _WS_RE.sub(" ", text).strip()
     words = text.split(" ")
-    if len(words) > cap_words:
-        text = " ".join(words[:cap_words]).rstrip(".,;:") + "…"
-    return text
+    if len(words) <= cap_words:
+        return text
+    capped = words[:cap_words]
+    # Prefer the last sentence boundary within the cap, if it keeps >= half.
+    for end in range(len(capped) - 1, cap_words // 2, -1):
+        if capped[end][-1:] in ".!?":
+            return " ".join(capped[:end + 1])
+    # Otherwise drop trailing connecting words, then add an ellipsis.
+    while capped and capped[-1].lower().strip(".,;:'\"") in _TRAILING_STOP:
+        capped.pop()
+    return " ".join(capped).rstrip(".,;:") + "…"
 
 
 def _entry_datetime(entry) -> datetime | None:
@@ -129,6 +145,7 @@ def fetch_all(settings: dict, feeds: list[dict]) -> tuple[list[dict], dict]:
                     "source": fc["name"],
                     "country": fc["country"],
                     "lean": fc["lean"],
+                    "paywall": fc.get("paywall", "none"),
                     "url": url,
                     "published_at": pub.isoformat(),
                     "snippet": snippet,

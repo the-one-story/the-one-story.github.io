@@ -20,6 +20,10 @@ from __future__ import annotations
 import os
 import sys
 import traceback
+from datetime import datetime
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import linear_kernel
 
 from common import load_feeds, load_settings, rel, write_json
 from cluster import build_clusters
@@ -62,6 +66,29 @@ def _inject_stale_banner() -> bool:
     return True
 
 
+def _todays_incumbent(scored, settings, ledger, run_time_iso):
+    """If a winner was already chosen today, return the current scored cluster
+    that matches it (cosine over headlines) so the day's story stays fixed.
+    Returns None on a fresh day, when daily_lock is off, or if the story faded."""
+    if not settings.get("daily_lock"):
+        return None
+    run_date = datetime.fromisoformat(run_time_iso).date().isoformat()
+    todays = [e for e in ledger if e.get("date") == run_date]
+    if not todays:
+        return None
+    incumbent_text = todays[-1]["text"]
+    texts = [" ".join(dict.fromkeys(m["title"] for m in c["members"]))
+             for c in scored]
+    vec = TfidfVectorizer(stop_words="english", ngram_range=(1, 2),
+                          sublinear_tf=True)
+    tfidf = vec.fit_transform(texts + [incumbent_text])
+    sims = linear_kernel(tfidf[:-1], tfidf[-1:]).ravel()
+    best = int(sims.argmax())
+    if sims[best] >= settings["scoring"]["novelty_match_threshold"]:
+        return scored[best]
+    return None
+
+
 def run_pipeline() -> dict:
     """Run all stages. Raises PipelineError on unrecoverable failure."""
     settings = load_settings()
@@ -82,10 +109,19 @@ def run_pipeline() -> dict:
     print(">>> SCORE")
     ledger = load_ledger(settings)
     scored = score_clusters(clusters, settings, feeds, report["run_time"], ledger)
+
+    # Daily lock: if a winner was already chosen today, keep that same story
+    # (refreshing its coverage) instead of letting a re-run pick a new one.
+    incumbent = _todays_incumbent(scored, settings, ledger, report["run_time"])
+    locked = incumbent is not None
+    if locked:
+        scored = [incumbent] + [c for c in scored if c is not incumbent]
+        print("    daily lock: kept today's already-chosen story")
+
     ranked = build_ranked_table(scored, settings, report)
     write_json(settings["ranked_json_path"], ranked)
     win = ranked["winner"]
-    print(f"    winner: {win['members'][0]['title'][:60]}")
+    print(f"    winner: {win['hero']['title'][:60]}")
     print(f"    score={win['score']:.4f} outlets={win['outlet_count']} "
           f"countries={len(win['countries'])} leans={len(win['leans'])}")
 
@@ -96,8 +132,11 @@ def run_pipeline() -> dict:
     print(f"    wrote {out_path}")
 
     print(">>> LEDGER")
-    lpath = record_winner(settings, win, report["run_time"])
-    print(f"    recorded winner -> {lpath}")
+    if locked:
+        print("    unchanged (today's winner already recorded)")
+    else:
+        lpath = record_winner(settings, win, report["run_time"])
+        print(f"    recorded new daily winner -> {lpath}")
 
     return ranked
 
