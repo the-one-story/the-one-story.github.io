@@ -288,6 +288,17 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <meta name="theme-color" content="#14161a">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <title>One Story</title>
+<!-- Link-preview (Open Graph) - how the URL unfurls in WhatsApp, iMessage, Slack, etc. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="One Story">
+<meta property="og:url" content="https://the-one-story.github.io/">
+<meta property="og:title" content="One Story">
+<meta property="og:description" content="The single most important news story of the last 24 hours - ranked deterministically across the world's press. No feed, no scroll.">
+<meta property="og:image" content="https://the-one-story.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="One Story - the single most important story of the last 24 hours">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   /* "Ink" - a deliberate single-theme dark look (an overnight wire desk),
      with a burnt-orange accent. Committed to dark by design. */
