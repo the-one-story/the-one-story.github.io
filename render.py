@@ -295,6 +295,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <meta property="og:title" content="One Story">
 <meta property="og:description" content="The single most important news story of the last 24 hours - ranked deterministically across the world's press. No feed, no scroll.">
 <meta property="og:image" content="https://the-one-story.github.io/assets/og.png">
+<meta property="og:image:secure_url" content="https://the-one-story.github.io/assets/og.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="One Story - the single most important story of the last 24 hours">
