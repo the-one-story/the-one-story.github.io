@@ -146,3 +146,25 @@ feeds:
     country: INT
     lean: centre
     via: gnews
+
+  # --- Latin America / Africa / SE Asia (added 23/07 - widen the map) ---
+  - name: The Rio Times (Brazil)
+    url: https://www.riotimesonline.com/feed/
+    country: BR
+    lean: centre
+  - name: Mexico News Daily
+    url: https://mexiconewsdaily.com/feed/
+    country: MX
+    lean: centre
+  - name: Daily Maverick (South Africa)
+    url: https://www.dailymaverick.co.za/rss/
+    country: ZA
+    lean: centre-left
+  - name: Egypt Independent
+    url: https://www.egyptindependent.com/feed/
+    country: EG
+    lean: centre
+  - name: Channel News Asia (Singapore)
+    url: https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml
+    country: SG
+    lean: centre

@@ -3,6 +3,11 @@
 Deferred / optional work. Nothing here is blocking; the site is live and the
 daily job runs on its own.
 
+- [ ] **Daily email subscription.** Look into letting people receive the day's
+  One Story by email. Needs: a signup form (no backend on GitHub Pages, so a
+  hosted form/list service - e.g. Buttondown, Listmonk, Mailchimp free tier, or
+  a serverless function), and the daily job emailing the rendered winner to the
+  list. Keep it free/low-cost and privacy-respecting; unsubscribe handling.
 - [ ] **Tune scoring weights on real data.** Once `data/history/` has ~1-2
   weeks of daily snapshots, use `replay.py` to test alternative weights
   (esp. bumping `recency` from 0.8). Don't tune on a single day.
