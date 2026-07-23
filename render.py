@@ -293,7 +293,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <meta property="og:site_name" content="One Story">
 <meta property="og:url" content="https://the-one-story.github.io/">
 <meta property="og:title" content="One Story">
-<meta property="og:description" content="The most important story of the last 24 hours.">
+<meta property="og:description" content="The most important story in the world right now.">
 <meta property="og:image" content="https://the-one-story.github.io/assets/og.png">
 <meta property="og:image:secure_url" content="https://the-one-story.github.io/assets/og.png">
 <meta property="og:image:type" content="image/png">
