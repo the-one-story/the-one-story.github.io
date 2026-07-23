@@ -196,10 +196,25 @@ def _sources_section(winner: dict) -> str:
     </details>"""
 
 
+_COMPONENT_DESC = {
+    "coverage": "How many distinct outlets are running the story — log-scaled, "
+                "so 20 isn't worth twice 10.",
+    "diversity": "How widely that coverage is spread across countries and the "
+                 "political spectrum — weighted heaviest, to beat a story merely "
+                 "loud in one bloc.",
+    "recency": "Favours coverage that is still building now over a story already "
+               "fading.",
+    "novelty": "Penalises a story that already led on a recent day, easing back "
+               "over ~4 days, so a repeat must bring bigger coverage to win again.",
+}
+
+
 def _why_section(winner: dict, runners: list[dict]) -> str:
     k = winner["components"]
     comp_rows = "".join(
-        f"<tr><td>{name}</td><td>{k[name]:.2f}</td></tr>"
+        f'<li><div class="chead"><span class="cname">{name}</span>'
+        f'<span class="cscore">{k[name]:.2f}</span></div>'
+        f'<p class="cdesc">{_COMPONENT_DESC[name]}</p></li>'
         for name in ("coverage", "diversity", "recency", "novelty")
     )
     nov = winner.get("novelty_match", {})
@@ -233,10 +248,7 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
            <em>and</em> the political spectrum) carries the most weight, so a
            story that everyone agrees is big rises above one that is simply
            being shouted loudest in a single country's press.</p>
-        <table class="comp">
-          <thead><tr><th>Component</th><th>Score (0-1)</th></tr></thead>
-          <tbody>{comp_rows}</tbody>
-        </table>
+        <ul class="comp">{comp_rows}</ul>
         {nov_note}
         <h3>Today's runners-up</h3>
         <ol class="runners">{runners_html}</ol>
@@ -273,6 +285,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#14161a">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <title>One Story</title>
 <style>
   /* "Ink" - a deliberate single-theme dark look (an overnight wire desk),
@@ -388,12 +402,14 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   .why-body p {{ margin: 0 0 1rem; }}
   .why-body code {{ font-size: 0.85em; color: var(--fg); }}
   .why-body em {{ color: var(--fg); font-style: italic; }}
-  table.comp {{ border-collapse: collapse; margin: 0 0 1rem; width: 100%;
-    max-width: 18rem; }}
-  table.comp th, table.comp td {{
-    text-align: left; padding: 0.3rem 0.6rem 0.3rem 0;
-    border-bottom: 1px solid var(--rule); }}
-  table.comp th {{ color: var(--fg); font-weight: 600; }}
+  ul.comp {{ list-style: none; margin: 0 0 1rem; padding: 0; }}
+  ul.comp li {{ padding: 0.6rem 0; border-top: 1px solid var(--rule); }}
+  .chead {{ display: flex; justify-content: space-between; align-items: baseline;
+    gap: 1rem; }}
+  .cname {{ color: var(--fg); font-weight: 600; text-transform: capitalize; }}
+  .cscore {{ color: var(--accent); font-weight: 700;
+    font-variant-numeric: tabular-nums; }}
+  .cdesc {{ margin: 0.2rem 0 0; color: var(--muted); font-size: 0.85rem; }}
   .note {{ font-size: 0.85rem; font-style: italic; }}
   h3 {{ color: var(--fg); font-size: 0.95rem; margin: 1.5rem 0 0.5rem; }}
   ol.runners {{ padding-left: 1.2rem; margin: 0; }}
