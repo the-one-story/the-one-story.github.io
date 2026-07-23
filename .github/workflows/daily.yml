@@ -40,7 +40,7 @@ jobs:
         run: |
           git config user.name  "one-story-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html data/recent_leads.json
+          git add index.html data/recent_leads.json data/history
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else

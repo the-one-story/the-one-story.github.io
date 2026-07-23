@@ -69,7 +69,7 @@ def _connected_components(sim, threshold: float) -> list[int]:
 def cluster_labels(articles: list[dict], settings: dict,
                    method: str = "connected_components") -> list[int]:
     """Return a cluster label per article using the chosen method."""
-    texts = [f"{a['title']} {a['snippet']}".strip() for a in articles]
+    texts = [f"{a['title']} {a.get('snippet', '')}".strip() for a in articles]
     vec = TfidfVectorizer(
         stop_words="english",
         min_df=settings["min_df"],

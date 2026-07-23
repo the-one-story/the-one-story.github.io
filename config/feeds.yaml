@@ -119,3 +119,30 @@ feeds:
     country: CA
     lean: centre-left
     via: gnews
+
+  # --- Middle East / Africa / Latin America / extra wire (added 23/07) ---
+  - name: The Times of Israel
+    url: https://www.timesofisrael.com/feed/
+    country: IL
+    lean: centre
+  # SCMP is Hong Kong-based, Alibaba-owned - useful China-region perspective
+  # but editorially state-adjacent on mainland topics. Treat as one more voice,
+  # not an independent check.
+  - name: South China Morning Post
+    url: https://www.scmp.com/rss/91/feed
+    country: CN
+    lean: centre
+    paywall: soft
+  - name: Buenos Aires Herald
+    url: https://buenosairesherald.com/feed
+    country: AR
+    lean: centre
+  - name: Premium Times (Nigeria)
+    url: https://www.premiumtimesng.com/feed
+    country: NG
+    lean: centre
+  - name: Agence France-Presse
+    url: https://news.google.com/rss/search?q=source:AFP+when:1d&hl=en-US&gl=US&ceid=US:en
+    country: INT
+    lean: centre
+    via: gnews

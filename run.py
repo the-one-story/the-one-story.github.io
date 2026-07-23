@@ -66,6 +66,40 @@ def _inject_stale_banner() -> bool:
     return True
 
 
+_ARCHIVE_FIELDS = ("title", "source", "country", "lean", "paywall", "url",
+                   "published_at", "snippet")
+
+
+def _archive_day(articles, scored, settings, report, locked) -> str:
+    """Append a dated snapshot to data/history/ so weights can be re-tuned on
+    real accumulated data later (see replay.py). Committed by the daily job.
+
+    Stores the full normalised article pool (enough to replay clustering +
+    scoring under any weights offline) plus the config used and the winner that
+    resulted. Idempotent per day (overwrites the same date)."""
+    run_date = datetime.fromisoformat(report["run_time"]).date().isoformat()
+    win = scored[0]
+    record = {
+        "run_time": report["run_time"],
+        "run_date": run_date,
+        "locked": locked,
+        "weights": settings["weights"],
+        "scoring": settings["scoring"],
+        "winner": {
+            "title": win["hero"]["title"],
+            "source": win["hero"]["source"],
+            "score": win["score"],
+            "components": win["components"],
+            "outlet_count": win["outlet_count"],
+            "countries": win["countries"],
+            "leans": win["leans"],
+        },
+        "n_articles": len(articles),
+        "articles": [{k: a[k] for k in _ARCHIVE_FIELDS} for a in articles],
+    }
+    return write_json(f"data/history/{run_date}.json", record)
+
+
 def _todays_incumbent(scored, settings, ledger, run_time_iso):
     """If a winner was already chosen today, return the current scored cluster
     that matches it (cosine over headlines) so the day's story stays fixed.
@@ -137,6 +171,10 @@ def run_pipeline() -> dict:
     else:
         lpath = record_winner(settings, win, report["run_time"])
         print(f"    recorded new daily winner -> {lpath}")
+
+    print(">>> ARCHIVE")
+    apath = _archive_day(articles, scored, settings, report, locked)
+    print(f"    logged {len(articles)} articles -> {apath}")
 
     return ranked
 
