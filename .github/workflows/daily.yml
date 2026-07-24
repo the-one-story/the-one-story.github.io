@@ -40,6 +40,7 @@ jobs:
       # set; otherwise the script dry-runs. The per-day guard prevents a
       # double-send on re-runs.
       - name: Send newsletter (if configured)
+        continue-on-error: true   # an email hiccup must never block publishing
         env:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
         run: python send_email.py

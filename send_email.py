@@ -61,7 +61,10 @@ def main() -> int:
     req = urllib.request.Request(
         f"{api}/emails", data=payload, method="POST",
         headers={"Authorization": f"Token {key}",
-                 "Content-Type": "application/json"})
+                 "Content-Type": "application/json",
+                 # Buttondown's one-time-per-key confirmation that an API send
+                 # is intentional (required for status 'about_to_send').
+                 "X-Buttondown-Live-Dangerously": "true"})
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             print(f"Sent '{subject[:60]}' -> HTTP {resp.status}")
