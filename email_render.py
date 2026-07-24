@@ -19,8 +19,10 @@ from common import load_settings, read_json, rel
 from render import _clean_source, _display_snippet
 
 SITE_URL = "https://the-one-story.github.io/"
-_O = "#b5652a"; _INK = "#201d1a"; _MUT = "#6f6a63"; _BG = "#f4efe6"
-_CARD = "#ffffff"; _RULE = "#e4ded3"
+# Intentionally dark (matches the site's Ink theme) so dark-mode clients don't
+# invert and mangle it, and light clients get a deliberate dark newsletter.
+_BG = "#14161a"; _INK = "#ece9e3"; _MUT = "#8b9096"; _O = "#b5652a"
+_SNIP = "#c3bfb7"; _RULE = "#2a2e34"
 
 
 def _fmt_date(iso: str, tz: str) -> str:
@@ -40,61 +42,47 @@ def build_email(ranked: dict) -> tuple[str, str]:
 
     coverage = (f"Running across {n_out} outlet{'s' if n_out != 1 else ''} in "
                 f"{n_cty} countr{'ies' if n_cty != 1 else 'y'}.")
-    snippet_row = (f'<p style="margin:0 0 22px;font-family:Georgia,serif;'
-                   f'font-size:18px;line-height:1.5;font-style:italic;color:{_INK}">'
-                   f'{snippet}</p>' if snippet else "")
+    sans = "-apple-system,'Segoe UI',Arial,sans-serif"
+    serif = "Georgia,'Times New Roman',serif"
+    snippet_row = (f'<p style="margin:0 0 22px;font-family:{serif};font-size:17px;'
+                   f'line-height:1.5;font-style:italic;color:{_SNIP};">{snippet}</p>'
+                   if snippet else "")
 
+    # Flat, dark, single column - no inner card (Buttondown provides the frame),
+    # no custom footer (Buttondown appends unsubscribe). bgcolor attrs for Outlook.
     body = f"""\
-<div style="background:{_BG};margin:0;padding:24px 0;">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{snippet or headline}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:{_BG};">
-<tr><td align="center" style="padding:0 16px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"
-       style="max-width:560px;background:{_CARD};border:1px solid {_RULE};border-radius:10px;">
-<tr><td style="padding:34px 36px 30px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+       bgcolor="{_BG}" style="background-color:{_BG};border-collapse:collapse;">
+<tr><td align="center" style="padding:26px 10px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+       style="max-width:560px;margin:0 auto;">
+<tr><td style="padding:14px 30px 30px;font-family:{sans};">
 
-  <p style="margin:0 0 4px;font-family:-apple-system,Segoe UI,Arial,sans-serif;
-     font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:{_O};
-     font-weight:700;">One Story</p>
-  <p style="margin:0 0 22px;font-family:-apple-system,Segoe UI,Arial,sans-serif;
-     font-size:13px;color:{_MUT};">{date_str}</p>
+  <p style="margin:0 0 5px;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
+     color:{_O};font-weight:700;">One Story</p>
+  <p style="margin:0 0 22px;font-size:13px;color:{_MUT};">{date_str}</p>
 
-  <h1 style="margin:0 0 16px;font-family:Georgia,'Times New Roman',serif;
-      font-size:30px;line-height:1.15;font-weight:700;color:{_INK};letter-spacing:-.01em;">
-    {headline}</h1>
+  <h1 style="margin:0 0 16px;font-family:{serif};font-size:28px;line-height:1.18;
+      font-weight:700;color:{_INK};letter-spacing:-.01em;">{headline}</h1>
 
   {snippet_row}
 
-  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 26px;"><tr>
-    <td style="border-radius:6px;background:{_O};">
-      <a href="{hero_url}" style="display:inline-block;padding:12px 22px;
-         font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:15px;font-weight:600;
-         color:#ffffff;text-decoration:none;border-radius:6px;">
-        Read the fullest account &rarr; {hero_src}</a>
-    </td>
-  </tr></table>
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 28px;">
+  <tr><td bgcolor="{_O}" style="background-color:{_O};border-radius:6px;">
+    <a href="{hero_url}" style="display:inline-block;padding:12px 22px;font-family:{sans};
+       font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;">
+      Read the fullest account &rarr; {hero_src}</a>
+  </td></tr></table>
 
-  <p style="margin:0 0 6px;font-family:-apple-system,Segoe UI,Arial,sans-serif;
-     font-size:14px;color:{_MUT};border-top:1px solid {_RULE};padding-top:20px;">
-     {coverage}</p>
-  <p style="margin:0 0 4px;font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:14px;">
-     <a href="{SITE_URL}" style="color:{_O};text-decoration:none;font-weight:600;">
-       See the map, every source, and why this story won &rarr;</a></p>
+  <p style="margin:0 0 10px;font-size:14px;color:{_MUT};
+     border-top:1px solid {_RULE};padding-top:20px;">{coverage}</p>
+  <p style="margin:0;font-size:14px;">
+    <a href="{SITE_URL}" style="color:{_O};text-decoration:none;font-weight:600;">
+      See the map, every source, and why this story won &rarr;</a></p>
 
 </td></tr></table>
-
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;">
-<tr><td style="padding:20px 36px;font-family:-apple-system,Segoe UI,Arial,sans-serif;
-    font-size:12px;line-height:1.6;color:{_MUT};text-align:center;">
-  You're receiving this because you subscribed to One Story - the single most important
-  story of the last 24 hours, chosen by how widely it's covered, not by an algorithm.<br>
-  <a href="{{{{ unsubscribe_url }}}}" style="color:{_MUT};text-decoration:underline;">Unsubscribe</a>
-  &nbsp;&middot;&nbsp;
-  <a href="{SITE_URL}" style="color:{_MUT};text-decoration:underline;">the-one-story.github.io</a>
-</td></tr></table>
-
-</td></tr></table>
-</div>"""
+</td></tr></table>"""
     return subject, body
 
 
