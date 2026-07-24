@@ -3,6 +3,10 @@
 Deferred / optional work. Nothing here is blocking; the site is live and the
 daily job runs on its own.
 
+- [ ] **Finish newsletter setup (Buttondown dashboard - Charlie's clicks).**
+  Turn off double opt-in (Settings -> Subscribing); rename the newsletter
+  "Charlie" -> "One Story" (Settings -> Basics) so emails are branded; make own
+  address active in Subscribers so the daily send arrives.
 - [x] **Daily email subscription.** LIVE (Buttondown, username "onestory").
   Signup form on the site + automated daily send in CI (verified 24/07: HTTP 201
   real send). Needed the `X-Buttondown-Live-Dangerously: true` header for
