@@ -33,6 +33,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 from cluster import build_clusters
 from common import load_feeds, load_settings, read_json, write_json
+from fetch import is_noise_format
 from ledger import load_ledger
 
 
@@ -115,18 +116,30 @@ def _novelty_penalties(clusters: list[dict], ledger: list[dict],
 _LEAN_RANK = {"centre": 0, "centre-left": 1, "centre-right": 1, "left": 2, "right": 2}
 _PAYWALL_RANK = {"none": 0, "soft": 1, "hard": 2}
 
+# Established general-audience international desks - preferred for the hero link
+# (the featured "fullest account"). Not used for scoring/coverage, only to pick
+# which single article to feature, so it isn't a regional/state-owned outlet.
+_HERO_TIER1 = {
+    "Reuters", "Associated Press", "Agence France-Presse", "BBC News - World",
+    "The Guardian - World", "Al Jazeera English", "NPR News (US)",
+    "Deutsche Welle", "France 24", "Channel News Asia (Singapore)",
+    "NBC News (US)", "ABC News (AU) - Top Stories",
+}
+
 
 def _is_gnews(url: str) -> bool:
     return "news.google.com" in url
 
 
 def choose_hero(members: list[dict]) -> dict:
-    """Best single write-up: prefer a freely-readable source (no paywall), then
-    a clean (non-redirect) link, then the most neutral outlet lean, then the
-    earliest published (first to cover)."""
+    """Best single write-up. Preference order: a straight article (never a
+    podcast/liveblog/roundup), freely readable, from an established
+    international desk, with a clean link, neutral lean, earliest to cover."""
     return sorted(
         members,
-        key=lambda m: (_PAYWALL_RANK.get(m.get("paywall", "none"), 0),
+        key=lambda m: (is_noise_format(m["url"], m["title"]),
+                       _PAYWALL_RANK.get(m.get("paywall", "none"), 0),
+                       m["source"] not in _HERO_TIER1,
                        _is_gnews(m["url"]),
                        _LEAN_RANK.get(m["lean"], 2),
                        m["published_at"]),

@@ -34,6 +34,21 @@ _UA = (
 )
 _TAG_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"\s+")
+# Non-article formats (podcasts, liveblogs, videos, newsletters, roundups).
+# These are excluded: their titles are multi-topic digests (bad headlines) and
+# their broad vocabulary bridges unrelated stories together during clustering.
+_NOISE_URL = re.compile(
+    r"(/podcasts?/|/videos?/|/watch/|/audio/|/galler(?:y|ies)/|/in-pictures/|"
+    r"/live/|/liveblog|-live-|/live-updates|/newsletters?/)", re.I)
+_NOISE_TITLE = re.compile(
+    r"(\blive:|\blive updates?\b|\bliveblog\b|\bpodcast\b|\bnewsletter\b|"
+    r"\bup first\b|from the politics desk|in today'?s edition|\bin pictures\b|"
+    r"\bwatch:)", re.I)
+
+
+def is_noise_format(url: str, title: str) -> bool:
+    """True for non-article formats (podcast/liveblog/video/newsletter/roundup)."""
+    return bool(_NOISE_URL.search(url or "") or _NOISE_TITLE.search(title or ""))
 # Google News site-scoped titles look like "Real headline - Reuters".
 _GNEWS_SUFFIX_RE = re.compile(r"\s+-\s+[^-]+$")
 # Connecting words we don't want a truncated snippet to end on.
@@ -113,6 +128,7 @@ def fetch_all(settings: dict, feeds: list[dict]) -> tuple[list[dict], dict]:
         "feeds_failed": 0,
         "dropped_no_date": 0,
         "dropped_out_of_window": 0,
+        "dropped_noise": 0,
     }
 
     for fc in feeds:
@@ -132,6 +148,9 @@ def fetch_all(settings: dict, feeds: list[dict]) -> tuple[list[dict], dict]:
                 title = _WS_RE.sub(" ", html.unescape(e.get("title", ""))).strip()
                 url = e.get("link", "")
                 if not title or not url:
+                    continue
+                if is_noise_format(url, title):
+                    report["dropped_noise"] += 1
                     continue
                 if is_gnews:
                     # Strip the " - Source" suffix; the GNews description is a
@@ -172,6 +191,7 @@ def _print_report(articles: list[dict], report: dict) -> None:
     print(f"Feeds OK / failed: {report['feeds_ok']} / {report['feeds_failed']}")
     print(f"Dropped (no date): {report['dropped_no_date']}")
     print(f"Dropped (stale)  : {report['dropped_out_of_window']}")
+    print(f"Dropped (noise)  : {report['dropped_noise']}")
     print(f"Articles in window: {len(articles)}")
     print("-" * 70)
     print(f"{'feed':<34}{'seen':>6}{'kept':>6}  status")
