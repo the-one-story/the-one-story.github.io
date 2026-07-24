@@ -66,9 +66,31 @@ def _connected_components(sim, threshold: float) -> list[int]:
     return labels
 
 
+def _agglomerative(sim, threshold: float) -> list[int]:
+    """Average-linkage agglomerative clustering on cosine distance.
+
+    Unlike single-linkage union-find, this only merges two groups when their
+    AVERAGE similarity is high enough, so a broad article (e.g. an oil-price
+    story that mentions both Iran and the stock market) can't chain two
+    unrelated stories together. `threshold` is the cosine-DISTANCE cut
+    (1 - similarity); larger = more permissive merging.
+    """
+    import numpy as np
+    from sklearn.cluster import AgglomerativeClustering
+
+    dist = np.clip(1.0 - sim, 0.0, 2.0)
+    np.fill_diagonal(dist, 0.0)
+    ac = AgglomerativeClustering(
+        metric="precomputed", linkage="average",
+        distance_threshold=threshold, n_clusters=None,
+    )
+    return ac.fit_predict(dist).tolist()
+
+
 def cluster_labels(articles: list[dict], settings: dict,
-                   method: str = "connected_components") -> list[int]:
-    """Return a cluster label per article using the chosen method."""
+                   method: str | None = None) -> list[int]:
+    """Return a cluster label per article using the configured method."""
+    method = method or settings.get("cluster_method", "agglomerative")
     texts = [f"{a['title']} {a.get('snippet', '')}".strip() for a in articles]
     vec = TfidfVectorizer(
         stop_words="english",
@@ -79,12 +101,16 @@ def cluster_labels(articles: list[dict], settings: dict,
     tfidf = vec.fit_transform(texts)
     sim = linear_kernel(tfidf)  # rows are L2-normalised -> dot == cosine
 
-    fn = CLUSTER_METHODS[method]
-    return fn(sim, settings["similarity_threshold"])
+    if method == "agglomerative":
+        threshold = settings.get("cluster_distance_threshold", 0.92)
+    else:
+        threshold = settings["similarity_threshold"]
+    return CLUSTER_METHODS[method](sim, threshold)
 
 
 CLUSTER_METHODS = {
     "connected_components": _connected_components,
+    "agglomerative": _agglomerative,
 }
 
 
@@ -100,7 +126,7 @@ def _centroid_time(members: list[dict]) -> str:
 
 
 def build_clusters(articles: list[dict], settings: dict,
-                   method: str = "connected_components") -> list[dict]:
+                   method: str | None = None) -> list[dict]:
     labels = cluster_labels(articles, settings, method)
 
     groups: dict[int, list[dict]] = {}

@@ -16,10 +16,17 @@ snippet_cap_words: 25        # COPYRIGHT guard: hard cap on feed description wor
 fetch_timeout_secs: 15       # per-feed network timeout; a dead feed never kills the run
 
 # --- Cluster ---
-# v1 clustering is TF-IDF + cosine similarity over title + snippet.
-# similarity_threshold: two articles join the same story if cosine >= this.
-similarity_threshold: 0.18
-min_df: 1                    # TF-IDF: ignore terms in fewer than this many docs
+# TF-IDF + cosine similarity over title + snippet, then group.
+# cluster_method:
+#   agglomerative        - average-linkage; only merges groups whose AVERAGE
+#                          similarity is high, so a broad article can't chain
+#                          two unrelated stories together (the default).
+#   connected_components - single-linkage union-find (prone to chaining; kept
+#                          as a swappable fallback).
+cluster_method: agglomerative
+cluster_distance_threshold: 0.92   # agglomerative: merge while cosine-distance < this
+similarity_threshold: 0.18         # connected_components: join if cosine >= this
+min_df: 1                          # TF-IDF: ignore terms in fewer than this many docs
 
 # --- Score ---
 # score = coverage^w_coverage * diversity^w_diversity

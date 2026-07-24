@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-07-24T10:27:31.735530+10:00",
+  "run_time": "2026-07-24T10:32:28.870626+10:00",
   "run_date": "2026-07-24",
   "locked": true,
   "weights": {
@@ -17,33 +17,34 @@
     "novelty_match_threshold": 0.3
   },
   "winner": {
-    "title": "Middle East war's economic impact 'could get worse' if Houthis join in",
-    "source": "France 24",
-    "score": 0.11498892300014237,
+    "title": "Trump's nuclear deal with Saudis jettisons longstanding US demands",
+    "source": "BBC News - World",
+    "score": 0.15470795510981847,
     "components": {
-      "coverage": 0.8503,
-      "diversity": 0.4382,
-      "recency": 0.4271,
+      "coverage": 0.9176,
+      "diversity": 0.4648,
+      "recency": 0.5002,
       "novelty": 1.0
     },
-    "outlet_count": 9,
+    "outlet_count": 11,
     "countries": [
       "AE",
-      "AU",
       "CN",
       "DE",
       "FR",
       "GB",
+      "IN",
       "INT",
-      "NG"
+      "JP",
+      "US"
     ],
     "leans": [
       "centre",
       "centre-left",
-      "centre-right"
+      "right"
     ]
   },
-  "n_articles": 1080,
+  "n_articles": 1083,
   "articles": [
     {
       "title": "CONFLICTS OF INTEREST?: EXCLUSIVE: DA paid Dubai-based consultancy more than R7.7m to run its GNU operation",
@@ -76,6 +77,66 @@
       "snippet": "The Trump administration is set to impose 10% and 12.5% tariffs on 60 trading partners, targeting forced labour practices and reshaping global trade dynamics."
     },
     {
+      "title": "‘Rats everywhere’: numbers caught are up 323%. So why are authorities not worried?",
+      "source": "South China Morning Post",
+      "country": "CN",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://www.scmp.com/news/hong-kong/society/article/3361630/rats-everywhere-numbers-caught-are-323-so-why-are-authorities-not-worried?utm_source=rss_feed",
+      "published_at": "2026-07-24T00:30:09+00:00",
+      "snippet": "Hong Kong resident Yau Suk-ming was startled in her kitchen when her daughter turned on a countertop blender and a rat leapt out…"
+    },
+    {
+      "title": "Australia got five warning signs this week. They’re all flashing red",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNYThmdkV3RkxQRGpRSFAyQnpKTmZoT0FpbmdYOEZRbjVGSDJMbUlPZmY5QlNnbWxfT0t6cHZWM0VpSzVjUkZBZnEybmxDQ2hlWHg2N1pkVzUwUUFKLU02a3Z4YmMyaGhvWTE4a1RuTzRBWnZ6Rml4Nk94Q0hOeGlKZmZjMWlTdkNleTJrWC1xQi1sWmE2UXp5Q1A4ZzJCWWdSU0tEUXhGcWJ2QmdIWk1HOHlrbzl4UQ?oc=5",
+      "published_at": "2026-07-24T00:30:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Scottie Scheffler addresses growing rivalry between Rory McIlroy, Bryson DeChambeau after The Open",
+      "source": "Fox News (US, right)",
+      "country": "US",
+      "lean": "right",
+      "paywall": "none",
+      "url": "https://www.foxnews.com/outkick-sports/scottie-scheffler-addresses-growing-rivalry-rory-mcilroy-bryson-dechambeau-open",
+      "published_at": "2026-07-24T00:27:46+00:00",
+      "snippet": "Scottie Scheffler shared his thoughts on the Bryson DeChambeau and Rory McIlroy rivalry ahead of the 3M Open, saying golf is different from other sports."
+    },
+    {
+      "title": "Norway set to file complaint over Trump's push to overturn red card",
+      "source": "ABC News (AU) - Top Stories",
+      "country": "AU",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.abc.net.au/news/2026-07-24/world-cup-2026-norway-set-to-file-official-complaint/106953060",
+      "published_at": "2026-07-24T00:25:37+00:00",
+      "snippet": "Norway's soccer federation says football is on a \"slippery slope\" after FIFA overturned a World Cup red card under pressure from US president Donald Trump."
+    },
+    {
+      "title": "Timothy Olyphant revealed the surprising truth behind his computer-free lifestyle",
+      "source": "Fox News (US, right)",
+      "country": "US",
+      "lean": "right",
+      "paywall": "none",
+      "url": "https://www.foxnews.com/entertainment/timothy-olyphant-revealed-surprising-truth-behind-computer-free-lifestyle",
+      "published_at": "2026-07-24T00:25:21+00:00",
+      "snippet": "Timothy Olyphant revealed his surprisingly low-tech lifestyle on the \"SmartLess\" podcast, admitting he had to dig out an old desktop computer to try to connect."
+    },
+    {
+      "title": "Trump says Saudi nuclear deal subject to forming Israel ties",
+      "source": "The Japan Times",
+      "country": "JP",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://www.japantimes.co.jp/news/2026/07/24/world/politics/us-saudi-nuclear-israel/",
+      "published_at": "2026-07-24T00:25:00+00:00",
+      "snippet": "U.S. President Donald Trump's surprising demand, coming less than 24 hours after the deal was announced, throws a wrench into its implementation."
+    },
+    {
       "title": "Westbound Hwy. 401 closed, 1 injured following two-truck collision in London",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -83,6 +144,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1TU2F5bmtvYnJfS0RkU0p0eFJBa3I5ZHZ1Wmo3SnNBUFZpbWxWQ09Pd2pmck1GbXlwdWlGMDg0ZlZvdlNqdkZ5aHJtdWdyZjhH?oc=5",
       "published_at": "2026-07-24T00:24:52+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Police dash-cam video shown on Day 4 of Umpherville inquest",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0yMTQ3ZVJFZTBDYXVmV01CeEZnWF91bmtJM0hGT1MzM2tKS09PZ2stdUJ5T0l6ZkhwU2VkTEhaUHJSSXEwRjBjd3IzeXNYY0tXNjJDWXpTemc?oc=5",
+      "published_at": "2026-07-24T00:23:47+00:00",
       "snippet": ""
     },
     {
@@ -114,6 +185,16 @@
       "url": "https://www.koreaherald.com/article/10818701",
       "published_at": "2026-07-24T00:16:36+00:00",
       "snippet": "A Seoul appellate court was set to deliver its verdict Friday on the closely watched asset division case between SK Group Chairman Chey Tae-won…"
+    },
+    {
+      "title": "Alaska sends 3,000 letters asking voters to verify their citizenship ahead of this year's elections",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaktqYXgzQUhBQkx4STRvRTVaZXFKSVhQbmNrWEJzWFFNUnNMUy16eFc1akxzaWZ5TkJ2a2ZCLWczNjlnaDVTMU91OG1iazdjUkdCRXh6QkNxbnRZUDFxMVpxOEN5V1QyN3ozaTlCbGt6YktIRmxUWXBCR3BCOGxSQVZvcWZqOHZUOFhZQmlpSkctOEdGWURqbjZLQnRKWEtqUWZYN0Nn?oc=5",
+      "published_at": "2026-07-24T00:13:00+00:00",
+      "snippet": ""
     },
     {
       "title": "Wildfires in Europe force tens of thousands to evacuate",
@@ -406,6 +487,16 @@
       "snippet": ""
     },
     {
+      "title": "Judge finds 4 men guilty of participating in 2023 Falconridge riot",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE85ak8tWFFBTmNFNlpoQURVX05XQ3JjYTN4WWZ4alZDYWc1TUJOdWdXc2xlUzlteFRWQjJ0Y2FVdkMtTGVvcUNtbjZTOGRYZURsNU04Y0l5dWlOdUJRS19fVTUxVVpsMjRVY1hiU1FkOUNNclV6SDF5dWYxamxRY28?oc=5",
+      "published_at": "2026-07-23T23:38:57+00:00",
+      "snippet": ""
+    },
+    {
       "title": "HSBC sells Singapore insurance business to Germany's Allianz in US$2.09 billion deal",
       "source": "Channel News Asia (Singapore)",
       "country": "SG",
@@ -493,6 +584,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNVFQwUHRSUjRsWFo2eGRGN2Nhem5qd09mYjdySVU4WVdYb2pRVkwwTFMwcTB1UTRiT0pCQUVFUi1KM2NNNWxpN21hTzRhNzh3WTB0TDJ6QURyVjFZajVyMjVXby00SS1oU0NsM3plbkRPQVlLbXVjVWlENVBGRWcxMXY1VTJpZDc1NEhCYS1IRFdESWZYTGl0cjA4WjJvTTRsZkNZejZCWU1NN1pMeUdLeE4xV1NTYTgwaEdJMjBNMGxQbFVVRVZwTnhyUUhrb1JsTjdiZ2RONA?oc=5",
       "published_at": "2026-07-23T23:29:15+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "King Charles emerges from Doctor Who's TARDIS to open Commonwealth Games in Glasgow",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQUt5Sm00dmRIQ1M5YzN5LWlLX2l5eVhvWk9mMXNCVWVPSmRXOE9lVjB6ekZ6RWItTElJdXpxb2xfTlA5dVBPTkxLd0NTSHlTWjJ6clFVb0UwNUROenVWTkJON083YUpWb3FGS05NaTE2RDRHdU84S19PSnJ5UXNLTlhzdUppa0dqSENwTjc4VnhLRzhydWV4cmdrTTFKanhPV3lXd01JOXQ0dnpjeTk3TFI3UjhpT1k?oc=5",
+      "published_at": "2026-07-23T23:28:00+00:00",
       "snippet": ""
     },
     {
@@ -666,6 +767,16 @@
       "snippet": "Historic Indonesian cultural artifacts recently repatriated by the United States Federal Bureau of Investigation (FBI) ..."
     },
     {
+      "title": "Dozens of charges laid after $139M in illegal drugs seized in southern Ontario bust",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaUHk4Vktpc2ctSmxTUmhCcTBsWkxpdDhXS3ZnTGQ3N01sc3BvQ19JMnJVUEtiSTdRWjYxakZ4V1ZNWXZoZkdNc0FjaHU4b1oxR2ktc1JhMEdhdw?oc=5",
+      "published_at": "2026-07-23T23:13:35+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Govt moves to curb economic leakage, save budget: Prabowo",
       "source": "Antara (Indonesia)",
       "country": "ID",
@@ -684,16 +795,6 @@
       "url": "https://www.france24.com/en/americas/20260723-fields-medal-honours-four-mathematicians-as-ai-reshapes-the-profession",
       "published_at": "2026-07-23T23:11:33+00:00",
       "snippet": "The International Mathematical Union awarded the prestigious Fields Medal to four mathematicians on Thursday, including only the third woman to receive the honour, as researchers…"
-    },
-    {
-      "title": "Judge finds 4 men guilty of participating in 2023 Falconridge riot",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE85ak8tWFFBTmNFNlpoQURVX05XQ3JjYTN4WWZ4alZDYWc1TUJOdWdXc2xlUzlteFRWQjJ0Y2FVdkMtTGVvcUNtbjZTOGRYZURsNU04Y0l5dWlOdUJRS19fVTUxVVpsMjRVY1hiU1FkOUNNclV6SDF5dWYxamxRY28?oc=5",
-      "published_at": "2026-07-23T23:11:32+00:00",
-      "snippet": ""
     },
     {
       "title": "Indonesia exempts four countries from export earnings rule: Airlangga",
@@ -843,16 +944,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9aUXZvaTZySHBBT0FaV3piT1B3WDdodFVyN1hPa3NGRktaSzY4WU04dm1tTUFJTGhIcUxUWmppdnZ2bWUybk1PNzRNbjVRNjhPNzlEMF9PSEppUQ?oc=5",
       "published_at": "2026-07-23T22:59:36+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "'Challenging conditions' ahead for wildfires near Boston Bar, as evacuation orders, alerts issued across B.C.",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5pZm5GcHVlTlJTRlJ1SEVxdm54aUdiUGtiSGJyYThEaElKUElCa2NJdnhZXzRxQ243S09JamdHLVkyZE5SVnJpUmVsVU9hSElO?oc=5",
-      "published_at": "2026-07-23T22:59:28+00:00",
       "snippet": ""
     },
     {
@@ -1096,6 +1187,16 @@
       "snippet": ""
     },
     {
+      "title": "MLB | Latest News, Stats, and Scores",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBaTkhyRGJFdHFXZVFvanhPRFAxZmlEWjZWRDJxNWFVRzZGT2I1Zm1kNmVLLU9Henk1d2M5dFFDRQ?oc=5",
+      "published_at": "2026-07-23T22:40:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Trump likens Shohei Ohtani to Babe Ruth as the World Series champion Dodgers visit White House",
       "source": "Fox News (US, right)",
       "country": "US",
@@ -1273,6 +1374,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5wLXdHUS1vTFpFRU1iSHVBb2VOV0hYV1ZZVGl3VkluRWxtdWROUVdfRnRWRnpoZ2ZKS3Y3b18wci1HUklWZTZ1dXNzajRIQXpJaC01cGMtYThNZw?oc=5",
       "published_at": "2026-07-23T22:25:53+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "28 August 2002 - company-announcements.afr.com",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQnZQTjVSOGItck1sWmJNc2FQY05td1RWdkhROUhKLUh6MmhidVFfcHVnaXgyVG1UNl9HRGczMTFkakdDdklfWE5lV1dEN3QtVjVVQ1p6U2Z1VzNCZXFhZGNzVldFUG04czNubUdjcU9LTlFTVW5pTFdIWW5mWkdXS3IxdEdqWmZVVWtva0JJaw?oc=5",
+      "published_at": "2026-07-23T22:23:13+00:00",
       "snippet": ""
     },
     {
@@ -1556,6 +1667,16 @@
       "snippet": "Formed in 2023 as the direct successor to a film processing lab, Toho Archive is at the forefront of preserving Japan's cinematic heritage."
     },
     {
+      "title": "Why overseas cosmetic patients are turning to China’s ‘born-with-it’ beauty philosophy",
+      "source": "Channel News Asia (Singapore)",
+      "country": "SG",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.channelnewsasia.com/east-asia/china-medical-aesthetics-foreigners-beauty-tourism-industry-6272866",
+      "published_at": "2026-07-23T22:00:00+00:00",
+      "snippet": "China is emerging as an alternative to South Korea for cosmetic procedures, with overseas patients drawn by natural-looking results, experienced doctors and competitive prices -…"
+    },
+    {
       "title": "Six IPOs this year, most trading below issue price: What this means for Singapore's market reforms",
       "source": "Channel News Asia (Singapore)",
       "country": "SG",
@@ -1574,16 +1695,6 @@
       "url": "https://www.channelnewsasia.com/commentary/faishal-ibrahim-minister-resigns-transparency-closure-singapore-6273286",
       "published_at": "2026-07-23T22:00:00+00:00",
       "snippet": "Without more information, the public has made all sorts of speculation and ill-informed judgement – the most damaging of which are not about the nature…"
-    },
-    {
-      "title": "Beyond Seoul: Can China become Asia’s next medical aesthetics hub?",
-      "source": "Channel News Asia (Singapore)",
-      "country": "SG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.channelnewsasia.com/east-asia/china-medical-aesthetics-foreigners-beauty-tourism-industry-6272866",
-      "published_at": "2026-07-23T22:00:00+00:00",
-      "snippet": "China is emerging as an alternative to South Korea for cosmetic procedures, with overseas patients drawn by natural-looking results, experienced doctors and competitive prices -…"
     },
     {
       "title": "2027: Tinubu’ll win Ondo convincingly, despite crisis in APC – Party chieftain",
@@ -1636,16 +1747,6 @@
       "snippet": ""
     },
     {
-      "title": "Lynx star Kayla McBride becomes latest to speak out on WNBA 3-point contest drama: ‘Half a-- invite’",
-      "source": "Fox News (US, right)",
-      "country": "US",
-      "lean": "right",
-      "paywall": "none",
-      "url": "https://www.foxnews.com/outkick-sports/lynx-star-kayla-mcbride-latest-speak-wnba-3-point-contest-drama-half-ass-invite",
-      "published_at": "2026-07-23T21:57:01+00:00",
-      "snippet": "Minnesota Lynx star Kayla McBride said she received a \"half-a--\" invite to the WNBA 3-point contest via text 48 hours through her agent before…"
-    },
-    {
       "title": "Conservation advocates celebrate a ‘Night of the Bats’ in Oaxaca",
       "source": "Mexico News Daily",
       "country": "MX",
@@ -1664,16 +1765,6 @@
       "url": "https://www.theguardian.com/us-news/2026/jul/23/new-jersey-noncitizen-republicans-election-fraud",
       "published_at": "2026-07-23T21:55:18+00:00",
       "snippet": "Republicans have latched on to the announcement after Trump’s lie-laden speech, but experts say DHS’s data is ‘designed to create a false argument’ Donald Trump…"
-    },
-    {
-      "title": "Heidi Klum ditches bikini top, covers up with potato chip bag on beach vacation",
-      "source": "Fox News (US, right)",
-      "country": "US",
-      "lean": "right",
-      "paywall": "none",
-      "url": "https://www.foxnews.com/entertainment/heidi-klum-ditches-bikini-top-covers-potato-chip-bag-beach-vacation",
-      "published_at": "2026-07-23T21:55:04+00:00",
-      "snippet": "Heidi Klum's sultry beach video shows her using a bag of potato chips as a topless cover-up in a playful nod to her new snack…"
     },
     {
       "title": "SAP CFO says AI must move beyond chatbot 'low-hanging fruit' before seeing returns",
@@ -1886,6 +1977,16 @@
       "snippet": "The US president's threat comes after another day of Iranian attacks on Bahrain, Kuwait and Jordan."
     },
     {
+      "title": "Paramount-Warner Bros deal paused through August 17, judge rules",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcmRNSGxjTjRrWkVpZy1wU3Y0SVNPT3Q2cER5TG4xRTFzdjJDc1JqblFpR2tqX3VCc0JaOTNFMWhIU3Joc0xMbThQYnFweDF3Y1k3QnpUSHVDSGJpRzNjN2pScHhadldlbERhZDNHUXlaVlRTVmp3TURCM0RSeHYwLVRoX1dLQk1JV2NiSDQzck16ZVlKa19JR1g3X0pzY2xXNGt2UmNWSUY?oc=5",
+      "published_at": "2026-07-23T21:39:53+00:00",
+      "snippet": ""
+    },
+    {
       "title": "History beckons as Stingers, Sharks surge into water polo semifinals",
       "source": "ABC News (AU) - Top Stories",
       "country": "AU",
@@ -1904,16 +2005,6 @@
       "url": "https://mexiconewsdaily.com/business/mexicos-inflation-falls-to-lowest-level-since-2020-nears-official-target-rate/",
       "published_at": "2026-07-23T21:36:02+00:00",
       "snippet": "The latest dip in inflation brings the rate close to the 3.0% target, and in some details actually reaches it."
-    },
-    {
-      "title": "MLB | Latest News, Stats, and Scores",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBaTkhyRGJFdHFXZVFvanhPRFAxZmlEWjZWRDJxNWFVRzZGT2I1Zm1kNmVLLU9Henk1d2M5dFFDRQ?oc=5",
-      "published_at": "2026-07-23T21:33:52+00:00",
-      "snippet": ""
     },
     {
       "title": "US to impose forced labor tariffs on many trading partners",
@@ -2083,16 +2174,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOd3hpTUZ4Sm5wM01HOUZ1akM4UnVsUzh6cTVzZ0pLVmpRM1l5WEVWOGxvajJjZjAtYzhZb2JPbXFsSHN5T3VCLXdQaEt6S3ExVUxPMDU3TjJod0dFZkF1a3NuY1FIcVNnSnktQTJSMnU0YXYzd0wxYlJaUkJfMDJlN1Nn?oc=5",
       "published_at": "2026-07-23T21:15:33+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Associated Press News: Breaking News | Latest News Today",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiNkFVX3lxTE1JRTBkY0d6emFJTklfMk1FZkEtdnc2dmtQVGhJQUcxb3cxdVZNajFoUnMxbGx1UQ?oc=5",
-      "published_at": "2026-07-23T21:15:13+00:00",
       "snippet": ""
     },
     {
@@ -2423,6 +2504,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaFh4VkxnS24wT1ZXUEIzWGc0RWtVeklfQnBoUnNnSl9SV3FHT3BHc25XbFNMZzVZNXpiRXYtTUpQM2VNeW5sa0NodEJpNC1zWnJ2bVdvcnNZbTdfcDFwekNxbjBwaXNBcWlJT0Q5cWFiYkZIaGxaY1YzbkxxRjhMVnlXaTJ4QUlMYThwZkdQSC1admYzYnN5U1RlbmxOdw?oc=5",
       "published_at": "2026-07-23T20:52:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Jack Antonoff Takes Next Step After Margaret Qualley Split — Source",
+      "source": "Agence France-Presse",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQnowdGxHOVJxNXJkbDdVemRKdEJZaWhEbHRpbWxnMVNtQzhZbW1xM0F1UGVPcWVyVVhxZ1BybVA4WVRoanowS1puanNwcnE4SVVXQWRUQkV3MHpkWWFIRncxeE85eFFBdC1JdDFfcjkwenE0dHZBMmpYQlFrc25tckl2SDUyMWcwaktwSGpyWVJKbU9EVU5hWmkwTFdubEpQeVpLRXVXQjdpTWVic29lZtIBtgFBVV95cUxPMEI4Q3F2R0RLQS1tRHdXakhJV2s5ME1vT0xsQlJ1WmNMQmhEQkRQZS1qYkZFbFlyeXRXREhEcVhvQUxQbUg5d2hMQ3JaSE5QNDhpdkljY1ZnLWxiVEk1b25xWDR5QmZIOUNYZFJDSzFTbFNKeFVRUjFXbHdpd2dHbDFscjZ4VEVlVWZSVGNYNmlyTFFLbG1peV8zZURyVGlnSDhQQ0d6TDVOVTFlNThGbmY4RHVfdw?oc=5",
+      "published_at": "2026-07-23T20:50:28+00:00",
       "snippet": ""
     },
     {
@@ -2884,6 +2975,16 @@
       "url": "https://www.timesofisrael.com/us-house-symbolically-votes-to-curb-trumps-iran-war-powers-but-senate-backs-president/",
       "published_at": "2026-07-23T19:31:10+00:00",
       "snippet": "In bipartisan effort, House votes to order Trump to halt military action against Iran until he receives congressional approval, highlighting growing frustration ahead of midterms…"
+    },
+    {
+      "title": "Republicans Love This AOC-Led Bill, But They Don’t Want To Pass It",
+      "source": "The Daily Wire (US, right)",
+      "country": "US",
+      "lean": "right",
+      "paywall": "soft",
+      "url": "https://www.dailywire.com/news/republicans-love-this-aoc-led-bill-but-they-dont-want-to-pass-it",
+      "published_at": "2026-07-23T19:30:55+00:00",
+      "snippet": "Republicans appear to support a bipartisan bill led by Rep. Alexandria Ocasio-Cortez (D-NY), but the legislation remains stalled amid reported concerns that giving the Democratic…"
     },
     {
       "title": "Resumption of oil exports: Will Yemen recover its economic lifeline?",
@@ -3576,6 +3677,16 @@
       "snippet": "While 276 members of the 360-member House were physically present in the chamber to vote on the bill, 35 others participated virtually through the National…"
     },
     {
+      "title": "Pugwash marina celebrates expansion, renovation",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9hb3Jxc0tmS0dNLWNJN3FBZE8wU0dkc1EtVDdBX21FX3A4RHplbUNvMlNqNnc4Z0psb3pmRFlmdXA3LTQ5b1pNMGxHOHJCVzdRa3VFbUFwdzdBUQ?oc=5",
+      "published_at": "2026-07-23T18:26:12+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Owner of popular Millbank bakery ‘panicked’ when Google's AI Overview mistakenly said they were shutting down",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -3583,16 +3694,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1yYnBMRHozS2VrRDdydTF1V1V2b05LUEhyU2NSRXgybEhENmUtMnNKcHVxTVdyTHZTbUFVcXBqWjQ2LVBPbU5KZTVhOTdWMnIx?oc=5",
       "published_at": "2026-07-23T18:26:04+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Pugwash marina celebrates expansion, renovation",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9hb3Jxc0tmS0dNLWNJN3FBZE8wU0dkc1EtVDdBX21FX3A4RHplbUNvMlNqNnc4Z0psb3pmRFlmdXA3LTQ5b1pNMGxHOHJCVzdRa3VFbUFwdzdBUQ?oc=5",
-      "published_at": "2026-07-23T18:25:33+00:00",
       "snippet": ""
     },
     {
@@ -4146,13 +4247,13 @@
       "snippet": ""
     },
     {
-      "title": "Canada's electronics sector could be hardest hit by new tariffs",
+      "title": "Liendo on becoming one of Canada's swimming captains at Commonwealth Games: 'Lucky to be captain'",
       "source": "CBC News (Canada)",
       "country": "CA",
       "lean": "centre-left",
       "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA0U2xPWDNFckxVTG9YdmxMSkt5LWNtZVJlOEFncnVYV0E5VHFrZk5NT01uMFdKWXZkSW9oZUJiZlhlWjYydzNaM2lublRIWWxBN0VJV0dQUkhqQQ?oc=5",
-      "published_at": "2026-07-23T17:18:36+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9fNWJ6eWl5eDJ4bjNCMW92d3NzN0NWbEFTOElDS1l1bDVVd1lEVzFXdktWamJoRjRhTWxlREJoQ2xmN3FxVXJQbkZhX3djY3Fsd21fcVJ6czZOZw?oc=5",
+      "published_at": "2026-07-23T17:13:42+00:00",
       "snippet": ""
     },
     {
@@ -5196,16 +5297,6 @@
       "snippet": "With Troy Jackson securing enough delegates to become the Maine Democratic Party's nominee for the US Senate at an unprecedented convention this coming weekend, party…"
     },
     {
-      "title": "Databricks expands Microsoft Azure partnership, to use more custom chips",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNREF5U0N2TUhPNzdSVTlFcEd3Zmg2UUx2Y09Ob1EzZGU2b3hDY3l3U0tua29zZXYwMXNRRU9SZk9lY0xnSkkyYTZEMzF3UVNIVUIzTzVwdWxmZ2VZV0poN0VoQjR4MjVzR1pxcGNTS0REX1cxN3Q0WXEyY1dFOW1ZcDEteHJ6cHd5dDRwZ2k1M0d5WVlDQ3JPeTJIaWNTemRKTGNJdWpHdlIxWll4RFJRUTlNaw?oc=5",
-      "published_at": "2026-07-23T15:03:45+00:00",
-      "snippet": ""
-    },
-    {
       "title": "RELEASE OF SECURITIES FROM ESCROW - company-announcements.afr.com",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -5902,7 +5993,7 @@
       "lean": "centre",
       "paywall": "none",
       "url": "https://nation.africa/kenya/news/mother-of-mbagathi-crash-victim-allan-mwenda-remembers-their-last-conversation-5535294",
-      "published_at": "2026-07-23T13:48:25+00:00",
+      "published_at": "2026-07-23T13:48:26+00:00",
       "snippet": "Mwenda died alongside his friends Erick Ochieng and Evans Kyalo."
     },
     {
@@ -6546,6 +6637,16 @@
       "snippet": "Grace Farris' book brings readers behind the med school scenes — documenting anxiety over loans, bouts of impostor syndrome, friendships forged in stress…"
     },
     {
+      "title": "US announces civilian nuclear deal with Saudi Arabia",
+      "source": "Agence France-Presse",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9XeWNOMWNpaVJTeldvX2hibkQ2UFJ0MjVEUFcwaTRCb3dnX0JyNy1CZmkxaDhKbk9kY3lqNHpHOWViMklqR1dWVWV1RQ?oc=5",
+      "published_at": "2026-07-23T12:35:03+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Crumbl Cookies Employee’s Unsanitary Behind-The-Counter Activity Caught On Camera",
       "source": "The Daily Wire (US, right)",
       "country": "US",
@@ -7154,16 +7255,6 @@
       "url": "https://www.dw.com/en/lenacapavir-will-slow-hiv-infections-if-there-s-enough-of-it-and-it-reaches-at-risk-groups/a-78075943?maca=en-rss-en-all-1573-rdf",
       "published_at": "2026-07-23T11:23:00+00:00",
       "snippet": "Lenacapavir is one injection, twice a year. It's a big improvement for people in high-risk groups, currently taking a pill a day against HIV infection."
-    },
-    {
-      "title": "Animals",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBid3FvSVgxLUEwQTFhU1ZOd3d6dzVBX0JfWEdtN2VWUEhfMkNsZmx4bWRtZXdCbEwyTkt0dm9QWnNkTHVh?oc=5",
-      "published_at": "2026-07-23T11:22:28+00:00",
-      "snippet": ""
     },
     {
       "title": "US tests GMO flies in rush to fight flesh-eating livestock pest",
@@ -8114,16 +8205,6 @@
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQbm0yUlRVTnZrYVp6MnVON3R4UHI5RUhsd2oydUJTc2Z2MFB2NW5CeFl6bl9Dc3hfZ25ZcUV6YWZWSE52N1B2bGpZVDR3U3lzTWRlWXI3eWxBeEphWTdmNmgyYXI1b3R6aFkyelRjNnBJT3RYckJPQlpnRjZUMXlZaXZ5TGI5U1hoYVE?oc=5",
       "published_at": "2026-07-23T09:21:00+00:00",
       "snippet": ""
-    },
-    {
-      "title": "Younger Singaporean men less averse to spousal violence: study",
-      "source": "South China Morning Post",
-      "country": "CN",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://www.scmp.com/week-asia/lifestyle-culture/article/3361592/younger-singaporean-men-less-averse-spousal-violence-study?utm_source=rss_feed",
-      "published_at": "2026-07-23T09:20:18+00:00",
-      "snippet": "Nearly one in three younger Singaporean men either agreed or were neutral when asked if spousal violence could ever be acceptable, according to preliminary survey…"
     },
     {
       "title": "Lee says property holding tax should be tripled, but would face riot-like backlash",
@@ -9546,16 +9627,6 @@
       "snippet": "Hyundai Motor said Thursday that its second-quarter operating profit dropped about 21 percent as rising raw materials costs and production disruptions outweighed record-breaking revenue…"
     },
     {
-      "title": "IMPLEMENTATION OF SCHEME - company-announcements.afr.com",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZlVwUkFnMTQtMWhwZVNJUFRoaWpZbWkxTkphV2x3SV9MX2JESU5pR1lNRjRkS1lCRTlremljcUR6REZfWlV4RmhzSW9Tc0tLZC0yczJDWUdSMEdFYUtDbG9kQThobTltWlFLYXlFcWU1b3YtR29lamVjSzBkelg1YWFaQkpsZ2ZsV1pRMEVRTQ?oc=5",
-      "published_at": "2026-07-23T06:06:44+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Houthi Red Sea threat would challenge a stretched US military",
       "source": "Reuters",
       "country": "INT",
@@ -9854,16 +9925,6 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTVdvX0tVRUltRWgyQjJVazF1dC1ZYkc3ZUNlSG1fcVdlS3F6WTIxTVg1blM1WHo5alQyeDlLVjFrYUp0SGFleW04VVBGRzdLai1DVHFhMUtoc2pYSExiZEFqbDVwc3VBZjVXamxOaVlnWGxZemgtcFI4QTRpOU96ZW16dWF6ZUdFdzNxbUw1Y190Zk9KdkFuVWw1SEhaUUVfdktTdVlzSGs5em05cnFRRHY1STBYMFBzdlVWYUNDdw?oc=5",
       "published_at": "2026-07-23T05:02:00+00:00",
       "snippet": ""
-    },
-    {
-      "title": "The Strange New Rules For Women’s Sports Coverage",
-      "source": "The Daily Wire (US, right)",
-      "country": "US",
-      "lean": "right",
-      "paywall": "soft",
-      "url": "https://www.dailywire.com/news/the-strange-new-rules-for-womens-sports-coverage",
-      "published_at": "2026-07-23T05:00:56+00:00",
-      "snippet": "The European Broadcasting Union just dropped new guidelines telling cameras how to film female athletes. No more low angles from behind or beneath."
     },
     {
       "title": "Inside Ukraine’s Kill Zone",
@@ -10186,16 +10247,6 @@
       "snippet": ""
     },
     {
-      "title": "Koizumi calls for breaking taboo on nuclear debate",
-      "source": "The Japan Times",
-      "country": "JP",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://www.japantimes.co.jp/news/2026/07/23/japan/politics/japan-defense-minister-nuclear-debate/",
-      "published_at": "2026-07-23T03:17:00+00:00",
-      "snippet": "\"Unless discussions are held without any taboos, no country can any longer ensure its own security on its own,\" the defense minister told reporters…"
-    },
-    {
       "title": "Vehicle collision knocks out power to thousands in southeast Winnipeg",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -10276,7 +10327,7 @@
       "snippet": ""
     },
     {
-      "title": "Indian youth protesters call for nationwide rallies as Delhi imposes tough curbs",
+      "title": "Indian activist ends fast but youth protesters still seek minister's ouster",
       "source": "Reuters",
       "country": "INT",
       "lean": "centre",
@@ -10453,16 +10504,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9XT2tlYTh5MHFleFBhUFZOYkZ0bWp3MEw2dmU3dTJsQmtfUVc5OHlhNEpPa3kyT2R1LVpRelJ1dmdRTW1IOEl1NWh4UTlfeDhWb2YxYlRCcS1TZw?oc=5",
       "published_at": "2026-07-23T02:05:54+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "- AFR",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQSUpHQWRCNEhGRGdSWE8tZEtCNXFyYUZHb2NYSFVyM0lyYXR6MGxRZTAyQy1tdFozOHBSNkljaVdmd0RtZElYRUJTOERjeUd6NUZUdnRKYVpWSHd4Ui15ZEZxaVg4YWllMDRNNlA0OGxkUXpWaF9MMWRUX3hLZE9ERm1sX3FMWGN1NTFESG9ESTNKX2E4dUxya2RLbEVaVExBWnVWSWdUVTUyaTVjdUN6NHNjMm9pcE82c3pNbGp0YlJVQmR0SHdWSTVQbzlqcXJCQVd1dWFwNm9BdWtXTU1ySU5xUVp4UmtVcGN1clF1VHZ0UQ?oc=5",
-      "published_at": "2026-07-23T02:05:19+00:00",
       "snippet": ""
     },
     {
@@ -10724,16 +10765,6 @@
       "url": "https://www.abc.net.au/news/2026-07-23/mens-netball-growing-in-popularity-but-barriers-remain/106943644",
       "published_at": "2026-07-23T01:01:34+00:00",
       "snippet": "More young men are taking up netball at a competitive level. Competition organisers say there is less stigma around the sport among boys, with plenty…"
-    },
-    {
-      "title": "Prince Albert police response under scrutiny on Day 3 of Boden Umpherville inquest",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUlN5MFk5a3l6Z3BRbzZhaE8yeUZMWHlMWHNXSjF2TXBsWXNqa19ycEtVQnFOZ2d1ZkRhQVZlQ3lVem96cjh4UGU4YnBRVm1XN09QdzNiVFM3R0ZLN3hfU3NUb1BZSkxnOXNJeUtrQlhJbzFZcXNMbXlLWVpBS2dNUm0wV3JXX3JodXdyZkJNb3NVZVZlamx3aFdnTHBmalk?oc=5",
-      "published_at": "2026-07-23T01:00:00+00:00",
-      "snippet": ""
     },
     {
       "title": "OFX Group Limited OFX agrees terms of recommended 100% cash offer from Equals and provides 1Q FY27 Trading Update1 Strategic Rev - company-announcements.afr.com",
