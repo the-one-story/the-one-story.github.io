@@ -74,6 +74,6 @@ output_html: index.html
 #      (that lets the daily job actually send). Without the key it stays dry-run.
 newsletter:
   enabled: false
-  buttondown_username: ""        # e.g. "onestory" - renders the signup form when set
+  buttondown_username: "onestory"        # e.g. "onestory" - renders the signup form when set
   api_base: https://api.buttondown.email/v1
   send_status: about_to_send     # Buttondown: sends immediately (vs "draft")
