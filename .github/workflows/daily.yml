@@ -6,7 +6,12 @@ name: Daily One Story
 on:
   schedule:
     - cron: "0 20 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      test_send:
+        description: "Send a one-off [Preview] test email now (doesn't affect the daily send)"
+        type: boolean
+        default: false
 
 # Let the job commit the regenerated page + the decay ledger back to the repo.
 permissions:
@@ -43,7 +48,7 @@ jobs:
         continue-on-error: true   # an email hiccup must never block publishing
         env:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
-        run: python send_email.py
+        run: python send_email.py ${{ github.event.inputs.test_send == 'true' && '--test' || '' }}
 
       - name: Commit regenerated page + ledger
         run: |

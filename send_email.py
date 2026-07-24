@@ -27,6 +27,7 @@ _STATE = "data/last_email.json"
 
 def main() -> int:
     force_dry = "--dry-run" in sys.argv
+    force_test = "--test" in sys.argv   # real one-off send, distinct subject, no guard
     settings = load_settings()
     ranked = read_json(settings["ranked_json_path"])
     if not ranked:
@@ -34,13 +35,15 @@ def main() -> int:
         return 1
 
     subject, body = build_email(ranked)
+    if force_test:
+        subject = "[Preview] " + subject   # dodge Buttondown's duplicate check
     run_date = datetime.fromisoformat(ranked["run_time"]).date().isoformat()
     nl = settings.get("newsletter") or {}
     key = os.environ.get("BUTTONDOWN_API_KEY", "").strip()
 
-    # Already sent today?
+    # Already sent today? (the one-off test ignores this)
     last = (read_json(_STATE, default={}) or {}).get("date")
-    if last == run_date and not force_dry:
+    if last == run_date and not force_dry and not force_test:
         print(f"Already emailed for {run_date}; skipping.")
         return 0
 
@@ -73,8 +76,11 @@ def main() -> int:
               file=sys.stderr)
         return 1
 
-    write_json(_STATE, {"date": run_date, "subject": subject})
-    print(f"Recorded send for {run_date}.")
+    if force_test:
+        print("Test send complete - daily guard left untouched.")
+    else:
+        write_json(_STATE, {"date": run_date, "subject": subject})
+        print(f"Recorded send for {run_date}.")
     return 0
 
 
