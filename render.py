@@ -240,6 +240,8 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
     comp_rows = "".join(
         f'<li><div class="chead"><span class="cname">{name}</span>'
         f'<span class="cscore">{k[name]:.2f}</span></div>'
+        f'<div class="cbar"><span style="width:{max(0, min(100, round(k[name]*100)))}%">'
+        f'</span></div>'
         f'<p class="cdesc">{_COMPONENT_DESC[name]}</p></li>'
         for name in ("coverage", "diversity", "recency", "novelty")
     )
@@ -274,6 +276,9 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
            <em>and</em> the political spectrum) carries the most weight, so a
            story that everyone agrees is big rises above one that is simply
            being shouted loudest in a single country's press.</p>
+        <p class="comp-intro">Each dimension below scores from <strong>0 to 1</strong>
+           (higher is stronger) and they multiply together to rank the day's
+           stories - so today's winner beat every other cluster on the combination.</p>
         <ul class="comp">{comp_rows}</ul>
         {nov_note}
         <h3>Today's runners-up</h3>
@@ -442,6 +447,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   .why-body p {{ margin: 0 0 1rem; }}
   .why-body code {{ font-size: 0.85em; color: var(--fg); }}
   .why-body em {{ color: var(--fg); font-style: italic; }}
+  .comp-intro {{ color: var(--muted); }}
+  .comp-intro strong {{ color: var(--fg); }}
   ul.comp {{ list-style: none; margin: 0 0 1rem; padding: 0; }}
   ul.comp li {{ padding: 0.6rem 0; border-top: 1px solid var(--rule); }}
   .chead {{ display: flex; justify-content: space-between; align-items: baseline;
@@ -449,6 +456,10 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   .cname {{ color: var(--fg); font-weight: 600; text-transform: capitalize; }}
   .cscore {{ color: var(--accent); font-weight: 700;
     font-variant-numeric: tabular-nums; }}
+  .cbar {{ height: 5px; background: var(--rule); border-radius: 3px;
+    margin: 0.35rem 0 0.1rem; overflow: hidden; }}
+  .cbar span {{ display: block; height: 100%; background: var(--accent);
+    border-radius: 3px; }}
   .cdesc {{ margin: 0.2rem 0 0; color: var(--muted); font-size: 0.85rem; }}
   .note {{ font-size: 0.85rem; font-style: italic; }}
   h3 {{ color: var(--fg); font-size: 0.95rem; margin: 1.5rem 0 0.5rem; }}

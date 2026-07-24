@@ -134,6 +134,8 @@
   .why-body p { margin: 0 0 1rem; }
   .why-body code { font-size: 0.85em; color: var(--fg); }
   .why-body em { color: var(--fg); font-style: italic; }
+  .comp-intro { color: var(--muted); }
+  .comp-intro strong { color: var(--fg); }
   ul.comp { list-style: none; margin: 0 0 1rem; padding: 0; }
   ul.comp li { padding: 0.6rem 0; border-top: 1px solid var(--rule); }
   .chead { display: flex; justify-content: space-between; align-items: baseline;
@@ -141,6 +143,10 @@
   .cname { color: var(--fg); font-weight: 600; text-transform: capitalize; }
   .cscore { color: var(--accent); font-weight: 700;
     font-variant-numeric: tabular-nums; }
+  .cbar { height: 5px; background: var(--rule); border-radius: 3px;
+    margin: 0.35rem 0 0.1rem; overflow: hidden; }
+  .cbar span { display: block; height: 100%; background: var(--accent);
+    border-radius: 3px; }
   .cdesc { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.85rem; }
   .note { font-size: 0.85rem; font-style: italic; }
   h3 { color: var(--fg); font-size: 0.95rem; margin: 1.5rem 0 0.5rem; }
@@ -218,15 +224,18 @@
            <em>and</em> the political spectrum) carries the most weight, so a
            story that everyone agrees is big rises above one that is simply
            being shouted loudest in a single country's press.</p>
-        <ul class="comp"><li><div class="chead"><span class="cname">coverage</span><span class="cscore">0.92</span></div><p class="cdesc">How many distinct outlets are running the story — log-scaled, so 20 isn't worth twice 10.</p></li><li><div class="chead"><span class="cname">diversity</span><span class="cscore">0.46</span></div><p class="cdesc">How widely that coverage is spread across countries and the political spectrum — weighted heaviest, to beat a story merely loud in one bloc.</p></li><li><div class="chead"><span class="cname">recency</span><span class="cscore">0.49</span></div><p class="cdesc">Favours coverage that is still building now over a story already fading.</p></li><li><div class="chead"><span class="cname">novelty</span><span class="cscore">1.00</span></div><p class="cdesc">Penalises a story that already led on a recent day, easing back over ~4 days, so a repeat must bring bigger coverage to win again.</p></li></ul>
+        <p class="comp-intro">Each dimension below scores from <strong>0 to 1</strong>
+           (higher is stronger) and they multiply together to rank the day's
+           stories - so today's winner beat every other cluster on the combination.</p>
+        <ul class="comp"><li><div class="chead"><span class="cname">coverage</span><span class="cscore">0.92</span></div><div class="cbar"><span style="width:92%"></span></div><p class="cdesc">How many distinct outlets are running the story — log-scaled, so 20 isn't worth twice 10.</p></li><li><div class="chead"><span class="cname">diversity</span><span class="cscore">0.46</span></div><div class="cbar"><span style="width:46%"></span></div><p class="cdesc">How widely that coverage is spread across countries and the political spectrum — weighted heaviest, to beat a story merely loud in one bloc.</p></li><li><div class="chead"><span class="cname">recency</span><span class="cscore">0.50</span></div><div class="cbar"><span style="width:50%"></span></div><p class="cdesc">Favours coverage that is still building now over a story already fading.</p></li><li><div class="chead"><span class="cname">novelty</span><span class="cscore">1.00</span></div><div class="cbar"><span style="width:100%"></span></div><p class="cdesc">Penalises a story that already led on a recent day, easing back over ~4 days, so a repeat must bring bigger coverage to win again.</p></li></ul>
         
         <h3>Today's runners-up</h3>
-        <ol class="runners"><li><a href='https://www.france24.com/en/americas/20260723-trump-announces-double-digit-tariffs-on-60-countries-over-forced-labour-concerns' target='_blank' rel='noopener'>Trump announces double digit tariffs on 60 countries over forced labour concerns</a><span class='ru-meta'>France 24 &middot; score 0.213 &middot; 14 outlets, 11 countries, 2 leans</span></li><li><a href='https://www.dw.com/en/trump-administration-drops-new-york-times-subpoenas-over-air-force-one-reporting/a-78091966?maca=en-rss-en-all-1573-rdf' target='_blank' rel='noopener'>Trump administration drops New York Times subpoenas over Air Force One reporting</a><span class='ru-meta'>Deutsche Welle &middot; score 0.184 &middot; 9 outlets, 6 countries, 4 leans</span></li><li><a href='https://www.abc.net.au/news/2026-07-24/world-cup-2026-norway-set-to-file-official-complaint/106953060' target='_blank' rel='noopener'>Norway set to file complaint over Trump&#x27;s push to overturn red card</a><span class='ru-meta'>ABC News (AU) - Top Stories &middot; score 0.123 &middot; 7 outlets, 6 countries, 4 leans</span></li><li><a href='https://www.dw.com/en/indian-activist-sonam-wangchuk-ends-hunger-strike/a-78076216?maca=en-rss-en-all-1573-rdf' target='_blank' rel='noopener'>Indian activist Sonam Wangchuk ends hunger strike</a><span class='ru-meta'>Deutsche Welle &middot; score 0.103 &middot; 8 outlets, 7 countries, 2 leans</span></li><li><a href='https://news.google.com/rss/articles/CBMirAFBVV95cUxQNmZUNVlBZXhaenBfMXBVU1ExWGMySUwxbzVNS01adEZBVzJaYUZsVlR1UlhzcWdxT01PMWtJMVYwZUZ3SkNBdjJrWGRjVUlQUUpWUGh0TkJlR3A1aWMtc3NFcllqUHNuTzlUUWxYVUU5eGY1b2VieFBHT0h6ZTRYaHozRF84Mkl6LTdLQmFtc1lxeXhjUXQyLWkwS2h0SmNRcGNselFqUzhKMjJu?oc=5' target='_blank' rel='noopener'>Liberal Justice Elena Kagan says the Supreme Court is not a rubber stamp for Trump</a><span class='ru-meta'>Associated Press &middot; score 0.079 &middot; 4 outlets, 4 countries, 3 leans</span></li></ol>
+        <ol class="runners"><li><a href='https://www.france24.com/en/americas/20260723-trump-announces-double-digit-tariffs-on-60-countries-over-forced-labour-concerns' target='_blank' rel='noopener'>Trump announces double digit tariffs on 60 countries over forced labour concerns</a><span class='ru-meta'>France 24 &middot; score 0.210 &middot; 14 outlets, 11 countries, 2 leans</span></li><li><a href='https://www.dw.com/en/trump-administration-drops-new-york-times-subpoenas-over-air-force-one-reporting/a-78091966?maca=en-rss-en-all-1573-rdf' target='_blank' rel='noopener'>Trump administration drops New York Times subpoenas over Air Force One reporting</a><span class='ru-meta'>Deutsche Welle &middot; score 0.181 &middot; 9 outlets, 6 countries, 4 leans</span></li><li><a href='https://www.abc.net.au/news/2026-07-24/world-cup-2026-norway-set-to-file-official-complaint/106953060' target='_blank' rel='noopener'>Norway set to file complaint over Trump&#x27;s push to overturn red card</a><span class='ru-meta'>ABC News (AU) - Top Stories &middot; score 0.121 &middot; 7 outlets, 6 countries, 4 leans</span></li><li><a href='https://www.dw.com/en/indian-activist-sonam-wangchuk-ends-hunger-strike/a-78076216?maca=en-rss-en-all-1573-rdf' target='_blank' rel='noopener'>Indian activist Sonam Wangchuk ends hunger strike</a><span class='ru-meta'>Deutsche Welle &middot; score 0.101 &middot; 8 outlets, 7 countries, 2 leans</span></li><li><a href='https://www.dw.com/en/oil-prices-jump-as-hormuz-red-sea-crises-deepen/a-78078835?maca=en-rss-en-all-1573-rdf' target='_blank' rel='noopener'>Oil prices jump as Hormuz, Red Sea crises deepen</a><span class='ru-meta'>Deutsche Welle &middot; score 0.086 &middot; 9 outlets, 8 countries, 2 leans</span></li></ol>
       </div>
     </details>
     
     <footer>
-      Updated 24/07/2026 11:28 AEST.<br>Next update: Sat 25 Jul, 06:00 AEST.
+      Updated 24/07/2026 11:46 AEST.<br>Next update: Sat 25 Jul, 06:00 AEST.
     </footer>
   </div>
 </body>
