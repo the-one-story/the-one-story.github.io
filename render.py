@@ -221,8 +221,8 @@ def _signup_form(username: str) -> str:
         return ""
     u = html.escape(username, quote=True)
     action = f"https://buttondown.com/api/emails/embed-subscribe/{u}"
-    # Submit into a hidden iframe so the subscriber stays on the page; swap the
-    # note to a confirmation. Buttondown uses double opt-in, hence "confirm".
+    # Submit into a hidden iframe so the subscriber stays on the page, then swap
+    # the note to a success message (single opt-in - no confirmation step).
     return f"""
     <section class="signup">
       <p class="signup-lead">Get it in your inbox each morning.</p>
@@ -243,7 +243,7 @@ def _signup_form(username: str) -> str:
             f.style.display = 'none';
             var n = document.getElementById('os-signup-note');
             if (n) {{
-              n.textContent = 'Thanks - check your inbox to confirm your subscription.';
+              n.textContent = "Thanks - you're on the list. Your first edition arrives tomorrow morning.";
               n.style.color = 'var(--accent)';
             }}
           }}, 150);
