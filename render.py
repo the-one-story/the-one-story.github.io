@@ -221,17 +221,35 @@ def _signup_form(username: str) -> str:
         return ""
     u = html.escape(username, quote=True)
     action = f"https://buttondown.com/api/emails/embed-subscribe/{u}"
+    # Submit into a hidden iframe so the subscriber stays on the page; swap the
+    # note to a confirmation. Buttondown uses double opt-in, hence "confirm".
     return f"""
     <section class="signup">
       <p class="signup-lead">Get it in your inbox each morning.</p>
-      <form action="{action}" method="post" target="popupwindow"
-            onsubmit="window.open('https://buttondown.com/{u}', 'popupwindow')"
-            class="signup-form">
+      <form action="{action}" method="post" target="os-bd-sink"
+            class="signup-form" onsubmit="return osSignup(this)">
         <input type="email" name="email" placeholder="you@example.com"
                aria-label="Email address" required>
         <button type="submit">Subscribe</button>
       </form>
-      <p class="signup-note">One email a day. No tracking. Unsubscribe anytime.</p>
+      <p class="signup-note" id="os-signup-note">One email a day. No tracking.
+        Unsubscribe anytime.</p>
+      <iframe name="os-bd-sink" title="subscription" aria-hidden="true"
+              tabindex="-1" style="position:absolute;width:0;height:0;border:0;">
+      </iframe>
+      <script>
+        function osSignup(f) {{
+          setTimeout(function () {{
+            f.style.display = 'none';
+            var n = document.getElementById('os-signup-note');
+            if (n) {{
+              n.textContent = 'Thanks - check your inbox to confirm your subscription.';
+              n.style.color = 'var(--accent)';
+            }}
+          }}, 150);
+          return true;  // let the POST reach Buttondown via the hidden iframe
+        }}
+      </script>
     </section>"""
 
 
