@@ -73,7 +73,7 @@ output_html: index.html
 #   3. Set enabled: true and add BUTTONDOWN_API_KEY as a GitHub Actions secret
 #      (that lets the daily job actually send). Without the key it stays dry-run.
 newsletter:
-  enabled: false
+  enabled: true
   buttondown_username: "onestory"        # e.g. "onestory" - renders the signup form when set
   api_base: https://api.buttondown.email/v1
   send_status: about_to_send     # Buttondown: sends immediately (vs "draft")
