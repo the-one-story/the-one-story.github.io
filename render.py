@@ -214,6 +214,27 @@ _COMPONENT_DESC = {
 }
 
 
+def _signup_form(username: str) -> str:
+    """Buttondown embeddable subscribe form (rendered only when a username is
+    configured). Posts straight to Buttondown - no backend, no key on the page."""
+    if not username:
+        return ""
+    u = html.escape(username, quote=True)
+    action = f"https://buttondown.com/api/emails/embed-subscribe/{u}"
+    return f"""
+    <section class="signup">
+      <p class="signup-lead">Get it in your inbox each morning.</p>
+      <form action="{action}" method="post" target="popupwindow"
+            onsubmit="window.open('https://buttondown.com/{u}', 'popupwindow')"
+            class="signup-form">
+        <input type="email" name="email" placeholder="you@example.com"
+               aria-label="Email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="signup-note">One email a day. No tracking. Unsubscribe anytime.</p>
+    </section>"""
+
+
 def _why_section(winner: dict, runners: list[dict]) -> str:
     k = winner["components"]
     comp_rows = "".join(
@@ -277,6 +298,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     hero_src = html.escape(_clean_source(winner["hero"]["source"]))
     coverage_block = _coverage_block(winner)
     sources_block = _sources_section(winner)
+    signup_block = _signup_form(ranked.get("buttondown_username", ""))
 
     stale_banner = (
         "<div class='stale'>Showing yesterday's story - today's update did "
@@ -436,6 +458,27 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     border-bottom: 1px solid var(--accent); }}
   .ru-meta {{ display: block; color: var(--muted); font-size: 0.78rem;
     margin-top: 0.15rem; }}
+  .signup {{
+    margin: 2.5rem 0 0; padding: 1.5rem 0 0; border-top: 1px solid var(--rule);
+    font-family: -apple-system, system-ui, sans-serif;
+  }}
+  .signup-lead {{ margin: 0 0 0.9rem; color: var(--fg); font-size: 1rem;
+    font-weight: 600; }}
+  .signup-form {{ display: flex; flex-wrap: wrap; gap: 0.5rem; }}
+  .signup-form input {{
+    flex: 1 1 12rem; min-width: 0; padding: 0.6rem 0.8rem; font-size: 0.95rem;
+    color: var(--fg); background: var(--card); border: 1px solid var(--rule);
+    border-radius: 0.4rem; font-family: inherit;
+  }}
+  .signup-form input:focus-visible {{ outline: 2px solid var(--accent);
+    outline-offset: 1px; }}
+  .signup-form button {{
+    padding: 0.6rem 1.2rem; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+    color: var(--bg); background: var(--accent); border: none;
+    border-radius: 0.4rem; font-family: inherit;
+  }}
+  .signup-form button:hover {{ opacity: 0.9; }}
+  .signup-note {{ margin: 0.7rem 0 0; color: var(--muted); font-size: 0.78rem; }}
   footer {{
     margin-top: auto; padding-top: 3rem;
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.8rem;
@@ -463,6 +506,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     {coverage_block}
     {sources_block}
     {_why_section(winner, runners)}
+    {signup_block}
     <footer>
       Updated {stamp} {tzabbr}.<br>Next update: {next_update}.
     </footer>

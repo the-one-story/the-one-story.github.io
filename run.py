@@ -27,6 +27,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 from common import load_feeds, load_settings, rel, write_json
 from cluster import build_clusters
+from email_render import build_email
 from fetch import fetch_all
 from ledger import load_ledger, record_winner
 from rank import build_ranked_table, score_clusters
@@ -164,6 +165,12 @@ def run_pipeline() -> dict:
     with open(out_path, "w", encoding="utf-8") as fh:
         fh.write(render_html(ranked, stale=False))
     print(f"    wrote {out_path}")
+
+    # Email body (preview/commit; the actual send is a separate CI step).
+    subject, email_body = build_email(ranked)
+    with open(rel("email.html"), "w", encoding="utf-8") as fh:
+        fh.write(email_body)
+    print(f"    wrote email.html - '{subject[:50]}'")
 
     print(">>> LEDGER")
     if locked:

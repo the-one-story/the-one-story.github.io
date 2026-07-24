@@ -36,11 +36,19 @@ jobs:
       - name: Run pipeline
         run: python run.py
 
+      # Sends the daily email if the newsletter is enabled AND the secret is
+      # set; otherwise the script dry-runs. The per-day guard prevents a
+      # double-send on re-runs.
+      - name: Send newsletter (if configured)
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python send_email.py
+
       - name: Commit regenerated page + ledger
         run: |
           git config user.name  "one-story-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html data/recent_leads.json data/history
+          git add index.html email.html data/recent_leads.json data/last_email.json data/history
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else

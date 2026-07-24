@@ -125,6 +125,32 @@ the same ranking.
   left intact and a subtle "showing yesterday's story" banner is injected. The
   injection is idempotent, so repeated failures don't stack banners.
 
+## Newsletter (optional)
+
+A signup form + a daily email of the winner, via [Buttondown](https://buttondown.com)
+(privacy-focused, free tier). Off until configured. To turn it on:
+
+1. Create a free Buttondown account; note your **username**.
+2. In `config/settings.yaml` under `newsletter:`, set `buttondown_username` to
+   it - this renders the signup form on the site (posts straight to Buttondown,
+   no backend, no key on the page).
+3. To actually send the daily email: set `newsletter.enabled: true`, and add
+   your Buttondown API key as a GitHub Actions secret named
+   **`BUTTONDOWN_API_KEY`**. The daily job then emails the winner to your list.
+
+Without the key (or with `enabled: false`) the send step **dry-runs** - it
+builds the email but never sends, so nothing goes out from a local run or an
+unconfigured repo. A per-day guard (`data/last_email.json`) prevents a
+double-send if the job re-runs. Preview the email any time:
+
+```bash
+python send_email.py --dry-run   # builds email.html, never sends
+```
+
+The email is `email_render.py` (inbox-safe table layout, same copyright rules
+as the site: headline + snippet + link + stats only) and `send_email.py`
+(Buttondown adapter - swap it for another provider if you prefer).
+
 ## Deploy
 
 The workflow is `.github/workflows/daily.yml`:
