@@ -3,13 +3,11 @@
 Deferred / optional work. Nothing here is blocking; the site is live and the
 daily job runs on its own.
 
-- [x] **Daily email subscription.** BUILT (Buttondown): signup form on the site
-  + daily send in CI + preview/dry-run. **To activate:** create a Buttondown
-  account, set `newsletter.buttondown_username` (+ `enabled: true`) in
-  settings.yaml, and add `BUTTONDOWN_API_KEY` as a GitHub Actions secret. See
-  README "Newsletter". Note: send code is written against Buttondown's documented
-  API but is UNTESTED against a live key - verify the first real send (endpoint /
-  `status: about_to_send`) with a test subscriber before opening it up.
+- [x] **Daily email subscription.** LIVE (Buttondown, username "onestory").
+  Signup form on the site + automated daily send in CI (verified 24/07: HTTP 201
+  real send). Needed the `X-Buttondown-Live-Dangerously: true` header for
+  API sends. Send step is `continue-on-error` so an email hiccup never blocks
+  publishing; per-day guard prevents double-sends.
 - [ ] **Tune scoring weights on real data.** Once `data/history/` has ~1-2
   weeks of daily snapshots, use `replay.py` to test alternative weights
   (esp. bumping `recency` from 0.8). Don't tune on a single day.
