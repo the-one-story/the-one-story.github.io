@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-07-24T14:59:26.954323+10:00",
+  "run_time": "2026-07-24T15:03:18.053242+10:00",
   "run_date": "2026-07-24",
   "locked": true,
   "weights": {
@@ -19,11 +19,11 @@
   "winner": {
     "title": "Trump's nuclear deal with Saudis jettisons longstanding US demands",
     "source": "BBC News - World",
-    "score": 0.12864818916511606,
+    "score": 0.1281910569863009,
     "components": {
       "coverage": 0.8962,
       "diversity": 0.4648,
-      "recency": 0.409,
+      "recency": 0.4072,
       "novelty": 1.0
     },
     "outlet_count": 11,
@@ -44,8 +44,18 @@
       "right"
     ]
   },
-  "n_articles": 1077,
+  "n_articles": 1076,
   "articles": [
+    {
+      "title": "Securities watchdog to channel more medium- and long-term capital into China markets",
+      "source": "South China Morning Post",
+      "country": "CN",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://www.scmp.com/business/banking-finance/article/3361682/securities-watchdog-channel-more-medium-and-long-term-capital-china-markets?utm_source=rss_feed",
+      "published_at": "2026-07-24T05:00:07+00:00",
+      "snippet": "China’s securities watchdog has pledged to channel more medium- and long-term capital into the country’s stock markets and fortify financial defences against external shocks…"
+    },
     {
       "title": "Two-thirds of Gaza may face acute hunger by year-end despite improvements, global food monitor says",
       "source": "Daily Maverick (South Africa)",
@@ -85,6 +95,16 @@
       "url": "https://www.dailymaverick.co.za/article/2026-07-24-trump-to-impose-forced-labor-duties-on-friday-as-temporary-10-us-tariffs-expire/",
       "published_at": "2026-07-24T04:55:00+00:00",
       "snippet": "July 23 (Reuters) - The Trump administration on Friday will impose new tariffs of 10% and 12.5% on goods from 60 trading partners, including…"
+    },
+    {
+      "title": "Cricket Australia Chief Floats Idea Of England Test In India | Today Cricket Match in English",
+      "source": "Agence France-Presse",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZGcyUTJIc0lSX0YzOGZmY1IwZXpJeEh3YTQzUUNxaUQ0YXJTZ2VjRDc5dUk2WVJqN04tZjBxQW9FWlQtMDUxdW9vZ25mYkR4UjVEbV9OZklNOE1fV3RCckZlN3FLWWJDTURjaXVFTlJxWUhSNnozaUdHMzQzc1Q0RjY2U2lMVXk5NWxoV1c5dWhFVm50WmlzbEFNdjBpNExLbUFJZW91NmVVZWFUS2fSAbMBQVVfeXFMTkJ3MThhYkN4MmJ5UXk1WlIybVVMVE0zNXhlX3RLVWpscG5CbE80aDlMdVpTU0pDY0lxZEVZZ0dmY19OQ0U5azdNbk1xbFMtaGhia0VxNEo0Mmd0NGQwSENHRFJqeWIwR1J6U3phV05uMGNYWXZibFE1dkx1bzRaazBDZFdiQzdxMk83bmJzZnd3VEt6eUdFd3dNeGdvSkNmQWZBSWtfbGtYV2FhckNER1VBSTg?oc=5",
+      "published_at": "2026-07-24T04:51:00+00:00",
+      "snippet": ""
     },
     {
       "title": "UN leader candidates pitch visions to save world body in crisis",
@@ -607,6 +627,16 @@
       "snippet": ""
     },
     {
+      "title": "Dozens of charges laid after $139M in illegal drugs seized in southern Ontario bust",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaUHk4Vktpc2ctSmxTUmhCcTBsWkxpdDhXS3ZnTGQ3N01sc3BvQ19JMnJVUEtiSTdRWjYxakZ4V1ZNWXZoZkdNc0FjaHU4b1oxR2ktc1JhMEdhdw?oc=5",
+      "published_at": "2026-07-24T03:44:05+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Malaysia back in the F1 frame as Bahrain hopes recede",
       "source": "Channel News Asia (Singapore)",
       "country": "SG",
@@ -967,14 +997,14 @@
       "snippet": ""
     },
     {
-      "title": "Monkeying around disrupts Hong Kong MTR services for second day in row",
+      "title": "Mating season may be behind monkeying around on Hong Kong MTR tracks: expert",
       "source": "South China Morning Post",
       "country": "CN",
       "lean": "centre",
       "paywall": "soft",
       "url": "https://www.scmp.com/news/hong-kong/transport/article/3361670/monkeying-around-disrupts-hong-kong-mtr-services-second-day-row?utm_source=rss_feed",
       "published_at": "2026-07-24T02:50:26+00:00",
-      "snippet": "A monkey caused fresh disruption to Hong Kong’s rail services on Friday morning after it was spotted on the tracks in Tsuen Wan station…"
+      "snippet": "Hong Kong could see more monkey encounters during the animals’ mating season, an expert has said, after one was spotted on MTR tracks…"
     },
     {
       "title": "Indonesia seeks AI sovereignty through local models, digital talent",
@@ -1205,16 +1235,6 @@
       "url": "https://www.channelnewsasia.com/singapore/us-tariffs-singapore-trade-mti-forced-labour-6275051",
       "published_at": "2026-07-24T02:28:00+00:00",
       "snippet": "The Ministry of Trade and Industry previously said that about one-third of Singapore's domestic exports to the US could be affected by the tariffs."
-    },
-    {
-      "title": "Trump imposes double-digit tariffs on dozens of countries as his 10% levies are set to expire Friday",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOVM1QThyUlVoWl9xS1lVTTFZUHJJdU1peU1wZjdlaEZ5R08xUFZQcGVmc05LWHhhR0hOdlBqLVlhOWRGRVg5RmpKU2FiUnVSMmZMTEZocGtlZ05xTVJicmJOMndxNENHYU14enNWdllRR2RYZE1jSVVYM2VRZGJuRmhyVW1rcVRnNnNCcDlweURpSTlSUXJZVkZTX0JseUtnTkE?oc=5",
-      "published_at": "2026-07-24T02:27:00+00:00",
-      "snippet": ""
     },
     {
       "title": "FDA panel narrowly backs unapproved peptide drugs favored by RFK Jr. and wellness influencers",
@@ -2177,6 +2197,16 @@
       "snippet": ""
     },
     {
+      "title": "Dollar rides yield surge as Middle East and trade wars raise inflation stakes",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQR1d1UDB3eEFoN2xlaHVUc19mMFZjSzJBRFVvXzVhVTBXZ3VmSEFNSktSejlPMzk5N1NWVEsyTGRsX200Z3h1RXVENjRuQ3g2UnRzYndRT3lEWE9TU1FXOUdQTzhFU3plM3RQTmVuX0xhZ2JIZjU1eWRnV1ZELUVxTVVyOGN0WjlZbHczbGxUSDNmYkEwSjZmU2ZwODQyMVlfTkp2WVBuOG1FWmJVTHJYVEtoU1Yza2huYUU2NWxTUUJVdDA?oc=5",
+      "published_at": "2026-07-24T00:52:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "ASX Announcement - company-announcements.afr.com",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -2475,16 +2505,6 @@
       "url": "https://www.theguardian.com/world/2026/jul/23/people-evacuated-intense-wildfire-saumos-france",
       "published_at": "2026-07-24T00:16:02+00:00",
       "snippet": "Spain declares national emergency around Madrid, as marine heatwave sees some parts of Mediterranean Sea 5C hotter than normal Brutal heat torching southern Europe…"
-    },
-    {
-      "title": "Around 2,000 Brazilian products exempt from both recent U.S. tariffs, minister says",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSmVLYXB4SXJLRmlQZk5jaEo3UDlRaGpaeFhpRmNUSGRnQW80RmNjM0JuYkJGWW1PU19nREg0QzlIT1lxVUVRYzlqRFYzVGNYeEpzUENPSFRzR3ZxdDJCYTNfdUFralRLZ05tWEZ3MU9lZ2xRLTJoU256aUJtbkY0OVdsbGZRZm0xT2FfVTFZZWVTdll3bWNGckl4RkdSRTFIeGg3MVFXbnNjSFN4bUxDSzQ3UEVjVDRZYWNSSXhNZUwtVUE?oc=5",
-      "published_at": "2026-07-24T00:15:00+00:00",
-      "snippet": ""
     },
     {
       "title": "Prime Minister Carney says Canada is ready to respond if Trump’s new tariffs go into effect",
@@ -2787,16 +2807,6 @@
       "snippet": "Iran and the United States threatened to intensify attacks on Thursday after Yemen's Houthi rebels struck Saudi oil tankers in the Red Sea, driving Brent…"
     },
     {
-      "title": "Despite provincial sidelining, school trustee candidates still want the job",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9XMUU5bVRwRTh3RDZRQkhtRnluZTlRQUVLMm1rYUlySnZsUUkweHFnenF2bUN1SEZnLUpuZzNHWkpiNnFGSXVvYmdkamZfX2pfNnNFMzdraEtDUQ?oc=5",
-      "published_at": "2026-07-23T23:52:16+00:00",
-      "snippet": ""
-    },
-    {
       "title": "UN chief candidates debate reform, Strait of Hormuz and Security Council deadlock",
       "source": "The National (UAE)",
       "country": "AE",
@@ -2824,16 +2834,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWlNNSmJlM0lQLXE1YS1Rcl83WHhIejl6M1VZbUt1cEFrSDIwd1E2M0pqNHlja0ZTS0dpdU1fMzlpaW1VekZtdGNhN3RuTklIYTV0ZFNYbDhoQV8wMEUxOGZ0OURPYWxTdWgydDVjM3lubW1lUjdoWHFsUlN3QU8xdW03TWxGV1J0QWEwZkY4czdUQll3MmltZEF3?oc=5",
       "published_at": "2026-07-23T23:44:22+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Dozens of charges laid after $139M in illegal drugs seized in southern Ontario bust",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaUHk4Vktpc2ctSmxTUmhCcTBsWkxpdDhXS3ZnTGQ3N01sc3BvQ19JMnJVUEtiSTdRWjYxakZ4V1ZNWXZoZkdNc0FjaHU4b1oxR2ktc1JhMEdhdw?oc=5",
-      "published_at": "2026-07-23T23:44:05+00:00",
       "snippet": ""
     },
     {
@@ -3297,7 +3297,7 @@
       "snippet": "Monthly spending by foreign tourists in South Korea reached a record high of over 1.4 trillion won ($913 million) in May, marking the third consecutive…"
     },
     {
-      "title": "‘I’m not a peptide bro’: The millionaire founder shaking up healthcare",
+      "title": "‘I’m not a peptide bro’: the millionaire founder shaking up healthcare",
       "source": "Australian Financial Review",
       "country": "AU",
       "lean": "centre-right",
@@ -3607,16 +3607,6 @@
       "snippet": ""
     },
     {
-      "title": "1 man dead, small wildfire ignited after tractor catches fire near Lumby, B.C.: RCMP",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUGEwRkdtWFpGYVpVYlR1LS1aTWU2VHlfMm9CdERrVnB4RWVlUUZ4V1hNYnNoUjRuajhSVEZMX2JFOE1hblhpQnR4TFlYT1lMWDA0by0yNU8tSUhUQlpNaWlzZEwyUm5IUnZtMlVlYjRGNUdDRHZ6ZDBnLWlpaFJfZnBCTXNvS1pRalE?oc=5",
-      "published_at": "2026-07-23T22:31:49+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Family of Norwegian adventurer who died in northern Manitoba returns to tell his story",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -3897,6 +3887,16 @@
       "snippet": ""
     },
     {
+      "title": "Video showing altercation in Moncton prompts community response",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1aa19yUmk1a0oxcmxaeE9RUFp2S0NaenhwNnJaa1liV0ZqTS1CSWRueWkzbTlwX1VpZVE4QnZNb1lDOE5PTTMzU0RySXJkVkFIcnJ1eWFQMTFBUQ?oc=5",
+      "published_at": "2026-07-23T21:57:32+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Conservation advocates celebrate a ‘Night of the Bats’ in Oaxaca",
       "source": "Mexico News Daily",
       "country": "MX",
@@ -4045,16 +4045,6 @@
       "url": "https://www.dailymaverick.co.za/article/2026-07-23-better-late-than-never-ramaphosa-launches-action-plan-to-tackle-sas-water-crisis/",
       "published_at": "2026-07-23T21:46:02+00:00",
       "snippet": "Four months behind schedule, President Cyril Ramaphosa has unveiled the National Water Action Plan."
-    },
-    {
-      "title": "Person in critical condition after paddleboard hits bridge in Calgary: EMS",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTW9MVXBvbWIxWElTRVk3R3Mwd19fODZWVUdnajFKdEJQUmIyQ2xCOGExOXRSOC1tU0ZTaE1kWHF3X213aFBFcG9VTzUzYmRHSnN0QnJLdzNObVJFb3pIaXl2NHEzeVdiWjQ4Y1FXZXlHQkVOUjhKbDVGbFd0NGJ5US1pQlRqWnJSWjB6V01YOA?oc=5",
-      "published_at": "2026-07-23T21:46:00+00:00",
-      "snippet": ""
     },
     {
       "title": "STOCK EXCHANGE ANNOUNCEMENT 24 July 2026 Q4 FY26 Connections Update Chorus today released its connections update for the Q4 FY26 - company-announcements.afr.com",
@@ -4327,6 +4317,16 @@
       "snippet": ""
     },
     {
+      "title": "Trump imposes double-digit tariffs on dozens of countries as his 10% levies are set to expire Friday",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOVM1QThyUlVoWl9xS1lVTTFZUHJJdU1peU1wZjdlaEZ5R08xUFZQcGVmc05LWHhhR0hOdlBqLVlhOWRGRVg5RmpKU2FiUnVSMmZMTEZocGtlZ05xTVJicmJOMndxNENHYU14enNWdllRR2RYZE1jSVVYM2VRZGJuRmhyVW1rcVRnNnNCcDlweURpSTlSUXJZVkZTX0JseUtnTkE?oc=5",
+      "published_at": "2026-07-23T21:09:56+00:00",
+      "snippet": ""
+    },
+    {
       "title": "THE COMEBACK: Chauke cleared for takeoff as possible replacement for NPA head Andy Mothibi",
       "source": "Daily Maverick (South Africa)",
       "country": "ZA",
@@ -4395,16 +4395,6 @@
       "url": "https://nation.africa/kenya/blogs-opinion/opinion/the-dangerous-path-of-arming-political-militia--5535486",
       "published_at": "2026-07-23T21:07:00+00:00",
       "snippet": "The state prosecutes protesters while goons who attack them are left for civilians on X to..."
-    },
-    {
-      "title": "FY26 Q4 Performance Report - company-announcements.afr.com",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUW96VU9MNkg3QTc5MEpydG5OQ2x6SEFLb2NkUnRlZ1hlMEwxRTVFZVJLbk5DWTZWMmE5U0liNVpwR09oWkd6c3M3dTNBVV83WlVubmdEMzFuUU1HSEZOSUltTlVzeExmT0tUdXlOdGNBVHNGdkxHTV9jd2dlb1dBdDZIUHkwU0FtbHg2OU1Baw?oc=5",
-      "published_at": "2026-07-23T21:06:57+00:00",
-      "snippet": ""
     },
     {
       "title": "Why ‘Nation’ should revisit the Ol Kalou by-election campaigns",
@@ -6247,6 +6237,16 @@
       "snippet": "The armed forces' retaliatory attacks will continue as long as the U.S. attacks on the country's infrastructure and coastal areas continue, says Iran's army spokesperson…"
     },
     {
+      "title": "Lockheed Martin, RTX lift 2026 forecasts as Pentagon looks to restock weapons",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTF9RanhOcnotQzBGd3N4c2V4ZUwtcEJBSklsTkh4V0FaLVNwaDBsOHZ3bFFJeG1lMmtiVXFiV3lIYmJzTE9FS3puZ1ZMWmR6ejhoZEZobXZlZi1SZDRPenlQNmJXLWV3enNwRnJCakVhbm5LVWhZazIxMlBfS3hJWFQ0R3N4Nk8xWkoyd3l2NnhGaDA5cVB0aDhnTXl1dTJNdU1adzZXUnNqbkgtT0s0Q1JBc2sxeGZLM0RHMlhrVWRMcmlENWpzN0V1RTlrQQ?oc=5",
+      "published_at": "2026-07-23T16:53:48+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Why Iran is targeting Kuwait's desalination plants as part of its war strategy",
       "source": "France 24",
       "country": "FR",
@@ -7017,6 +7017,16 @@
       "snippet": "With Troy Jackson securing enough delegates to become the Maine Democratic Party's nominee for the US Senate at an unprecedented convention this coming weekend, party…"
     },
     {
+      "title": "Databricks expands Microsoft Azure partnership, to use more custom chips",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNREF5U0N2TUhPNzdSVTlFcEd3Zmg2UUx2Y09Ob1EzZGU2b3hDY3l3U0tua29zZXYwMXNRRU9SZk9lY0xnSkkyYTZEMzF3UVNIVUIzTzVwdWxmZ2VZV0poN0VoQjR4MjVzR1pxcGNTS0REX1cxN3Q0WXEyY1dFOW1ZcDEteHJ6cHd5dDRwZ2k1M0d5WVlDQ3JPeTJIaWNTemRKTGNJdWpHdlIxWll4RFJRUTlNaw?oc=5",
+      "published_at": "2026-07-23T15:03:45+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Wildfire spreads near popular French tourist town as thousands are evacuated",
       "source": "Associated Press",
       "country": "INT",
@@ -7205,16 +7215,6 @@
       "url": "https://www.dailywire.com/news/exclusive-member-of-indian-tribe-admits-to-orchestrating-deadly-border-smuggling-scheme",
       "published_at": "2026-07-23T14:44:39+00:00",
       "snippet": "A tribal member living in Canada pleaded guilty Thursday to her role in planning a cross-border smuggling operation that resulted in the deaths…"
-    },
-    {
-      "title": "Russia's oil and gas revenue seen up 60% y/y in July",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQQ0ktU0NYejNqLUtnV3ZhdVFRUUJObFc4dXFSMXlLUnRkVGJxRDZqbm1ZNVVQVFJ6UVJfSk9vV1kybV9EUlFVbnVMWWVQWER2SUlVMzIwemVhRVpacDE1cFNCUEhDWDRoQXZGRlRfVFZwOXRsTm5Cc0x5M3NfWjBFeTRna0ZDS2tEY2xnQklSay1XVFNIcWFJZm1B?oc=5",
-      "published_at": "2026-07-23T14:43:45+00:00",
-      "snippet": ""
     },
     {
       "title": "In Gaza's tent camps, a cigarette lighter becomes a lifeline",
@@ -7703,7 +7703,7 @@
       "lean": "centre",
       "paywall": "none",
       "url": "https://nation.africa/kenya/news/mother-of-mbagathi-crash-victim-allan-mwenda-remembers-their-last-conversation-5535294",
-      "published_at": "2026-07-23T13:48:26+00:00",
+      "published_at": "2026-07-23T13:48:25+00:00",
       "snippet": "Mwenda died alongside his friends Erick Ochieng and Evans Kyalo."
     },
     {
@@ -8327,16 +8327,6 @@
       "snippet": "Michel Moro Gómez When monuments to democracy become monuments to war. The post War House appeared first on The Nation ."
     },
     {
-      "title": "Global AI experts push back on US ‘distillation’ claims against Moonshot’s Kimi K3 model",
-      "source": "South China Morning Post",
-      "country": "CN",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://www.scmp.com/tech/tech-war/article/3361625/global-ai-experts-push-back-us-distillation-claims-against-moonshots-kimi-k3-model?utm_source=rss_feed",
-      "published_at": "2026-07-23T12:30:11+00:00",
-      "snippet": "The global AI community has pushed back against the Trump administration’s claims that Moonshot AI’s groundbreaking Kimi K3 distilled US models, citing a lack…"
-    },
-    {
       "title": "Marles to announce $4.6b funding boost for AUKUS shipyard",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -8897,16 +8887,6 @@
       "snippet": "Indonesia's Minister of Culture Fadli Zon continues to work to ensure that Indonesian cultural artifacts ..."
     },
     {
-      "title": "Heavy rain and flooding kills 82 across India, Pakistan and Afghanistan",
-      "source": "Daily Maverick (South Africa)",
-      "country": "ZA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://www.dailymaverick.co.za/article/2026-07-23-heavy-rain-and-flooding-kills-82-across-india-pakistan-and-afghanistan/",
-      "published_at": "2026-07-23T11:14:33+00:00",
-      "snippet": "At least 82 people have died after heavy rains across northeastern India, Pakistan and Afghanistan this week, authorities said, as flooding caused widespread damage…"
-    },
-    {
       "title": "Stellantis European sales up 5.3% in June",
       "source": "ANSA English (Italy)",
       "country": "IT",
@@ -9044,6 +9024,16 @@
       "paywall": "none",
       "url": "https://www.thenationalnews.com/news/mena/2026/07/23/iraqs-al-zaidi-on-first-trip-to-iran-amid-regional-escalation/",
       "published_at": "2026-07-23T10:47:14+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Morning Bid: Magnificent cash burn",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNlNRXzR5Q0pfdW12YW5yckR2SUd1amN0TkJmVHFXNWlaMWc0RHZPUXluWkJOSnl1a1RST3FGYzJnTlZCX1lNYmNrR0dxTzdkTXpOQkVJb3l0N0hCUzlKeDJCWWM1eENMSXZoNnljMTBrT3FVTGhzT0ZXNGxNdmhBSHJOUE9JUEFqN1NoWGR0MU8xdk1LdVpJ?oc=5",
+      "published_at": "2026-07-23T10:39:36+00:00",
       "snippet": ""
     },
     {
@@ -9387,16 +9377,6 @@
       "snippet": "Joe Rogan claimed on Wednesday’s episode of “The Joe Rogan Experience” that a man who sat across from him in 2024 allegedly killed someone…"
     },
     {
-      "title": "Iran Vows More Strikes as Middle East War Expands",
-      "source": "Agence France-Presse",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxORVF6RVV2akdjczFJYTMxV1hlR1VzYkpSUVM1X0p5RnZfU2xaY2tRaXpiVmd0NjgyUU9HcnN4SUVYYmtVTnI2dXRQN3JCalRSZGU4RzJSOS1hNEM3RmVkNDU0alZuSnJLaGFyek4xeWpPOFQ4d2tjSmIwb1hrbTA5MFZwYWxIMWR0TEsyelpkRVZJVXM2RUZVZ3FTM2J2Ui16dm1GbVVBdWF5Rk1ueWk1cUo0RzRqUWN0WGkxZTlQYXVpOUHSAcgBQVVfeXFMT19VOGZNbElrWVNidGJjWjgzdWV6LV9wd0Y1MWJDUXh0RUVLUzA3SGpnOV9zZHVDSEZ2OWVjZjhBXzA1SDhXY1JiOWNDODZxeWplYkRGMTNvSFYxdUU2UnNFQzM4UHdWYU9WMVNsNDVjUFdsVGoyUGhjczJWWHRJWVNyTzYzYXpkY05KSkhmWlVPSUVIQXF2NEFzYXgxai10MTVWMjlDN3ljS1g2T3VZaGJDcVZWeFR0WjEyeVo3NGZkS2ZOQ09FZ1M?oc=5",
-      "published_at": "2026-07-23T09:47:16+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Danantara acquires four asset managers with US$10.5 bln AUM",
       "source": "Antara (Indonesia)",
       "country": "ID",
@@ -9405,6 +9385,16 @@
       "url": "https://en.antaranews.com/news/423763/danantara-acquires-four-asset-managers-with-us105-bln-aum",
       "published_at": "2026-07-23T09:46:33+00:00",
       "snippet": "State-owned investment holding group Danantara Indonesia officially signed a Share Purchase Agreement (SPA) to acquire ..."
+    },
+    {
+      "title": "Artistic Gymnastics - Pommel Horse, Session 2, Glasgow 2026",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA4dkxvVGM5aUdEcGZXc0VTek1kQXNMRlZzaVVxVTZlakxmeFdoWHNGX2hzMEdkQTJhWTRrZ1I2eldMVU1HNDgyb2xuZi1IcENZMm5HRjlPb25OUQ?oc=5",
+      "published_at": "2026-07-23T09:45:39+00:00",
+      "snippet": ""
     },
     {
       "title": "When will the Barcelona vs. Al Ahly Joan Gamper Trophy match take place?",
@@ -9815,6 +9805,16 @@
       "url": "https://www.koreaherald.com/article/10818308",
       "published_at": "2026-07-23T08:44:48+00:00",
       "snippet": "\"Hope\" has practically owned the Korean box office since it opened July 15. That grip might not hold much longer."
+    },
+    {
+      "title": "IDX FY26 Results Release Date and Conference Call Details - company-announcements.afr.com",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRVNGM2lqSTNfZmFaelhTaFliYmxTUGFrTkMyWkduQ2MyYV9JQkFLM3JEZmZDZFBiUi1xV09DTDAyOWlOTUpKVmg5RHkzYk9CQ3JsWmoyRmkwVllEMXp0M1RnTmp3c1VGWHhTWHBTMGhuVGlBTWZuUVpsYTdFbUJfSFl5V2o2V2ZYdUE4anRpOA?oc=5",
+      "published_at": "2026-07-23T08:41:54+00:00",
+      "snippet": ""
     },
     {
       "title": "Argentina assistant coach Ayala apologizes for World Cup scuffle",
@@ -10637,6 +10637,16 @@
       "snippet": ""
     },
     {
+      "title": "Canada to celebrate Gordie Howe bridge opening solo",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Fa1V6OVh3LWJCQlBvVGtOeVBrM0QyU2RReGJRNm9xNURnNzlQbnBxZGtZdkthYjl3cF9iV2JqWGNBYnVDcEpmeDNEcDVIQXF4dGp6ZEwzbEl5QQ?oc=5",
+      "published_at": "2026-07-23T06:01:32+00:00",
+      "snippet": ""
+    },
+    {
       "title": "America's 'mass affluence' is bigger than you think",
       "source": "Reuters",
       "country": "INT",
@@ -10794,26 +10804,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSDRfRDRfVTMzVGQ0V0w3X05TeTI3VUlSakd5T0hwZ0xtRXJxc3lROWxUNFFjQl9JUUc3UGI4eTBCVVpTdkJiaVVJS05pOE5NcjBMN2R5WXZ6ci1tdWZtb1BocjhuZnl5THNJM2V2SVJEeFlZVGhxNDFRS2QtaVlnaXkta080MC1qV1p2djMyVWNkQ2dxcEthNDN2N3FLa1Q3RDVZ?oc=5",
       "published_at": "2026-07-23T05:06:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Rubio says China's actions in the South China Sea are 'disturbing'",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTVdvX0tVRUltRWgyQjJVazF1dC1ZYkc3ZUNlSG1fcVdlS3F6WTIxTVg1blM1WHo5alQyeDlLVjFrYUp0SGFleW04VVBGRzdLai1DVHFhMUtoc2pYSExiZEFqbDVwc3VBZjVXamxOaVlnWGxZemgtcFI4QTRpOU96ZW16dWF6ZUdFdzNxbUw1Y190Zk9KdkFuVWw1SEhaUUVfdktTdVlzSGs5em05cnFRRHY1STBYMFBzdlVWYUNDdw?oc=5",
-      "published_at": "2026-07-23T05:02:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Inside Ukraine’s Kill Zone",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5PYXJreVpaVlVCb2VsTi14RUN5U3ZUV044QWc2UkVJcVBMLWVSVDR6MEdMQ21ZQjBlektIVkEwbnBmQk5Rck1yUXFvRjFoNEdmNmZxS2hiZ1pkV3NZek5Xbl9YZWozSzlRelVMczhuM0Q4VVoyRC13T1dB?oc=5",
-      "published_at": "2026-07-23T05:00:00+00:00",
       "snippet": ""
     }
   ]
