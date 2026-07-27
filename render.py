@@ -54,6 +54,12 @@ def _next_update(iso: str, tzname: str, update_hour_utc: int) -> str:
     return f"{local.strftime('%a %d %b, %H:%M')} {local.tzname()}"
 
 
+def _hyphenate(text: str) -> str:
+    """House style: no em/en dashes anywhere on the page - collapse them to a
+    plain hyphen (also normalises dashes that arrive inside feed text)."""
+    return (text or "").replace("—", "-").replace("–", "-")
+
+
 def _display_snippet(winner: dict) -> str:
     """Prefer the hero's snippet; fall back to the first member that has one."""
     if winner.get("hero", {}).get("snippet"):
@@ -196,21 +202,21 @@ def _sources_section(winner: dict) -> str:
     map_html = _coverage_map(winner)
     return f"""
     <details class="sources">
-      <summary>Covered by {n} outlet{"s" if n != 1 else ""} &mdash; where &amp; who</summary>
+      <summary>Covered by {n} outlet{"s" if n != 1 else ""} - where &amp; who</summary>
       <div class="sources-body">{map_html}{"".join(blocks)}</div>
     </details>"""
 
 
 _COMPONENT_DESC = {
-    "coverage": "How many distinct outlets are running the story — log-scaled, "
+    "coverage": "How many distinct outlets are running the story - log-scaled, "
                 "so 20 isn't worth twice 10.",
     "diversity": "How widely that coverage is spread across countries and the "
-                 "political spectrum — weighted heaviest, to beat a story merely "
-                 "loud in one bloc.",
+                 "political spectrum - weighted heaviest, so a story merely loud "
+                 "in one bloc doesn't dominate.",
     "recency": "Favours coverage that is still building now over a story already "
                "fading.",
     "novelty": "Penalises a story that already led on a recent day, easing back "
-               "over ~4 days, so a repeat must bring bigger coverage to win again.",
+               "over ~4 days, so a repeat must bring bigger coverage to lead again.",
 }
 
 
@@ -296,7 +302,7 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
     <details class="why">
       <summary>Why this story?</summary>
       <div class="why-body">
-        <p>The winner is chosen by a fully deterministic score -
+        <p>The lead story is chosen by a fully deterministic score -
            <code>coverage &times; diversity &times; recency &times; novelty</code> -
            with no editorial judgement. Diversity (spread across countries
            <em>and</em> the political spectrum) carries the most weight, so a
@@ -304,10 +310,10 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
            being shouted loudest in a single country's press.</p>
         <p class="comp-intro">Each dimension below scores from <strong>0 to 1</strong>
            (higher is stronger) and they multiply together to rank the day's
-           stories - so today's winner beat every other cluster on the combination.</p>
+           stories - so this story ranks highest across the combination today.</p>
         <ul class="comp">{comp_rows}</ul>
         {nov_note}
-        <h3>Today's runners-up</h3>
+        <h3>Next-highest today</h3>
         <ol class="runners">{runners_html}</ol>
       </div>
     </details>"""
@@ -323,8 +329,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 
     # Headline, snippet and link all come from the one hero article (the best
     # single write-up) so they read as a coherent unit.
-    headline = html.escape(winner["hero"]["title"])
-    snippet = html.escape(_display_snippet(winner))
+    headline = html.escape(_hyphenate(winner["hero"]["title"]))
+    snippet = html.escape(_hyphenate(_display_snippet(winner)))
     hero_url = html.escape(winner["hero"]["url"], quote=True)
     hero_src = html.escape(_clean_source(winner["hero"]["source"]))
     coverage_block = _coverage_block(winner)

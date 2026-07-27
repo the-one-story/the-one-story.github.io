@@ -16,7 +16,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from common import load_settings, read_json, rel
-from render import _clean_source, _display_snippet
+from render import _clean_source, _display_snippet, _hyphenate
 
 SITE_URL = "https://the-one-story.github.io/"
 # Intentionally dark (matches the site's Ink theme) so dark-mode clients don't
@@ -32,19 +32,19 @@ def _fmt_date(iso: str, tz: str) -> str:
 
 def build_email(ranked: dict) -> tuple[str, str]:
     w = ranked["winner"]
-    headline = html.escape(w["hero"]["title"])
-    snippet = html.escape(_display_snippet(w))
+    headline = html.escape(_hyphenate(w["hero"]["title"]))
+    snippet = html.escape(_hyphenate(_display_snippet(w)))
     hero_url = html.escape(w["hero"]["url"], quote=True)
     hero_src = html.escape(_clean_source(w["hero"]["source"]))
     n_out, n_cty = w["outlet_count"], len(w["countries"])
     date_str = _fmt_date(ranked["run_time"], ranked["timezone"])
-    subject = f"One Story - {w['hero']['title']}"
+    subject = f"One Story - {_hyphenate(w['hero']['title'])}"
 
     coverage = (f"Running across {n_out} outlet{'s' if n_out != 1 else ''} in "
                 f"{n_cty} countr{'ies' if n_cty != 1 else 'y'}.")
     sans = "-apple-system,'Segoe UI',Arial,sans-serif"
     serif = "Georgia,'Times New Roman',serif"
-    snippet_row = (f'<p style="margin:0 0 22px;font-family:{serif};font-size:17px;'
+    snippet_row = (f'<p style="margin:0 0 22px;font-family:{serif};font-size:19px;'
                    f'line-height:1.5;font-style:italic;color:{_SNIP};">{snippet}</p>'
                    if snippet else "")
 
@@ -59,11 +59,11 @@ def build_email(ranked: dict) -> tuple[str, str]:
        style="max-width:560px;margin:0 auto;">
 <tr><td style="padding:14px 30px 30px;font-family:{sans};">
 
-  <p style="margin:0 0 5px;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
+  <p style="margin:0 0 5px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;
      color:{_O};font-weight:700;">One Story</p>
-  <p style="margin:0 0 22px;font-size:13px;color:{_MUT};">{date_str}</p>
+  <p style="margin:0 0 22px;font-size:14px;color:{_MUT};">{date_str}</p>
 
-  <h1 style="margin:0 0 16px;font-family:{serif};font-size:28px;line-height:1.18;
+  <h1 style="margin:0 0 16px;font-family:{serif};font-size:31px;line-height:1.18;
       font-weight:700;color:{_INK};letter-spacing:-.01em;">{headline}</h1>
 
   {snippet_row}
@@ -71,15 +71,15 @@ def build_email(ranked: dict) -> tuple[str, str]:
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 28px;">
   <tr><td bgcolor="{_O}" style="background-color:{_O};border-radius:6px;">
     <a href="{hero_url}" style="display:inline-block;padding:12px 22px;font-family:{sans};
-       font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;">
+       font-size:16px;font-weight:600;color:#ffffff;text-decoration:none;">
       Read the fullest account &rarr; {hero_src}</a>
   </td></tr></table>
 
-  <p style="margin:0 0 10px;font-size:14px;color:{_MUT};
+  <p style="margin:0 0 10px;font-size:15px;color:{_MUT};
      border-top:1px solid {_RULE};padding-top:20px;">{coverage}</p>
-  <p style="margin:0;font-size:14px;">
+  <p style="margin:0;font-size:15px;">
     <a href="{SITE_URL}" style="color:{_O};text-decoration:none;font-weight:600;">
-      See the map, every source, and why this story won &rarr;</a></p>
+      See the map, every source, and why this story leads &rarr;</a></p>
 
 </td></tr></table>
 </td></tr></table>"""

@@ -122,8 +122,11 @@ _PAYWALL_RANK = {"none": 0, "soft": 1, "hard": 2}
 _HERO_TIER1 = {
     "Reuters", "Associated Press", "Agence France-Presse", "BBC News - World",
     "The Guardian - World", "Al Jazeera English", "NPR News (US)",
-    "Deutsche Welle", "France 24", "Channel News Asia (Singapore)",
+    "Deutsche Welle", "Channel News Asia (Singapore)",
     "NBC News (US)", "ABC News (AU) - Top Stories",
+    # France 24 (en) deliberately EXCLUDED: its pages are video-first and its
+    # feed text is often malformed, so it makes a poor "fullest account" hero.
+    # Still counted for coverage/diversity - just never the featured article.
 }
 
 
