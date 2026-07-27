@@ -79,7 +79,7 @@ def build_email(ranked: dict) -> tuple[str, str]:
      border-top:1px solid {_RULE};padding-top:20px;">{coverage}</p>
   <p style="margin:0;font-size:15px;">
     <a href="{SITE_URL}" style="color:{_O};text-decoration:none;font-weight:600;">
-      See the map and every source &rarr;</a></p>
+      See the map, every source, and how it's chosen &rarr;</a></p>
 
 </td></tr></table>
 </td></tr></table>"""
