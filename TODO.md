@@ -19,23 +19,23 @@ daily job runs on its own.
   Brevo honeypot for bot hygiene.
 - [x] **Cleanup done (27/07/2026).** Old `BUTTONDOWN_API_KEY` GitHub secret and
   the `+ostest` test contact in Brevo both deleted.
-- [ ] **Email deliverability - custom sending domain (editions currently land in
-  JUNK).** Confirmed 27/07/2026: the test edition delivered but Gmail filed it to
-  Junk because the Brevo sender is a **`@gmail.com` freemail address**. Mail that
-  claims to be "from @gmail.com" but is sent via a third party (Brevo) fails
-  DMARC alignment, so Gmail/Yahoo/Outlook spam-filter it for ALL subscribers
-  (Brevo itself flags the sender: "Freemail domain is not recommended"). The
-  plumbing is fine - it's purely the from-address. Fix:
-    1. Register a domain for One Story (~A$15-40/yr; e.g. onestory.news /
-       theonestory.com / onestory.email) - also gets `github.io` out of the site
-       URL (one job, two wins).
-    2. Authenticate it in Brevo -> it generates DKIM + a Brevo SPF record + a
-       DMARC record to add at the registrar's DNS.
-    3. Change `sender_email` (settings + Brevo verified sender) to e.g.
-       `hello@<domain>`.
-  Charlie registers the domain (his call, a purchase); then I handle the Brevo
-  authentication + DNS records + re-test until it inboxes cleanly. Interim:
-  marking "not junk" fixes it only for that one recipient, not subscribers.
+- [ ] **Email deliverability - editions land in JUNK (reputation, not auth).**
+  Confirmed 27/07/2026 by the actual from-address: `One Story
+  <charlie.rochfordgroup@11756300.brevosend.com>`. Brevo auto-rewrites the from
+  to its OWN authenticated domain (brevosend.com) because it can't authenticate a
+  gmail address - so SPF/DKIM/DMARC all PASS. (My earlier note here blaming a
+  "gmail DMARC failure" was WRONG - corrected.) The real cause is **shared-domain
+  reputation + brand-new sender**: `11756300.brevosend.com` is a shared Brevo
+  sending domain and there's zero send history/engagement, so Gmail defaults it
+  to Junk until trust builds. Not broken, not a dead end. Options, cheapest first:
+    1. Interim/free: mark "not junk" + add sender to contacts + a Gmail filter
+       "never send to spam". Works because the list is currently all Charlie's
+       own addresses. Reputation also improves with engagement over time.
+    2. Proper fix: a custom domain (dedicated reputation Charlie owns) authenticated
+       in Brevo (DKIM/SPF/DMARC DNS records), sending from hello@<domain> - also
+       gets github.io out of the site URL. Charlie buys the domain (his call, not
+       yet); then Claude does the Brevo/DNS auth + re-test. Only needed once there
+       are external subscribers.
 - [ ] **Tune scoring weights on real data.** Once `data/history/` has ~1-2
   weeks of daily snapshots, use `replay.py` to test alternative weights
   (esp. bumping `recency` from 0.8). Don't tune on a single day.
