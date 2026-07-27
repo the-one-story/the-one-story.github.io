@@ -44,12 +44,14 @@ def build_email(ranked: dict) -> tuple[str, str]:
                 f"{n_cty} countr{'ies' if n_cty != 1 else 'y'}.")
     sans = "-apple-system,'Segoe UI',Arial,sans-serif"
     serif = "Georgia,'Times New Roman',serif"
+    unsub = "{{ unsubscribe }}"   # Brevo swaps this for the real link at send
     snippet_row = (f'<p style="margin:0 0 22px;font-family:{serif};font-size:19px;'
                    f'line-height:1.5;font-style:italic;color:{_SNIP};">{snippet}</p>'
                    if snippet else "")
 
-    # Flat, dark, single column - no inner card, no custom footer (Brevo appends
-    # the required unsubscribe link + postal address). bgcolor attrs for Outlook.
+    # Flat, dark, single column - no inner card. Our own styled unsubscribe via
+    # Brevo's {{ unsubscribe }} tag (so we control its spacing); Brevo still adds
+    # its badge + postal address below. bgcolor attrs for Outlook.
     inner = f"""\
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{snippet or headline}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
@@ -80,6 +82,11 @@ def build_email(ranked: dict) -> tuple[str, str]:
   <p style="margin:0;font-size:15px;">
     <a href="{SITE_URL}" style="color:{_O};text-decoration:none;font-weight:600;">
       See the map, every source, and how it's chosen &rarr;</a></p>
+
+  <p style="margin:34px 0 0;padding-top:18px;border-top:1px solid {_RULE};
+     font-size:12px;line-height:1.7;color:{_MUT};text-align:center;">
+    <a href="{unsub}" style="color:{_MUT};text-decoration:underline;">Unsubscribe</a>
+  </p>
 
 </td></tr></table>
 </td></tr></table>"""
