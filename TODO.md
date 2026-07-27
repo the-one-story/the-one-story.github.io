@@ -58,6 +58,10 @@ daily job runs on its own.
   ever hard-fails.
 
 ## Optional design ideas raised, not taken
+- Lock the hero article for the whole local day (not just the story cluster), so
+  the featured headline/link doesn't re-pick between runs. Offered 27/07, not
+  taken - only matters under repeated same-day runs; production runs once/day, so
+  the fresh re-pick (latest best article in the locked story) is fine.
 - Highlighted-countries map (kept dots - fills over-weight large countries).
 - Demote hard-paywalled sources (AFR) to non-clickable (kept: counted +
   lock-marked, never the hero link).
