@@ -65,15 +65,22 @@ ledger_path: data/recent_leads.json
 ranked_json_path: data/ranked.json
 output_html: index.html
 
-# --- Newsletter (optional; off until configured) ---
-# Signup form + a daily email of the winner via Buttondown.
-# To turn it on:
-#   1. Create a free Buttondown account; note your username.
-#   2. Put the username below (that renders the signup form on the site).
-#   3. Set enabled: true and add BUTTONDOWN_API_KEY as a GitHub Actions secret
-#      (that lets the daily job actually send). Without the key it stays dry-run.
+# --- Newsletter (Brevo) ---
+# Single opt-in signup form on the site + a daily campaign of the winner, sent
+# via Brevo's API from the daily job. Brevo (unlike Buttondown) allows single
+# opt-in, so a signup is instant - no confirmation email. To (re)configure:
+#   1. Brevo account -> verify a sender address -> create a contact list.
+#   2. Fill sender_email + list_id below.
+#   3. Create a Brevo subscription form; paste its action URL into
+#      signup_form_url (that renders the signup form on the site, posting
+#      straight to Brevo - no backend, no key on the page).
+#   4. Add BREVO_API_KEY as a GitHub Actions secret (the daily job needs it to
+#      send). Without a verified sender_email + list_id + key it stays dry-run.
 newsletter:
   enabled: true
-  buttondown_username: "onestory"        # e.g. "onestory" - renders the signup form when set
-  api_base: https://api.buttondown.email/v1
-  send_status: about_to_send     # Buttondown: sends immediately (vs "draft")
+  provider: brevo
+  api_base: https://api.brevo.com/v3
+  sender_name: "One Story"
+  sender_email: ""     # a Brevo-VERIFIED sender address (required to send)
+  list_id:             # numeric Brevo contact-list id (required to send)
+  signup_form_url: ""  # Brevo subscription-form action URL (sibforms serve URL)

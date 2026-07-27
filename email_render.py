@@ -1,13 +1,13 @@
 """Build the daily email from the ranked winner.
 
 Produces an inbox-safe HTML email (table layout, inline styles, web-safe fonts,
-light background - dark email backgrounds render badly in many clients). Same
-copyright rules as the site: headline + feed snippet + link + computed stats
-only, no article body, nothing generated.
+committed dark theme - matches the site and dodges client dark-mode inversion).
+Same copyright rules as the site: headline + feed snippet + link + computed
+stats only, no article body, nothing generated.
 
-Provider-agnostic: writes email.html and returns (subject, html). The Buttondown
-template variable {{ unsubscribe_url }} is included in the footer; other
-providers ignore it or use their own token - swap in send_email.py if needed.
+Provider-agnostic: writes email.html and returns (subject, html). No custom
+unsubscribe/footer - the sending provider (Brevo) appends the required
+unsubscribe link + postal address to every campaign, so we don't duplicate it.
 """
 from __future__ import annotations
 
@@ -38,7 +38,7 @@ def build_email(ranked: dict) -> tuple[str, str]:
     hero_src = html.escape(_clean_source(w["hero"]["source"]))
     n_out, n_cty = w["outlet_count"], len(w["countries"])
     date_str = _fmt_date(ranked["run_time"], ranked["timezone"])
-    subject = f"One Story — {w['hero']['title']}"
+    subject = f"One Story - {w['hero']['title']}"
 
     coverage = (f"Running across {n_out} outlet{'s' if n_out != 1 else ''} in "
                 f"{n_cty} countr{'ies' if n_cty != 1 else 'y'}.")
@@ -48,8 +48,8 @@ def build_email(ranked: dict) -> tuple[str, str]:
                    f'line-height:1.5;font-style:italic;color:{_SNIP};">{snippet}</p>'
                    if snippet else "")
 
-    # Flat, dark, single column - no inner card (Buttondown provides the frame),
-    # no custom footer (Buttondown appends unsubscribe). bgcolor attrs for Outlook.
+    # Flat, dark, single column - no inner card, no custom footer (Brevo appends
+    # the required unsubscribe link + postal address). bgcolor attrs for Outlook.
     body = f"""\
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{snippet or headline}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"

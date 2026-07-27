@@ -47,7 +47,8 @@ jobs:
       - name: Send newsletter (if configured)
         continue-on-error: true   # an email hiccup must never block publishing
         env:
-          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_TEST_EMAIL: ${{ secrets.BREVO_TEST_EMAIL }}   # only used by --test
         run: python send_email.py ${{ github.event.inputs.test_send == 'true' && '--test' || '' }}
 
       - name: Commit regenerated page + ledger

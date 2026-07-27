@@ -248,8 +248,8 @@ def build_ranked_table(scored: list[dict], settings: dict,
         "window_hours": settings["window_hours"],
         "timezone": settings["timezone"],
         "update_hour_utc": settings["update_hour_utc"],
-        "buttondown_username": (settings.get("newsletter") or {}).get(
-            "buttondown_username", ""),
+        "signup_form_url": (settings.get("newsletter") or {}).get(
+            "signup_form_url", ""),
         "winner": scored[0],
         "runners_up": [
             {k: v for k, v in c.items() if k != "members"}

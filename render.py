@@ -214,13 +214,13 @@ _COMPONENT_DESC = {
 }
 
 
-def _signup_form(username: str) -> str:
-    """Buttondown embeddable subscribe form (rendered only when a username is
-    configured). Posts straight to Buttondown - no backend, no key on the page."""
-    if not username:
+def _signup_form(form_url: str) -> str:
+    """Brevo subscription form (rendered only when a form URL is configured).
+    Posts straight to Brevo - no backend, no key on the page. Brevo is single
+    opt-in, so the address is added on submit with no confirmation email."""
+    if not form_url:
         return ""
-    u = html.escape(username, quote=True)
-    action = f"https://buttondown.com/api/emails/embed-subscribe/{u}"
+    action = html.escape(form_url, quote=True)
     # Submit into a hidden iframe so the subscriber stays on the page, then swap
     # the note to a success message (single opt-in - no confirmation step).
     return f"""
@@ -228,8 +228,14 @@ def _signup_form(username: str) -> str:
       <p class="signup-lead">Get it in your inbox each morning.</p>
       <form action="{action}" method="post" target="os-bd-sink"
             class="signup-form" onsubmit="return osSignup(this)">
-        <input type="email" name="email" placeholder="you@example.com"
+        <input type="email" name="EMAIL" placeholder="you@example.com"
                aria-label="Email address" required>
+        <!-- Brevo honeypot: bots fill this, humans never see it. Keeps single
+             opt-in from letting junk straight onto the list. -->
+        <input type="text" name="email_address_check" value="" tabindex="-1"
+               autocomplete="off" aria-hidden="true"
+               style="position:absolute;left:-5000px;">
+        <input type="hidden" name="locale" value="en">
         <button type="submit">Subscribe</button>
       </form>
       <p class="signup-note" id="os-signup-note">One email a day. No tracking.
@@ -247,7 +253,7 @@ def _signup_form(username: str) -> str:
               n.style.color = 'var(--accent)';
             }}
           }}, 150);
-          return true;  // let the POST reach Buttondown via the hidden iframe
+          return true;  // let the POST reach Brevo via the hidden iframe
         }}
       </script>
     </section>"""
@@ -321,7 +327,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     hero_src = html.escape(_clean_source(winner["hero"]["source"]))
     coverage_block = _coverage_block(winner)
     sources_block = _sources_section(winner)
-    signup_block = _signup_form(ranked.get("buttondown_username", ""))
+    signup_block = _signup_form(ranked.get("signup_form_url", ""))
 
     stale_banner = (
         "<div class='stale'>Showing yesterday's story - today's update did "
