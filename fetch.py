@@ -43,7 +43,19 @@ _NOISE_URL = re.compile(
 _NOISE_TITLE = re.compile(
     r"(\blive:|\blive updates?\b|\bliveblog\b|\bpodcast\b|\bnewsletter\b|"
     r"\bup first\b|from the politics desk|in today'?s edition|\bin pictures\b|"
-    r"\bwatch:)", re.I)
+    r"\bwatch:|"
+    # Roundups / digests: they bridge unrelated stories during clustering and
+    # surface as off-topic "sources" (e.g. "the biggest news you missed this
+    # weekend"). Kept conservative to avoid dropping single-story explainers.
+    r"\bbiggest news\b|\byou missed\b|\bin case you missed\b|\bicymi\b|"
+    r"\bround-?up\b|\bweek in review\b|"
+    r"\byour (?:morning|evening|weekend|weekly|daily) (?:briefing|rundown|digest)\b)",
+    re.I)
+# Emoji / pictographs some feeds prefix to titles (e.g. France 24's red-dot live
+# marker) that otherwise render as stray symbols in the source list.
+_EMOJI_RE = re.compile(
+    "[\U0001F000-\U0001FAFF\U00002600-\U000027BF\U00002B00-\U00002BFF"
+    "\U0001F1E6-\U0001F1FF️‍⃣]")
 
 
 def is_noise_format(url: str, title: str) -> bool:
@@ -145,7 +157,8 @@ def fetch_all(settings: dict, feeds: list[dict]) -> tuple[list[dict], dict]:
                 if pub < window_start.astimezone(timezone.utc):
                     report["dropped_out_of_window"] += 1
                     continue
-                title = _WS_RE.sub(" ", html.unescape(e.get("title", ""))).strip()
+                title = _EMOJI_RE.sub("", html.unescape(e.get("title", "")))
+                title = _WS_RE.sub(" ", title).strip()
                 url = e.get("link", "")
                 if not title or not url:
                     continue
