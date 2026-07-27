@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-07-27T14:43:14.902817+10:00",
+  "run_time": "2026-07-27T14:48:29.149733+10:00",
   "run_date": "2026-07-27",
   "locked": true,
   "weights": {
@@ -19,20 +19,19 @@
   "winner": {
     "title": "Berlin CSD: Latest in string of deadly vehicle attacks",
     "source": "Deutsche Welle",
-    "score": 0.2374548254458941,
+    "score": 0.22832450257027603,
     "components": {
       "coverage": 1.0,
-      "diversity": 0.6197,
-      "recency": 0.4317,
+      "diversity": 0.5933,
+      "recency": 0.4484,
       "novelty": 1.0
     },
-    "outlet_count": 17,
+    "outlet_count": 16,
     "countries": [
       "AE",
       "CA",
       "CN",
       "DE",
-      "FR",
       "GB",
       "IN",
       "INT",
@@ -48,7 +47,7 @@
       "right"
     ]
   },
-  "n_articles": 894,
+  "n_articles": 862,
   "articles": [
     {
       "title": "London’s Gatwick Airport hit by water supply problem",
@@ -59,6 +58,36 @@
       "url": "https://www.dailymaverick.co.za/article/2026-07-27-londons-gatwick-airport-hit-by-water-supply-problem/",
       "published_at": "2026-07-27T04:52:52+00:00",
       "snippet": "LONDON, July 26 (Reuters) - Water supplies to London’s Gatwick Airport were disrupted on Sunday after a power outage at a local treatment works, authorities…"
+    },
+    {
+      "title": "North Korea sending 30,000 troops to Russia is a ‘win-win’: analysts",
+      "source": "South China Morning Post",
+      "country": "CN",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://www.scmp.com/week-asia/politics/article/3361943/north-korea-sending-30000-troops-russia-win-win-analysts?utm_source=rss_feed",
+      "published_at": "2026-07-27T04:46:24+00:00",
+      "snippet": "North Korea is rumoured to be sending tens of thousands more troops to Russia in support of its war in Ukraine, marking a deepening…"
+    },
+    {
+      "title": "Kyung Hee, Jeonju Vision recognized as top universities for international student job support",
+      "source": "The Korea Herald",
+      "country": "KR",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.koreaherald.com/article/10821527",
+      "published_at": "2026-07-27T04:45:11+00:00",
+      "snippet": "Kyung Hee University and Jeonju Vision University were named the top institutions for supporting international students’ employment and entrepreneurship, the Education Ministry said Monday."
+    },
+    {
+      "title": "‘Worst in 30 years’: Housing panic is infecting economy. Just ask Myer",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQ00xaUFxWDdSZlE1NXlnbmZaeHFTTWRncVd1bTNwR3A2dWtQeHZzMTM0eWxORkcwYWF1bTE1YXBSdnVqOEY2akoxZkxielpjbXVSR1pxS3pjNTRRMGhOaXQ1TFF4Wk85eTRuN0V2WTBjUjNoc093S2h0YXQySFBWZGx6dUtrcEM0dXNNVTg2MmxUUm5HT0NxRU5USjl4VjVxZXdMUmxyTjVyQlFjVGRfZmwzX3Y?oc=5",
+      "published_at": "2026-07-27T04:42:00+00:00",
+      "snippet": ""
     },
     {
       "title": "Wildfires threaten Bordeaux as France and Spain battle blazes",
@@ -79,6 +108,16 @@
       "url": "https://www.japantimes.co.jp/news/2026/07/27/japan/us-military-japan-transformation/",
       "published_at": "2026-07-27T04:41:00+00:00",
       "snippet": "Lt. Gen. Stephen Jost said that some 215 personnel had been added to the headquarters since last year, as a shift to give the command…"
+    },
+    {
+      "title": "Hong Kong IPO-bound Shein's management and ownership structure",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQY1M0Qy1LVHdublFfREFoOFlXOVhnRnVHRTVaR3hHam9RS3Bxd0taZ0FveDZjSlhZaURxTjZSSjFxbnBvUmU5MGl1WjROWnYxWGVCd3VIMGx2V2c1MV9qQUoxcGFtZ0NLT3A2UTBNYTVMLUFqRG5ISFJaSW5xU0ZfWDg1aU9TR2NTcWFJOFcxMVJMQTBOTFBmTlhGZEI2YVhQYm9mN2dQVGRCSE0zTkFB?oc=5",
+      "published_at": "2026-07-27T04:39:00+00:00",
+      "snippet": ""
     },
     {
       "title": "News Canada Nova Scotia Digby-Yarmouth-Shelburne",
@@ -141,7 +180,7 @@
       "snippet": ""
     },
     {
-      "title": "'The diggers have arrived': Works begin on Hobart's $1.13b stadium",
+      "title": "'The diggers have arrived': Works begin at Hobart's $1.13b stadium site",
       "source": "ABC News (AU) - Top Stories",
       "country": "AU",
       "lean": "centre",
@@ -281,16 +320,6 @@
       "snippet": ""
     },
     {
-      "title": "Glasgow 2026: Olopade upbeat as Nigeria claim seventh medal, target more gold",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/sports/nigeria-sports-news/898323-glasgow-2026-olopade-upbeat-as-nigeria-claim-seventh-medal-target-more-gold.html",
-      "published_at": "2026-07-27T04:10:00+00:00",
-      "snippet": "Nyong claimed the silver medal in the women's 48kg weightlifting event after lifting a combined total of 168kg."
-    },
-    {
       "title": "Renoir masterpiece from Abu Dhabi Collection now on display at Louvre Abu Dhabi",
       "source": "The National (UAE)",
       "country": "AE",
@@ -299,16 +328,6 @@
       "url": "https://www.thenationalnews.com/arts-culture/art-design/2026/07/27/renoir-masterpiece-now-on-display-at-louvre-abu-dhabi/",
       "published_at": "2026-07-27T04:01:00+00:00",
       "snippet": ""
-    },
-    {
-      "title": "EDITORIAL: NNPCL’s reckless disregard for Senate oversight",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/news/top-news/898360-editorial-nnpcls-reckless-disregard-for-senate-oversight.html",
-      "published_at": "2026-07-27T04:00:46+00:00",
-      "snippet": "PREMIUM TIMES holds the President of the Senate, Godswill Akpabio, responsible for NNPCL’s litany of affronts on the legislature."
     },
     {
       "title": "Heathrow expansion would take thousands of jobs from other UK regions, report finds",
@@ -1081,7 +1100,7 @@
       "snippet": "NCT 127 will return with its seventh album “Blingy” next month, marking the group’s first major release since July 2024."
     },
     {
-      "title": "Two dead and five injured, including a young boy, in Seattle Center shooting, fire officials say",
+      "title": "Two dead and five injured, including a young boy, in Seattle Center shooting",
       "source": "NBC News (US)",
       "country": "US",
       "lean": "centre-left",
@@ -1431,6 +1450,16 @@
       "snippet": ""
     },
     {
+      "title": "NFL Scores, News & Stats | Latest Super Bowl News",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE9fRi02OXd4bXBMeDZqWl9nMVZwbF9YY3QyQzluc1o4U2RIR1VWMGR6VjVzTjVuSlFtOVVpeWhRRQ?oc=5",
+      "published_at": "2026-07-27T01:37:46+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Tadej Pogacar matches record with fifth Tour de France crown",
       "source": "The Japan Times",
       "country": "JP",
@@ -1628,6 +1657,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03Ml84WXo1b2c4VHBMRlpKRnY2QmVmblNhcUtnVnYyQkdsVmNHdkg2cFcydnNHWVNvYzBHNTA0NmNPZzBlaHY5RzEtUExvM21VMmw2bw?oc=5",
       "published_at": "2026-07-27T01:18:31+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Chicago White Sox",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB0VG5DLWlLUlFXOUJVcmhXNlZXQnN4NkVzaEdlc09ZZEZRNEJsOGdmeFpfNnhrOFFSaVNoQmFxeTRtODdqQ0M5dXVoSlhMem11Rnc?oc=5",
+      "published_at": "2026-07-27T01:18:16+00:00",
       "snippet": ""
     },
     {
@@ -1838,6 +1877,16 @@
       "paywall": "hard",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdTYxOGQ3NHo2eDVTakhqRDN6a0NBWVFYQjVCSGc3Smhzbl9HdjhPcTVEVGxaS2tHeGlzM3NhOXJPM2MyWWhKMFI4c2R4X0JHam5fSjRPZXZheVZZQmk1RVdTTndiZmVYUlN1S2ZlalB1UDhmOFBTYmtMZ3NtUW92ZE1HZFQ3NzBld0hhNG1RZw?oc=5",
       "published_at": "2026-07-27T00:50:43+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Net Tangible Asset (NTA, after fees and expenses) - company-announcements.afr.com",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNa1g5REUyWm81YXVRMWFodzI5NXNTcUNWOVU0TmVQVXN4azdmM0E4ZzFoMjZobUZ4QncweUdZdEplcEhzTHJrcHNuT3F3TF9LZGN3V1dBTkIwWDN1RnA5ajZ6OEVfNEtmdUNnQ1NJX0JETy0xUnUzemYzTURlMUk0d2ZEbGJITWF4MnM1TG1fSQ?oc=5",
+      "published_at": "2026-07-27T00:50:30+00:00",
       "snippet": ""
     },
     {
@@ -2551,13 +2600,13 @@
       "snippet": ""
     },
     {
-      "title": "ASX/Media Release - company-announcements.afr.com",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZ3NabDhRUzNUTGpQd2Q5azcyNzhzREwxWXZLckl0b2FGRU1ZRjBFNjVBU0JFaUdRc1ozWkZLaDdSLXZxODlrX3AtQW45S3pLNjJhM242WTcyT0g3U3g2NXg5TFZRYi04QUdOV1B0WkxIaEhwbTd3Y20yRXM0U0JkRVRWUk12QWFVcVdHd2RvWQ?oc=5",
-      "published_at": "2026-07-26T23:52:09+00:00",
+      "title": "Ukraine",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBoLUFxWVlhd0NHcHV5UjVHdVQtVjc0LUx3V08zeVNpdE5IS2Jtc3BFOUJnRktJVDdzczRIN1ZZaTNTbjd4?oc=5",
+      "published_at": "2026-07-26T23:46:02+00:00",
       "snippet": ""
     },
     {
@@ -2661,6 +2710,16 @@
       "snippet": ""
     },
     {
+      "title": "Gun violence",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5tWG9GY0F1alREcV9mMFBVUmFSeGkweWdZVC1QZkpjbHByWEVNeDZkVEFTUlotZDdidWJ0T1NWeGNjLTM1aWZpSXpmOA?oc=5",
+      "published_at": "2026-07-26T23:37:16+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Court set to rule on ex-President Yoon's election law violation case",
       "source": "The Korea Herald",
       "country": "KR",
@@ -2698,26 +2757,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNYXNZLVdkX0ZFdllnY20tLWtKVWVRYXRWUXJROG9DelFnX2hwY0JDbEpOVFR3MXl3aXZnY2plX3lyWWxwR0YzX0VVS2tDUzhPak1FRWczM0x0WWl4VG1XYkdLZjJpME1OZW45WVRSVEhhdmp2S1A0UHBUSlRxTlAxbU9QWElpOVhMcVU2Qlh3b0I3Q29Fc0dDeVdwMC1ycUMwRkN2dllBTkNtTjZsWFhLSzJTYUdsVHVSQi03cU84VHhtUXlhdmdFcGFmZXEyWHhTQ0ljeE5BMVZYWFp3ZVJtSV9fZlRtNk85N0JVemlXelZPbnNCbVhMWklXS2F2UdIBgwJBVV95cUxORlhCQ0pCWWdFanZhRFJ4Mm81VnlRUklXcGptWmNsZXZvOGkzVTdib0dVZUJueGNud3ZCbHFzZlVVdTFhZ2VOTU04MUo2WEJqTEhQNUlxYi1VMnZEc2VfcmgtdUdqN3VGUElFUE1HSlphRDZ0SjQzclFXM3dmcmtWTWUtWUhEa0FLMi1WQ0Z5YXdZZzdmb1NWX0JPeE5oN1BydkN4SkZ4TkpDaDhQd1EwOF9CQnpRVWdwWVUxS1dHaXVmTHpRZ2ZPcEhVbGpaS3E2ZUxpb2MzV2hjeUMwVUVJUVJiSUZWbTFibkE1S2dvZ3B1eFU1bjFEX2xNb3YyYWIzUmFJ?oc=5",
       "published_at": "2026-07-26T23:33:50+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "- AFR",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQb2dja0RSdjNmOE9EZm5CVTFvTG1IV252RmtLV0RTLUJtM1VyME5aUHJsckJ5Z2xjZTFWUXBibVlKMzI0Sl93OHdFbHRGenhTckNMLWJWWVVFel9XSV93MldvV0NNMk5UQzJVQ3E4RVlaRkpuejBOUzFnUEpzTFcwLWZzS1ExVG1tTW5mRkFZU1BNVHpVZnV3bHdKUVdVaEI2d0RqTEx6LXlMMVlVbE5vMW9rYVNaX0dQRmpxM2dFekthV2RBX0VTeEpiUkdJMkZPOEtOVXNraXFVVXlfU0RJSQ?oc=5",
-      "published_at": "2026-07-26T23:33:26+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "- AFR",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPd0NsUVZRY0FPVURoNEwzSXpnYmdLUXNEamdJXzFOc1BjeFV1OENiVjRXTl9ZajQyRl85LWEwWldkWnFROVUwTnFhSUpWRzBtUGZ2WlFHYnR6NTlUeVdHZjcwV293aU1nOEhHWU9JbjBGQUpxbzY4QmZHQ1c1NUpwaER3XzhYc1k0UEo5UGkyRmJuTHpfOUtNaW9QaHE0TDljTUkzMTE1ZW16Mmd3T0JpdTZkc0hIcVZpekpVM2JHdEY4RTJNZVFmZmRoOGR6M2VZYkNnRlo2bXJzZE4xci1jTHowbXFvclEyYkpJd1hFWmlSQQ?oc=5",
-      "published_at": "2026-07-26T23:33:14+00:00",
       "snippet": ""
     },
     {
@@ -3111,16 +3150,6 @@
       "snippet": ""
     },
     {
-      "title": "Ukraine",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBoLUFxWVlhd0NHcHV5UjVHdVQtVjc0LUx3V08zeVNpdE5IS2Jtc3BFOUJnRktJVDdzczRIN1ZZaTNTbjd4?oc=5",
-      "published_at": "2026-07-26T22:57:17+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Pentagon reports more than 600 Iran war casualties in quiet database update",
       "source": "The Guardian - World",
       "country": "GB",
@@ -3211,13 +3240,13 @@
       "snippet": ""
     },
     {
-      "title": "TWAV.O",
-      "source": "Reuters",
+      "title": "Hurricanes",
+      "source": "Associated Press",
       "country": "INT",
       "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQaHN4VWlZa1ZERERuc1FRZGJGSVJnR3ZNWldKR0xGTk5RcFlEQ2RkdE5GTkdvcjh0ei1EalpFeGJjOGNxbmRheUplUTc1VEhxRUpDdW55ME56VG50MVlJckx5Z3U5M2U5Z0FFeWdZbG9BLWRhVHFFTVhVTHZWM1lWNThkSQ?oc=5",
-      "published_at": "2026-07-26T22:38:34+00:00",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9ETzdOVTdhNFkwcTNIRzZ1NzZSenlGeFVxYS1TTlFMYlo1MDZWN1l0aFNHanZNUlNBZFROTzNzWVhHU0pHcUxTeg?oc=5",
+      "published_at": "2026-07-26T22:44:46+00:00",
       "snippet": ""
     },
     {
@@ -3391,16 +3420,6 @@
       "snippet": ""
     },
     {
-      "title": "Hurricanes",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9ETzdOVTdhNFkwcTNIRzZ1NzZSenlGeFVxYS1TTlFMYlo1MDZWN1l0aFNHanZNUlNBZFROTzNzWVhHU0pHcUxTeg?oc=5",
-      "published_at": "2026-07-26T22:10:36+00:00",
-      "snippet": ""
-    },
-    {
       "title": "YouTube star Ms Rachel gives funds to democratic socialist Michigan Senate hopeful Abdul El-Sayed",
       "source": "Fox News (US, right)",
       "country": "US",
@@ -3561,16 +3580,6 @@
       "snippet": "Britain’s Prime Minister Andy Burnham will on Monday host Ukrainian President Volodymyr Zelensky as his first foreign leader since taking office a week ago…"
     },
     {
-      "title": "France wildfires: Bordeaux faces evacuation over ‘apocalypse’ blaze",
-      "source": "Agence France-Presse",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQkppSThweFYtek0xSGo3SFJhOU85S3VpWmJ6aUNHcW45d0tmaUh6ODlteVpLWjIwZ3RRUjN2RVJKY3NOdnlzbE1XY0RncS1McFJ3b2RfQXpFRWxEX0NteUZmSXgxbFZwUWEyMkpqUFJmU3k2cl9LMm5vZWpRSHVPNGotSXFRVDlBSlR0Q2FvOTBFNHZIR1c5OXlBbm95WGdDOVZOdg?oc=5",
-      "published_at": "2026-07-26T21:50:00+00:00",
-      "snippet": ""
-    },
-    {
       "title": "NELSON MANDELA BAY: From Audi Q5 to Ford Focus — ANC metro chief whip’s sudden downgrade",
       "source": "Daily Maverick (South Africa)",
       "country": "ZA",
@@ -3599,6 +3608,16 @@
       "url": "https://www.dailymaverick.co.za/article/2026-07-26-eff-celebrates-13-years-with-manifesto-focused-on-youth-issues-and-basic-services/",
       "published_at": "2026-07-26T21:44:49+00:00",
       "snippet": "Celebrating its 13th anniversary in Thohoyandou, the Economic Freedom Fighters launched a bold municipal campaign centred on insourcing and basic services."
+    },
+    {
+      "title": "Artificial intelligence",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA4Qi1oeTk1Z21hMnphRDg4Q3FlR1NuQmd0RUpidzBDU3A4YVRlVlZoMnZDbFVNSXA5bWVtUU55UkFqaXBVR1JqY29Sd0Q4NUZOOWtSNFJEWmVZUQ?oc=5",
+      "published_at": "2026-07-26T21:42:48+00:00",
+      "snippet": ""
     },
     {
       "title": "Inuit assembly sets goals for Arctic peace, stability and sovereignty",
@@ -3921,6 +3940,16 @@
       "snippet": "Concerns over unfair play continue to threaten the credibility of school sports."
     },
     {
+      "title": "US and Iran pause their attacks after days of escalation",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOd1ZkcWRJbVdJX0lWSFo1TGFnSDdhUkFQbHZ1ZGlHVUp0b1BwbEZ0SHVPNGY2NS12NmQ3c3dpbjNVVG5qXzJvUDh6NGVSQnFkS2hEQ1BNbi1jUV9nN1lhUHF5MVlrRVpHdURweU9hTnZPTUYxSFVYaklYeWhlTURTQWJteG5acjYybFplamI2XzlJSW5RbktF?oc=5",
+      "published_at": "2026-07-26T21:01:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Home cocktail maker says Gen Z isn't giving up alcohol — they're changing how they drink",
       "source": "Fox News (US, right)",
       "country": "US",
@@ -3991,6 +4020,16 @@
       "snippet": ""
     },
     {
+      "title": "Law enforcement",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5CS2t4MUdtMXhCVGx4N0Q0RUEwS250bC1acHYxS0g3bkIwX2c2YWZ4MzExNWlMOFFoMWpZdFZQUFltVWZSLXJmRjZoRTZpWGs?oc=5",
+      "published_at": "2026-07-26T20:53:59+00:00",
+      "snippet": ""
+    },
+    {
       "title": "A’s left-hander Jeffrey Springs leaves start against Twins with right hip discomfort",
       "source": "Associated Press",
       "country": "INT",
@@ -3998,26 +4037,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZExjQjFtVFpXRGNyVDg5c2h6Uk9saG9ZU2dIQXdVdFh3Vi1IaXp2U0dhQ0NQQWFUR1hmTEJzR01YVzBhLWR1Z3BWd1RROThRQjlpYl9vWHMwcnRoR2V2UlZWSjRXOGp0X1pVdmlzV0piMnpOdkY5dHBCc2U0cEZWdkdPREljUjVTQVFIREhn?oc=5",
       "published_at": "2026-07-26T20:52:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Former manager explains why women ‘want Kwam 1’s children’",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/entertainment/naija-fashion/898362-former-manager-explains-why-women-want-kwam-1s-children.html",
-      "published_at": "2026-07-26T20:50:59+00:00",
-      "snippet": "“I promise you, as we speak, there are still some women out there who are waiting for their 'turn' to get pregnant by him…”…"
-    },
-    {
-      "title": "Swimming and Para Swimming, Session 10, Finals, Glasgow 2026",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBhOHFZVGEzTGZDUk1GS3BiUHJYaFN6b003b0ptcVBnUUZ0Qi1JaGNHN3FqMDhFM0FRZDRpY1JYaHgyUHlPeUNmR2Q0RVFlMF9JMmJYZjVKM0RCUQ?oc=5",
-      "published_at": "2026-07-26T20:49:42+00:00",
       "snippet": ""
     },
     {
@@ -4071,16 +4090,6 @@
       "snippet": "The four American troops killed during renewed fighting between the US and Iran in recent weeks are no longer listed as part of the Iran…"
     },
     {
-      "title": "Labour shuts down FUTA Teaching Hospital over non-implementation of agreement",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/news/top-news/898359-labour-shuts-down-futa-teaching-hospital-over-non-implementation-of-agreement.html",
-      "published_at": "2026-07-26T20:39:03+00:00",
-      "snippet": "The NLC and TUC, in a notice on Sunday, directed the workers at the institution to down tools as from 12 midnight."
-    },
-    {
       "title": "Marlins’ losing streak hits franchise-record 12 games with 5-3 loss to Padres",
       "source": "Associated Press",
       "country": "INT",
@@ -4099,16 +4108,6 @@
       "url": "https://www.foxnews.com/sports/cardinals-end-jacoby-brissett-contract-dispute-deal-worth-21m-2026-season-reports",
       "published_at": "2026-07-26T20:35:59+00:00",
       "snippet": "The Arizona Cardinals and Jacoby Brissett finally reached an agreement on a revised contract for the 2026 NFL season, ending a stalemate as the likely…"
-    },
-    {
-      "title": "Bordeaux under threat as France and Spain battle 'unprecedented' wildfires",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/environment/20260726-bordeaux-under-threat-as-france-spain-battle-unprecedented-wildfires",
-      "published_at": "2026-07-26T20:35:39+00:00",
-      "snippet": "The fire in southwest France was about 15 kilometres away from Bordeaux on Sunday, as authorities in France and Spain battled wildfires that have forced…"
     },
     {
       "title": "Former President Hernandez returns to Honduras after Trump pardon",
@@ -4149,16 +4148,6 @@
       "url": "https://www.koreaherald.com/article/10820556",
       "published_at": "2026-07-26T20:30:00+00:00",
       "snippet": "The UNESCO World Heritage Committee, meeting at its 48th session in Busan, has urged Japan to improve its exhibits at the Sado Island Gold Mines…"
-    },
-    {
-      "title": "‘I waited 20 days for Burna Boy to send his ‘Dai Dai’ verse — Shakira",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/entertainment/music/898355-i-waited-20-days-for-burna-boy-to-send-his-dai-dai-verse-shakira.html",
-      "published_at": "2026-07-26T20:27:44+00:00",
-      "snippet": "The Colombian singer said Burna Boy's contribution elevated Dai Dai, the official song of the 2026 FIFA World Cup."
     },
     {
       "title": "'Don't know how I do it': Pogačar claims fifth Tour de France title",
@@ -4221,16 +4210,6 @@
       "snippet": ""
     },
     {
-      "title": "Osun 2026: Uzodimma, Akpabio, Abbas, others to lead APC campaign council",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/news/top-news/898354-osun-2026-uzodimma-akpabio-abbas-others-to-lead-apc-campaign-council.html",
-      "published_at": "2026-07-26T20:24:03+00:00",
-      "snippet": "The APC will, on Tuesday, inaugurate the campaign council for the election scheduled for 15 August."
-    },
-    {
       "title": "CEBL: Scarborough Shooting Stars @ Montreal Alliance",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -4281,16 +4260,6 @@
       "snippet": "India's Cockroach Janta Party ended its five-week multi-city protest on Saturday after the youth-led movement's key demand—the resignation of Education Minister Dharmendra Pradhan—was met."
     },
     {
-      "title": "“We weren’t referring to anybody” — Kwam 1’s saxophonist clarifies ‘unnecessary pregnancy’ song backlash",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/entertainment/naija-fashion/898347-we-werent-referring-to-anybody-kwam-1s-saxophonist-clarifies-unnecessary-pregnancy-song-backlash.html",
-      "published_at": "2026-07-26T20:14:13+00:00",
-      "snippet": "“On this particular day that the incident happened, I won't lie to you, from the beginning of that show, Alhaji was in a very good…"
-    },
-    {
       "title": "Wildfires in France drive 250,000 people from their homes and creep toward wine city of Bordeaux",
       "source": "Associated Press",
       "country": "INT",
@@ -4311,16 +4280,6 @@
       "snippet": ""
     },
     {
-      "title": "59 microphones,19 speakers; here’s the first look of BBNaija season 11 house (PHOTOS)",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/entertainment/naija-fashion/898338-59-microphones19-speakers-heres-the-first-look-of-bbnaija-season-11-house-photos.html",
-      "published_at": "2026-07-26T20:09:48+00:00",
-      "snippet": "More than 1,000 Nigerian workers are involved in building the BBNaija house before each new season premieres."
-    },
-    {
       "title": "From being found lifeless in the water to taking home a medal in the pool",
       "source": "ABC News (AU) - Top Stories",
       "country": "AU",
@@ -4329,16 +4288,6 @@
       "url": "https://www.abc.net.au/news/2026-07-27/victoria-belando-nicholson-commonwealth-games-2026-para-swimming/106942068",
       "published_at": "2026-07-26T20:04:19+00:00",
       "snippet": "Victoria Belando Nicholson was a baby when she was pulled lifeless from the water after falling from a refugee boat."
-    },
-    {
-      "title": "From stage 6 onwards, Pogacar 'never let go' during Tour de France",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/from-stage-6-onwards-pogacar-never-let-go-during-tour-de-france",
-      "published_at": "2026-07-26T20:02:13+00:00",
-      "snippet": "Tadej Pogacar won a record-equaling fifth Tour de France title on Sunday. The 27-year-old Slovenian dominated this year's race to join Belgian Eddy Merckx, Spaniard…"
     },
     {
       "title": "(LEND.OQ) | Stock Price & Latest News",
@@ -4471,16 +4420,6 @@
       "snippet": ""
     },
     {
-      "title": "Wildfires have scorched 115,000 hectares across France this year, interior minister says",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/europe/20260725-france-evacuates-55-000-more-as-bordeaux-fires-worsen",
-      "published_at": "2026-07-26T19:34:03+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Xenophobic Unrest: South Africa scales down repatriation efforts as migration rates decline",
       "source": "Daily Maverick (South Africa)",
       "country": "ZA",
@@ -4529,16 +4468,6 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQmtNd3hTdXJCcmcwUVpDZnRHdWNNQ0s5OUNUWlpxMmg4QTg2d3ZISTRBYXRRcXhBSVU0QnQ3amVDX19WSE5aajJLQkZfTk5DTklrSDNUY3pZTGloaDAzanRGbWg0cXU2dThCdF9wR01lWnl4SnhsZTZvdWtSSFNhVU1WdE0xVjltdnB6NngxTHFwMVBxOFA0Z1MxbWgxd3d0S0NKcUlR?oc=5",
       "published_at": "2026-07-26T19:23:46+00:00",
       "snippet": ""
-    },
-    {
-      "title": "Xenophobia: Another Nigerian killed in South Africa",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/foreign/898336-xenophobia-another-nigerian-killed-in-south-africa.html",
-      "published_at": "2026-07-26T19:23:22+00:00",
-      "snippet": "The consulate disclosed that the police also shot another Nigerian national, Egwabor Patrick, who is still receiving treatment."
     },
     {
       "title": "Pogacar's Tour de France dynasty continues with record-equalling fifth title",
@@ -4619,16 +4548,6 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQX3IzOWU3cVlZc3JqNkYwN1AwUGM4RWxwQ2F1b21WNG9XUUI5azE5WWlEbk1jelU3QXJ4NDdoRG15YW5EZGVVTm9Ccm9iMXJYZVd5cHdHeFJ3Wnd4Z29MbDdUcWl6U0JjLU5Pa0xvQkFsdkhwcFhqb2l2T0s3RWJJS0stdHJQc1RoQXB4dFg1TUN0YW1YWExXUUM1eVJqVEVpTGhBaThUdlFTeEl5blE?oc=5",
       "published_at": "2026-07-26T19:08:28+00:00",
       "snippet": ""
-    },
-    {
-      "title": "Asake’s M$NEY concert film debuts exclusively on Spotify",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/entertainment/music/898329-asakes-mney-concert-film-debuts-exclusively-on-spotify.html",
-      "published_at": "2026-07-26T19:01:17+00:00",
-      "snippet": "The film captures Asake's one-night-only performance of his latest album at London's historic Theatre Royal Drury Lane."
     },
     {
       "title": "‘Flat Broke’: DNC Meltdown Sparks Panic On The Left",
@@ -4791,26 +4710,6 @@
       "snippet": "Just two days after the first case of the novel coronavirus was confirmed in the United States, Dr."
     },
     {
-      "title": "Bandits abduct high court judge in Kebbi",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/news/top-news/898319-bandits-abduct-high-court-judge-in-kebbi.html",
-      "published_at": "2026-07-26T18:50:48+00:00",
-      "snippet": "The judge was reportedly seized from his residence in Bunza LGA in the early hours of Sunday, shortly after returning from a trip to neighbouring…"
-    },
-    {
-      "title": "Around Africa, elections have become too inconvenient, By Chidi Anselm Odinkalu",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/opinion/898327-around-africa-elections-have-become-too-inconvenient-by-chidi-anselm-odinkalu.html",
-      "published_at": "2026-07-26T18:49:14+00:00",
-      "snippet": "José Eduardo Van-Dúnem dos Santos was 37 when the ruling Popular Movement for the Liberation of Angola, (better known by its Portuguese acronym, MPLA) chose…"
-    },
-    {
       "title": "US pauses Iran attacks for second night after Trump advised to halt bombing",
       "source": "The Guardian - World",
       "country": "GB",
@@ -4971,16 +4870,6 @@
       "snippet": "Daniel Ogama Adongo, a former Indianapolis Colts linebacker from Kenya, was deported by ICE last month, the agency said in a statement, citing an overstayed…"
     },
     {
-      "title": "Archery: Nigeria win historic team gold, seven medals at African Championships",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/sports/nigeria-sports-news/898317-archery-nigeria-win-historic-team-gold-seven-medals-at-african-championships.html",
-      "published_at": "2026-07-26T18:07:35+00:00",
-      "snippet": "The federation's Director of Marketing, Emmanuel Oyeleke, said the success should inspire greater investment in the sport The post Archery: Nigeria win historic team gold…"
-    },
-    {
       "title": "Displaced from wildfires in Spain share their stories of uncertainty and narrow escapes",
       "source": "Associated Press",
       "country": "INT",
@@ -5019,26 +4908,6 @@
       "url": "https://www.thenationalnews.com/news/us/2026/07/26/netanyahu-says-he-will-attend-unga-as-mamdani-says-he-is-not-welcome/",
       "published_at": "2026-07-26T18:01:57+00:00",
       "snippet": ""
-    },
-    {
-      "title": "Pogacar wins fifth Tour de France as teen Seixas seals stunning fourth place",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/sport/20260726-pogacar-wins-fifth-tour-de-france-as-teen-seixas-seals-stunning-fourth-place",
-      "published_at": "2026-07-26T18:00:08+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Pogacar wins fifth Tour de France as teen Seixas seals stunning fourth place",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/sport/20260726-pogacar-wins-fifth-tour-de-france-as-teen-seixas-seals-stunning-fourth-place",
-      "published_at": "2026-07-26T17:59:10+00:00",
-      "snippet": "Tadej Pogacar claimed his record-equalling fifth Tour de France title as Mathieu van der Poel won a sensational 21st and final stage around Paris…"
     },
     {
       "title": "Tadej Pogacar secures his legacy with fifth Tour de France title",
@@ -5101,16 +4970,6 @@
       "snippet": ""
     },
     {
-      "title": "Main suspect in Berlin Pride attack shot dead by police",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/europe/20260726-deadly-berlin-pride-ramming-was-islamist-terror-attack-says-german-interior-minister",
-      "published_at": "2026-07-26T17:46:54+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Gaza peace plan inches forward as Israel approves peacekeeping force",
       "source": "The National (UAE)",
       "country": "AE",
@@ -5121,6 +4980,16 @@
       "snippet": ""
     },
     {
+      "title": "Movie News | Latest New Movie News",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE5NRkFJaE9nQzJtTEF6d01SeDk1dV8tQ2JBejZJTk4xemdXU2Y0TFBQZERYQWJpenBEMVVYekt1aGZwVXM?oc=5",
+      "published_at": "2026-07-26T17:44:53+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Iran foreign minister says Ukraine's attack on Iranian vessel 'cannot go unanswered'",
       "source": "Reuters",
       "country": "INT",
@@ -5128,26 +4997,6 @@
       "paywall": "soft",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOR0dDdnVkOGdDUi10WVpzQ1FKWjNjcmRWaEl3ZFdZdXQ2cnNmY3JIbDNyN2ZiZ1ctd1YtOG1iOEZubEM4RzZ1djNiT3M1djhBRnROYTNKUVgwSGlUa1VFbUJ0ekJIWkhTVmRhZFJNbEVGTHhvc0daZXNmUzNEMWpZNlBmUy1QeEF3Y1o4SlBzcnRnd0ZXZnc5REROeGFGRzFrM2RKQXhVY3hmc3Y3RDl2bUdZazNXRF9iZkJURF9rcTVXQjMw?oc=5",
       "published_at": "2026-07-26T17:43:43+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Crime | Latest News & Updates",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1nNV9HSjd2YV9uVDgwYmYzWUZES2p3SGFWeFBQNFlxVEViNHU0MndFbUp3cTR1REJCMS1DT21sVW9sUQ?oc=5",
-      "published_at": "2026-07-26T17:43:33+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Artificial intelligence",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA4Qi1oeTk1Z21hMnphRDg4Q3FlR1NuQmd0RUpidzBDU3A4YVRlVlZoMnZDbFVNSXA5bWVtUU55UkFqaXBVR1JqY29Sd0Q4NUZOOWtSNFJEWmVZUQ?oc=5",
-      "published_at": "2026-07-26T17:37:47+00:00",
       "snippet": ""
     },
     {
@@ -5171,6 +5020,16 @@
       "snippet": ""
     },
     {
+      "title": "- CBC Gem",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBLYUV5azRXaHNzT0Z1d01fWHBkd2RDRW1LUmc4dHRBcWtSdTZ1VG9LUjNSZm9wZXRjdmQ0aldIRlVSZE83NlI2UjgxTG9hTXh1Rmc?oc=5",
+      "published_at": "2026-07-26T17:33:50+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Fauci Complains Questions About COVID Origins Were ‘Wasting’ Time",
       "source": "The Daily Wire (US, right)",
       "country": "US",
@@ -5179,6 +5038,16 @@
       "url": "https://www.dailywire.com/news/fauci-complains-questions-about-covid-origins-were-wasting-time",
       "published_at": "2026-07-26T17:30:20+00:00",
       "snippet": "Dr. Anthony Fauci rejected questions about the origins of the COVID-19 pandemic and funding sent from the United States to the Wuhan Institute of Virology…"
+    },
+    {
+      "title": "- newsletters.cbc.ca",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBwT0p4QWdEZE1MQjNhajlMTXNkT1MxZmNIM3E1SWw5Q3VlVUJOT2o3OU5NN0lDSTJQay1zdm9GS2tocWJfQ1VXZ1B4cDAycmU2b0N4ZUVUN3o5dw?oc=5",
+      "published_at": "2026-07-26T17:29:24+00:00",
+      "snippet": ""
     },
     {
       "title": "US appeals court upholds injunction that blocks Trump’s order to create a federal voter list",
@@ -5201,14 +5070,14 @@
       "snippet": "Dr. Anthony Fauci, the former Chief Medical Advisor to the President, appeared consumed with media attention and his growing public image as the coronavirus pandemic…"
     },
     {
-      "title": "WAFCON 2026 Preview: Super Falcons eye historic 11th crown, World Cup ticket",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
+      "title": "- newsletters.cbc.ca",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
       "paywall": "none",
-      "url": "https://www.premiumtimesng.com/news/top-news/898308-wafcon-2026-preview-super-falcons-eye-historic-11th-crown-world-cup-ticket.html",
-      "published_at": "2026-07-26T17:25:08+00:00",
-      "snippet": "With a record prize fund, expanded format, World Cup qualification at stake and some of the finest players on the continent preparing to compete, Morocco…"
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12MnE5UlpubFFKRW9fZzZDcS10NjdsM3RGclV0WGQ3MlV5cEpRZzJxWVFZeUJxUi1IVVozOU5yODJVbl9kS2dZNElGZ3B6bXZTWlB3RHFVR0VwUQ?oc=5",
+      "published_at": "2026-07-26T17:25:05+00:00",
+      "snippet": ""
     },
     {
       "title": "Netanyahu accuses Mamdani of ‘fomenting hate’ and calls ICC war-crimes charges ‘bogus’",
@@ -5411,16 +5280,6 @@
       "snippet": ""
     },
     {
-      "title": "Movie News | Latest New Movie News",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE5NRkFJaE9nQzJtTEF6d01SeDk1dV8tQ2JBejZJTk4xemdXU2Y0TFBQZERYQWJpenBEMVVYekt1aGZwVXM?oc=5",
-      "published_at": "2026-07-26T16:53:35+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Artistic Gymnastics - Floor Exercise, Session 6, Glasgow 2026",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -5451,6 +5310,16 @@
       "snippet": ""
     },
     {
+      "title": "NBA Scores & Daily News | NBA Stats, Scores & News Today",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBwMFNyak8wbjBIcmRoX2hyLUNMU3o2NzFoa3UtTFl4UUFQU18tWnVzUWxhZGsxRS1IRXFWdWhoVQ?oc=5",
+      "published_at": "2026-07-26T16:42:46+00:00",
+      "snippet": ""
+    },
+    {
       "title": "India’s Cockroach Janta party protest victory signals trouble ahead for Modi",
       "source": "The Guardian - World",
       "country": "GB",
@@ -5478,16 +5347,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSDJtcENfTHM5OWVuVUtDX3o4a3RtZThUejFNSDEwSTRBZ0NKT29Zdm9OMENJWFktQmhoNUtxQ1VLOG83SVZwU0FrOEtYWVNSc0djWXNPbEZ5ZDZqazMwXzBvdzlUSUxzSGRHZlJXdl95TEVDMGxDQngwdWFmSHNzbHpmUEJvS250MHhRR0dWYUFuOXpVLTBxLUVJRmh5YVNnOVdJQ0p0ODJyeGNab2ZfWEtwWXNsME0tMEQtM0gtOGl5dUt1?oc=5",
       "published_at": "2026-07-26T16:41:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "NBA Scores & Daily News | NBA Stats, Scores & News Today",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBwMFNyak8wbjBIcmRoX2hyLUNMU3o2NzFoa3UtTFl4UUFQU18tWnVzUWxhZGsxRS1IRXFWdWhoVQ?oc=5",
-      "published_at": "2026-07-26T16:38:21+00:00",
       "snippet": ""
     },
     {
@@ -5599,16 +5458,6 @@
       "url": "https://www.dw.com/en/israeli-settlers-torch-mosques-in-occupied-west-bank/a-78120749?maca=en-rss-en-all-1573-rdf",
       "published_at": "2026-07-26T16:21:00+00:00",
       "snippet": "Israeli settlers in the occupied West Bank attacked two mosques Sunday, setting them ablaze and scrawling graffiti."
-    },
-    {
-      "title": "Tinubu appoints Olarewaju-Smart as Special Adviser on House of Reps Matters",
-      "source": "Premium Times (Nigeria)",
-      "country": "NG",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.premiumtimesng.com/news/top-news/898304-tinubu-appoints-olarewaju-smart-as-special-adviser-on-house-of-reps-matters.html",
-      "published_at": "2026-07-26T16:17:06+00:00",
-      "snippet": "Mr Olanrewaju-Smart is a scholar and public policy expert with a PhD in Educational Management from Lead City University and a Master’s degree in Public…"
     },
     {
       "title": "'There is no Mungiki': Mt Kenya pushes back against Murkomen crackdown order",
@@ -5778,6 +5627,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5qam1FakU2Wi1zLXhmSUQzVHRWX2RUelUzZTFaUW5ITHZ3WS1ZQ1M0QkNTWEl4d2VMV2dHV3JMcGMyNC1fNGtNMmxoYXpwNW1LVnpZMlBUSEFvUQ?oc=5",
       "published_at": "2026-07-26T15:45:17+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "WNBA Scores & Daily News | WNBA Stats, Scores & News Today",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9RellkeWJkeDFvWUtHTHRPOURyM29ReE54N3hpa3NCRUxRQ01yVy1FTjRUS0RaVzNxZzlVakgxUkhZYW1hX0pWemVtcnI5U2s?oc=5",
+      "published_at": "2026-07-26T15:44:24+00:00",
       "snippet": ""
     },
     {
@@ -5961,16 +5820,6 @@
       "snippet": "Indonesia is intensifying diplomatic efforts to accelerate the signing of the Indonesia-European Union Comprehensive ..."
     },
     {
-      "title": "US and Iran pause their attacks after days of escalation",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOd1ZkcWRJbVdJX0lWSFo1TGFnSDdhUkFQbHZ1ZGlHVUp0b1BwbEZ0SHVPNGY2NS12NmQ3c3dpbjNVVG5qXzJvUDh6NGVSQnFkS2hEQ1BNbi1jUV9nN1lhUHF5MVlrRVpHdURweU9hTnZPTUYxSFVYaklYeWhlTURTQWJteG5acjYybFplamI2XzlJSW5RbktF?oc=5",
-      "published_at": "2026-07-26T15:12:27+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Norris ends wait for F1 win in Hungary as Antonelli stretches championship lead",
       "source": "Associated Press",
       "country": "INT",
@@ -6031,16 +5880,6 @@
       "snippet": "Indonesian Foreign Minister Sugiono and New Zealand Foreign Minister Winston Peters have reaffirmed their commitment to ..."
     },
     {
-      "title": "Germany: Berlin Pride attack believed to be an act of Islamic extremist terror",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/germany-berlin-pride-attack-believed-to-be-an-act-of-islamic-extremist-terror",
-      "published_at": "2026-07-26T15:03:04+00:00",
-      "snippet": "German investigators on Sunday searched for a man who allegedly drove a van into a crowd near Berlin's Pride festival, killing one person and injuring…"
-    },
-    {
       "title": "Manhunt continues for suspect tied to deadly Pride festival attack in Berlin",
       "source": "CBC News (Canada)",
       "country": "CA",
@@ -6051,16 +5890,6 @@
       "snippet": ""
     },
     {
-      "title": "Fires in France: 42,000 hectares burnt, 220,000 people evacuated",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/fires-in-france-42-000-hectares-burnt-220-000-people-evacuated",
-      "published_at": "2026-07-26T14:58:59+00:00",
-      "snippet": "Andrew Hilliar has more."
-    },
-    {
       "title": "Berlin Pride attack prompts grief and solidarity with LGBTQ community",
       "source": "Reuters",
       "country": "INT",
@@ -6069,26 +5898,6 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUE1aUmxVOHNfRkY1bW5mZG5DMUxHaFBpSWtPb3FONXF6YjItMFMycmx4M1YzTHhyZ1hlYURXMjM0UmlPQ3VRTTJwZjBGWFhudGxDWGl5NjJtbGtRdVFlcVJnVnNwZEcxSjctdzNEOThDcWctYnl2bG93eHlhYkFOaEItUEl3S2hzYXFKbHNpYjA2MVo3U2tUUk9CQ1dldnNUNWdkbjdqakJ3a3FJYmR5OG5WNGQ?oc=5",
       "published_at": "2026-07-26T14:54:21+00:00",
       "snippet": ""
-    },
-    {
-      "title": "WNBA Scores & Daily News | WNBA Stats, Scores & News Today",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9RellkeWJkeDFvWUtHTHRPOURyM29ReE54N3hpa3NCRUxRQ01yVy1FTjRUS0RaVzNxZzlVakgxUkhZYW1hX0pWemVtcnI5U2s?oc=5",
-      "published_at": "2026-07-26T14:53:34+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Sea drones to defend the sky in Ukraine as the war continues",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/sea-drones-to-defend-the-sky-as-the-war-continues-in-ukraine",
-      "published_at": "2026-07-26T14:51:50+00:00",
-      "snippet": "FRANCE 24 report by Gulliver Cragg."
     },
     {
       "title": "Argentina’s energy trade balance posts best first half in a decade",
@@ -6181,16 +5990,6 @@
       "snippet": "Mexico's iconic axolotl is thriving in captive aquariums, but is disappearing from the wild, including its endemic home in the Xochimilco canals of Mexico City."
     },
     {
-      "title": "Flavio Bolsonaro launches Brazil presidential campaign, touts support from Milei",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/flavio-bolsonaro-launches-brazil-presidential-campaign-touts-support-from-milei",
-      "published_at": "2026-07-26T14:35:21+00:00",
-      "snippet": "Brazilian Senator Flavio Bolsonaro, eldest son of former president Jair Bolsonaro, on Saturday formally launched his bid to challenge President Luiz Inacio Lula da Silva…"
-    },
-    {
       "title": "U.S. forgoes strikes on Iran, but conflict in the Red Sea escalates",
       "source": "NBC News (US)",
       "country": "US",
@@ -6269,16 +6068,6 @@
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5HWnh2Qk1MZ0FnRVhtcURCXzdBUkVhNEFaVlJIb2JlNjlfdFN3Y0F2X0U2cDFOYzVHa2ppcUFQb2RueGNuTVJvNFkzVGpZNGdnSEc0R2MzMWh1RTMtaEpOQmln?oc=5",
       "published_at": "2026-07-26T14:22:31+00:00",
       "snippet": ""
-    },
-    {
-      "title": "Football: WAFCON kicks off in Morocco with record 16-nation line-up",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/football-wafcon-kicks-off-in-morocco-with-record-16-nation-line-up",
-      "published_at": "2026-07-26T14:21:42+00:00",
-      "snippet": "Thando Sibiya, Sports Presenter and Journalist, is our guest."
     },
     {
       "title": "PLA Southern Theater Command slams Philippines for stirring up trouble in SCS, conducts routine South China Sea patrols amid trilateral US-Philippines-Japan drills",
@@ -6621,6 +6410,16 @@
       "snippet": ""
     },
     {
+      "title": "Africa News Reports | Latest News in Africa",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBJQmVmQkNENXZhMGRlTFh2Mkh6cUhHc2REN3prU2RDdkNlSHZ5bDRoZDVrUG9ieVpGMXM5VmZVMWFhWXM?oc=5",
+      "published_at": "2026-07-26T12:44:19+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Wildfires in France drive 250,000 people from their homes and creep toward wine city of Bordeaux",
       "source": "The Korea Herald",
       "country": "KR",
@@ -6951,16 +6750,6 @@
       "snippet": "I can't at any point say that I won't take a different opinion from him, that I will need to voice a different idea…"
     },
     {
-      "title": "Africa News Reports | Latest News in Africa",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBJQmVmQkNENXZhMGRlTFh2Mkh6cUhHc2REN3prU2RDdkNlSHZ5bDRoZDVrUG9ieVpGMXM5VmZVMWFhWXM?oc=5",
-      "published_at": "2026-07-26T11:53:24+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Bintan Durian Festival draws hundreds of local, foreign visitors",
       "source": "Antara (Indonesia)",
       "country": "ID",
@@ -7009,16 +6798,6 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNWXRWNmVBUThCWWRVOVdHcUt3Z29oeV8wdzYtV1F4WTFIeHM0VWo4M083UWxteEpsaDhIUEJpQjhNcl90RlJhYU94UjdhdzZ2VXNTRUhxUnU3ekoyUHd5eGVwamoyc0VwZkRsR3hCazdyRktMcXdLbTVrQ0FaQnNMUGhyU2ZYRXBIakJsRFFoUUlqaE43M3kyT3JhTTFUUzRZOS1uU1ZR?oc=5",
       "published_at": "2026-07-26T11:45:00+00:00",
       "snippet": ""
-    },
-    {
-      "title": "Main suspect in Berlin Pride attack shot dead by German police forces",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/europe/20260726-deadly-berlin-pride-ramming-was-islamist-terror-attack-says-german-interior-minister",
-      "published_at": "2026-07-26T11:41:10+00:00",
-      "snippet": "The suspect in the deadly Berlin Pride attack that left one person dead and 29 injured was shot and killed by police during a confrontation…"
     },
     {
       "title": "Iran says halts Middle East attacks as US holds fire",
@@ -7121,6 +6900,16 @@
       "snippet": ""
     },
     {
+      "title": "The third drone, shot down in Romania. Nicușor Dan: The one on Friday was a Shahed",
+      "source": "Agence France-Presse",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTGVzRUpMcHNmMGxvUV9xczNUeHZjM3NPNkctQUVaSkNUZThNaXpxTmJMaUI0djlXX2JCQ2VqaTVjMDVORHdfcmtzVjdkekVKcGFxOXZ1TzNMT2JrQU82Wi1mSm13ekZOVEJIc0ZzVUtGY2dzYm5raU5qalA4Q3R0SEFqU2N0UEF6Y2J4LVdzUGpieEZRUXNTN25GSmpuX3M?oc=5",
+      "published_at": "2026-07-26T11:30:04+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Proposed law to allow Bitcoin, social media monetisation as collateral for loans",
       "source": "Daily Nation (Kenya)",
       "country": "KE",
@@ -7129,16 +6918,6 @@
       "url": "https://nation.africa/kenya/business/proposed-law-to-allow-bitcoin-social-media-monetisation-as-collateral-for-loans-5537826",
       "published_at": "2026-07-26T11:27:52+00:00",
       "snippet": "MPs urged to expand the range of assets that CBK recognises as loan collateral."
-    },
-    {
-      "title": "FNRN.OQ - | Stock Price & Latest News",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5aSkJnd3JYM19JVm92RE9mQjhvSm14bGJzbVJOSzhEdWNMMTBGaEtPNHltZmZGbVVXS1JmUzZBQ3hRMUZwSUJoZ2NpMHliQVdpQlRVczZ3TW4xN2t1bVV5SUF0bXZkd0pVbF9NdDBqUDhvbWh2RW5IMU5WTQ?oc=5",
-      "published_at": "2026-07-26T11:23:43+00:00",
-      "snippet": ""
     },
     {
       "title": "CUVL.OQ - | Stock Price & Latest News",
@@ -7381,16 +7160,6 @@
       "snippet": ""
     },
     {
-      "title": "‘Bullied, beaten up, killed’: Armenia's drag queens risk it all for the stage",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/europe/20260726-bullied-beaten-killed-armenia-drag-queens-risk-all-for-the-stage",
-      "published_at": "2026-07-26T10:39:20+00:00",
-      "snippet": "Armenian attitudes toward the LGBTQ community have transformed in recent years, in part due to the war in Ukraine."
-    },
-    {
       "title": "ARF statement calls for 'complete denuclearization' of Korean Peninsula for 2nd straight year",
       "source": "The Korea Herald",
       "country": "KR",
@@ -7409,26 +7178,6 @@
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMVdoalg3dHoyTkpNMVNtYnFMcmxZM2ppU1ZEUUZReDR5bXh2OVNqUXBVZnI5N0lld1BTdVdjdkM1dGhKdERIWkptRUU2R2FtaGR3UWJ6SFJ0YjRTN0Ixa0RZTzN1ci1xZV94VF9xQTlBMGU0TEJocC1xUGw4SHdlbGtaNHZILU1Hc2YzQmxjSXdvdUJmT2c0NkNiV1ZxM0tTUk1ndG12QVAwRkZkN1lTdzJVUjUwLXM?oc=5",
       "published_at": "2026-07-26T10:36:24+00:00",
       "snippet": ""
-    },
-    {
-      "title": "Deadly attack on holiday camp in Russian-held part of Ukraine, officials say",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/zelensky-says-russia-seeks-30-000-extra-n-korea-troops-for-ukraine-war",
-      "published_at": "2026-07-26T10:32:59+00:00",
-      "snippet": "At least 11 people were killed, including five children, in an overnight drone attack on a holiday camp in a Russian-held part of Ukraine's ‌Zaporizhzhia…"
-    },
-    {
-      "title": "Wildfires ravage southwest France: Thousands face devastation after evacuation",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/wildfires-ravage-southwest-france-thousands-face-devastation-after-evacuation",
-      "published_at": "2026-07-26T10:29:55+00:00",
-      "snippet": "A raging wildfire in southwest France forced the evacuation of 55,000 people overnight Sunday, bringing the total forced out of their homes to 220,000…"
     },
     {
       "title": "Iran Says It Halts Retaliatory Attacks After US Stops Strikes",
@@ -7539,16 +7288,6 @@
       "url": "https://nation.africa/kenya/news/court-declines-to-halt-ntsa-s-elogbook-rollout-5537710",
       "published_at": "2026-07-26T10:14:31+00:00",
       "snippet": "Petitioners had argued that the system was introduced without adequate legal safeguards."
-    },
-    {
-      "title": "Romanian jet shoots down drone entering country's airspace for third day in a row",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/europe/20260726-romanian-jet-shoots-down-drone-entering-country-airspace-for-third-day-in-a-row",
-      "published_at": "2026-07-26T10:11:29+00:00",
-      "snippet": "A Romanian fighter jet on Sunday shot down the third drone flying into the country's airspace in as many days, the defence minister said."
     },
     {
       "title": "Can Pakistan-administered Kashmir elections calm tensions?",
@@ -7741,14 +7480,14 @@
       "snippet": ""
     },
     {
-      "title": "France fire situation 'remains very unfavourable' says interior minister",
-      "source": "France 24",
-      "country": "FR",
+      "title": "Brazil denies visas for US officials seeking talks",
+      "source": "Agence France-Presse",
+      "country": "INT",
       "lean": "centre",
       "paywall": "none",
-      "url": "https://www.france24.com/en/france-fire-situation-remains-very-unfavourable-says-interior-minister",
-      "published_at": "2026-07-26T09:57:22+00:00",
-      "snippet": "French Interior Minister Laurent Nunez said on Sunday the wildfire situation in southwestern France was \"very unfavourable\".\"Another difficult night on the wildfire front,\" Nunez said…"
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZTFaN1hWMWRYX2Eyck9NTmg1eWtoTkFwQnV2VllqZ3VjSWR5MHg2VTlPTU1MSTBraGJWZlNqaWdxS2Y1QlJaNkRUWGpnYXRjYlZYY2FQWk41b1Q5b0dwVWYwZDFmQkRWeDU2c0NyQXdybTA1SWtxekpGOUdMbVphNkh0WWF1RDFfMWxaZUxUOGRsS0xTVkE?oc=5",
+      "published_at": "2026-07-26T09:59:21+00:00",
+      "snippet": ""
     },
     {
       "title": "Sudan civil war: Civilians used as 'human shields'",
@@ -7769,26 +7508,6 @@
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1rR0ZoS0VsN1ZleFJHblRHUy0wNS1zekZvRmFiY1lGWllJdDBGcFNQNG92cnhzXzR2blNKNHpaOG1SZjYwVjVVVktJN1d4S1hpYUhCcmRyZ25PWk9MTkNrazliSUlIQjFHZmF6ONIBckFVX3lxTE9iMXp4RmpOLWpNdXh5ZEdMRWNEODVNd2pxWEZCb014UUVSM2s3cjhfWDVyYjU1MWRFMmJxZ0plT3FhTFpzbnlQRzJYaG1uSFFGV1BJZzNzM1doLUd3TWtuMWE3VzFoUmRqWTFzc3ZGZVJpdw?oc=5",
       "published_at": "2026-07-26T09:55:19+00:00",
       "snippet": ""
-    },
-    {
-      "title": "German police hunt suspect in Berlin Pride attack: 1 dead and 16 injured",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/german-police-hunt-suspect-in-berlin-pride-attack-1-dead-and-16-injured",
-      "published_at": "2026-07-26T09:53:33+00:00",
-      "snippet": "German authorities on Sunday issued a wanted notice for a fugitive suspect in the van rammingnear Berlin’s Pride festival that left one person dead…"
-    },
-    {
-      "title": "Israel detains over 70 suspects following deadly violence in the West Bank",
-      "source": "France 24",
-      "country": "FR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.france24.com/en/israel-detains-over-70-suspects-following-deadly-violence-in-the-west-bank",
-      "published_at": "2026-07-26T09:49:38+00:00",
-      "snippet": "Israel’s military said it detained over 70 suspects across the occupied West Bank overnight and on Saturday, a day after troops deployed across the territory…"
     },
     {
       "title": "PLN EPI builds green hydrogen ecosystem for industry and aviation",
@@ -8521,16 +8240,6 @@
       "snippet": ""
     },
     {
-      "title": "- AP News",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZkVHNU1QSnVtanotSVA1VFVkT09tR0tHTWpzS00tUFkyMFpKXzY5YnlmSGpVUUN6M2VhUGNEOXVJbjFiSEZiY1ZfMTBCTVgzRU5KUS1LMkxLQ1M4aHhFTEFXWkQ4QXpYTmZybERMNGlmeDVKblg5Y1lKTTV3TktpX1VpMm1kUkhLS19abXFJbWxRQm5lSF9mQWZZYmZqNnZ5aG8yUVJxUQ?oc=5",
-      "published_at": "2026-07-26T07:20:22+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Japan great 'King Kazu' Miura scores first competitive goal after four years at 59",
       "source": "Reuters",
       "country": "INT",
@@ -8549,16 +8258,6 @@
       "url": "https://www.thehindu.com/news/international/india-emerging-as-trusted-partner-to-the-world-pm-modi/article71120577.ece",
       "published_at": "2026-07-26T07:13:45+00:00",
       "snippet": "Mr. Modi also said that this is a defining period in India's journey, where aspirations are reaching new heights"
-    },
-    {
-      "title": "Russia asks North Korea to send 30,000 extra troops to aid in Ukraine war: Zelensky",
-      "source": "South China Morning Post",
-      "country": "CN",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://www.scmp.com/news/world/russia-central-asia/article/3361882/russia-asks-north-korea-send-30000-extra-troops-aid-ukraine-war-zelensky?utm_source=rss_feed",
-      "published_at": "2026-07-26T07:11:50+00:00",
-      "snippet": "Ukraine’s President Volodymyr Zelensky has said that Russia has sought an extra 30,000 troops and missile launchers from North Korea to fight his country."
     },
     {
       "title": "Why Don Lemon Is The Perfect Vibes Candidate For 2028 Democrats",
@@ -8731,6 +8430,16 @@
       "snippet": "The multi-phase mass transit system promises to reshape movement."
     },
     {
+      "title": "1250.HK - | Stock Price & Latest News",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNWItaEZ2dmJ4NnUxNy1CdVpudUNEZUZreURuY1NTbEhoVTlhd0xZRU90WFZjbE91cmEwNkJOaTkzT0RrWU1ubFhTaFZaRU5ibFc1QVVrUnl6Nlp1Y2dEMmk3OXJUUDh5SU1YZFZPRUJ6NmZpU0ZMVDA1SnZIMWdXOWphTWM2YXdzRjFYYjM1LWRYZw?oc=5",
+      "published_at": "2026-07-26T06:10:24+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Driver who initiated 6-car collision claims sudden acceleration",
       "source": "The Korea Herald",
       "country": "KR",
@@ -8801,6 +8510,16 @@
       "snippet": "A Malaysian man in his 40s was arrested Sunday for allegedly killing a Malaysian man in his 20s during a group brawl in Eumseong, North…"
     },
     {
+      "title": "Pengana threatens to sue, accusing board of covering for Geoff Wilson",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNOVFWRGc2bHVYR1UyVW00WE9PbVlaTlpvVGVUV2hvc3luTkdUeUJBZ2tkOGRaYm1XTGdIN2twSG00dWRSeWYxM19HQnppMExEZVNHT0ZfNFQxam5vSFRJV2VJTU1mMWFoT09Wdzh5MTZOUEp6TU83TzFFNVp4bE9VN0ZnSk5NbklTd3AybWJMR2oyZVpQcGZBb1l0VG9kSHpLTHVHTEN1RU5MMzBxcktGZ00tNWV6czBUeHdTLVJB?oc=5",
+      "published_at": "2026-07-26T05:57:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Airstrikes have paused and talks are pressing forward. But can the US and Iran take the off-ramp?",
       "source": "Associated Press",
       "country": "INT",
@@ -8809,16 +8528,6 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNDJld2dfWkJobEFGdjZJaUQ0LThjRlJfcDFXSVc4dEwxMjhmeVB4QVVqcFVTV3B3RGRFV2NHWmpQdWsyVEx6ckxOdWVXcXcyRmpuejVER2R2alBhTEIyRlhGaHkyUXRQSjNKQ1kySDR4dHZvdm9LTWxMMXZUZ3p1ZUJqOE1WS1VNYlpKalF0NWdsVTdWZ3c0ZGRB?oc=5",
       "published_at": "2026-07-26T05:56:00+00:00",
       "snippet": ""
-    },
-    {
-      "title": "Pre-fame BTS, Rescene performances put local festivals back in spotlight",
-      "source": "The Korea Herald",
-      "country": "KR",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.koreaherald.com/article/10820482",
-      "published_at": "2026-07-26T05:55:15+00:00",
-      "snippet": "Local festivals in Korea rarely attract national attention, but Cheorwon in Gangwon Province is in the spotlight after it was revealed that both BTS…"
     },
     {
       "title": "Trump: Pause in Strikes on Iran Does Not Mean We Have Backed Down",
@@ -8959,36 +8668,6 @@
       "url": "https://www.theguardian.com/us-news/2026/jul/26/lawsuit-csi-aviation-globalx-cecot-deportation",
       "published_at": "2026-07-26T05:00:03+00:00",
       "snippet": "Exclusive: CSI Aviation and GlobalX accused of violating civil rights as part of Trump immigration crackdown Venezuelan men sent last year to a notorious Salvadorian…"
-    },
-    {
-      "title": "Indonesia reaffirms support for Palestinian cause",
-      "source": "Antara (Indonesia)",
-      "country": "ID",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://en.antaranews.com/news/424037/indonesia-reaffirms-support-for-palestinian-cause",
-      "published_at": "2026-07-26T04:48:16+00:00",
-      "snippet": "Indonesia reiterated its commitment to supporting the Palestinian people during a meeting between Foreign Minister ..."
-    },
-    {
-      "title": "Van slams into crowd at Berlin Pride festival, killing 1 and injuring 16, as police identify suspect",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZG8xc01CZTU0QWdwMkhEaXMxTkM1N1cyb0ZtSXhBOXFJUHdLRnQ2dlRMV3hHOGtiOC1KYVBJSWVKSjU5RFRSTFhkU3Q2anlTMXBfcEQzY3FtM1d5STB6eUtkTEhkVk5iV3VOQ1hRaTU3X1FLZU1FOXVITkl0LXdGdnhXa2FqTFhyMk5qWjBpbGZPdENWUmdiaUp3?oc=5",
-      "published_at": "2026-07-26T04:47:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Son Heung-min, Denis Bouanga get 1st-half goals in surging LAFC's 4-0 win over Sporting Kansas City",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNHpJNkFYV1ZmbW1fSERyM0R4NjRKUFFtMktiTEU0dnNxQ3VUZkV5ZGlPU05oMHVuWG8xYmwzVjZJd3lRZlpMbjFvRzJuUGM4dTNudV9FbjNfSDFnQXNucWJRVWdqWFFQZFRtNkRGVHNsTlhCV3I5TnVGZk1TTzhSS3hmbHFicS1WZGc?oc=5",
-      "published_at": "2026-07-26T04:46:00+00:00",
-      "snippet": ""
     }
   ]
 }
