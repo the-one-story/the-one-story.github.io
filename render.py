@@ -236,6 +236,8 @@ def _signup_form(form_url: str) -> str:
                autocomplete="off" aria-hidden="true"
                style="position:absolute;left:-5000px;">
         <input type="hidden" name="locale" value="en">
+        <!-- Brevo needs html_type=simple for a no-JS POST from our own form. -->
+        <input type="hidden" name="html_type" value="simple">
         <button type="submit">Subscribe</button>
       </form>
       <p class="signup-note" id="os-signup-note">One email a day. No tracking.
