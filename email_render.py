@@ -54,12 +54,12 @@ def build_email(ranked: dict) -> tuple[str, str]:
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{snippet or headline}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
        bgcolor="{_BG}" style="background-color:{_BG};border-collapse:collapse;">
-<tr><td align="center" style="padding:26px 10px;">
+<tr><td align="center" bgcolor="{_BG}" style="padding:26px 10px;background-color:{_BG};">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-       style="max-width:560px;margin:0 auto;">
-<tr><td style="padding:14px 30px 30px;font-family:{sans};">
+       bgcolor="{_BG}" style="max-width:560px;margin:0 auto;background-color:{_BG};">
+<tr><td bgcolor="{_BG}" style="padding:14px 30px 30px;font-family:{sans};background-color:{_BG};">
 
-  <p style="margin:0 0 5px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;
+  <p style="margin:0 0 6px;font-size:18px;letter-spacing:3px;text-transform:uppercase;
      color:{_O};font-weight:700;">One Story</p>
   <p style="margin:0 0 22px;font-size:14px;color:{_MUT};">{date_str}</p>
 
@@ -79,7 +79,7 @@ def build_email(ranked: dict) -> tuple[str, str]:
      border-top:1px solid {_RULE};padding-top:20px;">{coverage}</p>
   <p style="margin:0;font-size:15px;">
     <a href="{SITE_URL}" style="color:{_O};text-decoration:none;font-weight:600;">
-      See the map, every source, and why this story leads &rarr;</a></p>
+      See the map, every source, and how it's chosen &rarr;</a></p>
 
 </td></tr></table>
 </td></tr></table>"""
