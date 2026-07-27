@@ -23,7 +23,9 @@ from common import load_settings, read_json, rel
 
 # Strip a trailing " - Section" or " (tags)" from a feed name for clean display
 # e.g. "The Nation (US, left)" -> "The Nation", "The Guardian - World" -> "The Guardian".
-_SRC_CLEAN = re.compile(r"\s*[(\-].*$")
+# Strip a trailing " - Region/Section" suffix or a " (Region)" parenthetical,
+# but NOT an internal hyphen (so "Agence France-Presse" survives intact).
+_SRC_CLEAN = re.compile(r"\s+-\s.*$|\s*\(.*$")
 
 
 def _clean_source(name: str) -> str:
