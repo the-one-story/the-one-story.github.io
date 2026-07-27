@@ -81,6 +81,6 @@ newsletter:
   provider: brevo
   api_base: https://api.brevo.com/v3
   sender_name: "One Story"
-  sender_email: ""     # a Brevo-VERIFIED sender address (required to send)
-  list_id:             # numeric Brevo contact-list id (required to send)
-  signup_form_url: ""  # Brevo subscription-form action URL (sibforms serve URL)
+  sender_email: "charlie.rochfordgroup@gmail.com"   # Brevo-verified sender
+  list_id: 2                                        # Brevo list "Your first list"
+  signup_form_url: "https://6de84235.sibforms.com/serve/MUIFABJRu0JpFgRzIpeyQY1ujh6jE5WFKXT6i7aP9c-LRXqSFOZe6uCPyqdakcYQP7sTRrnFbX_3db_R19NlljLVQcyVPRR5LeE6jDM9CNJlbmqezDRcfVbOpQHuBWjqLI03bjhDpKrF3j7ImuauWsVQzd_-nz-HXglI4VIWUd4XtyW7fgbJxXopNu4v5fc_Sq5Twj6a4hWllqJ2vA=="
