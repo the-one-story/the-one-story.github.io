@@ -56,6 +56,10 @@ def main() -> int:
         return 1
 
     subject, body = build_email(ranked)
+    if force_test:
+        # Make each test subject unique so Gmail doesn't thread/de-dupe repeated
+        # tests of the same day's edition (which hid earlier template changes).
+        subject = f"{subject} [test {datetime.now().strftime('%H:%M:%S')}]"
     run_date = datetime.fromisoformat(ranked["run_time"]).date().isoformat()
     nl = settings.get("newsletter") or {}
     key = os.environ.get("BREVO_API_KEY", "").strip()
