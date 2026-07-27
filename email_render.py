@@ -50,7 +50,7 @@ def build_email(ranked: dict) -> tuple[str, str]:
 
     # Flat, dark, single column - no inner card, no custom footer (Brevo appends
     # the required unsubscribe link + postal address). bgcolor attrs for Outlook.
-    body = f"""\
+    inner = f"""\
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{snippet or headline}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
        bgcolor="{_BG}" style="background-color:{_BG};border-collapse:collapse;">
@@ -83,6 +83,23 @@ def build_email(ranked: dict) -> tuple[str, str]:
 
 </td></tr></table>
 </td></tr></table>"""
+
+    # Full HTML document so Brevo carries our <head> through to the client. The
+    # color-scheme meta tells dark-mode clients (notably Gmail) the email is
+    # intentionally dark and must NOT be auto-lightened or inverted.
+    body = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="supported-color-schemes" content="dark">
+<style>:root{{color-scheme:dark;supported-color-schemes:dark;}}</style>
+</head>
+<body style="margin:0;padding:0;background-color:{_BG};">
+{inner}
+</body>
+</html>"""
     return subject, body
 
 
