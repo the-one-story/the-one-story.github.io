@@ -96,7 +96,7 @@ def build_email(ranked: dict) -> tuple[str, str]:
 <meta name="supported-color-schemes" content="dark">
 <style>:root{{color-scheme:dark;supported-color-schemes:dark;}}</style>
 </head>
-<body style="margin:0;padding:0;background-color:{_BG};">
+<body style="margin:0;padding:0 0 32px;background-color:{_BG};">
 {inner}
 </body>
 </html>"""
