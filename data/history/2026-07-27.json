@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-07-27T13:02:04.851670+10:00",
+  "run_time": "2026-07-27T13:11:04.382793+10:00",
   "run_date": "2026-07-27",
   "locked": true,
   "weights": {
@@ -19,11 +19,11 @@
   "winner": {
     "title": "Berlin CSD: Latest in string of deadly vehicle attacks",
     "source": "Deutsche Welle",
-    "score": 0.2649190778907945,
+    "score": 0.26272657930344834,
     "components": {
       "coverage": 1.0,
       "diversity": 0.6197,
-      "recency": 0.4949,
+      "recency": 0.4898,
       "novelty": 1.0
     },
     "outlet_count": 17,
@@ -48,7 +48,7 @@
       "right"
     ]
   },
-  "n_articles": 885,
+  "n_articles": 887,
   "articles": [
     {
       "title": "London’s Gatwick Airport hit by water supply problem",
@@ -69,6 +69,76 @@
       "url": "https://www.dailymaverick.co.za/article/2026-07-27-wildfires-threaten-bordeaux-as-france-and-spain-battle-blazes/",
       "published_at": "2026-07-27T04:41:19+00:00",
       "snippet": "BORDEAUX/MADRID, July 26 (Reuters) - Wildfires advanced towards the outskirts of the historic French city of Bordeaux, at the heart of the country’s winelands…"
+    },
+    {
+      "title": "China’s memory chip makers ride AI boom to new power — and U.S. scrutiny",
+      "source": "The Japan Times",
+      "country": "JP",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://www.japantimes.co.jp/business/2026/07/27/tech/china-chip-makers-ai-us/",
+      "published_at": "2026-07-27T03:05:00+00:00",
+      "snippet": "Memory chips were once a low-margin business, but the global buildout of AI data centers has transformed them into one of the world's most sought-after…"
+    },
+    {
+      "title": "Indonesia prepares 56,000 water pumps to mitigate drought",
+      "source": "Antara (Indonesia)",
+      "country": "ID",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://en.antaranews.com/news/424107/indonesia-prepares-56000-water-pumps-to-mitigate-drought",
+      "published_at": "2026-07-27T03:03:11+00:00",
+      "snippet": "The Ministry of Agriculture is preparing 56,000 water pumps in the 2026 fiscal year as a national drought mitigation ..."
+    },
+    {
+      "title": "Search for 17 missing crew after Vietnamese cargo ship sinks in South China Sea",
+      "source": "The Hindu (International)",
+      "country": "IN",
+      "lean": "centre-left",
+      "paywall": "soft",
+      "url": "https://www.thehindu.com/news/international/vietnamese-cargo-ship-sinks-in-south-china-sea/article71270513.ece",
+      "published_at": "2026-07-27T03:00:11+00:00",
+      "snippet": "A search is underway for 17 people missing after a Vietnamese cargo ship carrying 62 people sank in bad weather in the disputed South China…"
+    },
+    {
+      "title": "Why the UFC keeps coming back to Abu Dhabi: 'It feels like a second home'",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/sport/combat-sports/2026/07/27/why-the-ufc-keeps-coming-back-to-abu-dhabi-it-feels-like-a-second-home/",
+      "published_at": "2026-07-27T03:00:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "New strait problem: US playing wrong moves on Gulf chessboard again",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/business/energy/2026/07/27/new-strait-problem-us-playing-wrong-moves-on-gulf-chessboard-again/",
+      "published_at": "2026-07-27T03:00:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Guterres's visit to Damascus is a chance for the UN to reset with Syria",
+      "source": "The National (UAE)",
+      "country": "AE",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://www.thenationalnews.com/opinion/editorial/2026/07/27/guterress-visit-to-damascus-is-a-chance-for-the-un-to-reset-with-syria/",
+      "published_at": "2026-07-27T03:00:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "The tiny Okayama village providing Japan with a blueprint for forest management",
+      "source": "The Japan Times",
+      "country": "JP",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://www.japantimes.co.jp/environment/2026/07/27/sustainability/okayama-village-forest-management/",
+      "published_at": "2026-07-27T03:00:00+00:00",
+      "snippet": "Nishiawakura is prioritizing long-term forest health and biodiversity, while also strengthening the local economy."
     },
     {
       "title": "Israeli settlers set fire to West Bank mosques after deadly clash",
@@ -441,24 +511,24 @@
       "snippet": "NCT 127 will return with its seventh album “Blingy” next month, marking the group’s first major release since July 2024."
     },
     {
-      "title": "Multiple people injured in Seattle Center shooting, police say",
+      "title": "Two dead, five injured, including a 2-year-old, in Seattle Center shooting, fire officials say",
       "source": "NBC News (US)",
       "country": "US",
       "lean": "centre-left",
       "paywall": "none",
       "url": "https://www.nbcnews.com/news/us-news/multiple-people-injured-seattle-center-shooting-police-say-rcna589371",
       "published_at": "2026-07-27T02:10:37+00:00",
-      "snippet": "Multiple people were injured Sunday evening as gunfire erupted at Seattle Center, a gathering place for cultural and arts events that was hosting a major…"
+      "snippet": "Two people were killed and five others were injured in a shooting at Seattle Center Sunday night as the civic center complex hosted a major…"
     },
     {
-      "title": "Multiple people injured in Seattle Center shooting, police say",
+      "title": "Two dead, five injured, including a 2-year-old, in Seattle Center shooting, fire officials say",
       "source": "NBC News (US)",
       "country": "US",
       "lean": "centre-left",
       "paywall": "none",
       "url": "https://www.nbcnews.com/news/us-news/multiple-people-injured-seattle-center-shooting-police-say-rcna589371",
       "published_at": "2026-07-27T02:10:37+00:00",
-      "snippet": "Multiple people were injured Sunday evening as gunfire erupted at Seattle Center, a gathering place for cultural and arts events that was hosting a major…"
+      "snippet": "Two people were killed and five others were injured in a shooting at Seattle Center Sunday night as the civic center complex hosted a major…"
     },
     {
       "title": "China chipmaker CXMT's shares surge 470% in Shangai trading debut",
@@ -801,6 +871,16 @@
       "snippet": ""
     },
     {
+      "title": "Indian rupee, bonds set for relief as Iran-US war truce eases oil fears; Fed in focus",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPREo0N0gwZF9WbndhVmxycGFteHdsa2ZEQ1BCUV85TVdKLTRfdlBYb0tlQnY4SzNCdHh2dEloR2k4QWFuYlNYazRucHZGa1dxOHNNdGYzcmo1M1BEUExzZGlBMm45WUJHTU1RYUxOZ3RvT2w2MU1yTUpWQUthRzdOLUJ0bHVBeHJLSmNYcVZkS3F6eVplb0NSelcxek54UXkxaHd4QXVzRWIyRVBVczEzbUhETHZzOTIyZWtHdEt3?oc=5",
+      "published_at": "2026-07-27T01:33:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Hong Kong’s lawmakers don’t need to be coddled",
       "source": "South China Morning Post",
       "country": "CN",
@@ -889,6 +969,16 @@
       "url": "https://www.channelnewsasia.com/asia/indonesia-central-bank-governor-perry-warjiyo-steps-down-6279666",
       "published_at": "2026-07-27T01:14:00+00:00",
       "snippet": "Destry Damayanti, a senior deputy governor at the central bank, has been appointed as interim governor."
+    },
+    {
+      "title": "Artistic Gymnastics - Floor Exercise, Session 5, Glasgow 2026",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5kcjFpbmsxakM3dVRPcEl4SUx1Rmh4RlVmQXlDeVJDeERHaE5seEJZU3RkMUc5VHY5ZF9WeVVGVkV0YTBlQVh6Rmx4Y1g3Rk5pbTVyaTFRSzB1Zw?oc=5",
+      "published_at": "2026-07-27T01:12:06+00:00",
+      "snippet": ""
     },
     {
       "title": "Syrian president tells Al Jazeera his country seeks security deal with Israel",
@@ -981,16 +1071,6 @@
       "snippet": "A former security guard from northeastern China has successfully secured a spot in a postgraduate programme at the prestigious Tsinghua University after an impressive eight…"
     },
     {
-      "title": "ASX Announcement Imugene announces CEO Leslie Chong resignation - company-announcements.afr.com",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNN24xdjZna2tGUTZVNWpwVG54eF8yWUZuVE5TUFFBNzM4Tmo0MnhicVB5dzBUYVMyQW5nM2VxNzEtR21sSHowRjZKemViNWJTbFk4ajR3Ym1XMHh4eWZFQl9qZDI5SXhUTjBxeXIyNnY0MV9rYl9QQkt3emxzM0FoRmM1Zk10cEZUQ0F6SVlxcw?oc=5",
-      "published_at": "2026-07-27T00:59:56+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Missile strikes kill civilians in Kyiv and other cities, with Russian-held areas hit",
       "source": "The Japan Times",
       "country": "JP",
@@ -1061,6 +1141,16 @@
       "snippet": ""
     },
     {
+      "title": "27 July 2026 The Manager ASX Market Announcements ASX Limited Level 27, 39 Martin Place, Sydney NSW 2000 Electronic Lodgement A - company-announcements.afr.com",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYVY0LXZUWUpobm5MNHpGeWxWaE9oZTNLY1RFOEVGMTl1NkRfNW1uSGtHSTh4a1dkanBBM3VYYkI0U0NCYm5aMTJUNkVSX0EwN0YyZnJFSUR5WDV2b201dmtxaXpkU29DMjA5ZzJTcFRaSXdFRlpLUU5vcDByY1ZxLXNNN3JuemExcThEenVlMA?oc=5",
+      "published_at": "2026-07-27T00:53:59+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Appendix 3A.1 - Notification of dividend / distribution - company-announcements.afr.com",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -1071,13 +1161,13 @@
       "snippet": ""
     },
     {
-      "title": "Hong Kong",
+      "title": "NFL Scores, News & Stats | Latest Super Bowl News",
       "source": "Associated Press",
       "country": "INT",
       "lean": "centre",
       "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1IWkNua2tkUy1MQUN5NVdFVFVuN0pXME5LdGZ0aS1JUFE5U3o1N2RsamctcmVQTkZmR2NIak5tWVpYcE9tSEVN?oc=5",
-      "published_at": "2026-07-27T00:53:39+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE9fRi02OXd4bXBMeDZqWl9nMVZwbF9YY3QyQzluc1o4U2RIR1VWMGR6VjVzTjVuSlFtOVVpeWhRRQ?oc=5",
+      "published_at": "2026-07-27T00:53:19+00:00",
       "snippet": ""
     },
     {
@@ -1118,6 +1208,16 @@
       "paywall": "hard",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNa1g5REUyWm81YXVRMWFodzI5NXNTcUNWOVU0TmVQVXN4azdmM0E4ZzFoMjZobUZ4QncweUdZdEplcEhzTHJrcHNuT3F3TF9LZGN3V1dBTkIwWDN1RnA5ajZ6OEVfNEtmdUNnQ1NJX0JETy0xUnUzemYzTURlMUk0d2ZEbGJITWF4MnM1TG1fSQ?oc=5",
       "published_at": "2026-07-27T00:50:30+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "27 July 2026 The Manager ASX Market Announcements ASX Limited Exchange Centre Level 27, 39 Martin Place Sydney NSW 2000 Hear - company-announcements.afr.com",
+      "source": "Australian Financial Review",
+      "country": "AU",
+      "lean": "centre-right",
+      "paywall": "hard",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaGl2U09JY2tQUjZCMmFsU2IxRi1vZVF6VFFBdVVxV0YzaEdfS0l1NlVra29FTm9tdkpXeFRucC12emNWTE44bWVjdDc4Wjc0YWc3NTVLRXRvOVdwa0F4N0wydUM1QWFDV0I5cDhodnVYV0xnOFZURTcwYTRBY0xBcHVpOW5DMkNXazkwc2VXaw?oc=5",
+      "published_at": "2026-07-27T00:50:15+00:00",
       "snippet": ""
     },
     {
@@ -1179,16 +1279,6 @@
       "url": "https://www.japantimes.co.jp/news/2026/07/27/japan/crime-legal/sagamihara-care-home-stabbings-10-years/",
       "published_at": "2026-07-27T00:47:00+00:00",
       "snippet": "\"The deep sorrow remains even after 10 long years,\" said the head of the Tsukui Yamayuri-en residential facility for those with disabilities in Sagamihara, Kanagawa…"
-    },
-    {
-      "title": "Evacuated B.C. community’s water system vandalized as wildfires threaten area, officials say",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPT1FfbWJXSDJack9TcjhCX1hwVXZMa1Z0aURPMGYyT2d0eVBiYjd6ei15WjBTQmVWSGo0cE1LSTlOTTlRZVRXXzJmLVdMaXlfQ1R1cDY4eWFCbzhFVks0OGJaLVhVY0Y3a1B1d1lwR1JxaTNLMDlZcFRiZWJHVVlQS24xT2cwSXN2d2dVYmU3OUhOT1Z4ZW5Z?oc=5",
-      "published_at": "2026-07-27T00:45:00+00:00",
-      "snippet": ""
     },
     {
       "title": "Lee orders retention of oil price caps until price uncertainty completely recedes",
@@ -1309,16 +1399,6 @@
       "url": "https://www.foxnews.com/entertainment/hilaria-baldwin-flaunts-fit-figure-bikini-fans-marvel-mom-7",
       "published_at": "2026-07-27T00:36:37+00:00",
       "snippet": "Hilaria Baldwin demonstrated glute exercises in a bikini video on Instagram, earning praise from fans amazed by the mother of seven's fit physique."
-    },
-    {
-      "title": "Market release - company-announcements.afr.com",
-      "source": "Australian Financial Review",
-      "country": "AU",
-      "lean": "centre-right",
-      "paywall": "hard",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOUYwQ25FZ3oxMzBDMnlFSVc5dHNTT04yOWRMczJjc01tc1NsZmQzTV9sX29FRXNody1qTTlhTEMwSkUybkdIc3ZZNklHdS13cFZtYlkzTEJzUW5obHY0OEgyWkFreDNSaEU0UDV2SWk4TjNacXJvcDBpRWRDYXNqRVUwdWZSQlRiNzVFNDg4MA?oc=5",
-      "published_at": "2026-07-27T00:32:04+00:00",
-      "snippet": ""
     },
     {
       "title": "Dollar pulls back as US-Iran attacks pause, oil drops",
@@ -1618,6 +1698,16 @@
       "paywall": "none",
       "url": "https://www.channelnewsasia.com/business/japan-june-services-producer-prices-rise-iran-war-keeps-freight-costs-high-6279616",
       "published_at": "2026-07-27T00:06:21+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Japan PM Takaichi's approval rating slides as inflation bites, Yomiuri poll shows",
+      "source": "Reuters",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2tsTDZqa1ZvZnhlWm5wVmFTTmdESk1kSzkzNWU4Y2VxbFB3NUFfRWliX0Y5Q2ZVWTNEaFZYc1ljaWZOeFZhT3VPems3SjlycU1STnJhdDR6Qjd3Rmcwdm9XamhCZ1pGeDZrS240aHV1VWVFeHFqMWlNZ1lZaFNReGFsTm5ZMFo1N2JGbGg0bExRVi11SmZyWVFTRnp3S1JvMWpjQngtbC1kNGJaUzhUWFNtODNmVlB4OUllR25pWDZEbjZRSlRfZXZXZw?oc=5",
+      "published_at": "2026-07-27T00:06:00+00:00",
       "snippet": ""
     },
     {
@@ -1941,16 +2031,6 @@
       "snippet": "Democratic Minnesota state Sen. John Hoffman said Rep. Angie Craig, D-Minn., sought his endorsement for her Senate campaign while he was in intensive care following…"
     },
     {
-      "title": "‘More than we need’: Trump denies US low on ammo as Iran war on hold",
-      "source": "Agence France-Presse",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNYXNZLVdkX0ZFdllnY20tLWtKVWVRYXRWUXJROG9DelFnX2hwY0JDbEpOVFR3MXl3aXZnY2plX3lyWWxwR0YzX0VVS2tDUzhPak1FRWczM0x0WWl4VG1XYkdLZjJpME1OZW45WVRSVEhhdmp2S1A0UHBUSlRxTlAxbU9QWElpOVhMcVU2Qlh3b0I3Q29Fc0dDeVdwMC1ycUMwRkN2dllBTkNtTjZsWFhLSzJTYUdsVHVSQi03cU84VHhtUXlhdmdFcGFmZXEyWHhTQ0ljeE5BMVZYWFp3ZVJtSV9fZlRtNk85N0JVemlXelZPbnNCbVhMWklXS2F2UdIBgwJBVV95cUxORlhCQ0pCWWdFanZhRFJ4Mm81VnlRUklXcGptWmNsZXZvOGkzVTdib0dVZUJueGNud3ZCbHFzZlVVdTFhZ2VOTU04MUo2WEJqTEhQNUlxYi1VMnZEc2VfcmgtdUdqN3VGUElFUE1HSlphRDZ0SjQzclFXM3dmcmtWTWUtWUhEa0FLMi1WQ0Z5YXdZZzdmb1NWX0JPeE5oN1BydkN4SkZ4TkpDaDhQd1EwOF9CQnpRVWdwWVUxS1dHaXVmTHpRZ2ZPcEhVbGpaS3E2ZUxpb2MzV2hjeUMwVUVJUVJiSUZWbTFibkE1S2dvZ3B1eFU1bjFEX2xNb3YyYWIzUmFJ?oc=5",
-      "published_at": "2026-07-26T23:33:50+00:00",
-      "snippet": ""
-    },
-    {
       "title": "- AFR",
       "source": "Australian Financial Review",
       "country": "AU",
@@ -2231,24 +2311,14 @@
       "snippet": ""
     },
     {
-      "title": "Deportes",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBKSWFUbk02V3BrdWJEU1B4SnVtaS03Y3JDVlM1emM2LTdBbUJlQWZXbllpNnJHMXVhcEhCY3BaX2ZQSEFCY1E?oc=5",
-      "published_at": "2026-07-26T23:08:02+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Venezuela opposition leader Machado says she will not take part in US-backed talks",
+      "title": "Venezuela opposition leader Machado says won’t take part in US-backed talks",
       "source": "South China Morning Post",
       "country": "CN",
       "lean": "centre",
       "paywall": "soft",
       "url": "https://www.scmp.com/news/world/americas/article/3361923/venezuela-opposition-leader-machado-says-she-will-not-take-part-us-backed-talks?utm_source=rss_feed",
       "published_at": "2026-07-26T23:05:30+00:00",
-      "snippet": "Venezuelan Nobel Peace Prize laureate and opposition leader Maria Corina Machado said on Sunday she will not take part in US-backed talks with the de…"
+      "snippet": "Venezuelan Nobel Peace Prize laureate and opposition leader Maria Corina Machado said Sunday she will not participate in US-backed talks with the de facto government…"
     },
     {
       "title": "Ukraine",
@@ -2278,6 +2348,16 @@
       "paywall": "soft",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSkhjUXN3Z1VSTkZyVjdBMURwLXRFYm1TMkpmZEZGS1FyRFhsRjNkSWpTZ2g1cW1UNVpXUnc4dWNSWkJIVlVkY18wOENjMWsxQm0tWWN6Y3M3RW9lNkxRUXY5Rzc5M3cxMHI2Ry1DbldOOG0xQU5obklobjlXdFNWU2tVcXc2dkM1bzYwNXlUZHowQ1l4OGhWTjN4Y1hybVQwcGoyZnphTXkyVVRYa3lmNW9URQ?oc=5",
       "published_at": "2026-07-26T23:04:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Hundreds of Torontonians celebrate after feds reject Billy Bishop jet expansion",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5qRHcxdkVRQ0t6clQ3WjYzOVEwbl9RVFYxNnB4MWRhaGtNU3ZSWnVTRWFLbHVHM25uUzJTbGhWOHEwb05qRjdKRGFXZld1OGdnd2w2NW9Ld0xFQQ?oc=5",
+      "published_at": "2026-07-26T23:03:32+00:00",
       "snippet": ""
     },
     {
@@ -2388,16 +2468,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPeHRXNUU2SWFLOU1OU0pfanVLSTlVODBRY3ZyV1RILXAwQlFDTEFKMzlralNRdF9MWWxXbnF5cHNsUno4b280aXYxenhkX25Cenk2U29aY29LOUVCVFJIcmx1aVNBV0RnUHlGQ045VmhTTDlkdUZ0V2U1bEg1VXdocnQ1SmU0dw?oc=5",
       "published_at": "2026-07-26T22:54:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Hurricanes",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9ETzdOVTdhNFkwcTNIRzZ1NzZSenlGeFVxYS1TTlFMYlo1MDZWN1l0aFNHanZNUlNBZFROTzNzWVhHU0pHcUxTeg?oc=5",
-      "published_at": "2026-07-26T22:53:40+00:00",
       "snippet": ""
     },
     {
@@ -2541,6 +2611,16 @@
       "snippet": "Naveen and Zelmé Daries will share the Commonwealth stage for the first time, with one returning and the other making her debut."
     },
     {
+      "title": "Pakistan 199-3 at stumps to trail West Indies by 112 runs in 1st test",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbGtTRUwxd2lzUzdtZ3ROVWszUFpFa1c0ejlqMFZPdTdsakNacHFJczZiMUlYdTB0b05yNG1JUXIxaGQzbjBDdVI5TmpJYkZRLXdhTlpHMnQ0Nl9lSGhoNnlQVElTNG5vZGlSM3lkNGpJanhpUmpOX3BpNnRYR0hET3pWZm1sWWcxNmt4ZUdxekhsOG9n?oc=5",
+      "published_at": "2026-07-26T22:27:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Suspect in Berlin Pride attack shot dead by police",
       "source": "Reuters",
       "country": "INT",
@@ -2631,16 +2711,6 @@
       "snippet": ""
     },
     {
-      "title": "Search for 17 missing crew after Vietnamese cargo ship sinks in South China Sea",
-      "source": "The Hindu (International)",
-      "country": "IN",
-      "lean": "centre-left",
-      "paywall": "soft",
-      "url": "https://www.thehindu.com/news/international/vietnamese-cargo-ship-sinks-in-south-china-sea/article71270513.ece",
-      "published_at": "2026-07-26T22:13:56+00:00",
-      "snippet": "A search is underway for 17 people missing after a Vietnamese cargo ship carrying 62 people sank in bad weather in the disputed South China…"
-    },
-    {
       "title": "Europe will one day thank Trump for 'shaking' it out of its 'complacency': UK defense chief",
       "source": "Fox News (US, right)",
       "country": "US",
@@ -2719,16 +2789,6 @@
       "url": "https://www.japantimes.co.jp/news/2026/07/27/world/crime-legal/berlin-pride-attack-manhunt/",
       "published_at": "2026-07-26T22:05:00+00:00",
       "snippet": "The suspect was a known Islamic State sympathizer who'd attempted to join the organization in 2025."
-    },
-    {
-      "title": "Mexico",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBsbDhZRnVyak5fWkhUTkVPUVpNS2p0MUVqal8yalItaTZtLVJYOHNtVDUyT2J1SDhzaF9sSndpZWh0aHc?oc=5",
-      "published_at": "2026-07-26T22:03:20+00:00",
-      "snippet": ""
     },
     {
       "title": "New wave of buyers drives $2m sale in hidden gem area",
@@ -2851,6 +2911,16 @@
       "snippet": ""
     },
     {
+      "title": "Mexico",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBsbDhZRnVyak5fWkhUTkVPUVpNS2p0MUVqal8yalItaTZtLVJYOHNtVDUyT2J1SDhzaF9sSndpZWh0aHc?oc=5",
+      "published_at": "2026-07-26T21:56:30+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Sweltering heat wave grips central and southern US for a second straight day",
       "source": "Associated Press",
       "country": "INT",
@@ -2858,6 +2928,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQT3Nsd3djX3NRQmpjUTdQRDFheW9lRVNtQVpVUzhINFdFbzZJZjl6ZkpScUxUS29sT3h4WTMzSnJTRUJUOExNUjZrM2psaU1oejBaQ0Q5emVwT3IweUZoS3ZYQjBxbWs0ZnB0anh6NDMtcUF1TmVtYWMyZmR2T2Y5cko4bHRYRHc?oc=5",
       "published_at": "2026-07-26T21:54:00+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Hurricanes",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9ETzdOVTdhNFkwcTNIRzZ1NzZSenlGeFVxYS1TTlFMYlo1MDZWN1l0aFNHanZNUlNBZFROTzNzWVhHU0pHcUxTeg?oc=5",
+      "published_at": "2026-07-26T21:53:40+00:00",
       "snippet": ""
     },
     {
@@ -2901,13 +2981,13 @@
       "snippet": "Questions to the Nelson Mandela Bay metro by DA councillor Gustav Rautenbach have uncovered why the Nelson Mandela Bay metro council’s chief whip Wandisela Jikeka…"
     },
     {
-      "title": "Gun violence",
-      "source": "Associated Press",
+      "title": "Reds push across three runs in 10th to knock off Cardinals",
+      "source": "Reuters",
       "country": "INT",
       "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5tWG9GY0F1alREcV9mMFBVUmFSeGkweWdZVC1QZkpjbHByWEVNeDZkVEFTUlotZDdidWJ0T1NWeGNjLTM1aWZpSXpmOA?oc=5",
-      "published_at": "2026-07-26T21:45:15+00:00",
+      "paywall": "soft",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSVRxeHFPcDlNamFRYmk0ajk4N1FQdmh0MzdISU9ha2V4ajBfUEdxSC1rUmtsRU45TXlIVWRBTXpZSzUxc1dPTGFNT2RWeXNKbjY5Q09GYUVIdTRtbE51X3dibXAwTkVXY3lkOU0yaWM0NWY3em1zeXlmZjdKTkFxeTd1amJfYlA3ZXdOWEdQWXlrQm91ZDJwWWhFaVBiRmNrLWowdDNMSDAyRlhwbUE?oc=5",
+      "published_at": "2026-07-26T21:46:19+00:00",
       "snippet": ""
     },
     {
@@ -2919,16 +2999,6 @@
       "url": "https://www.dailymaverick.co.za/article/2026-07-26-eff-celebrates-13-years-with-manifesto-focused-on-youth-issues-and-basic-services/",
       "published_at": "2026-07-26T21:44:49+00:00",
       "snippet": "Celebrating its 13th anniversary in Thohoyandou, the Economic Freedom Fighters launched a bold municipal campaign centred on insourcing and basic services."
-    },
-    {
-      "title": "Inuit assembly sets goals for Arctic peace, stability and sovereignty",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBLRnZ3TkxVZGhPLS12aGE5ekRJSHNsWUZuaVpJMzZaNWRqbkctLVB2UVREdkN4dGRjUTZXTm9iN0tQdUY1dkU2REkxbUNmYWhGb29iTXhJMDlNZw?oc=5",
-      "published_at": "2026-07-26T21:40:38+00:00",
-      "snippet": ""
     },
     {
       "title": "Pogacar confirms status as Tour de France great with fifth title",
@@ -2951,6 +3021,16 @@
       "snippet": "Brian Molefe faces off against Eskom’s Pension and Provident Fund in the Constitutional Court, disputing the amount he owes from a controversial R10m pension payout…"
     },
     {
+      "title": "Gun violence",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5tWG9GY0F1alREcV9mMFBVUmFSeGkweWdZVC1QZkpjbHByWEVNeDZkVEFTUlotZDdidWJ0T1NWeGNjLTM1aWZpSXpmOA?oc=5",
+      "published_at": "2026-07-26T21:37:16+00:00",
+      "snippet": ""
+    },
+    {
       "title": "THE INTERVIEW: Liberty, irony, hypocrisy — former Knesset Speaker Avraham Burg on Israel’s ‘South Africa moment’",
       "source": "Daily Maverick (South Africa)",
       "country": "ZA",
@@ -2968,16 +3048,6 @@
       "paywall": "soft",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNdFJjejR1Tk1zRFVBVWN6Wk9jSmdHX2todU8tRm9qNk9YRWhjUmdOVDRMV3owS0RSbXoySFd6U0NocmppV2VPR0VrQi1lNjJBYXhOMnVxVnM5UDNNTGlORndGU25SamxzN0hPZ3RtYl9HWEJPQktnQjhBek9UNnAtcFhyckMwUmxfNXNDWTlOUE5TNlNVaEtCWUtmZks?oc=5",
       "published_at": "2026-07-26T21:33:43+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Hundreds of Torontonians celebrate after feds reject Billy Bishop jet expansion",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5qRHcxdkVRQ0t6clQ3WjYzOVEwbl9RVFYxNnB4MWRhaGtNU3ZSWnVTRWFLbHVHM25uUzJTbGhWOHEwb05qRjdKRGFXZld1OGdnd2w2NW9Ld0xFQQ?oc=5",
-      "published_at": "2026-07-26T21:33:32+00:00",
       "snippet": ""
     },
     {
@@ -3098,6 +3168,16 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE90cWpaNTJyellVQVJmc1JrTDVENHhGOXhqLWhST2d0ampRUDhpLVJBZkk4ZDZ2a05LRm9nT3RpZjNoWEdDMjF3UGpKYm8tS0k2bU15ekczb0xyZ0VXUUhuYkVQOS1YTEVzOGpWMEk3bkRMZkpKYlMzR3VhTENSQQ?oc=5",
       "published_at": "2026-07-26T21:16:14+00:00",
+      "snippet": ""
+    },
+    {
+      "title": "Inuit assembly sets goals for Arctic peace, stability and sovereignty",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBLRnZ3TkxVZGhPLS12aGE5ekRJSHNsWUZuaVpJMzZaNWRqbkctLVB2UVREdkN4dGRjUTZXTm9iN0tQdUY1dkU2REkxbUNmYWhGb29iTXhJMDlNZw?oc=5",
+      "published_at": "2026-07-26T21:10:38+00:00",
       "snippet": ""
     },
     {
@@ -3229,6 +3309,16 @@
       "url": "https://nation.africa/kenya/blogs-opinion/editorials/let-merit-triumph-at-games--5538192",
       "published_at": "2026-07-26T21:01:00+00:00",
       "snippet": "Concerns over unfair play continue to threaten the credibility of school sports."
+    },
+    {
+      "title": "US and Iran pause their attacks after days of escalation",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOd1ZkcWRJbVdJX0lWSFo1TGFnSDdhUkFQbHZ1ZGlHVUp0b1BwbEZ0SHVPNGY2NS12NmQ3c3dpbjNVVG5qXzJvUDh6NGVSQnFkS2hEQ1BNbi1jUV9nN1lhUHF5MVlrRVpHdURweU9hTnZPTUYxSFVYaklYeWhlTURTQWJteG5acjYybFplamI2XzlJSW5RbktF?oc=5",
+      "published_at": "2026-07-26T21:01:00+00:00",
+      "snippet": ""
     },
     {
       "title": "Home cocktail maker says Gen Z isn't giving up alcohol — they're changing how they drink",
@@ -4411,6 +4501,16 @@
       "snippet": ""
     },
     {
+      "title": "Why is China’s AI push gaining ground? | Explained",
+      "source": "The Hindu (International)",
+      "country": "IN",
+      "lean": "centre-left",
+      "paywall": "soft",
+      "url": "https://www.thehindu.com/news/international/why-is-chinas-ai-push-gaining-ground-explained/article71269506.ece",
+      "published_at": "2026-07-26T17:36:23+00:00",
+      "snippet": "How have Chinese firms caught up with leading U.S. AI models despite chip restrictions? What advantages do Chinese open-source AI models offer over captive models?"
+    },
+    {
       "title": "Israel to allow international force into Gaza, Israeli official says",
       "source": "Reuters",
       "country": "INT",
@@ -4429,6 +4529,16 @@
       "url": "https://www.dailywire.com/news/fauci-complains-questions-about-covid-origins-were-wasting-time",
       "published_at": "2026-07-26T17:30:20+00:00",
       "snippet": "Dr. Anthony Fauci rejected questions about the origins of the COVID-19 pandemic and funding sent from the United States to the Wuhan Institute of Virology…"
+    },
+    {
+      "title": "- newsletters.cbc.ca",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBwT0p4QWdEZE1MQjNhajlMTXNkT1MxZmNIM3E1SWw5Q3VlVUJOT2o3OU5NN0lDSTJQay1zdm9GS2tocWJfQ1VXZ1B4cDAycmU2b0N4ZUVUN3o5dw?oc=5",
+      "published_at": "2026-07-26T17:29:24+00:00",
+      "snippet": ""
     },
     {
       "title": "US appeals court upholds injunction that blocks Trump’s order to create a federal voter list",
@@ -4688,16 +4798,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA4Qi1oeTk1Z21hMnphRDg4Q3FlR1NuQmd0RUpidzBDU3A4YVRlVlZoMnZDbFVNSXA5bWVtUU55UkFqaXBVR1JqY29Sd0Q4NUZOOWtSNFJEWmVZUQ?oc=5",
       "published_at": "2026-07-26T16:53:29+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "KCEEY.PK",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5uYy1TcGFoamNrZXUxRnJ2N1JoM2puVURHS3VyZllPMTdsVi1YWkJEaXNQelZLM0UtQzkzTHFOMFpLTDZFVHRzanRDc0NIS2t6OUR1R19oaTNOUEpENkZFQmtEVWYtMGRnMDlfRGRvSFJDeFNPYUh3ZU0tRQ?oc=5",
-      "published_at": "2026-07-26T16:50:35+00:00",
       "snippet": ""
     },
     {
@@ -5301,16 +5401,6 @@
       "snippet": "A senior finance operative of the Islamic State West Africa Province (ISWAP) and two sons have surrendered to troops of the Joint Task Force North…"
     },
     {
-      "title": "US and Iran pause their attacks after days of escalation",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOd1ZkcWRJbVdJX0lWSFo1TGFnSDdhUkFQbHZ1ZGlHVUp0b1BwbEZ0SHVPNGY2NS12NmQ3c3dpbjNVVG5qXzJvUDh6NGVSQnFkS2hEQ1BNbi1jUV9nN1lhUHF5MVlrRVpHdURweU9hTnZPTUYxSFVYaklYeWhlTURTQWJteG5acjYybFplamI2XzlJSW5RbktF?oc=5",
-      "published_at": "2026-07-26T15:12:27+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Norris ends wait for F1 win in Hungary as Antonelli stretches championship lead",
       "source": "Associated Press",
       "country": "INT",
@@ -5359,16 +5449,6 @@
       "url": "https://en.antaranews.com/news/424092/indonesia-new-zealand-strengthen-defense-and-nutrition-ties",
       "published_at": "2026-07-26T15:04:31+00:00",
       "snippet": "Indonesian Foreign Minister Sugiono and New Zealand Foreign Minister Winston Peters have reaffirmed their commitment to ..."
-    },
-    {
-      "title": "Tariffs and global trade",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE4xaE5zb1c3N0hDYmpHMWNMazZZc2dRREQyQmw3MGROYzNDbUtFbFNVSXNGb0xWSHppYWM0cDZQbUNpZGhB?oc=5",
-      "published_at": "2026-07-26T15:01:15+00:00",
-      "snippet": ""
     },
     {
       "title": "Manhunt continues for suspect tied to deadly Pride festival attack in Berlin",
@@ -5439,6 +5519,16 @@
       "url": "https://mexiconewsdaily.com/el-jalapeno/el-jalapeno-guadalajara-residents-to-receive-contaminated-water-at-very-affordable-rates-state-officials-say/",
       "published_at": "2026-07-26T14:49:46+00:00",
       "snippet": "It might not be clean, but at least it's cheap! The post El Jalapeño: Guadalajara residents to receive contaminated water at ‘very affordable rates,’ state…"
+    },
+    {
+      "title": "Climate change project wins Arctic Inspiration Prize of nearly $100,000",
+      "source": "CBC News (Canada)",
+      "country": "CA",
+      "lean": "centre-left",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAwVzEzdDdxQTUyRWYzM3JnTmM0U2k4OU5ScTc2VTJFcHhmSFhtcGNoQTdjc1I4RTd2QmNESmZFNzM5S0hRN0FYV0F5RFQ1d01NX1E?oc=5",
+      "published_at": "2026-07-26T14:48:45+00:00",
+      "snippet": ""
     },
     {
       "title": "Iran says it will halt strikes as long as US bombing pause holds",
@@ -5891,16 +5981,6 @@
       "snippet": "German police shot and killed a Muslim man who previously tried to join the Islamic State after he rammed a vehicle into Berlin’s Pride festival…"
     },
     {
-      "title": "Atletico Complete Kang-In Lee Signing From PSG",
-      "source": "Agence France-Presse",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSVk2Q21vTDNHY0hQMmV3eXlBV1lFRXhHYjQyVDhiTS1fWEl6dUozMU5HLTZFRV9ibERmR2otRWlhbDU4ZTJ0VHJlYnV0eFpWaDRQbDdKc3hZVGlvanRHYUpPQzBPMDJVTTNoWm40TEtUemxEVkRZc2FVVDZ4XzNfZXQ5d1NhTHZUcWZuRmtCQQ?oc=5",
-      "published_at": "2026-07-26T12:48:15+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Reuters",
       "source": "Reuters",
       "country": "INT",
@@ -5948,16 +6028,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5veERfajVjTWtkU09OMWppczVrblVXLTZNY01nVzctME5qU2JyLWxOU3JDd3FDVGtUajZQMmhNMjFzUXJybHpfZ2NpaWVyVk1LS3RVRmtfekl4QQ?oc=5",
       "published_at": "2026-07-26T12:41:42+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Fast-moving wildfires burn in central Oregon, in photos",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOME5QWmlNX1JkZ0hHOG4zM3B4WFA0eHNkN2w5cXJPODFxNktSQUFYaHNjQW5scWR0cnhwdDRHYkEtdVE4anZtY0Z0ZkptWXh5TUJ1UWFyNUVaU1FzWmdHSXRCLUZ4Sm9taXl3aVF2Wms2UGlMS0p0RFdxOWcyaFpuWHZHaWN1OW15RU9JRG5tdlVYdjg?oc=5",
-      "published_at": "2026-07-26T12:37:00+00:00",
       "snippet": ""
     },
     {
@@ -6211,6 +6281,16 @@
       "snippet": "Authorities say the 21-year-old was fatally shot after allegedly charging at officers with a knife, a day after an attack left one dead and 29…"
     },
     {
+      "title": "U.S. Democratic Party",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9Gbkd3V2JTbjZBUmpPZzdOZzUtdzdRSkhWeTlkbmE0ak9wMWxPeDVxZlF2M3BYV1gwLTVxTW01UllqRl9yeVMwV2tTdFVhSlNTUlVYdA?oc=5",
+      "published_at": "2026-07-26T12:00:27+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Low profile, high AI ambition: what leaked comments reveal about DeepSeek’s Liang Wenfeng",
       "source": "South China Morning Post",
       "country": "CN",
@@ -6431,16 +6511,6 @@
       "snippet": ""
     },
     {
-      "title": "The third drone, shot down in Romania. Nicușor Dan: The one on Friday was a Shahed",
-      "source": "Agence France-Presse",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTGVzRUpMcHNmMGxvUV9xczNUeHZjM3NPNkctQUVaSkNUZThNaXpxTmJMaUI0djlXX2JCQ2VqaTVjMDVORHdfcmtzVjdkekVKcGFxOXZ1TzNMT2JrQU82Wi1mSm13ekZOVEJIc0ZzVUtGY2dzYm5raU5qalA4Q3R0SEFqU2N0UEF6Y2J4LVdzUGpieEZRUXNTN25GSmpuX3M?oc=5",
-      "published_at": "2026-07-26T11:30:04+00:00",
-      "snippet": ""
-    },
-    {
       "title": "Proposed law to allow Bitcoin, social media monetisation as collateral for loans",
       "source": "Daily Nation (Kenya)",
       "country": "KE",
@@ -6458,16 +6528,6 @@
       "paywall": "soft",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZXB2bUhBUWpSV3VwTUVjaXY2dGQ1UElwMFdhWjBzdkdOV3ZGTm9uc0lZM053dTZkaWg1eldacnVyejNsU0x5LUd5OUhhTG54OU9kRjRKb3dPd0tNOExzUE5BUXR4bm9jaTNfNEl4U0FPNHJYemxTMlk4YWRKemUxTi0wcThPRDZwcEE?oc=5",
       "published_at": "2026-07-26T11:25:26+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "FNRN.OQ - | Stock Price & Latest News",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5aSkJnd3JYM19JVm92RE9mQjhvSm14bGJzbVJOSzhEdWNMMTBGaEtPNHltZmZGbVVXS1JmUzZBQ3hRMUZwSUJoZ2NpMHliQVdpQlRVczZ3TW4xN2t1bVV5SUF0bXZkd0pVbF9NdDBqUDhvbWh2RW5IMU5WTQ?oc=5",
-      "published_at": "2026-07-26T11:23:43+00:00",
       "snippet": ""
     },
     {
@@ -6667,16 +6727,6 @@
       "lean": "centre-left",
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB5NWFCS1F2X2w0NVdwQ2U1UFNLWXlrLTY4RDYtSGo0MEZzR1BkNXVxMDU1QlY0VDI5ZHZLSGNyMkxaamQ5NE1teDM5RFJBT2NUem8wRE11TnFXdw?oc=5",
-      "published_at": "2026-07-26T10:50:00+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Artistic Gymnastics - Floor Exercise, Session 5, Glasgow 2026",
-      "source": "CBC News (Canada)",
-      "country": "CA",
-      "lean": "centre-left",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5kcjFpbmsxakM3dVRPcEl4SUx1Rmh4RlVmQXlDeVJDeERHaE5seEJZU3RkMUc5VHY5ZF9WeVVGVkV0YTBlQVh6Rmx4Y1g3Rk5pbTVyaTFRSzB1Zw?oc=5",
       "published_at": "2026-07-26T10:50:00+00:00",
       "snippet": ""
     },
@@ -7071,6 +7121,16 @@
       "snippet": ""
     },
     {
+      "title": "Brazil denies visas for US officials seeking talks",
+      "source": "Agence France-Presse",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZTFaN1hWMWRYX2Eyck9NTmg1eWtoTkFwQnV2VllqZ3VjSWR5MHg2VTlPTU1MSTBraGJWZlNqaWdxS2Y1QlJaNkRUWGpnYXRjYlZYY2FQWk41b1Q5b0dwVWYwZDFmQkRWeDU2c0NyQXdybTA1SWtxekpGOUdMbVphNkh0WWF1RDFfMWxaZUxUOGRsS0xTVkE?oc=5",
+      "published_at": "2026-07-26T09:59:21+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Sudan civil war: Civilians used as 'human shields'",
       "source": "Deutsche Welle",
       "country": "DE",
@@ -7281,16 +7341,6 @@
       "snippet": "The Jakarta Provincial Government planted 21,060 mangrove seedlings simultaneously across five coastal locations on ..."
     },
     {
-      "title": "Syria reports fresh Israeli incursion and shelling in south",
-      "source": "The Japan Times",
-      "country": "JP",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://www.japantimes.co.jp/news/2026/07/26/world/south-syria-israeli-shelling/",
-      "published_at": "2026-07-26T09:11:00+00:00",
-      "snippet": "Israeli officials have said they intend to keep forces in a \"security zone\" in southern Syria, where they seek a broader demilitarized zone."
-    },
-    {
       "title": "Known Islamic Terrorist On The Run After Deadly Berlin Car-Ramming Attack",
       "source": "The Daily Wire (US, right)",
       "country": "US",
@@ -7459,16 +7509,6 @@
       "url": "https://www.dailywire.com/news/family-members-of-9-11-victims-want-mamdani-barred-from-25th-anniversary-ceremonies",
       "published_at": "2026-07-26T08:40:15+00:00",
       "snippet": "A growing grassroots effort led by families of 9/11 victims is demanding that New York City mayor Zohran Mamdani be banned from attending the upcoming…"
-    },
-    {
-      "title": "Eel draws long lines on Day of Ox despite scorching heat in Tokyo",
-      "source": "The Japan Times",
-      "country": "JP",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://www.japantimes.co.jp/news/2026/07/26/japan/day-of-ox-eels/",
-      "published_at": "2026-07-26T08:38:00+00:00",
-      "snippet": "Japanese people traditionally eat grilled eel on the midsummer Day of the Ox, believing it helps replenish energy and endure the summer heat."
     },
     {
       "title": "About Relativity Acquisition Corp (BIOT.O)",
@@ -8511,16 +8551,6 @@
       "snippet": ""
     },
     {
-      "title": "MTVA.OQ - | Stock Price & Latest News",
-      "source": "Reuters",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "soft",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOdzR6cUZ1WUZtWU1iWU14MGhkUm16RHlDTDBxcXZJWkc3d3JFeXhacGMzSWloRnJ2X21BdV9qUFRUbE5WQWU0TlJiRGdrZ2dLMmF5OU53NHlscFJLMGxKMk9BU0poWEs3YU83QlUxQlhVSUZyR2dpZGdRY1BDMWhNVlo2Xy1TQQ?oc=5",
-      "published_at": "2026-07-26T04:28:07+00:00",
-      "snippet": ""
-    },
-    {
       "title": "DAN GELSTON",
       "source": "Associated Press",
       "country": "INT",
@@ -8558,16 +8588,6 @@
       "paywall": "soft",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX05uWGZuRERrX3Nta2dzWXJhYldYQlhKRFhJSWc0TUdlQ3lFdlZwV1dMNmRtRF9BbV9xVW04d1NpM0NJVkNMWkxnTTh3eXZDd3UyTE0tdGZJSUtCbFdCWVhTZDZqb3QxNVU2cE54bFltSHVZc2hjd25BN2FzQ0laaFFJa3RSVFFuRWhUWC0ydkJfRFhSdkNTSXV6U0tLbnExSlBIYnBPQWU1eGxNcE52SA?oc=5",
       "published_at": "2026-07-26T04:15:50+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "After stellar World Cup, Cape Verde goalkeeper heading to Chile",
-      "source": "Agence France-Presse",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1hRzdpeWZIbjY0R3FCclRMUGV1Qy01NE0yRU5OUlZYYWtHQTFWdUMwQmpZVmhkeENJdVNGWnhSei1FUnlUT1l1VndVcTVuczk0?oc=5",
-      "published_at": "2026-07-26T04:10:33+00:00",
       "snippet": ""
     },
     {
@@ -8721,6 +8741,16 @@
       "snippet": "Federal officials are investigating an incident in which a man appeared to kick and harass a protected sea lion on a city-operated beach near San…"
     },
     {
+      "title": "Suárez penalty kick seals Inter Miami win after Berterame knocked unconscious in collision",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVEJQdDlidUxibkJnSWtyQWJCUVVJS3N6cWlEUkpqbVFWdFlQOHhQa2YzdERSZExUeENBUHUydWwxc1F3elZtcjJtdHUtZmItV2w0alZaVUZZS3JkUzlSVlIxYXZub3pCcHlrWUtmRUxXMmFERHJpQjJfYjZkTHkyQW5LSFdYS2hSNWVjaXhOTQ?oc=5",
+      "published_at": "2026-07-26T03:58:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "SCTX.OQ",
       "source": "Reuters",
       "country": "INT",
@@ -8871,6 +8901,16 @@
       "snippet": ""
     },
     {
+      "title": "Photo highlights from the Commonwealth Games in Glasgow",
+      "source": "Associated Press",
+      "country": "INT",
+      "lean": "centre",
+      "paywall": "none",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbEk3S0FGTkVJd3JZakJmWlgyOW5COF8wSmVtd1ZhS0IzQ1VJdENGRVlPMk5GcjNGS1VjenFhZUlrT0V5YkNaLXU0RUV2NHlaeDBzS3o4a1o0c0U3U0ZXZVQtNDdaLVNJN2xVbHN3dzI2WXZXUWE4OUZwQy1MLVZFbktWWlFfb1Y1WGdGclRSdmJmR0tKcnZhRWUtRUx3SGc?oc=5",
+      "published_at": "2026-07-26T03:20:00+00:00",
+      "snippet": ""
+    },
+    {
       "title": "Typhoon Noul makes landfall in southern China, with over 700,000 evacuated and flights canceled",
       "source": "Associated Press",
       "country": "INT",
@@ -8878,26 +8918,6 @@
       "paywall": "none",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQR3ZHa2FCUlZiV093RTJZVVpvVVRYM3BmWkU0TzdaOGVnZ0M5T19DeHZlNm5XZmlFUXNyLXhnMHhPblhReDNZRzk0Y0hvT2h2dXd0N1M1Mmh2OEM4Z2ZmZnhONGVteTFES1pKU0tnRGFQTDBNa25idG1VbWtxUWpqSjc5OVhYS2dLcjYxZkl6VkZ1dw?oc=5",
       "published_at": "2026-07-26T03:16:16+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "COREY WILLIAMS",
-      "source": "Associated Press",
-      "country": "INT",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1kbFBjZXhMV05fQWM1OFM1RlFMQTBMNFhReTlnbmw5YnJOOGZOT2l6MHpWdXpRLXF1M1FvN2xEeTE4WnlmWFNNdWVxRlV0enp2blE?oc=5",
-      "published_at": "2026-07-26T03:03:59+00:00",
-      "snippet": ""
-    },
-    {
-      "title": "Suez Canal at 70: The music, films, art and literature that tell its story",
-      "source": "The National (UAE)",
-      "country": "AE",
-      "lean": "centre",
-      "paywall": "none",
-      "url": "https://www.thenationalnews.com/arts-culture/2026/07/26/suez-canal-at-70-the-music-films-art-and-literature-that-tell-its-story/",
-      "published_at": "2026-07-26T03:03:00+00:00",
       "snippet": ""
     }
   ]
