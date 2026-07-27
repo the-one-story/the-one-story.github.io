@@ -36,6 +36,11 @@ daily job runs on its own.
        gets github.io out of the site URL. Charlie buys the domain (his call, not
        yet); then Claude does the Brevo/DNS auth + re-test. Only needed once there
        are external subscribers.
+- [ ] **"Sent with Brevo" badge in the email footer** - free-tier branding, NOT
+  removable by code/settings. Only goes away on a paid plan (Starter + the
+  $9/mo "Remove Brevo logo" add-on, or Standard/higher). The unsubscribe line
+  next to it is legally required and stays regardless. Living with it on free
+  for now; revisit if ever on a paid plan (would pair with the domain decision).
 - [ ] **Tune scoring weights on real data.** Once `data/history/` has ~1-2
   weeks of daily snapshots, use `replay.py` to test alternative weights
   (esp. bumping `recency` from 0.8). Don't tune on a single day.
