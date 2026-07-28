@@ -50,8 +50,10 @@ scoring:
   recency_half_life_hours: 10
   # novelty: multiplier applied when today's winner-candidate matches a story
   # that led on a recent prior day. 1.0 = no penalty, 0.0 = fully suppressed.
-  # penalty_floor is the strongest penalty (most-recent prior lead); it decays
-  # back toward 1.0 over novelty_decay_days.
+  # penalty_floor anchors the decay line as age -> 0; because only PRIOR days
+  # (age_days >= 1) penalise, the strongest penalty actually realised is
+  # floor + (1-floor)*(1/decay_days) - e.g. ~0.51 for a story that led yesterday.
+  # The penalty then decays linearly back toward 1.0 over novelty_decay_days.
   novelty_penalty_floor: 0.35
   novelty_decay_days: 4
   # a candidate must match a prior lead at cosine >= this to be penalised.

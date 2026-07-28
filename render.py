@@ -215,8 +215,8 @@ _COMPONENT_DESC = {
     "diversity": "How widely that coverage is spread across countries and the "
                  "political spectrum - weighted heaviest, so a story merely loud "
                  "in one bloc doesn't dominate.",
-    "recency": "Favours coverage that is still building now over a story already "
-               "fading.",
+    "recency": "Favours stories with fresh, recent coverage over ones already "
+               "fading (measured from the average time the coverage was published).",
     "novelty": "Penalises a story that already led on a recent day, easing back "
                "over ~4 days, so a repeat must bring bigger coverage to lead again.",
 }
@@ -271,8 +271,10 @@ def _signup_form(form_url: str) -> str:
 
 def _why_section(winner: dict, runners: list[dict]) -> str:
     k = winner["components"]
+    weights = load_settings()["weights"]
     comp_rows = "".join(
-        f'<li><div class="chead"><span class="cname">{name}</span>'
+        f'<li><div class="chead"><span class="cname">{name}'
+        f' <span class="cwt">{weights.get(name, 1.0):.1f}&times; weight</span></span>'
         f'<span class="cscore">{k[name]:.2f}</span></div>'
         f'<div class="cbar"><span style="width:{max(0, min(100, round(k[name]*100)))}%">'
         f'</span></div>'
@@ -311,8 +313,9 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
            story that everyone agrees is big rises above one that is simply
            being shouted loudest in a single country's press.</p>
         <p class="comp-intro">Each dimension below scores from <strong>0 to 1</strong>
-           (higher is stronger) and they multiply together to rank the day's
-           stories - so this story ranks highest across the combination today.</p>
+           (higher is stronger), but they don't count equally: each is raised to the
+           weight shown, then the weighted dimensions combine to rank the day's
+           stories - so this story comes out top across the combination today.</p>
         <ul class="comp">{comp_rows}</ul>
         {nov_note}
         <h3>Next-highest today</h3>
@@ -488,6 +491,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   .chead {{ display: flex; justify-content: space-between; align-items: baseline;
     gap: 1rem; }}
   .cname {{ color: var(--fg); font-weight: 600; text-transform: capitalize; }}
+  .cwt {{ color: var(--muted); font-weight: 400; font-size: 0.72rem;
+    text-transform: none; letter-spacing: 0; }}
   .cscore {{ color: var(--accent); font-weight: 700;
     font-variant-numeric: tabular-nums; }}
   .cbar {{ height: 5px; background: var(--rule); border-radius: 3px;
