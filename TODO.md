@@ -41,6 +41,25 @@ daily job runs on its own.
   $9/mo "Remove Brevo logo" add-on, or Standard/higher). The unsubscribe line
   next to it is legally required and stays regardless. Living with it on free
   for now; revisit if ever on a paid plan (would pair with the domain decision).
+- [ ] **"Why this story?" explainer fidelity (panel audit, 28/07/2026).** Engine
+  maths is sound; the explainer copy misdescribes it. (a) [MED] "they multiply
+  together to rank" is wrong - the four shown bars are RAW components but the score
+  is `cov^1.0 * div^1.6 * rec^0.8 * nov^1.0`, so multiplying the bars won't
+  reproduce the runner-up scores shown beneath. Reword to "combine" + name the
+  weights. (b) [MED] the diversity bar is almost always the SHORTEST (normalised
+  against all ~25 feed countries + 5 leans -> ~0.2-0.4) yet is labelled "weighted
+  heaviest"; the x1.6 exponent is invisible. Annotate the row with its weight or show
+  weighted contribution. (c) [LOW] "recency favours coverage still building now"
+  overstates it - it's exp-decay on the cluster's MEAN publish time (avg age), not
+  momentum; soften to "fresh over fading". Both (a)/(b) are copy+annotation in
+  `render.py` `_why_section` / `_COMPONENT_DESC`, not a maths change.
+- [ ] **Novelty floor never reached (internal nit, 28/07/2026).**
+  `novelty_penalty_floor` (0.35) is unreachable: `age_days >= 1` is required, so the
+  strongest achievable penalty is `0.35 + 0.65*(1/4) = 0.51` (a yesterday-lead). The
+  `settings.yaml` comment calls 0.35 "the strongest penalty" - relabel it, or base
+  `frac` on `(age_days-1)/(decay_days-1)` in `rank.py:_novelty_penalties` if a
+  yesterday-lead should actually hit the floor. Public copy ("~4 days") is fine;
+  doesn't change current rankings materially.
 - [ ] **Tune scoring weights on real data.** Once `data/history/` has ~1-2
   weeks of daily snapshots, use `replay.py` to test alternative weights
   (esp. bumping `recency` from 0.8). Don't tune on a single day.
