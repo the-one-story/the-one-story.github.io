@@ -259,7 +259,7 @@ def _signup_form(form_url: str) -> str:
             f.style.display = 'none';
             var n = document.getElementById('os-signup-note');
             if (n) {{
-              n.textContent = "Thanks - you're on the list. Your first edition arrives tomorrow morning.";
+              n.textContent = "Thanks - you're on the list; your first edition arrives tomorrow morning. Heads up: it may land in spam the first time - mark it 'not spam' (or add us to your contacts) and the rest will reach your inbox.";
               n.style.color = 'var(--accent)';
             }}
           }}, 150);
