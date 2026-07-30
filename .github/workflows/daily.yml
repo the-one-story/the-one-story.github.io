@@ -12,6 +12,10 @@ on:
         description: "Send a one-off [Preview] test email now (doesn't affect the daily send)"
         type: boolean
         default: false
+      test_email:
+        description: "Override recipient for the test send (defaults to the BREVO_TEST_EMAIL secret). Not a secret - just an address."
+        type: string
+        default: ""
 
 # Let the job commit the regenerated page + the decay ledger back to the repo.
 permissions:
@@ -48,7 +52,8 @@ jobs:
         continue-on-error: true   # an email hiccup must never block publishing
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
-          BREVO_TEST_EMAIL: ${{ secrets.BREVO_TEST_EMAIL }}   # only used by --test
+          # --test recipient: the test_email dispatch input overrides the secret.
+          BREVO_TEST_EMAIL: ${{ github.event.inputs.test_email != '' && github.event.inputs.test_email || secrets.BREVO_TEST_EMAIL }}
         run: python send_email.py ${{ github.event.inputs.test_send == 'true' && '--test' || '' }}
 
       - name: Commit regenerated page + ledger

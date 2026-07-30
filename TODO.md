@@ -3,6 +3,18 @@
 Deferred / optional work. Nothing here is blocking; the site is live and the
 daily job runs on its own.
 
+- [ ] **[PRIORITY] Custom sending domain - the real fix for first-email-to-spam.**
+  Reported 30/07/2026 that new subscribers' first edition lands in spam. Root cause
+  is reputation, not auth (see the deliverability item below for the full diagnosis).
+  The real fix: buy a domain (e.g. `onestory.news`), authenticate it in Brevo (add
+  the DKIM/SPF/DMARC DNS records Brevo generates), and send from `hello@<domain>`
+  instead of the shared `<id>.brevosend.com`. That gives One Story its own sender
+  reputation (instead of borrowing the cold shared one) and DMARC alignment on a
+  brand domain - which is what stops the first email being filtered. Bonus: the same
+  domain gets `github.io` out of the site URL, so it does double duty. Needs Charlie
+  to buy the domain (his call); then Claude does the Brevo verification + DNS records
+  + re-test. Interim free mitigation already shipped: the signup success note now
+  tells new subscribers to mark the first edition "not spam".
 - [x] **Brevo cutover - DONE + verified end-to-end 27/07/2026.** Switched
   Buttondown -> Brevo because Buttondown forces double opt-in on form signups
   (no toggle) and Brevo allows SINGLE opt-in (instant, no confirmation email) AND
@@ -31,11 +43,8 @@ daily job runs on its own.
     1. Interim/free: mark "not junk" + add sender to contacts + a Gmail filter
        "never send to spam". Works because the list is currently all Charlie's
        own addresses. Reputation also improves with engagement over time.
-    2. Proper fix: a custom domain (dedicated reputation Charlie owns) authenticated
-       in Brevo (DKIM/SPF/DMARC DNS records), sending from hello@<domain> - also
-       gets github.io out of the site URL. Charlie buys the domain (his call, not
-       yet); then Claude does the Brevo/DNS auth + re-test. Only needed once there
-       are external subscribers.
+    2. Proper fix: a custom sending domain - see the **[PRIORITY]** item at the top
+       of this list for the full plan.
 - [ ] **"Sent with Brevo" badge in the email footer** - free-tier branding, NOT
   removable by code/settings. Only goes away on a paid plan (Starter + the
   $9/mo "Remove Brevo logo" add-on, or Standard/higher). The unsubscribe line
