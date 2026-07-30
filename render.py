@@ -530,10 +530,19 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   .signup-form button:hover {{ opacity: 0.9; }}
   .signup-note {{ margin: 0.7rem 0 0; color: var(--muted); font-size: 0.78rem; }}
   footer {{
-    margin-top: auto; padding-top: 3rem;
+    margin-top: auto; padding-top: 1.8rem;
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.8rem;
     color: var(--muted);
   }}
+  .byline {{
+    margin: 1.6rem 0 0;
+    font-family: -apple-system, system-ui, sans-serif; font-size: 0.95rem;
+  }}
+  .byline a {{ color: var(--accent); font-weight: 600;
+    text-decoration: underline; text-underline-offset: 3px;
+    text-decoration-thickness: 1px; }}
+  .byline a:hover {{ opacity: 0.7; }}
+  .byline .ext {{ font-weight: 400; }}
   .stale {{
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.85rem;
     background: var(--accent); color: var(--bg); padding: 0.6rem 1rem;
@@ -557,6 +566,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     {sources_block}
     {_why_section(winner, runners)}
     {signup_block}
+    <p class="byline"><a href="https://charlie-tren.github.io/">Other Projects
+      <span class="ext">&#8599;</span></a></p>
     <footer>
       Updated {stamp} {tzabbr}.<br>Next update: {next_update}.
     </footer>
