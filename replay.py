@@ -14,6 +14,30 @@ to the replayed winner and flags where they differ.
 
 Note: the novelty term is date/ledger-dependent and is NOT reconstructed here
 (replay uses an empty ledger), so this is for tuning coverage/diversity/recency.
+
+--- Explaining why a PARTICULAR day picked the story it did -------------------
+This tool can't answer that (empty ledger hides every novelty penalty, which is
+often the whole reason a bigger story lost). Two gotchas make the obvious
+approach fail: `data/ranked.json` is NOT committed by CI, so the local copy is
+usually days stale; and the ledger on disk already contains the day you're
+asking about. Rebuild the run instead, filtering the ledger to entries strictly
+BEFORE that date - that is the state the scorer actually saw:
+
+    from cluster import build_clusters
+    from common import load_feeds, load_settings, read_json
+    from rank import score_clusters
+    s, feeds = load_settings(), load_feeds()
+    h = read_json('data/history/2026-07-31.json')          # archived pool
+    led = [e for e in read_json('data/recent_leads.json', default=[])
+           if e['date'] < h['run_date']]                   # ledger as it stood
+    scored = score_clusters(build_clusters(h['articles'], s), s, feeds,
+                            h['run_time'], led)
+    # scored[i]['components'] + ['novelty_match'] now show the real penalties.
+
+Worked 31/07/2026: Ceuta led on 0.202 while a FIFA cluster with MORE coverage
+(17 outlets v 11) and MORE spread (14 countries v 9) scored 0.271 unpenalised -
+it placed 3rd only because it took the 0.512 yesterday-lead novelty penalty
+(cosine 0.359). Without the real ledger that verdict is invisible.
 """
 from __future__ import annotations
 
