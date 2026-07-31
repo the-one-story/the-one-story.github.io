@@ -29,7 +29,7 @@ import sys
 from datetime import datetime, timezone
 
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
+from sklearn.metrics.pairwise import cosine_similarity, linear_kernel
 
 from cluster import build_clusters
 from common import load_feeds, load_settings, read_json, write_json
@@ -134,19 +134,60 @@ def _is_gnews(url: str) -> bool:
     return "news.google.com" in url
 
 
+# Hero must be ABOUT the cluster's dominant story. A large cluster can absorb a
+# tangential article that shares vocabulary (e.g. a "FIFA charges Argentina"
+# disciplinary piece pulled into the FIFA-World-Cup-sell-off cluster), and such
+# an article must never be the featured headline. Judged on each member's cosine
+# to the cluster TF-IDF centroid, RELATIVE to the cluster's own median so the
+# test adapts to how tight the cluster is.
+_OFFTOPIC_MIN_MEMBERS = 5     # below this the median is too noisy to trust
+# Tuned on the 9 archived days (data/history), NOT guessed: at 0.70 exactly three
+# top-cluster heroes change and all three are fixes (a FIFA disciplinary piece, a
+# "string of attacks" context piece, and a stage-win piece, each displacing the
+# story its cluster was actually about). 0.75 fixes one more but flips six other
+# heroes, including a straight news headline -> an explainer, so it over-reaches:
+# a distinctively-worded good headline also scores low against the centroid.
+_OFFTOPIC_FRAC_OF_MEDIAN = 0.70
+
+
+def _offtopic_flags(members: list[dict]) -> list[bool]:
+    """True for members that poorly match the cluster's dominant story."""
+    n = len(members)
+    if n < _OFFTOPIC_MIN_MEMBERS:
+        return [False] * n
+    texts = [f"{m['title']} {m.get('snippet', '')}".strip() for m in members]
+    try:
+        tfidf = TfidfVectorizer(stop_words="english", ngram_range=(1, 2),
+                                sublinear_tf=True).fit_transform(texts)
+    except ValueError:   # degenerate vocabulary - no basis to judge
+        return [False] * n
+    import numpy as np
+    sims = cosine_similarity(tfidf, np.asarray(tfidf.mean(axis=0))).ravel()
+    cut = float(np.median(sims)) * _OFFTOPIC_FRAC_OF_MEDIAN
+    return [bool(s < cut) for s in sims]
+
+
 def choose_hero(members: list[dict]) -> dict:
     """Best single write-up. Preference order: a straight article (never a
-    podcast/liveblog/roundup), freely readable, from an established
-    international desk, with a clean link, neutral lean, earliest to cover."""
-    return sorted(
-        members,
-        key=lambda m: (is_noise_format(m["url"], m["title"]),
-                       _PAYWALL_RANK.get(m.get("paywall", "none"), 0),
-                       m["source"] not in _HERO_TIER1,
-                       _is_gnews(m["url"]),
-                       _LEAN_RANK.get(m["lean"], 2),
-                       m["published_at"]),
+    podcast/liveblog/roundup), on-topic for the cluster's dominant story, freely
+    readable, from an established international desk, with a clean link, neutral
+    lean, earliest to cover.
+
+    On-topic outranks the paywall/tier preferences deliberately: featuring the
+    RIGHT story from a lesser outlet beats featuring the wrong story from Reuters.
+    """
+    offtopic = _offtopic_flags(members)
+    best = sorted(
+        range(len(members)),
+        key=lambda i: (is_noise_format(members[i]["url"], members[i]["title"]),
+                       offtopic[i],
+                       _PAYWALL_RANK.get(members[i].get("paywall", "none"), 0),
+                       members[i]["source"] not in _HERO_TIER1,
+                       _is_gnews(members[i]["url"]),
+                       _LEAN_RANK.get(members[i]["lean"], 2),
+                       members[i]["published_at"]),
     )[0]
+    return members[best]
 
 
 # --------------------------------------------------------------------------- #
