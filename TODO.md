@@ -3,6 +3,21 @@
 Deferred / optional work. Nothing here is blocking; the site is live and the
 daily job runs on its own.
 
+- [ ] **`trafilatura` (Apache-2.0) - full article text instead of RSS summaries.**
+  *(added 31/07/2026, library-review sweep across all projects.)* `fetch.py` only
+  ever sees `entry.summary` from feedparser - a truncated, publisher-controlled
+  blurb. Clustering and scoring therefore run on a thin, uneven signal (some feeds
+  give two sentences, some give a full lede, some give marketing copy). trafilatura
+  would fetch and extract the real article body, which should sharpen both the
+  clustering and the diversity term that anti-volume-bias depends on.
+  **This is a design change, not a drop-in.** It adds one HTTP fetch per candidate
+  article to every run (CI time, politeness, failure modes to handle) and it will
+  shift scores, so the current story selection WILL change. Before adopting: run it
+  side-by-side on a few days of real feeds and compare the chosen story against what
+  the summary-only path picked - if the picks are the same, the added fetch cost buys
+  nothing and this should be rejected outright. Sibling trafilatura item in Board
+  Mover Scanner (there it fixes a live bug, so it ranks higher).
+
 - [ ] **[PRIORITY] Custom sending domain - the real fix for first-email-to-spam.**
   Reported 30/07/2026 that new subscribers' first edition lands in spam. Root cause
   is reputation, not auth (see the deliverability item below for the full diagnosis).
@@ -69,6 +84,26 @@ daily job runs on its own.
   `frac` on `(age_days-1)/(decay_days-1)` in `rank.py:_novelty_penalties` if a
   yesterday-lead should actually hit the floor. Public copy ("~4 days") is fine;
   doesn't change current rankings materially.
+- [ ] **Google-News redirect URLs quietly cancel the tier-1 hero preference.**
+  *(found 31/07/2026 while fixing the off-topic hero.)* Several tier-1 wires -
+  Reuters, AP, AFP, CBC - arrive via Google News, so their `url` is a
+  `news.google.com/rss/articles/...` redirect. `choose_hero` demotes those
+  (`_is_gnews`, to avoid featuring a redirect link), which means the wires are
+  systematically ruled out of the hero slot even though `_HERO_TIER1` is supposed
+  to prefer them - the two rules work against each other. Net effect: the hero is
+  usually the earliest tier-1 *direct* link, which is often an explainer rather
+  than the fullest straight-news account. Live example (31/07): the on-topic FIFA
+  hero became ABC's "FIFA wants to sell the World Cup to a Trump associate. Here's
+  what..." while Reuters' "UEFA votes to boycott World Cup over FIFA investor plan"
+  was demoted purely for being a gnews URL. Two possible fixes: (a) resolve
+  Google-News redirects to the publisher URL at fetch time (one extra request per
+  gnews item, so weigh against the CI-time concern in the trafilatura item above -
+  they share the same tradeoff and should probably be decided together), or
+  (b) rank straight news above explainers/analysis (a title-pattern test like
+  `_NOISE_TITLE`: "here's what", "how will", "why ...", "explained", "what to
+  know"). (b) is cheap and needs no network; (a) is the more complete fix.
+  Verify either on `data/history/` the same way the off-topic threshold was tuned -
+  count how many heroes change and confirm each change is an improvement.
 - [ ] **Tune scoring weights on real data.** Once `data/history/` has ~1-2
   weeks of daily snapshots, use `replay.py` to test alternative weights
   (esp. bumping `recency` from 0.8). Don't tune on a single day.
