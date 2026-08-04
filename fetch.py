@@ -39,7 +39,10 @@ _WS_RE = re.compile(r"\s+")
 # their broad vocabulary bridges unrelated stories together during clustering.
 _NOISE_URL = re.compile(
     r"(/podcasts?/|/videos?/|/watch/|/audio/|/galler(?:y|ies)/|/in-pictures/|"
-    r"/live/|/liveblog|-live-|/live-updates|/newsletters?/)", re.I)
+    # \bnewsletters?\b (not /newsletter/) so it also catches the word inside a
+    # slug - NPR's Up First lands at /<id>/up-first-newsletter-<topics>, with no
+    # /newsletter/ path segment to match.
+    r"/live/|/liveblog|-live-|/live-updates|\bnewsletters?\b)", re.I)
 _NOISE_TITLE = re.compile(
     r"(\blive:|\blive updates?\b|\bliveblog\b|\bpodcast\b|\bnewsletter\b|"
     r"\bup first\b|from the politics desk|in today'?s edition|\bin pictures\b|"
@@ -49,6 +52,11 @@ _NOISE_TITLE = re.compile(
     # weekend"). Kept conservative to avoid dropping single-story explainers.
     r"\bbiggest news\b|\byou missed\b|\bin case you missed\b|\bicymi\b|"
     r"\bround-?up\b|\bweek in review\b|"
+    # "<headline>. And, <unrelated headline>" - the NPR Up First signature, which
+    # carries NO "newsletter"/"Up First" text in the feed title, so only the shape
+    # gives it away. Two stories in one item: it bridges clusters and reads as a
+    # nonsense hero. Zero false positives across 12,714 archived articles.
+    r"\.\s+and,\s|"
     r"\byour (?:morning|evening|weekend|weekly|daily) (?:briefing|rundown|digest)\b)",
     re.I)
 # Emoji / pictographs some feeds prefix to titles (e.g. France 24's red-dot live
