@@ -161,7 +161,7 @@ touches the live list).
 
 The workflow is `.github/workflows/daily.yml`:
 
-1. Runs daily at **20:00 UTC** (≈06:00 AEST / 07:00 AEDT - fixed UTC, so it
+1. Runs daily at **19:00 UTC** (≈05:00 AEST / 06:00 AEDT - fixed UTC, so it
    drifts ~1h with Sydney daylight saving), plus manual `workflow_dispatch`.
 2. Installs deps, runs `python run.py`.
 3. Commits `index.html` and `data/recent_leads.json` (the ledger - the only
