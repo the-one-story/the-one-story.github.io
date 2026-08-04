@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 from common import load_settings, read_json, rel
 from render import _clean_source, _display_snippet, _hyphenate
 
-SITE_URL = "https://the-one-story.github.io/"
+SITE_URL = "https://one-story.charlietrenorden.com/"
 # Intentionally dark (matches the site's Ink theme) so dark-mode clients don't
 # invert and mangle it, and light clients get a deliberate dark newsletter.
 _BG = "#14161a"; _INK = "#ece9e3"; _MUT = "#8b9096"; _O = "#b5652a"
