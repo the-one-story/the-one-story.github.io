@@ -2,10 +2,12 @@ name: Daily One Story
 
 # Runs once a day and on manual dispatch. GitHub Actions cron is UTC and does
 # NOT observe daylight saving, so this fixed time drifts ~1h in Sydney terms:
-#   20:00 UTC == 06:00 AEST (winter) / 07:00 AEDT (summer).
+#   19:00 UTC == 05:00 AEST (winter) / 06:00 AEDT (summer).
+# Target is 5am AEST; keep config/settings.yaml update_hour_utc in step with this
+# (the page's "next update" line is rendered from that value, not from the cron).
 on:
   schedule:
-    - cron: "0 20 * * *"
+    - cron: "0 19 * * *"
   workflow_dispatch:
     inputs:
       test_send:

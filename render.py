@@ -47,7 +47,7 @@ def _fmt_local(iso: str, tzname: str) -> tuple[str, str]:
 
 def _next_update(iso: str, tzname: str, update_hour_utc: int) -> str:
     """Human-readable next scheduled update: the next update_hour_utc:00 UTC
-    after the run time, shown in local time (e.g. 'Fri 24 Jul, 06:00 AEST')."""
+    after the run time, shown in local time (e.g. 'Fri 24 Jul, 05:00 AEST')."""
     run = datetime.fromisoformat(iso).astimezone(timezone.utc)
     nxt = run.replace(hour=update_hour_utc, minute=0, second=0, microsecond=0)
     if nxt <= run:
@@ -330,7 +330,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     tzname = ranked["timezone"]
     stamp, tzabbr = _fmt_local(ranked["run_time"], tzname)
     next_update = _next_update(ranked["run_time"], tzname,
-                               ranked.get("update_hour_utc", 20))
+                               ranked.get("update_hour_utc", 19))
 
     # Headline, snippet and link all come from the one hero article (the best
     # single write-up) so they read as a coherent unit.
