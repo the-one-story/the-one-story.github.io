@@ -121,6 +121,25 @@ daily job runs on its own.
   ever hard-fails.
 
 ## Optional design ideas raised, not taken
+- **A generic "two sentence-clauses in one title" roundup guard - REJECTED on data
+  (04/08/2026).** Tempting after two roundup formats slipped through (NBC, then NPR
+  Up First), since the pattern list is reactive by nature. Measured before deciding:
+  `[a-z'")]\.\s+[A-Z]` (period preceded by a lowercase char so `U.S.`/`No. 1` don't
+  fire) hits **213 of 12,666 clean archived articles (1.68%)**, and they are
+  overwhelmingly LEGITIMATE single-story headlines using a two-sentence rhetorical
+  shape - "OpenAI blamed a hacking event on its AI models gone rogue. Here is
+  what...", "Famine has ended in Gaza. But the gains are fragile" - plus
+  abbreviation misfires ("Rep. Jim Jordan...", "Sen. Paul..."). ~200 good articles
+  lost per roundup caught. Keep the precise per-format patterns instead: each new
+  format is a two-line `_NOISE_URL`/`_NOISE_TITLE` addition with zero collateral,
+  verified against `data/history/` the same way. Don't re-open without a materially
+  better discriminator than title shape.
+- **Note for whoever hits the next roundup:** the off-topic hero guard
+  (`rank._offtopic_flags`) structurally CANNOT catch this class. A roundup leading
+  with the cluster's dominant story is highly representative of it - the 04/08 NPR
+  item scored 1.25x the cluster median, the 2nd most representative of 9 members.
+  That guard detects "wrong story"; a roundup is "right story PLUS another story".
+  Fix roundups at fetch (drop), not at hero selection.
 - Lock the hero article for the whole local day (not just the story cluster), so
   the featured headline/link doesn't re-pick between runs. Offered 27/07, not
   taken - only matters under repeated same-day runs; production runs once/day, so
