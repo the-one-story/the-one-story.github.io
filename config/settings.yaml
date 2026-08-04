@@ -5,9 +5,11 @@
 # --- Time window ---
 timezone: Australia/Sydney   # window + display timezone (IANA name)
 window_hours: 24             # rolling lookback ending at run time
-update_hour_utc: 19          # the daily cron hour (UTC) - render shows the next one
-                             # 19:00 UTC == 05:00 AEST / 06:00 AEDT (target: 5am AEST)
-                             # MUST match the cron in .github/workflows/daily.yml
+update_hour_local: 5         # the daily run hour in `timezone` above - render shows
+                             # the next one. The job targets 05:00 Sydney all year
+                             # (daily.yml runs two UTC crons, 18:00 + 19:00, and a
+                             # gate job drops whichever isn't 05:00 local today), so
+                             # this is season-independent - no DST upkeep needed.
 # Daily lock: once a day's winner is chosen it stays that story for the rest of
 # the (local) day, refreshing only its coverage counts - "one story a day".
 daily_lock: true

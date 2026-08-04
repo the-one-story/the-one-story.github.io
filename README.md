@@ -161,8 +161,12 @@ touches the live list).
 
 The workflow is `.github/workflows/daily.yml`:
 
-1. Runs daily at **19:00 UTC** (≈05:00 AEST / 06:00 AEDT - fixed UTC, so it
-   drifts ~1h with Sydney daylight saving), plus manual `workflow_dispatch`.
+1. Runs daily at **05:00 Sydney, year-round**, plus manual `workflow_dispatch`.
+   Actions cron is fixed UTC and ignores daylight saving, so two cron lines are
+   registered (18:00 UTC = 05:00 AEDT, 19:00 UTC = 05:00 AEST) and a `gate` job
+   asks the tz database which one is 05:00 local today - the other is skipped.
+   The page's "next update" line comes from `update_hour_local` (5), so it stays
+   correct across a DST switch without any change here.
 2. Installs deps, runs `python run.py`.
 3. Commits `index.html` and `data/recent_leads.json` (the ledger - the only
    state that must persist between runs) back to the repo.

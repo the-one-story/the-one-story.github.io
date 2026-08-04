@@ -291,7 +291,7 @@ def build_ranked_table(scored: list[dict], settings: dict,
         "run_time": feeds_report["run_time"],
         "window_hours": settings["window_hours"],
         "timezone": settings["timezone"],
-        "update_hour_utc": settings["update_hour_utc"],
+        "update_hour_local": settings["update_hour_local"],
         "signup_form_url": (settings.get("newsletter") or {}).get(
             "signup_form_url", ""),
         "winner": scored[0],
