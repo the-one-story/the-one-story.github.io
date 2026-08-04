@@ -1,13 +1,17 @@
 name: Daily One Story
 
-# Runs once a day and on manual dispatch. GitHub Actions cron is UTC and does
-# NOT observe daylight saving, so this fixed time drifts ~1h in Sydney terms:
-#   19:00 UTC == 05:00 AEST (winter) / 06:00 AEDT (summer).
-# Target is 5am AEST; keep config/settings.yaml update_hour_utc in step with this
-# (the page's "next update" line is rendered from that value, not from the cron).
+# Target: 05:00 Sydney EVERY day of the year. GitHub Actions cron is fixed UTC and
+# ignores daylight saving, so one cron line would drift an hour twice a year. Two
+# lines cover both regimes and the `gate` job below skips whichever is wrong today:
+#   18:00 UTC == 05:00 AEDT (summer, UTC+11)
+#   19:00 UTC == 05:00 AEST (winter, UTC+10)
+# So on any given day exactly one of the two proceeds past the gate. The page's
+# "next update" line is rendered from config/settings.yaml `update_hour_local`
+# (5), which is season-independent and needs no upkeep here.
 on:
   schedule:
-    - cron: "0 19 * * *"
+    - cron: "0 18 * * *"   # 05:00 AEDT
+    - cron: "0 19 * * *"   # 05:00 AEST
   workflow_dispatch:
     inputs:
       test_send:
@@ -29,7 +33,39 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Which of the two cron lines is the real 05:00 Sydney one TODAY? Ask the tz
+  # database rather than hardcoding DST dates, so it stays correct if the rules
+  # ever change. A manual dispatch always proceeds.
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.check.outputs.run }}
+    steps:
+      - id: check
+        env:
+          EVENT: ${{ github.event_name }}
+          WANT_LOCAL_HOUR: "5"
+        run: |
+          python3 - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          want = int(os.environ["WANT_LOCAL_HOUR"])
+          now = datetime.now(ZoneInfo("Australia/Sydney"))
+          # Gate on LOCAL hour, not on which cron fired: that is what we actually
+          # care about, and it tolerates GitHub's usual few-minutes cron lag.
+          ok = os.environ["EVENT"] != "schedule" or now.hour == want
+          print(f"Sydney now {now:%Y-%m-%d %H:%M %Z} (UTC{now:%z}); "
+                f"want {want:02d}:00 local -> run={ok}")
+          # Only key=value belongs in GITHUB_OUTPUT; the log line above goes to stdout.
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"run={'true' if ok else 'false'}\n")
+          PY
+
   build:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

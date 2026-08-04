@@ -16,7 +16,7 @@ from __future__ import annotations
 import html
 import re
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, time, timedelta
 from zoneinfo import ZoneInfo
 
 from common import load_settings, read_json, rel
@@ -45,15 +45,21 @@ def _fmt_local(iso: str, tzname: str) -> tuple[str, str]:
     return dt.strftime("%d/%m/%Y %H:%M"), dt.tzname() or ""
 
 
-def _next_update(iso: str, tzname: str, update_hour_utc: int) -> str:
-    """Human-readable next scheduled update: the next update_hour_utc:00 UTC
-    after the run time, shown in local time (e.g. 'Fri 24 Jul, 05:00 AEST')."""
-    run = datetime.fromisoformat(iso).astimezone(timezone.utc)
-    nxt = run.replace(hour=update_hour_utc, minute=0, second=0, microsecond=0)
-    if nxt <= run:
-        nxt += timedelta(days=1)
-    local = nxt.astimezone(ZoneInfo(tzname))
-    return f"{local.strftime('%a %d %b, %H:%M')} {local.tzname()}"
+def _next_update(iso: str, tzname: str, update_hour_local: int) -> str:
+    """Human-readable next scheduled update, e.g. 'Fri 24 Jul, 05:00 AEST'.
+
+    The job is scheduled in LOCAL terms (05:00 Sydney year-round - two UTC crons
+    plus a DST gate, see daily.yml), so resolve the next LOCAL occurrence. Built
+    from the calendar date rather than by adding a timedelta, so the wall-clock
+    hour stays 05:00 even across a daylight-saving transition.
+    """
+    local = datetime.fromisoformat(iso).astimezone(ZoneInfo(tzname))
+    tz = ZoneInfo(tzname)
+    at = time(hour=update_hour_local)
+    nxt = datetime.combine(local.date(), at, tzinfo=tz)
+    if nxt <= local:
+        nxt = datetime.combine(local.date() + timedelta(days=1), at, tzinfo=tz)
+    return f"{nxt.strftime('%a %d %b, %H:%M')} {nxt.tzname()}"
 
 
 def _hyphenate(text: str) -> str:
@@ -330,7 +336,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     tzname = ranked["timezone"]
     stamp, tzabbr = _fmt_local(ranked["run_time"], tzname)
     next_update = _next_update(ranked["run_time"], tzname,
-                               ranked.get("update_hour_utc", 19))
+                               ranked.get("update_hour_local", 5))
 
     # Headline, snippet and link all come from the one hero article (the best
     # single write-up) so they read as a coherent unit.
