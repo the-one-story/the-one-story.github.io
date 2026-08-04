@@ -366,11 +366,11 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <!-- Link-preview (Open Graph) - how the URL unfurls in WhatsApp, iMessage, Slack, etc. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="One Story">
-<meta property="og:url" content="https://the-one-story.github.io/">
+<meta property="og:url" content="https://one-story.charlietrenorden.com/">
 <meta property="og:title" content="One Story">
 <meta property="og:description" content="The most important story in the world right now">
-<meta property="og:image" content="https://the-one-story.github.io/assets/og.png">
-<meta property="og:image:secure_url" content="https://the-one-story.github.io/assets/og.png">
+<meta property="og:image" content="https://one-story.charlietrenorden.com/assets/og.png">
+<meta property="og:image:secure_url" content="https://one-story.charlietrenorden.com/assets/og.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
