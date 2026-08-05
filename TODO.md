@@ -50,7 +50,15 @@ daily job runs on its own.
        error text is literal: "Add this Branded record value ... *to authenticate this
        domain*." (An earlier note here saying branding "does not block
        authentication" was WRONG.) Opting into the branded subdomain `send` therefore
-       made link-branding a prerequisite. Two ways out:
+       made link-branding a prerequisite.
+       **RECOMMENDED (04/08/2026): drop the branding.** It is the only thing blocking
+       authentication, the gain is marginal (click-tracking links stay on Brevo's
+       shared domain rather than ours), it is addable any time later, and dropping it
+       removes all dependence on the INFERRED target values below - the fix should not
+       rest on a guess. Charlie also disliked the record length. Note the length is
+       cosmetically irrelevant: the long string is the TARGET, a hostname on Brevo's
+       infrastructure that no reader ever sees; only the Name side
+       (`send.mail.charlietrenorden.com`) is ever visible. Two ways out:
          - **Keep branding (better):** in Brevo's records step click "Copy" beside each
            of the three Branding *Value* fields and paste them, then add the three
            CNAMEs in Cloudflare as **DNS only** and re-run Verify + Authenticate. The
