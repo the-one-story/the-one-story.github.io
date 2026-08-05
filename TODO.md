@@ -43,12 +43,25 @@ daily job runs on its own.
        `test_email=<addr>`) and confirm it lands in the inbox, not spam - that is
        the whole point of the exercise. Check the from-address is now
        `@mail.charlietrenorden.com`, not `<id>.brevosend.com`.
-    4. Optional: the three BRANDING records (`send.mail`, `r.send.mail`,
-       `img.send.mail`, all CNAME) are NOT added, so Brevo still rewrites click
-       tracking to its shared domain. Brevo's UI truncates their values and omits
-       them from the accessibility tree, so they could not be read exactly and were
-       NOT guessed. To finish: click "Copy" beside each Value in Brevo and paste
-       them, or drop the branded subdomain. Does not block authentication.
+    4. **BLOCKER (corrected 04/08/2026):** the three BRANDING records (`send.mail`,
+       `r.send.mail`, `img.send.mail`, all CNAME) are NOT added, and Brevo **will not
+       mark the domain authenticated until they match** - the domain still reads "Not
+       authenticated" even though all four authentication records verify green. Its
+       error text is literal: "Add this Branded record value ... *to authenticate this
+       domain*." (An earlier note here saying branding "does not block
+       authentication" was WRONG.) Opting into the branded subdomain `send` therefore
+       made link-branding a prerequisite. Two ways out:
+         - **Keep branding (better):** in Brevo's records step click "Copy" beside each
+           of the three Branding *Value* fields and paste them, then add the three
+           CNAMEs in Cloudflare as **DNS only** and re-run Verify + Authenticate. The
+           values cannot be read programmatically - Brevo truncates them in the input
+           AND omits them from the accessibility tree, and blocks page JS - and they
+           must NOT be guessed (the obvious `.brevosend.com` pattern was tried and
+           disproved by DNS).
+         - **Drop branding (fastest):** clear the branded subdomain so only the four
+           authentication records are required - re-open "Authenticate domain", click
+           "Previous" back to step 2 "Branded subdomain", empty the `send` field, then
+           Continue -> Continue -> Verify records -> Authenticate domain.
 - [x] **[SUPERSEDED] Custom sending domain - the real fix for first-email-to-spam.**
   Reported 30/07/2026 that new subscribers' first edition lands in spam. Root cause
   is reputation, not auth (see the deliverability item below for the full diagnosis).
