@@ -58,6 +58,18 @@ daily job runs on its own.
            AND omits them from the accessibility tree, and blocks page JS - and they
            must NOT be guessed (the obvious `.brevosend.com` pattern was tried and
            disproved by DNS).
+         - **INFERRED values to try first (04/08/2026)** - pattern-derived from the
+           confirmed DKIM targets plus the visible truncations (`...brand.brevose`,
+           `...r.brand.brevos`, `...img.brand.brev`). NOT verified; Brevo's "Verify
+           records" is the arbiter, and it compares the published string, so one click
+           settles it. A wrong CNAME here is inert (nothing uses `send.mail`). All
+           three **DNS only**:
+             - `send.mail`     CNAME `send-mail-charlietrenorden-com.brand.brevosend.com`
+             - `r.send.mail`   CNAME `send-mail-charlietrenorden-com.r.brand.brevosend.com`
+             - `img.send.mail` CNAME `send-mail-charlietrenorden-com.img.brand.brevosend.com`
+           (Note: an earlier claim that DNS "disproved" this pattern was too strong -
+           these targets are likely only provisioned once the domain authenticates, so
+           a non-resolving lookup was inconclusive, not a refutation.)
          - **Drop branding (fastest):** clear the branded subdomain so only the four
            authentication records are required - re-open "Authenticate domain", click
            "Previous" back to step 2 "Branded subdomain", empty the `send` field, then
