@@ -18,7 +18,38 @@ daily job runs on its own.
   nothing and this should be rejected outright. Sibling trafilatura item in Board
   Mover Scanner (there it fixes a live bug, so it ranks higher).
 
-- [ ] **[PRIORITY] Custom sending domain - the real fix for first-email-to-spam.**
+- [ ] **[PRIORITY] Finish the custom sending domain cutover (started 04/08/2026).**
+  Domain bought (`charlietrenorden.com`, DNS on Cloudflare) and the sending domain
+  `mail.charlietrenorden.com` is set up in Brevo with branded subdomain `send`,
+  method = individual DNS records / manual. **Done:** all four AUTHENTICATION
+  records added in Cloudflare, every one `DNS only` (not proxied - a proxied DKIM
+  CNAME breaks authentication), independently confirmed live by DNS-over-HTTPS, and
+  Brevo's own "Verify records" reports all four as MATCH. "Authenticate domain"
+  submitted; Brevo returned *"Authentication is pending"* (propagation, up to 48h).
+  Records as entered:
+    - `mail`                   TXT   `brevo-code:a70e1487e9f3991c7316df42bfcc2b80`
+    - `brevo1._domainkey.mail` CNAME `b1.mail-charlietrenorden-com.dkim.brevo.com`
+    - `brevo2._domainkey.mail` CNAME `b2.mail-charlietrenorden-com.dkim.brevo.com`
+    - `_dmarc.mail`            TXT   `v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com`
+  **Still to do, in order:**
+    1. Confirm Brevo shows the domain **Authenticated** (Senders, Domains & IPs ->
+       Domains). Usually minutes on Cloudflare.
+    2. Switch `newsletter.sender_email` in `config/settings.yaml` from
+       `charlie.rochfordgroup@gmail.com` to `onestory@mail.charlietrenorden.com`.
+       **Deliberately NOT changed yet** - Brevo rejects an unverified sender, so
+       flipping it before authentication completes would silently kill the daily
+       send (the step is `continue-on-error`, so the site would still publish).
+    3. Test-send to a FRESH Gmail address (workflow_dispatch, `test_send=true` +
+       `test_email=<addr>`) and confirm it lands in the inbox, not spam - that is
+       the whole point of the exercise. Check the from-address is now
+       `@mail.charlietrenorden.com`, not `<id>.brevosend.com`.
+    4. Optional: the three BRANDING records (`send.mail`, `r.send.mail`,
+       `img.send.mail`, all CNAME) are NOT added, so Brevo still rewrites click
+       tracking to its shared domain. Brevo's UI truncates their values and omits
+       them from the accessibility tree, so they could not be read exactly and were
+       NOT guessed. To finish: click "Copy" beside each Value in Brevo and paste
+       them, or drop the branded subdomain. Does not block authentication.
+- [x] **[SUPERSEDED] Custom sending domain - the real fix for first-email-to-spam.**
   Reported 30/07/2026 that new subscribers' first edition lands in spam. Root cause
   is reputation, not auth (see the deliverability item below for the full diagnosis).
   The real fix: buy a domain (e.g. `onestory.news`), authenticate it in Brevo (add

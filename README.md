@@ -1,6 +1,6 @@
 # One Story
 
-**Live: https://the-one-story.github.io/**
+**Live: https://one-story.charlietrenorden.com/**
 
 A website that shows exactly **one** thing: the single most important news
 story of the last 24 hours, refreshed once a day. No feed, no scroll, no second
