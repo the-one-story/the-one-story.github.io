@@ -2,12 +2,14 @@ name: Daily One Story
 
 # Target: 05:00 Sydney EVERY day of the year. GitHub Actions cron is fixed UTC and
 # ignores daylight saving, so one cron line would drift an hour twice a year. Two
-# lines cover both regimes and the `gate` job below skips whichever is wrong today:
+# lines cover both regimes and the `gate` job below drops the wrong one:
 #   18:00 UTC == 05:00 AEDT (summer, UTC+11)
 #   19:00 UTC == 05:00 AEST (winter, UTC+10)
-# So on any given day exactly one of the two proceeds past the gate. The page's
-# "next update" line is rendered from config/settings.yaml `update_hour_local`
-# (5), which is season-independent and needs no upkeep here.
+# The gate asks "is it >= 05:00 local AND has today's edition not been emailed
+# yet?" rather than "is the clock exactly 05:00?" - Actions cron is routinely
+# delayed by hours, and an exact-hour test silently turns a late run into a missed
+# day (it did, 06/08/2026). The page's "next update" line is rendered from
+# config/settings.yaml `update_hour_local` (5), season-independent, no upkeep here.
 on:
   schedule:
     - cron: "0 18 * * *"   # 05:00 AEDT
@@ -41,23 +43,51 @@ jobs:
     outputs:
       run: ${{ steps.check.outputs.run }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - id: check
         env:
           EVENT: ${{ github.event_name }}
           WANT_LOCAL_HOUR: "5"
         run: |
           python3 - <<'PY'
-          import os
+          import json, os
           from datetime import datetime
           from zoneinfo import ZoneInfo
 
           want = int(os.environ["WANT_LOCAL_HOUR"])
           now = datetime.now(ZoneInfo("Australia/Sydney"))
-          # Gate on LOCAL hour, not on which cron fired: that is what we actually
-          # care about, and it tolerates GitHub's usual few-minutes cron lag.
-          ok = os.environ["EVENT"] != "schedule" or now.hour == want
+          today = now.date().isoformat()
+
+          # Which local date did we last actually EMAIL an edition for? Written by
+          # send_email.py on a real send (a --test send deliberately does not touch
+          # it), and committed, so it is the honest "today is already done" flag.
+          try:
+              with open("data/last_email.json", encoding="utf-8") as fh:
+                  last = (json.load(fh) or {}).get("date")
+          except (OSError, ValueError):
+              last = None
+
+          # Run when it is late enough AND today has not gone out yet - NOT when the
+          # clock reads exactly 05:00. Actions cron is regularly delayed by hours
+          # (06/08/2026: the 19:00 UTC run started 22:41 UTC = 08:41 Sydney), and an
+          # exact-hour test turns a late run into a skipped day. This form still
+          # drops the wrong cron of the two - in AEST 18:00 UTC is 04:00 local, too
+          # early; in AEDT 18:00 UTC is 05:00 and runs, then 19:00 UTC is 06:00 and
+          # is stopped by the already-sent check - while letting a delayed run
+          # through so the edition is merely late instead of missing.
+          if os.environ["EVENT"] != "schedule":
+              ok, why = True, "manual dispatch"
+          elif now.hour < want:
+              ok, why = False, f"too early (before {want:02d}:00 local)"
+          elif last == today:
+              ok, why = False, f"already emailed for {today}"
+          else:
+              ok, why = True, f"due (last emailed: {last})"
+
           print(f"Sydney now {now:%Y-%m-%d %H:%M %Z} (UTC{now:%z}); "
-                f"want {want:02d}:00 local -> run={ok}")
+                f"want >={want:02d}:00 local -> run={ok} ({why})")
           # Only key=value belongs in GITHUB_OUTPUT; the log line above goes to stdout.
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
               fh.write(f"run={'true' if ok else 'false'}\n")
