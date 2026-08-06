@@ -18,7 +18,26 @@ daily job runs on its own.
   nothing and this should be rejected outright. Sibling trafilatura item in Board
   Mover Scanner (there it fixes a live bug, so it ranks higher).
 
-- [ ] **[PRIORITY] Finish the custom sending domain cutover (started 04/08/2026).**
+- [x] **Custom sending domain LIVE - `mail.charlietrenorden.com` authenticated
+  (06/08/2026).** Brevo shows "All domains are authenticated". Sending now happens
+  from `One Story <onestory@mail.charlietrenorden.com>`, a sender Brevo lists as
+  **Verified** with DKIM signature `mail.charlietrenorden.com` and "DMARC is
+  configured" - reputation is ours alone instead of the shared `brevosend.com`.
+  Records in Cloudflare, all **DNS only**: `mail` TXT brevo-code,
+  `brevo1/brevo2._domainkey.mail` CNAME -> b1/b2.mail-charlietrenorden-com.dkim.brevo.com,
+  `_dmarc.mail` TXT `v=DMARC1; p=none; rua=...`. Test send verified (campaign 37).
+  **Two gotchas worth remembering:** (1) Brevo will NOT authenticate a domain while
+  its BRANDING records mismatch, so the optional branded subdomain becomes a hard
+  prerequisite - we cleared it (wizard step 2) to unblock, and its record values are
+  unreadable programmatically anyway (truncated in the UI, absent from the a11y tree,
+  page JS blocked). Re-add any time via "Set up branded subdomain". (2) An
+  authenticated domain is NOT sufficient to send - the address must ALSO exist as a
+  Sender, else the API returns `400 invalid_parameter "Sender is invalid / inactive"`.
+  Adding it on an authenticated domain auto-verifies with no confirmation email.
+  **Remaining:** confirm the test landed in INBOX not spam, and expect a short
+  warm-up while the brand-new domain builds reputation. Consider tightening DMARC
+  from `p=none` to `p=quarantine` once traffic is established.
+- [ ] **[SUPERSEDED - see above] Finish the custom sending domain cutover.**
   Domain bought (`charlietrenorden.com`, DNS on Cloudflare) and the sending domain
   `mail.charlietrenorden.com` is set up in Brevo with branded subdomain `send`,
   method = individual DNS records / manual. **Done:** all four AUTHENTICATION
