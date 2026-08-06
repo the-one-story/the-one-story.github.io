@@ -34,9 +34,12 @@ daily job runs on its own.
   authenticated domain is NOT sufficient to send - the address must ALSO exist as a
   Sender, else the API returns `400 invalid_parameter "Sender is invalid / inactive"`.
   Adding it on an authenticated domain auto-verifies with no confirmation email.
-  **Remaining:** confirm the test landed in INBOX not spam, and expect a short
-  warm-up while the brand-new domain builds reputation. Consider tightening DMARC
-  from `p=none` to `p=quarantine` once traffic is established.
+  **VERIFIED 06/08/2026: the test landed in the INBOX** - first send from a
+  brand-new domain, no warm-up needed. The months-long first-email-to-spam problem
+  is closed. (I had expected a cautious warm-up period; Gmail accepted it straight
+  away, so an authenticated domain you own beats a shared ESP domain immediately, not
+  just eventually.) Optional later: tighten DMARC `p=none` -> `p=quarantine` once
+  there is real send history.
 - [ ] **[SUPERSEDED - see above] Finish the custom sending domain cutover.**
   Domain bought (`charlietrenorden.com`, DNS on Cloudflare) and the sending domain
   `mail.charlietrenorden.com` is set up in Brevo with branded subdomain `send`,
