@@ -86,6 +86,11 @@ newsletter:
   provider: brevo
   api_base: https://api.brevo.com/v3
   sender_name: "One Story"
-  sender_email: "charlie.rochfordgroup@gmail.com"   # Brevo-verified sender
+  # Sends from our OWN Brevo-authenticated domain (mail.charlietrenorden.com,
+  # authenticated 04/08/2026: brevo-code TXT + 2 DKIM CNAMEs + DMARC, all live in
+  # Cloudflare as DNS-only). Previously a gmail address, which Brevo had to rewrite
+  # to its SHARED <id>.brevosend.com domain - auth passed but the shared domain's
+  # cold reputation sent first emails to spam. Now the reputation is ours alone.
+  sender_email: "onestory@mail.charlietrenorden.com"
   list_id: 2                                        # Brevo list "Your first list"
   signup_form_url: "https://6de84235.sibforms.com/serve/MUIFABJRu0JpFgRzIpeyQY1ujh6jE5WFKXT6i7aP9c-LRXqSFOZe6uCPyqdakcYQP7sTRrnFbX_3db_R19NlljLVQcyVPRR5LeE6jDM9CNJlbmqezDRcfVbOpQHuBWjqLI03bjhDpKrF3j7ImuauWsVQzd_-nz-HXglI4VIWUd4XtyW7fgbJxXopNu4v5fc_Sq5Twj6a4hWllqJ2vA=="
