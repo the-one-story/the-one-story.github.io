@@ -7,6 +7,8 @@ venv/
 data/articles.json
 data/clusters.json
 data/ranked.json
+# Browser screenshots from tests/smoke_site.py - diagnostic output, not state.
+data/smoke-shots/
 # NOTE: data/recent_leads.json IS committed - it is the decay ledger state
 # the scheduled job needs to carry between runs. Force-track it explicitly.
 !data/recent_leads.json
