@@ -3,6 +3,32 @@
 Deferred / optional work. Nothing here is blocking; the site is live and the
 daily job runs on its own.
 
+## HIGH - test coverage
+
+- [ ] **Test the scoring pipeline. `tests/` currently holds one smoke script.**
+      *(added 07/08/2026, estate-wide test audit.)*
+      `tests/smoke_site.py` checks the rendered site, not the decisions that
+      produced it. Eleven modules run **unattended every day** and pick the single
+      story that goes on the site and into the newsletter. If `rank.py` or
+      `cluster.py` silently drifts, nothing catches it - the site still renders,
+      it just picks the wrong story, and it does that every day until someone
+      notices by eye.
+
+      These are deterministic pure functions (no LLM), which makes them unusually
+      cheap to test:
+      - `rank.py` - score a fixture set of articles and assert the ordering.
+        **Pin the diversity term explicitly** - it is the anti-volume-bias
+        mechanism and the thing most likely to regress into "whatever 20 outlets
+        covered most".
+      - `cluster.py` - a fixture where the same event is worded three ways must
+        collapse to one cluster; two genuinely different events must not.
+      - `ledger.py` - the same story must not be publishable twice; assert the
+        dedupe survives a restart.
+      - `fetch.py` - parse checked-in RSS fixtures including a malformed feed and
+        an empty one. No network in tests.
+      - `email_render.py` - assert the newsletter HTML against the gotchas already
+        learned (table + inline + bgcolor, no SVG logo, `{{unsubscribe}}` present).
+
 - [ ] **`trafilatura` (Apache-2.0) - full article text instead of RSS summaries.**
   *(added 31/07/2026, library-review sweep across all projects.)* `fetch.py` only
   ever sees `entry.summary` from feedparser - a truncated, publisher-controlled
