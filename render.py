@@ -409,7 +409,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   }}
   .kicker {{
     font-family: -apple-system, system-ui, sans-serif;
-    text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.7rem;
+    text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.82rem;
     color: var(--muted); margin: 0 0 2.5rem;
   }}
   .kicker b {{ color: var(--accent); font-weight: 700; }}
