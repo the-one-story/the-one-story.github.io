@@ -583,7 +583,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     {sources_block}
     {_why_section(winner, runners)}
     {signup_block}
-    <p class="byline"><a href="https://charlie-tren.github.io/">Other Projects
+    <p class="byline"><a href="https://charlietrenorden.com/">Other Projects
       <span class="ext">&#8599;</span></a></p>
     <footer>
       Updated {stamp} {tzabbr}.<br>Next update: {next_update}.
