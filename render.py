@@ -361,7 +361,18 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#14161a">
+<!-- Favicons. The SVG is the master mark; the PNG/ICO fallbacks exist because
+     Safari and older Chrome ignore rel=icon type=image/svg+xml and would
+     otherwise show a blank tab. apple-touch-icon is the iOS home-screen icon
+     (flattened onto the bone bg - iOS renders transparency as black). -->
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" href="assets/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
 <title>One Story</title>
 <!-- Link-preview (Open Graph) - how the URL unfurls in WhatsApp, iMessage, Slack, etc. -->
 <meta property="og:type" content="website">
