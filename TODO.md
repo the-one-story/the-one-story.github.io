@@ -3,6 +3,38 @@
 Deferred / optional work. Nothing here is blocking; the site is live and the
 daily job runs on its own.
 
+## HIGH - deliverability still unresolved for BULK sends
+
+- [ ] **A real campaign from the authenticated domain still went to JUNK (07/08/2026).**
+      The single-recipient `sendTest` (campaign 37) landed in the INBOX, but the first
+      real `sendNow` to the list (campaign 39, "Trump signs new orders restricting
+      birthright citizenship") went to junk. From-address was correct
+      (`One Story <onestory@mail.charlietrenorden.com>`), so authentication is NOT the
+      problem - DKIM/DMARC are ours and passing.
+      **Two candidate causes, NOT yet separated:**
+        1. **Shared click-tracking domain.** A real campaign rewrites every link
+           through Brevo's tracking host; a `sendTest` may not. Because the branded
+           subdomain was dropped to unblock authentication, that host is Brevo's
+           SHARED one - the same class of problem as the old shared `brevosend.com`
+           From. **Verified against the API spec: `POST /v3/emailCampaigns` has NO
+           parameter to disable link tracking** (the body accepts `mirrorActive`,
+           `utmCampaign`, `header`/`footer`, etc. - nothing for link rewriting), so a
+           branded subdomain is the ONLY lever. This makes the earlier "branding is
+           marginal, drop it" call look wrong.
+        2. **No sending history.** This was the first BULK campaign from a
+           days-old domain; filters are most cautious exactly there, and one send
+           each way is not a pattern.
+      **Cheapest discriminator:** on the junked email, read the "Why is this message
+      in spam?" banner, and hover the story link - if it points at a brevo/sendibt
+      tracking host rather than the publisher, cause 1 is live; if not, tracking is
+      irrelevant and it is cause 2 (wait it out + mark not-spam, which now accrues to
+      OUR domain).
+      **To fix cause 1:** Domains -> "Set up branded subdomain" -> copy the three
+      record Values -> add as CNAMEs in Cloudflare, **DNS only**. Their values still
+      cannot be read programmatically (truncated in the UI, absent from the
+      accessibility tree, page JS blocked) so a human must copy them. Note the Brevo
+      UI would not open this flow at all on 07/08 - repeated dead clicks.
+
 ## HIGH - test coverage
 
 - [ ] **Test the scoring pipeline. `tests/` currently holds one smoke script.**
