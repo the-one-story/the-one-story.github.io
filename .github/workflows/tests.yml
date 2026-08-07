@@ -1,0 +1,39 @@
+name: Tests
+
+# Guards the DECISION logic - clustering, scoring, hero choice, the noise
+# filter, the ledger and the schedule gate. The daily job can be perfectly
+# green while picking the wrong story, so this runs on every push rather than
+# as part of the daily run: a failure here must be loud, but it must never
+# stop the site publishing.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      # The daily bot commits regenerated output; no need to re-run on those.
+      - "index.html"
+      - "email.html"
+      - "data/**"
+      - "**/*.md"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+
+      # smoke_site.py is a standalone browser script (needs Playwright + a
+      # committed index.html), not a pytest module - excluded deliberately.
+      - name: Run tests
+        run: python -m pytest tests/ -q --ignore=tests/smoke_site.py

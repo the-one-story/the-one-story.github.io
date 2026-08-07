@@ -1,0 +1,7 @@
+# Test-only dependencies. The pipeline itself needs nothing from here.
+#   python -m pytest tests/ -q --ignore=tests/smoke_site.py
+pytest>=8.0
+
+# tests/smoke_site.py additionally needs Playwright, kept separate because it
+# is a heavy install and the browser smoke test is run on demand, not in CI:
+#   pip install playwright && playwright install chromium
