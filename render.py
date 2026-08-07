@@ -27,6 +27,20 @@ from common import load_settings, read_json, rel
 # but NOT an internal hyphen (so "Agence France-Presse" survives intact).
 _SRC_CLEAN = re.compile(r"\s+-\s.*$|\s*\(.*$")
 
+# Cloudflare Web Analytics. Feeds the private stats dashboard, which runs ONE
+# account-wide GraphQL query and splits the results by `requestHost` - so this is
+# deliberately the same token used across every site in the estate, not a per-site
+# one. Cookieless, no personal data, ~10KB deferred so it costs nothing visible.
+#
+# This belongs in the template and NOT in the built index.html: the daily workflow
+# regenerates that file, so a tag pasted into the output disappears on the next run.
+# A plain constant rather than inline HTML because the page below is an f-string,
+# where the token's braces would otherwise need escaping.
+_BEACON = (
+    '<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
+    '''data-cf-beacon='{"token": "32b821209b5441a08df42ccf61c9e6c2"}'></script>'''
+)
+
 
 def _clean_source(name: str) -> str:
     return _SRC_CLEAN.sub("", name).strip() or name
@@ -568,6 +582,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   a.hero:focus-visible, .why summary:focus-visible {{
     outline: 2px solid var(--accent); outline-offset: 3px; }}
 </style>
+{_BEACON}
 </head>
 <body>
   <div class="wrap">
