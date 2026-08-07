@@ -91,6 +91,12 @@ def cluster_labels(articles: list[dict], settings: dict,
                    method: str | None = None) -> list[int]:
     """Return a cluster label per article using the configured method."""
     method = method or settings.get("cluster_method", "agglomerative")
+    # Nothing to compare: AgglomerativeClustering requires >= 2 samples, and a
+    # TF-IDF fit on an empty corpus raises. run.py's contract is that only ZERO
+    # articles is a real failure - one article must still yield a page - so
+    # short-circuit rather than letting sklearn abort the run.
+    if len(articles) < 2:
+        return [0] * len(articles)
     texts = [f"{a['title']} {a.get('snippet', '')}".strip() for a in articles]
     vec = TfidfVectorizer(
         stop_words="english",
