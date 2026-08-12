@@ -116,8 +116,14 @@ jobs:
       # Sends the daily email if the newsletter is enabled AND the secret is
       # set; otherwise the script dry-runs. The per-day guard prevents a
       # double-send on re-runs.
+      # continue-on-error keeps a bad send from blocking the PUBLISH below - but
+      # it also swallows the exit code, and `gh run list` then shows a green run.
+      # That hid a dead newsletter for three days (10-12/08/2026, Brevo 402
+      # account_under_validation). The outcome is re-raised after the commit step
+      # so publishing still happens AND a failed send is visibly a failed run.
       - name: Send newsletter (if configured)
-        continue-on-error: true   # an email hiccup must never block publishing
+        id: send
+        continue-on-error: true
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           # --test recipient: the test_email dispatch input overrides the secret.
@@ -135,3 +141,12 @@ jobs:
             git commit -m "Daily update: $(date -u +'%Y-%m-%d %H:%MZ')"
             git push
           fi
+
+      # Runs last, so the page is already published. Fails the run when the
+      # newsletter did not go out, so a dead send is loud instead of silent.
+      - name: Surface a failed send
+        if: steps.send.outcome == 'failure'
+        run: |
+          echo "::error title=Newsletter not sent::send_email.py failed - see the \
+          'Send newsletter' step. The site published normally; only the email failed."
+          exit 1

@@ -17,7 +17,21 @@ daily job runs on its own.
       campaign is never created, so the missed editions will not send once the hold lifts.
       Most likely trigger is the single opt-in signup form; switching to double opt-in is the
       strongest remediation to offer them.
-- [ ] **A failed send reports the job as green, which is why three dead days went unnoticed.**
+- [x] **DONE 13/08/2026 - a failed send now fails the run.** The send step keeps
+      `continue-on-error` so publishing is never blocked, but it carries `id: send` and a
+      final "Surface a failed send" step re-raises `steps.send.outcome == 'failure'`
+      AFTER the commit step - so the page still publishes and the run goes red. Pinned by
+      `tests/test_send_email.py`, which also asserts the surfacer sits after the commit
+      (put it before and a bad send would block publishing - the original instinct that
+      led to the bug).
+- [x] **DONE 13/08/2026 - stopped retrying into the review queue.** `send_email.py`
+      recognises `402 account_under_validation`, records a hold in `data/last_email.json`
+      (`{code, since, last_attempt}`) and skips further creates, re-probing every 3 days so
+      sending resumes on its own when the hold lifts; a successful send clears it. Other
+      HTTP errors deliberately do NOT record a hold, so a one-off 500 cannot silence the
+      newsletter for days. Skips still exit non-zero, so a held day is never green.
+- [x] **Superseded by the two entries above.** *(original wording kept for the reasoning)*
+      **A failed send reports the job as green, which is why three dead days went unnoticed.**
       `daily.yml:120` carries `continue-on-error: true` on the send step, commented "an email
       hiccup must never block publishing". That is the right instinct and the wrong
       implementation: `send_email.py` exits 1, the step swallows it, and `gh run list` shows
