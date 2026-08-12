@@ -32,6 +32,32 @@ from email_render import build_email
 
 _STATE = "data/last_email.json"
 
+# Brevo can put an account under manual review, after which EVERY campaign
+# create returns 402 account_under_validation (it did from 10/08/2026, and three
+# editions died silently). Retrying daily into a human review queue achieves
+# nothing and looks worse, so a hold is recorded and further attempts are skipped
+# - but re-probed occasionally so sending resumes on its own once it is lifted.
+_HOLD_CODES = {"account_under_validation"}
+_HOLD_REPROBE_DAYS = 3
+
+
+def _hold_blocks(state: dict, run_date: str) -> str | None:
+    """Reason to skip today, or None if we should attempt (or re-probe)."""
+    hold = (state or {}).get("hold")
+    if not hold:
+        return None
+    last_try = hold.get("last_attempt") or hold.get("since")
+    try:
+        from datetime import date
+        gap = date.fromisoformat(run_date).toordinal() - date.fromisoformat(last_try).toordinal()
+    except (TypeError, ValueError):
+        return None                      # unreadable hold - do not let it wedge sending
+    if gap >= _HOLD_REPROBE_DAYS:
+        return None                      # due a re-probe
+    return (f"account on hold ({hold.get('code')}) since {hold.get('since')}; "
+            f"next re-probe after {_HOLD_REPROBE_DAYS} days without one "
+            f"(last attempt {last_try})")
+
 
 def _post(url: str, key: str, payload: dict | None) -> tuple[int, dict]:
     """POST JSON to Brevo. payload=None sends an empty-body POST (sendNow)."""
@@ -67,10 +93,19 @@ def main() -> int:
     list_id = nl.get("list_id")
 
     # Already sent today? (the one-off test ignores this)
-    last = (read_json(_STATE, default={}) or {}).get("date")
+    state = read_json(_STATE, default={}) or {}
+    last = state.get("date")
     if last == run_date and not force_dry and not force_test:
         print(f"Already emailed for {run_date}; skipping.")
         return 0
+
+    # Account under review at Brevo? Don't keep firing rejected campaign creates
+    # into a manual review queue. Still a non-zero exit so the day is not silently
+    # counted as fine.
+    blocked = None if (force_dry or force_test) else _hold_blocks(state, run_date)
+    if blocked:
+        print(f"Send SKIPPED: {blocked}", file=sys.stderr)
+        return 1
 
     if force_dry or not (key and nl.get("enabled") and sender_email and list_id):
         why = ("--dry-run" if force_dry else
@@ -116,10 +151,24 @@ def main() -> int:
         _post(f"{api}/emailCampaigns/{campaign_id}/sendNow", key, None)
         print(f"Sent '{subject[:60]}' -> campaign {campaign_id}")
     except urllib.error.HTTPError as e:
-        print(f"Send FAILED: HTTP {e.code} "
-              f"{e.read().decode('utf-8', 'replace')[:400]}", file=sys.stderr)
+        raw = e.read().decode("utf-8", "replace")
+        print(f"Send FAILED: HTTP {e.code} {raw[:400]}", file=sys.stderr)
+        try:
+            code = (json.loads(raw) or {}).get("code", "")
+        except ValueError:
+            code = ""
+        if code in _HOLD_CODES and not force_test:
+            hold = dict(state.get("hold") or {})
+            hold.setdefault("since", run_date)
+            hold["code"], hold["last_attempt"] = code, run_date
+            write_json(_STATE, {**state, "hold": hold})
+            print(f"Recorded account hold ({code}) since {hold['since']} - further "
+                  f"sends are skipped, with a re-probe every {_HOLD_REPROBE_DAYS} days. "
+                  "This is an account-level block at Brevo, not a config problem.",
+                  file=sys.stderr)
         return 1
 
+    # A send got through, so any recorded hold is over.
     write_json(_STATE, {"date": run_date, "subject": subject})
     print(f"Recorded send for {run_date}.")
     return 0
