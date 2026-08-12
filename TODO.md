@@ -5,7 +5,29 @@ daily job runs on its own.
 
 ## HIGH - deliverability still unresolved for BULK sends
 
-- [ ] **NO NEWSLETTER HAS GONE OUT SINCE 10/08/2026 - the Brevo account is under validation.**
+- [ ] **CORRECTION 13/08/2026: the account is SUSPENDED, not merely "under validation".**
+      The dashboard carries a red banner: *"Your account has been suspended for not
+      following our Terms of use."* The API's 402 code (`account_under_validation`) reads
+      like a routine queue and is what the note below assumed; the banner is explicit that
+      it is a Terms-of-use enforcement. That changes the remediation from "wait it out" to
+      "get the suspension reviewed and lifted", and it is **not** something to sit on.
+      **Observed in the dashboard (13/08):**
+        - Last successful sends: One Story campaign **#45 on 10/08** and The Aftertimes
+          **#46 on 10/08**. Nothing since, on either newsletter - consistent with the 402s.
+        - One Story #45 scored **80% open, 40% click** on **7 total contacts**. That is
+          healthy engagement on a tiny list, which argues AGAINST a spam-complaint
+          trigger and makes an automated policy flag more likely - but Brevo has not
+          stated a reason anywhere in the app, so this is inference, not fact.
+        - Sending quota is untouched (300 of 300 left), so this is not a limit.
+        - **No reason and no appeal link appear in the dashboard or the notifications
+          panel** (which lists only campaign-sent notices). Brevo normally emails the
+          account owner - check `charlie.rochfordgroup@gmail.com`, including its spam
+          folder, and otherwise raise a ticket via Help -> support.
+      **Charlie's action, not Claude's:** appealing a suspension means corresponding with
+      Brevo and potentially accepting terms, so it needs him. Worth having ready: the list
+      is opt-in from the site's own form, 7 contacts, no purchased data.
+      *(Original note, now known to be understated:)*
+      **NO NEWSLETTER HAS GONE OUT SINCE 10/08/2026 - the Brevo account is under validation.**
       Every send returns `HTTP 402 {"code":"account_under_validation","message":"Your account
       is under validation. You can not create another campaign."}`. Diagnosed 12/08/2026 from
       the logs of run 31530845789, which otherwise reported success. **This is a shared
