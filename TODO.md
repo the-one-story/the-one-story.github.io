@@ -5,6 +5,31 @@ daily job runs on its own.
 
 ## HIGH - deliverability still unresolved for BULK sends
 
+- [ ] **NO NEWSLETTER HAS GONE OUT SINCE 10/08/2026 - the Brevo account is under validation.**
+      Every send returns `HTTP 402 {"code":"account_under_validation","message":"Your account
+      is under validation. You can not create another campaign."}`. Diagnosed 12/08/2026 from
+      the logs of run 31530845789, which otherwise reported success. **This is a shared
+      account, so The Aftertimes went dark at the same time** - see that repo's TODO for the
+      full diagnosis. The account is `charlie.rochfordgroup@gmail.com` (company name "One
+      Story"), recovered without a login via the API. Charlie is resolving it from the machine
+      already signed in to Brevo. **Nothing here is misconfigured** - the domain is
+      authenticated and verified and the API key still authenticates. **No backfill:** the
+      campaign is never created, so the missed editions will not send once the hold lifts.
+      Most likely trigger is the single opt-in signup form; switching to double opt-in is the
+      strongest remediation to offer them.
+- [ ] **A failed send reports the job as green, which is why three dead days went unnoticed.**
+      `daily.yml:120` carries `continue-on-error: true` on the send step, commented "an email
+      hiccup must never block publishing". That is the right instinct and the wrong
+      implementation: `send_email.py` exits 1, the step swallows it, and `gh run list` shows
+      `success`, so the only trace is a job annotation nobody reads. Publishing should indeed
+      not be blocked, but the failure has to surface - open an issue, or fail the job after
+      the commit step has run. The Aftertimes has the identical bug in the identical place.
+- [ ] **Stop retrying the send while the account is under review.** Since 10/08 the daily job
+      has called campaign creation every day against an account already on a manual review
+      queue. Those rejected attempts do not help the case being assessed. Short-circuit on a
+      `402 account_under_validation` rather than hammering, and let the gate skip the step
+      until Charlie clears the hold.
+
 - [ ] **A real campaign from the authenticated domain still went to JUNK (07/08/2026).**
       The single-recipient `sendTest` (campaign 37) landed in the INBOX, but the first
       real `sendNow` to the list (campaign 39, "Trump signs new orders restricting
@@ -98,7 +123,13 @@ daily job runs on its own.
   away, so an authenticated domain you own beats a shared ESP domain immediately, not
   just eventually.) Optional later: tighten DMARC `p=none` -> `p=quarantine` once
   there is real send history.
-- [ ] **[SUPERSEDED - see above] Finish the custom sending domain cutover.**
+- [x] **DONE - verified 12/08/2026. Finish the custom sending domain cutover.**
+  `brevo_sender.py list` (run in The Aftertimes' repo, same Brevo account) returns
+  `mail.charlietrenorden.com authenticated=True verified=True` and
+  `onestory@mail.charlietrenorden.com active=True`. The cutover is complete; only the
+  JUNK-placement question above is still live, and that is reputation, not auth.
+  <details><summary>Original note</summary>
+  **[SUPERSEDED - see above] Finish the custom sending domain cutover.**
   Domain bought (`charlietrenorden.com`, DNS on Cloudflare) and the sending domain
   `mail.charlietrenorden.com` is set up in Brevo with branded subdomain `send`,
   method = individual DNS records / manual. **Done:** all four AUTHENTICATION
@@ -190,6 +221,7 @@ daily job runs on its own.
   Brevo honeypot for bot hygiene.
 - [x] **Cleanup done (27/07/2026).** Old `BUTTONDOWN_API_KEY` GitHub secret and
   the `+ostest` test contact in Brevo both deleted.
+  </details>
 - [ ] **Email deliverability - editions land in JUNK (reputation, not auth).**
   Confirmed 27/07/2026 by the actual from-address: `One Story
   <charlie.rochfordgroup@11756300.brevosend.com>`. Brevo auto-rewrites the from
@@ -262,7 +294,7 @@ daily job runs on its own.
   diversity-term retuning to avoid volume skew.
 - [ ] **CI action versions.** `actions/checkout@v4` + `setup-python@v5` log a
   Node 20 deprecation warning (auto-run on Node 24). Cosmetic; bump only if it
-  ever hard-fails.
+  ever hard-fails. Still warning as of the 12/08/2026 run - confirmed, not fixed.
 
 ## Optional design ideas raised, not taken
 - **A generic "two sentence-clauses in one title" roundup guard - REJECTED on data
