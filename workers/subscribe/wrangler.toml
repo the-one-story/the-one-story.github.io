@@ -6,7 +6,7 @@ compatibility_date = "2026-08-13"
 # just an id, and the Worker is what holds the key. Fill in from the Resend
 # dashboard, then redeploy.
 [vars]
-SEGMENT_ID = ""
+SEGMENT_ID = "3d0546e3-fc12-44d4-83fe-b3bc6b437478"   # Resend segment "One Story"
 ALLOWED_ORIGIN = "https://one-story.charlietrenorden.com"
 
 # RESEND_API_KEY is a SECRET and must never appear in this file. Set it with:
