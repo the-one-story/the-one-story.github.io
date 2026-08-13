@@ -2,6 +2,15 @@ name = "one-story-subscribe"
 main = "worker.js"
 compatibility_date = "2026-08-13"
 
+# Served from our OWN domain rather than *.workers.dev. Two reasons: the account
+# has no workers.dev subdomain registered (and "subscribe" was taken), and a
+# first-party endpoint is not blocked by the tracker/ad blockers that some
+# people run against *.workers.dev. custom_domain = true makes wrangler create
+# and manage the DNS record itself, since the zone is on the same account.
+[[routes]]
+pattern = "subscribe.charlietrenorden.com"
+custom_domain = true
+
 # The segment/audience the signup form adds contacts to. Not a secret - it is
 # just an id, and the Worker is what holds the key. Fill in from the Resend
 # dashboard, then redeploy.
