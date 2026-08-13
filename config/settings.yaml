@@ -101,4 +101,9 @@ newsletter:
   # cold reputation sent first emails to spam. Now the reputation is ours alone.
   sender_email: "onestory@mail.charlietrenorden.com"
   list_id: 2                                        # Brevo list "Your first list"
-  signup_form_url: "https://6de84235.sibforms.com/serve/MUIFABJRu0JpFgRzIpeyQY1ujh6jE5WFKXT6i7aP9c-LRXqSFOZe6uCPyqdakcYQP7sTRrnFbX_3db_R19NlljLVQcyVPRR5LeE6jDM9CNJlbmqezDRcfVbOpQHuBWjqLI03bjhDpKrF3j7ImuauWsVQzd_-nz-HXglI4VIWUd4XtyW7fgbJxXopNu4v5fc_Sq5Twj6a4hWllqJ2vA=="
+  # Our own Cloudflare Worker (workers/subscribe), not the mail provider: Resend
+  # hosts no signup form and its contacts API needs the key, which cannot sit in
+  # a public page. Empty renders NO form at all, so the site is safe to publish
+  # before the Worker is deployed. Set to the deployed workers.dev or custom
+  # route URL once it is up.
+  signup_form_url: ""

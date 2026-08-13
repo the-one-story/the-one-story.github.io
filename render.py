@@ -243,9 +243,13 @@ _COMPONENT_DESC = {
 
 
 def _signup_form(form_url: str) -> str:
-    """Brevo subscription form (rendered only when a form URL is configured).
-    Posts straight to Brevo - no backend, no key on the page. Brevo is single
-    opt-in, so the address is added on submit with no confirmation email."""
+    """Signup form (rendered only when an endpoint is configured).
+
+    Posts to our own Cloudflare Worker (workers/subscribe), NOT to the mail
+    provider. Brevo hosted a form we could post to directly; Resend does not,
+    and its contacts API needs the API key - which can never sit in a public
+    page. The Worker holds the key and adds the contact server-side.
+    """
     if not form_url:
         return ""
     action = html.escape(form_url, quote=True)
@@ -256,16 +260,13 @@ def _signup_form(form_url: str) -> str:
       <p class="signup-lead">Get it in your inbox each morning.</p>
       <form action="{action}" method="post" target="os-bd-sink"
             class="signup-form" onsubmit="return osSignup(this)">
-        <input type="email" name="EMAIL" placeholder="you@example.com"
+        <input type="email" name="email" placeholder="you@example.com"
                aria-label="Email address" required>
-        <!-- Brevo honeypot: bots fill this, humans never see it. Keeps single
-             opt-in from letting junk straight onto the list. -->
+        <!-- Honeypot: bots fill this, humans never see it. The Worker answers
+             200 and silently drops the submission. -->
         <input type="text" name="email_address_check" value="" tabindex="-1"
                autocomplete="off" aria-hidden="true"
                style="position:absolute;left:-5000px;">
-        <input type="hidden" name="locale" value="en">
-        <!-- Brevo needs html_type=simple for a no-JS POST from our own form. -->
-        <input type="hidden" name="html_type" value="simple">
         <button type="submit">Subscribe</button>
       </form>
       <p class="signup-note" id="os-signup-note">One email a day. No tracking.
@@ -283,7 +284,7 @@ def _signup_form(form_url: str) -> str:
               n.style.color = 'var(--accent)';
             }}
           }}, 150);
-          return true;  // let the POST reach Brevo via the hidden iframe
+          return true;  // let the POST reach the Worker via the hidden iframe
         }}
       </script>
     </section>"""
