@@ -52,6 +52,27 @@ daily job runs on its own.
       Worker holds the key and adds the contact server-side. ~70 lines, no dependencies,
       free tier, and the DNS is already on Cloudflare.
 
+## Likely cause of the Brevo suspension, found while migrating contacts
+
+- [ ] **2 of the 7 Brevo contacts were BLOCKLISTED - a 29% negative rate on a 7-person
+      list.** Seen 13/08/2026 in Brevo's contact table: `tessa@atomadesign.com.au`
+      (08/08) and `frannymcginley@gmail.com` (02/08) both sat in the **Blocklisted**
+      column, which Brevo sets on an unsubscribe, a hard bounce or a spam complaint.
+      Against Brevo's published automated thresholds - hard bounce >2%, unsubscribe >1%,
+      complaint >0.2% - **two events on seven contacts breaches every one of them by an
+      order of magnitude**. Both blocklistings landed in the days immediately before the
+      10/08 suspension.
+      This is a far better-evidenced explanation than the earlier guesses (shared
+      tracking domain, or The Aftertimes' AI-generated content). It also means **the
+      trigger follows the list, not the provider**: the same two events on the same tiny
+      list would breach Resend's thresholds too. The structural fix is list size and
+      quality, not another migration.
+      **Neither was migrated to Resend** - re-subscribing someone who unsubscribed or
+      complained is both wrong and precisely the behaviour that gets an account
+      suspended. If either genuinely wants back on, they must sign up again themselves.
+      Worth mentioning in the Brevo appeal: it explains the metrics without any
+      wrongdoing, and undercuts a "spammer" reading.
+
 ## HIGH - deliverability still unresolved for BULK sends
 
 - [ ] **CORRECTION 13/08/2026: the account is SUSPENDED, not merely "under validation".**
