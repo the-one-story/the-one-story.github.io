@@ -30,7 +30,15 @@ def _fmt_date(iso: str, tz: str) -> str:
     return f"{dt.strftime('%A')} {dt.day} {dt.strftime('%B %Y')}"
 
 
-def build_email(ranked: dict) -> tuple[str, str]:
+def build_email(ranked: dict, *, unsubscribe_url: str | None = None) -> tuple[str, str]:
+    """Build (subject, html).
+
+    `unsubscribe_url` is provider-dependent and deliberately opt-in. Brevo
+    appended its own unsubscribe footer, so passing one there duplicated it -
+    hence the None default. Resend appends nothing and instead substitutes a
+    placeholder, so its footer has to be rendered here or subscribers get no
+    unsubscribe link at all.
+    """
     w = ranked["winner"]
     headline = html.escape(_hyphenate(w["hero"]["title"]))
     snippet = html.escape(_hyphenate(_display_snippet(w)))
@@ -47,6 +55,12 @@ def build_email(ranked: dict) -> tuple[str, str]:
     snippet_row = (f'<p style="margin:0 0 22px;font-family:{serif};font-size:19px;'
                    f'line-height:1.5;font-style:italic;color:{_SNIP};">{snippet}</p>'
                    if snippet else "")
+    # NOT html-escaped: this is a provider placeholder (e.g.
+    # {{{RESEND_UNSUBSCRIBE_URL}}}) that must survive verbatim to be substituted.
+    unsub_row = (f'<p style="margin:18px 0 0;font-size:13px;color:{_MUT};">'
+                 f'<a href="{unsubscribe_url}" style="color:{_MUT};'
+                 f'text-decoration:underline;">Unsubscribe</a></p>'
+                 if unsubscribe_url else "")
 
     # Flat, dark, single column - no inner card, no custom footer (Brevo appends
     # the unsubscribe link + badge + postal address). bgcolor attrs for Outlook.
@@ -80,6 +94,7 @@ def build_email(ranked: dict) -> tuple[str, str]:
   <p style="margin:0;font-size:15px;">
     <a href="{SITE_URL}" style="color:{_O};text-decoration:none;font-weight:600;">
       See the map, every source, and how it's chosen &rarr;</a></p>
+  {unsub_row}
 
 </td></tr></table>
 </td></tr></table>"""

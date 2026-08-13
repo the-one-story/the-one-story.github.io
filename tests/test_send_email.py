@@ -47,26 +47,42 @@ def test_an_unreadable_hold_does_not_wedge_sending():
 # --------------------------------------------------------------------------- #
 # End-to-end behaviour of main()                                              #
 # --------------------------------------------------------------------------- #
-@pytest.fixture
-def wired(monkeypatch, isolated_root):
+def _wire(monkeypatch, newsletter, env):
     """A fully configured sender whose only unknown is what the API returns."""
     ranked = {"run_time": "2026-08-13T05:00:00+10:00"}
+    state = {"v": {}}
     monkeypatch.setattr(send_email, "read_json",
                         lambda p, default=None: dict(ranked) if "ranked" in p
-                        else (_state.get("v") or default))
-    monkeypatch.setattr(send_email, "build_email", lambda r: ("Subject line", "<html></html>"))
+                        else (state.get("v") or default))
+    monkeypatch.setattr(send_email, "build_email",
+                        lambda r, **kw: ("Subject line", "<html></html>"))
     monkeypatch.setattr(send_email, "load_settings", lambda: {
-        "ranked_json_path": "data/ranked.json",
-        "newsletter": {"enabled": True, "sender_email": "onestory@mail.example.com",
-                       "sender_name": "One Story", "list_id": 2,
-                       "api_base": "https://api.brevo.com/v3"},
-    })
-    monkeypatch.setenv("BREVO_API_KEY", "key")
-    _state = {"v": {}}
+        "ranked_json_path": "data/ranked.json", "newsletter": newsletter})
+    for k, v in env.items():
+        monkeypatch.setenv(k, v)
     monkeypatch.setattr(send_email, "write_json",
-                        lambda p, obj: _state.__setitem__("v", obj) or p)
+                        lambda p, obj: state.__setitem__("v", obj) or p)
     monkeypatch.setattr(send_email.sys, "argv", ["send_email.py"])
-    return _state
+    return state
+
+
+@pytest.fixture
+def wired(monkeypatch, isolated_root):
+    """The retired Brevo path, kept because the code is still shipped."""
+    return _wire(monkeypatch, {
+        "enabled": True, "provider": "brevo",
+        "sender_email": "onestory@mail.example.com", "sender_name": "One Story",
+        "list_id": 2, "api_base": "https://api.brevo.com/v3"},
+        {"BREVO_API_KEY": "key"})
+
+
+@pytest.fixture
+def resend(monkeypatch, isolated_root):
+    return _wire(monkeypatch, {
+        "enabled": True, "provider": "resend",
+        "sender_email": "onestory@mail.example.com", "sender_name": "One Story",
+        "segment_id": "seg-uuid", "api_base": "https://api.resend.com"},
+        {"RESEND_API_KEY": "key"})
 
 
 def _http_error(code, body):
@@ -118,6 +134,106 @@ def test_already_sent_today_is_a_no_op(wired, monkeypatch):
     wired["v"] = {"date": "2026-08-13"}
     calls = []
     monkeypatch.setattr(send_email, "_post", lambda *a, **k: calls.append(a) or (200, {"id": 1}))
+    assert send_email.main() == 0
+    assert calls == []
+
+
+# --------------------------------------------------------------------------- #
+# Resend path                                                                 #
+# --------------------------------------------------------------------------- #
+def test_resend_sends_a_broadcast_in_one_call(resend, monkeypatch):
+    """Brevo needed create-then-sendNow; Resend does it in one POST with
+    send:true. A missing send flag would leave the edition sitting as a draft
+    and nobody would receive it."""
+    calls = []
+    monkeypatch.setattr(send_email, "_post",
+                        lambda url, key, payload, auth="brevo":
+                        calls.append((url, payload, auth)) or (201, {"id": "b-1"}))
+    assert send_email.main() == 0
+    assert len(calls) == 1, "a broadcast must not take two calls"
+    url, payload, auth = calls[0]
+    assert url.endswith("/broadcasts")
+    assert auth == "resend"
+    assert payload["send"] is True
+    assert payload["segment_id"] == "seg-uuid"
+    assert payload["from"] == "One Story <onestory@mail.example.com>"
+    assert resend["v"]["date"] == "2026-08-13"
+
+
+def test_resend_uses_bearer_auth_not_brevos_api_key_header(monkeypatch):
+    """The two providers authenticate differently; sending Brevo's header to
+    Resend is a 401."""
+    seen = {}
+
+    class _Resp:
+        status = 200
+        def read(self): return b'{"id":"x"}'
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+
+    def _fake_urlopen(req, timeout=None):
+        seen.update(dict(req.header_items()))
+        return _Resp()
+
+    monkeypatch.setattr(send_email.urllib.request, "urlopen", _fake_urlopen)
+    send_email._post("https://api.resend.com/broadcasts", "kk", {}, auth="resend")
+    hdrs = {k.lower(): v for k, v in seen.items()}
+    assert hdrs.get("Authorization".lower()) == "Bearer kk"
+    assert "api-key" not in hdrs
+
+    seen.clear()
+    send_email._post("https://api.brevo.com/v3/emailCampaigns", "kk", {})
+    hdrs = {k.lower(): v for k, v in seen.items()}
+    assert hdrs.get("api-key") == "kk"
+    assert "authorization" not in hdrs
+
+
+def test_resend_test_send_uses_direct_email_not_a_broadcast(resend, monkeypatch):
+    """A broadcast can only target a segment, so a --test broadcast would mail
+    the live list. It must go through /emails to a named address instead."""
+    calls = []
+    monkeypatch.setattr(send_email, "_post",
+                        lambda url, key, payload, auth="brevo":
+                        calls.append((url, payload)) or (200, {"id": "e-1"}))
+    monkeypatch.setenv("RESEND_TEST_EMAIL", "me@example.com")
+    monkeypatch.setattr(send_email.sys, "argv", ["send_email.py", "--test"])
+    assert send_email.main() == 0
+    url, payload = calls[0]
+    assert url.endswith("/emails"), "a test must not go out as a broadcast"
+    assert payload["to"] == ["me@example.com"]
+    assert "segment_id" not in payload
+    assert resend["v"] == {}, "a test must not touch the per-day guard"
+
+
+def test_resend_body_carries_the_unsubscribe_placeholder(resend, monkeypatch):
+    """Resend appends no footer, so without this the edition ships with no
+    unsubscribe link."""
+    captured = {}
+    monkeypatch.setattr(send_email, "build_email",
+                        lambda r, **kw: captured.update(kw) or ("s", "<html></html>"))
+    monkeypatch.setattr(send_email, "_post", lambda *a, **k: (201, {"id": "b-1"}))
+    assert send_email.main() == 0
+    assert captured.get("unsubscribe_url") == send_email._RESEND_UNSUB
+
+
+def test_brevo_path_passes_no_unsubscribe_url(wired, monkeypatch):
+    """Brevo appends its own footer - passing one duplicates it."""
+    captured = {}
+    monkeypatch.setattr(send_email, "build_email",
+                        lambda r, **kw: captured.update(kw) or ("s", "<html></html>"))
+    monkeypatch.setattr(send_email, "_post", lambda *a, **k: (201, {"id": 1}))
+    assert send_email.main() == 0
+    assert captured.get("unsubscribe_url") is None
+
+
+def test_resend_missing_segment_id_dry_runs_rather_than_erroring(monkeypatch, isolated_root):
+    _wire(monkeypatch, {
+        "enabled": True, "provider": "resend", "sender_name": "One Story",
+        "sender_email": "onestory@mail.example.com", "segment_id": ""},
+        {"RESEND_API_KEY": "key"})
+    calls = []
+    monkeypatch.setattr(send_email, "_post",
+                        lambda *a, **k: calls.append(a) or (200, {}))
     assert send_email.main() == 0
     assert calls == []
 

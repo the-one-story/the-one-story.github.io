@@ -115,10 +115,28 @@ def test_email_has_no_svg_logo(ranked):
     assert "<svg" not in html.lower()
 
 
-def test_email_adds_no_custom_unsubscribe_footer(ranked):
-    """Brevo appends its own; duplicating it strands a line above the badge."""
+def test_email_adds_no_unsubscribe_footer_by_default(ranked):
+    """Brevo appended its own; duplicating it stranded a line above the badge.
+    So the footer is opt-in, and the default stays bare."""
     _, html = email_render.build_email(ranked)
     assert "unsubscribe" not in html.lower()
+
+
+def test_email_renders_an_unsubscribe_footer_when_given_one(ranked):
+    """Resend appends nothing - without this the edition would go out with no
+    unsubscribe link at all."""
+    _, html = email_render.build_email(
+        ranked, unsubscribe_url="{{{RESEND_UNSUBSCRIBE_URL}}}")
+    assert "Unsubscribe" in html
+
+
+def test_unsubscribe_placeholder_is_not_html_escaped(ranked):
+    """It has to reach the provider verbatim to be substituted; escaping the
+    braces would mail a literal, broken link."""
+    _, html = email_render.build_email(
+        ranked, unsubscribe_url="{{{RESEND_UNSUBSCRIBE_URL}}}")
+    assert "{{{RESEND_UNSUBSCRIBE_URL}}}" in html
+    assert "&#123;" not in html and "&lbrace;" not in html
 
 
 def test_email_subject_carries_the_headline_and_no_dashes(ranked):
