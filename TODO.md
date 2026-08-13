@@ -10,14 +10,35 @@ daily job runs on its own.
       these are done - with `segment_id` blank the sender dry-runs, and with
       `signup_form_url` blank the page renders NO signup form at all (deliberate: better
       than a form posting into the suspended Brevo account).
-      **Claude cannot do steps 1-3** - they are account creation and API keys.
-        1. **Create the Resend account** and verify `mail.charlietrenorden.com`. Resend
-           will show DNS records - paste them here and Claude adds them to Cloudflare as
-           **DNS only** (a proxied DKIM CNAME breaks authentication, as on Brevo).
-           Free tier: 3,000 emails/month, 1,000 contacts, **1 custom domain**.
-        2. **Add `RESEND_API_KEY` as a repo secret.** The workflow already passes it.
-        3. **Create the audience/segment**, then put its uuid in
-           `config/settings.yaml` -> `newsletter.segment_id`.
+      **PROGRESS 13/08/2026 (driven in Chrome):**
+        - [x] Resend account already existed (charlie.rochfordgroup@gmail.com).
+        - [x] Domain `mail.charlietrenorden.com` added, region **Tokyo (ap-northeast-1)**
+              - the closest of the four Resend offers (the others are us-east-1,
+              eu-west-1, sa-east-1) to a Sydney audience.
+        - [x] **Manual setup** chosen over "Auto configure", which would have granted
+              Resend write access to the Cloudflare DNS. Same call as on Brevo: do not
+              hand a vendor standing control of the zone.
+        - [x] **DKIM TXT added and confirmed live.** `resend._domainkey.mail` =
+              `p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDjd1fR1GV5yu/xI4SzoNNG2USpM3bfbnbvUbsj453Uy+6+uQIVwcSPhHC/OneVqhOLXhu9WUylzuzbHjK7e1+QimuUGy2U5mtloQR3p5HedRWnrFBjTlNysOH42WvaBHst/kpqOZZD/8S+Uk13wZgarVdUjNT6/vmHJxpo9HHMfQIDAQAB`
+              The Resend UI prints this with a `[...]` ellipsis mid-string, so it was
+              reassembled and then **structurally verified** rather than trusted:
+              base64-decodes cleanly, DER declares 159 body bytes and carries exactly
+              159, contains the rsaEncryption OID, ends `IDAQAB` (exponent 65537). It is
+              complete, not truncated.
+        - [ ] **TWO RECORDS STILL MISSING** (confirmed absent by DNS-over-HTTPS). The
+              Cloudflare add-record dialog kept dismissing itself on the type dropdown and
+              the browser window then collapsed to a 747x196 viewport with the renderer
+              timing out, so these were not completed. Both are on `send.mail`, both
+              **DNS only**:
+                * `send.mail`  **TXT**  `v=spf1 include:amazonses.com ~all`
+                * `send.mail`  **MX**   `feedback-smtp.ap-northeast-1.amazonses.com`
+                  priority **10**
+              Without these, SPF fails and the domain will not verify in Resend.
+              (The "Enable Receiving" MX Resend also offers is NOT needed - we only send.)
+      **Still needs Charlie - account/credential work Claude will not do:**
+        - [ ] **Add `RESEND_API_KEY` as a repo secret.** The workflow already passes it.
+        - [ ] **Create the audience/segment**, then put its uuid in
+              `config/settings.yaml` -> `newsletter.segment_id`.
         4. **Deploy the signup Worker** (`workers/subscribe/`):
            `wrangler secret put RESEND_API_KEY`, set `SEGMENT_ID` in `wrangler.toml`,
            `wrangler deploy`, then put the deployed URL in `signup_form_url`.
