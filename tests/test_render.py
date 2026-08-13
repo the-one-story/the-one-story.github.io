@@ -75,6 +75,40 @@ def test_next_update_reports_the_local_zone_abbreviation():
 
 
 # --------------------------------------------------------------------------- #
+# Signup form                                                                 #
+# --------------------------------------------------------------------------- #
+def test_no_signup_form_when_no_endpoint_configured():
+    """The site must be publishable before the Worker exists - an empty
+    endpoint renders no form rather than one that posts nowhere."""
+    from render import _signup_form
+    assert _signup_form("") == ""
+
+
+def test_signup_form_field_names_match_the_worker():
+    """The Worker reads `email` and `email_address_check`. A rename on either
+    side silently breaks signups - the form would post and the Worker would see
+    an empty address."""
+    from render import _signup_form
+    html_out = _signup_form("https://example.workers.dev/")
+    assert 'name="email"' in html_out
+    assert 'name="email_address_check"' in html_out
+    # Brevo-era fields that the Worker does not read.
+    assert 'name="EMAIL"' not in html_out
+    assert 'name="html_type"' not in html_out
+
+
+def test_signup_form_posts_to_the_configured_endpoint():
+    from render import _signup_form
+    assert 'action="https://sub.example.com/"' in _signup_form("https://sub.example.com/")
+
+
+def test_signup_honeypot_is_hidden_from_humans():
+    from render import _signup_form
+    out = _signup_form("https://example.workers.dev/")
+    assert 'aria-hidden="true"' in out and "left:-5000px" in out
+
+
+# --------------------------------------------------------------------------- #
 # Email body                                                                  #
 # --------------------------------------------------------------------------- #
 @pytest.fixture

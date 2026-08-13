@@ -1,0 +1,13 @@
+name = "one-story-subscribe"
+main = "worker.js"
+compatibility_date = "2026-08-13"
+
+# The segment/audience the signup form adds contacts to. Not a secret - it is
+# just an id, and the Worker is what holds the key. Fill in from the Resend
+# dashboard, then redeploy.
+[vars]
+SEGMENT_ID = ""
+ALLOWED_ORIGIN = "https://one-story.charlietrenorden.com"
+
+# RESEND_API_KEY is a SECRET and must never appear in this file. Set it with:
+#   wrangler secret put RESEND_API_KEY

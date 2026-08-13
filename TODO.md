@@ -3,6 +3,34 @@
 Deferred / optional work. Nothing here is blocking; the site is live and the
 daily job runs on its own.
 
+## HIGH - finish the Resend cutover (code is done; needs an account + a key)
+
+- [ ] **Resend adapter is built, tested and INERT. Four steps to make it live.**
+      *(13/08/2026. Code: commit `a9c1aaf` + the signup Worker.)* Nothing sends until
+      these are done - with `segment_id` blank the sender dry-runs, and with
+      `signup_form_url` blank the page renders NO signup form at all (deliberate: better
+      than a form posting into the suspended Brevo account).
+      **Claude cannot do steps 1-3** - they are account creation and API keys.
+        1. **Create the Resend account** and verify `mail.charlietrenorden.com`. Resend
+           will show DNS records - paste them here and Claude adds them to Cloudflare as
+           **DNS only** (a proxied DKIM CNAME breaks authentication, as on Brevo).
+           Free tier: 3,000 emails/month, 1,000 contacts, **1 custom domain**.
+        2. **Add `RESEND_API_KEY` as a repo secret.** The workflow already passes it.
+        3. **Create the audience/segment**, then put its uuid in
+           `config/settings.yaml` -> `newsletter.segment_id`.
+        4. **Deploy the signup Worker** (`workers/subscribe/`):
+           `wrangler secret put RESEND_API_KEY`, set `SEGMENT_ID` in `wrangler.toml`,
+           `wrangler deploy`, then put the deployed URL in `signup_form_url`.
+      **Then:** port the 7 contacts, and test-send with
+      `gh workflow run "Daily One Story" -f test_send=true -f test_email=<addr>`.
+      Confirm the From reads `@mail.charlietrenorden.com` and that an **Unsubscribe**
+      link is present - Resend appends no footer, so a missing placeholder means an
+      edition with no unsubscribe link.
+      **Why a Worker at all:** Brevo hosted a form we could POST to directly; Resend does
+      not, and its contacts API needs the key, which can never sit in a public page. The
+      Worker holds the key and adds the contact server-side. ~70 lines, no dependencies,
+      free tier, and the DNS is already on Cloudflare.
+
 ## HIGH - deliverability still unresolved for BULK sends
 
 - [ ] **CORRECTION 13/08/2026: the account is SUSPENDED, not merely "under validation".**
