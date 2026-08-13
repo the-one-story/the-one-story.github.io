@@ -125,8 +125,12 @@ jobs:
         id: send
         continue-on-error: true
         env:
+          # send_email.py reads whichever pair matches newsletter.provider, so
+          # both are passed and the unused one is simply ignored.
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           # --test recipient: the test_email dispatch input overrides the secret.
+          RESEND_TEST_EMAIL: ${{ github.event.inputs.test_email != '' && github.event.inputs.test_email || secrets.BREVO_TEST_EMAIL }}
           BREVO_TEST_EMAIL: ${{ github.event.inputs.test_email != '' && github.event.inputs.test_email || secrets.BREVO_TEST_EMAIL }}
         run: python send_email.py ${{ github.event.inputs.test_send == 'true' && '--test' || '' }}
 

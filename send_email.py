@@ -1,22 +1,31 @@
-"""Send the daily email to the mailing list (Brevo).
+"""Send the daily email to the mailing list.
 
 Runs in the daily CI job after the page is built. Safe by default:
-- No-ops (dry-run) unless BREVO_API_KEY is set AND the newsletter is fully
-  configured (enabled, a verified sender_email, and a list_id) in settings, so it
-  never sends from a local run or a half-configured repo.
+- No-ops (dry-run) unless the provider's API key is set AND the newsletter is
+  fully configured in settings, so it never sends from a local run or a
+  half-configured repo.
 - A per-day guard (data/last_email.json) means re-running the job the same day
   will NOT send a second email.
 
-Brevo has no single "send this HTML to a list" call, so the flow is two steps:
-create the campaign as a draft (POST /v3/emailCampaigns) then send it
-(POST /v3/emailCampaigns/{id}/sendNow). --test uses sendTest to a single address
-(BREVO_TEST_EMAIL) so it never touches the live list, and leaves the daily guard
-untouched.
+TWO PROVIDERS, chosen by `newsletter.provider` in settings:
+
+  resend (current) - one call does everything:
+      POST /broadcasts {segment_id, from, subject, html, send: true}
+    Auth is `Authorization: Bearer <key>`. Resend does NOT append an unsubscribe
+    footer, so the body must contain the {{{RESEND_UNSUBSCRIBE_URL}}} placeholder
+    - email_render only adds it when we pass one in, which is why the Brevo path
+    passes None. A test sends to a plain address via POST /emails instead, since
+    a broadcast can only go to a segment.
+
+  brevo (retired 13/08/2026, kept so the move is reversible) - two calls:
+      POST /v3/emailCampaigns  -> draft, returns {id}
+      POST /v3/emailCampaigns/{id}/sendNow
+    Auth is the `api-key` header. Brevo appends its own unsubscribe footer.
 
 Usage:
     python send_email.py            # sends if configured, else dry-run
     python send_email.py --dry-run  # force dry-run (build + print, never send)
-    python send_email.py --test     # create + send a test to BREVO_TEST_EMAIL only
+    python send_email.py --test     # send a test to the provider's test address
 """
 from __future__ import annotations
 
@@ -59,17 +68,27 @@ def _hold_blocks(state: dict, run_date: str) -> str | None:
             f"(last attempt {last_try})")
 
 
-def _post(url: str, key: str, payload: dict | None) -> tuple[int, dict]:
-    """POST JSON to Brevo. payload=None sends an empty-body POST (sendNow)."""
+def _post(url: str, key: str, payload: dict | None,
+          auth: str = "brevo") -> tuple[int, dict]:
+    """POST JSON. payload=None sends an empty-body POST (Brevo's sendNow).
+
+    The two providers authenticate differently: Brevo takes a bare `api-key`
+    header, Resend takes a standard `Authorization: Bearer`.
+    """
     data = json.dumps(payload).encode("utf-8") if payload is not None else None
-    req = urllib.request.Request(
-        url, data=data, method="POST",
-        headers={"api-key": key,
-                 "content-type": "application/json",
-                 "accept": "application/json"})
+    headers = {"content-type": "application/json", "accept": "application/json"}
+    headers["Authorization" if auth == "resend" else "api-key"] = (
+        f"Bearer {key}" if auth == "resend" else key)
+    req = urllib.request.Request(url, data=data, method="POST", headers=headers)
     with urllib.request.urlopen(req, timeout=30) as resp:
         raw = resp.read().decode("utf-8", "replace")
         return resp.status, (json.loads(raw) if raw.strip() else {})
+
+
+# Resend substitutes this placeholder per-recipient and uses it for the
+# List-Unsubscribe header. It MUST appear in the body or subscribers get no
+# unsubscribe link, which is both rude and illegal in most jurisdictions.
+_RESEND_UNSUB = "{{{RESEND_UNSUBSCRIBE_URL}}}"
 
 
 def main() -> int:
@@ -81,16 +100,26 @@ def main() -> int:
         print("No ranked data - run the pipeline first.")
         return 1
 
-    subject, body = build_email(ranked)
+    nl = settings.get("newsletter") or {}
+    provider = str(nl.get("provider") or "resend").strip().lower()
+    is_resend = provider == "resend"
+
+    # Resend needs the unsubscribe placeholder inside the body; Brevo appends its
+    # own footer, so passing one there would duplicate it.
+    subject, body = build_email(
+        ranked, unsubscribe_url=_RESEND_UNSUB if is_resend else None)
     if force_test:
         # Make each test subject unique so Gmail doesn't thread/de-dupe repeated
         # tests of the same day's edition (which hid earlier template changes).
         subject = f"{subject} [test {datetime.now().strftime('%H:%M:%S')}]"
     run_date = datetime.fromisoformat(ranked["run_time"]).date().isoformat()
-    nl = settings.get("newsletter") or {}
-    key = os.environ.get("BREVO_API_KEY", "").strip()
+    key_var = "RESEND_API_KEY" if is_resend else "BREVO_API_KEY"
+    test_var = "RESEND_TEST_EMAIL" if is_resend else "BREVO_TEST_EMAIL"
+    key = os.environ.get(key_var, "").strip()
     sender_email = str(nl.get("sender_email") or "").strip()
-    list_id = nl.get("list_id")
+    # Brevo addresses a numeric list; Resend a segment UUID. Same role, so the
+    # configured/missing checks below treat them as one thing.
+    list_id = nl.get("segment_id") if is_resend else nl.get("list_id")
 
     # Already sent today? (the one-off test ignores this)
     state = read_json(_STATE, default={}) or {}
@@ -109,47 +138,88 @@ def main() -> int:
 
     if force_dry or not (key and nl.get("enabled") and sender_email and list_id):
         why = ("--dry-run" if force_dry else
-               "no BREVO_API_KEY" if not key else
+               f"no {key_var}" if not key else
                "newsletter disabled" if not nl.get("enabled") else
                "no sender_email in settings" if not sender_email else
-               "no list_id in settings")
+               ("no segment_id in settings" if is_resend
+                else "no list_id in settings"))
         print(f"DRY-RUN ({why}) - not sending.")
         print(f"Subject: {subject}")
         print(f"Body: {len(body)} bytes")
         return 0
 
-    api = str(nl.get("api_base") or "https://api.brevo.com/v3").rstrip("/")
+    default_api = ("https://api.resend.com" if is_resend
+                   else "https://api.brevo.com/v3")
+    api = str(nl.get("api_base") or default_api).rstrip("/")
     name = f"One Story {run_date}" + (" [test]" if force_test else "")
-    campaign = {
-        "name": name,
-        "subject": subject,
-        "sender": {"name": nl.get("sender_name", "One Story"), "email": sender_email},
-        "htmlContent": body,
-        "recipients": {"listIds": [int(list_id)]},
-    }
+    sender = f"{nl.get('sender_name', 'One Story')} <{sender_email}>"
     try:
-        status, data = _post(f"{api}/emailCampaigns", key, campaign)
-        campaign_id = data.get("id")
-        if not campaign_id:
-            print(f"Create returned HTTP {status} but no campaign id: {data}",
-                  file=sys.stderr)
-            return 1
+        if is_resend:
+            if force_test:
+                # A broadcast can only target a segment, so a test goes through
+                # the plain send endpoint to a named address instead. The live
+                # segment is untouched and the daily guard is left alone.
+                recipients = [e.strip() for e in
+                              os.environ.get(test_var, "").split(",") if e.strip()]
+                if not recipients:
+                    print(f"--test needs {test_var} set (comma-separated ok).",
+                          file=sys.stderr)
+                    return 1
+                # No segment behind a direct send, so the placeholder would not
+                # resolve - drop it rather than mail a literal {{{...}}}.
+                test_body = build_email(ranked, unsubscribe_url=None)[1]
+                _post(f"{api}/emails", key,
+                      {"from": sender, "to": recipients,
+                       "subject": subject, "html": test_body}, auth="resend")
+                print(f"Test of '{subject[:60]}' sent to {recipients} "
+                      "(direct send; segment untouched, guard left alone).")
+                return 0
 
-        if force_test:
-            recipients = [e.strip() for e in
-                          os.environ.get("BREVO_TEST_EMAIL", "").split(",") if e.strip()]
-            if not recipients:
-                print("--test needs BREVO_TEST_EMAIL set (comma-separated ok).",
+            status, data = _post(f"{api}/broadcasts", key, {
+                "segment_id": str(list_id),
+                "from": sender,
+                "subject": subject,
+                "html": body,
+                "name": name,
+                "send": True,
+            }, auth="resend")
+            broadcast_id = data.get("id")
+            if not broadcast_id:
+                print(f"Broadcast returned HTTP {status} but no id: {data}",
                       file=sys.stderr)
                 return 1
-            _post(f"{api}/emailCampaigns/{campaign_id}/sendTest", key,
-                  {"emailTo": recipients})
-            print(f"Test of '{subject[:60]}' sent to {recipients} "
-                  f"(campaign {campaign_id}; live list untouched, guard left alone).")
-            return 0
+            print(f"Sent '{subject[:60]}' -> broadcast {broadcast_id}")
+        else:
+            campaign = {
+                "name": name,
+                "subject": subject,
+                "sender": {"name": nl.get("sender_name", "One Story"),
+                           "email": sender_email},
+                "htmlContent": body,
+                "recipients": {"listIds": [int(list_id)]},
+            }
+            status, data = _post(f"{api}/emailCampaigns", key, campaign)
+            campaign_id = data.get("id")
+            if not campaign_id:
+                print(f"Create returned HTTP {status} but no campaign id: {data}",
+                      file=sys.stderr)
+                return 1
 
-        _post(f"{api}/emailCampaigns/{campaign_id}/sendNow", key, None)
-        print(f"Sent '{subject[:60]}' -> campaign {campaign_id}")
+            if force_test:
+                recipients = [e.strip() for e in
+                              os.environ.get(test_var, "").split(",") if e.strip()]
+                if not recipients:
+                    print(f"--test needs {test_var} set (comma-separated ok).",
+                          file=sys.stderr)
+                    return 1
+                _post(f"{api}/emailCampaigns/{campaign_id}/sendTest", key,
+                      {"emailTo": recipients})
+                print(f"Test of '{subject[:60]}' sent to {recipients} "
+                      f"(campaign {campaign_id}; live list untouched, guard left alone).")
+                return 0
+
+            _post(f"{api}/emailCampaigns/{campaign_id}/sendNow", key, None)
+            print(f"Sent '{subject[:60]}' -> campaign {campaign_id}")
     except urllib.error.HTTPError as e:
         raw = e.read().decode("utf-8", "replace")
         print(f"Send FAILED: HTTP {e.code} {raw[:400]}", file=sys.stderr)

@@ -83,8 +83,16 @@ output_html: index.html
 #      send). Without a verified sender_email + list_id + key it stays dry-run.
 newsletter:
   enabled: true
-  provider: brevo
-  api_base: https://api.brevo.com/v3
+  # Moved off Brevo 13/08/2026 after it suspended the account (Terms of Use) and
+  # killed the newsletter for days. Resend is a developer-first sender: one call
+  # (POST /broadcasts with send:true) does what Brevo needed two for, and it does
+  # not run marketing-compliance content classification. Set provider back to
+  # `brevo` and the old path still works - it is retired, not removed.
+  provider: resend
+  api_base: https://api.resend.com
+  # Resend addresses a SEGMENT (uuid), where Brevo addressed a numeric list id.
+  # Fill this in from the Resend dashboard once the audience exists.
+  segment_id: ""
   sender_name: "One Story"
   # Sends from our OWN Brevo-authenticated domain (mail.charlietrenorden.com,
   # authenticated 04/08/2026: brevo-code TXT + 2 DKIM CNAMEs + DMARC, all live in
