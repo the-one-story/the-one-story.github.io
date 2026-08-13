@@ -76,7 +76,16 @@ def _post(url: str, key: str, payload: dict | None,
     header, Resend takes a standard `Authorization: Bearer`.
     """
     data = json.dumps(payload).encode("utf-8") if payload is not None else None
-    headers = {"content-type": "application/json", "accept": "application/json"}
+    headers = {
+        "content-type": "application/json",
+        "accept": "application/json",
+        # MUST be a real User-Agent. Both providers sit behind Cloudflare bot
+        # rules that reject urllib's default `Python-urllib/3.x` with
+        # 403 error 1010 browser_signature_banned - which reads like an auth or
+        # config failure but is purely the agent string. Cost a failed send on
+        # 13/08/2026, and had already bitten the sibling project on Brevo.
+        "user-agent": "one-story/1.0 (+https://one-story.charlietrenorden.com)",
+    }
     headers["Authorization" if auth == "resend" else "api-key"] = (
         f"Bearer {key}" if auth == "resend" else key)
     req = urllib.request.Request(url, data=data, method="POST", headers=headers)

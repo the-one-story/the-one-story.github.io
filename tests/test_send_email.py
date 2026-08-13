@@ -188,6 +188,26 @@ def test_resend_uses_bearer_auth_not_brevos_api_key_header(monkeypatch):
     assert "authorization" not in hdrs
 
 
+def test_post_sends_a_real_user_agent(monkeypatch):
+    """Cloudflare fronts both providers' APIs and bans urllib's default
+    `Python-urllib/3.x` with 403 error 1010 browser_signature_banned. It reads
+    like an auth failure but is purely the agent string - it killed a send on
+    13/08/2026 and had already bitten the sibling project."""
+    seen = {}
+
+    class _Resp:
+        status = 200
+        def read(self): return b"{}"
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+
+    monkeypatch.setattr(send_email.urllib.request, "urlopen",
+                        lambda req, timeout=None: seen.update(dict(req.header_items())) or _Resp())
+    send_email._post("https://api.resend.com/broadcasts", "k", {}, auth="resend")
+    ua = {k.lower(): v for k, v in seen.items()}.get("user-agent", "")
+    assert ua and "python-urllib" not in ua.lower(), f"default agent will be blocked: {ua!r}"
+
+
 def test_resend_test_send_uses_direct_email_not_a_broadcast(resend, monkeypatch):
     """A broadcast can only target a segment, so a --test broadcast would mail
     the live list. It must go through /emails to a named address instead."""
