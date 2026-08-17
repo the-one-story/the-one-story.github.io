@@ -566,7 +566,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.8rem;
     color: var(--muted);
   }}
-  .byline {{
+  /* House standard: the back-link sits top right on every property. */
+  .byline {{ text-align: right; margin: 0 0 .9rem;
     margin: 1.6rem 0 0;
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.95rem;
   }}
@@ -588,6 +589,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <body>
   <div class="wrap">
     {stale_banner}
+    <p class="byline"><a href="https://charlietrenorden.com/">&larr;&nbsp;Other projects</a></p>
     <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the most important
        story of the last {ranked['window_hours']} hours</p>
     <h1>{headline}</h1>
@@ -599,8 +601,6 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     {sources_block}
     {_why_section(winner, runners)}
     {signup_block}
-    <p class="byline"><a href="https://charlietrenorden.com/">Other Projects
-      <span class="ext">&#8599;</span></a></p>
     <footer>
       Updated {stamp} {tzabbr}.<br>Next update: {next_update}.
     </footer>

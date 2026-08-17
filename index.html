@@ -195,7 +195,8 @@
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.8rem;
     color: var(--muted);
   }
-  .byline {
+  /* House standard: the back-link sits top right on every property. */
+  .byline { text-align: right; margin: 0 0 .9rem;
     margin: 1.6rem 0 0;
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.95rem;
   }
@@ -217,6 +218,7 @@
 <body>
   <div class="wrap">
     
+    <p class="byline"><a href="https://charlietrenorden.com/">&larr;&nbsp;Other projects</a></p>
     <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the most important
        story of the last 24 hours</p>
     <h1>Four &#x27;extraordinary&#x27; Renaissance paintings stolen from Italian museum</h1>
@@ -290,8 +292,6 @@
         }
       </script>
     </section>
-    <p class="byline"><a href="https://charlietrenorden.com/">Other Projects
-      <span class="ext">&#8599;</span></a></p>
     <footer>
       Updated 17/08/2026 05:26 AEST.<br>Next update: Tue 18 Aug, 05:00 AEST.
     </footer>

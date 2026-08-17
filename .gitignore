@@ -12,3 +12,7 @@ data/smoke-shots/
 # NOTE: data/recent_leads.json IS committed - it is the decay ledger state
 # the scheduled job needs to carry between runs. Force-track it explicitly.
 !data/recent_leads.json
+
+# wrangler writes an account-id + email cache here - never commit it
+.wrangler/
+**/.wrangler/
