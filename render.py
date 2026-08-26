@@ -423,10 +423,14 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     padding: clamp(2rem, 8vw, 5rem) 1.5rem 4rem;
     min-height: 100vh; display: flex; flex-direction: column;
   }}
+  .topbar {{
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 0.5rem 1.25rem; margin: 0 0 2.5rem;
+  }}
   .kicker {{
     font-family: -apple-system, system-ui, sans-serif;
-    text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.82rem;
-    color: var(--muted); margin: 0 0 2.5rem;
+    text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.82rem;
+    color: var(--muted); margin: 0;
   }}
   .kicker b {{ color: var(--accent); font-weight: 700; }}
   h1 {{
@@ -568,9 +572,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     color: var(--muted);
   }}
   /* House standard: the back-link sits top right on every property. */
-  .byline {{ text-align: right; margin: 0 0 .9rem;
-    margin: 1.6rem 0 0;
-    font-family: -apple-system, system-ui, sans-serif; font-size: 0.95rem;
+  .byline {{ text-align: right; margin: 0 0 0 auto;
+    font-family: -apple-system, system-ui, sans-serif; font-size: 0.85rem;
   }}
   .byline a {{ color: var(--accent); font-weight: 600;
     text-decoration: underline; text-underline-offset: 3px;
@@ -590,9 +593,11 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <body>
   <div class="wrap">
     {stale_banner}
-    <p class="byline"><a href="https://charlietrenorden.com/">&larr;&nbsp;Other projects</a></p>
-    <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the most important
-       story of the last {ranked['window_hours']} hours</p>
+    <header class="topbar">
+      <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the most important
+         story of the last {ranked['window_hours']} hours</p>
+      <p class="byline"><a href="https://charlietrenorden.com/">&larr;&nbsp;Other projects</a></p>
+    </header>
     <h1>{headline}</h1>
     {snippet_html}
     <a class="hero" href="{hero_url}" target="_blank" rel="noopener">
