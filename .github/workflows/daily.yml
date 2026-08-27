@@ -15,6 +15,18 @@ on:
     - cron: "0 18 * * *"   # 05:00 AEDT
     - cron: "0 19 * * *"   # 05:00 AEST
   workflow_dispatch:
+  # Fired by the heartbeat Worker (site-stats/heartbeat) at 20:30 UTC, from
+  # OUTSIDE GitHub Actions. On 26/08/2026 GitHub's scheduler went down and took
+  # every cron on the estate with it, catch-ups included; a backup that shares a
+  # failure domain with the thing it backs up is not a backup.
+  #
+  # SAFE FOR THE EMAIL, which was checked rather than assumed: send_email.py
+  # keeps a per-day guard in data/last_email.json and prints "Already emailed for
+  # <date>; skipping". The only path that bypasses it is --test, and a
+  # repository_dispatch carries no inputs, so `inputs.test_send == 'true'` is
+  # false and the flag is never passed.
+  repository_dispatch:
+    types: [heartbeat]
     inputs:
       test_send:
         description: "Send a one-off [Preview] test email now (doesn't affect the daily send)"
