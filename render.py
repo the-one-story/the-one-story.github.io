@@ -302,7 +302,10 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
         f'<div class="cbar"><span style="width:{max(0, min(100, round(k[name]*100)))}%">'
         f'</span></div>'
         f'<p class="cdesc">{_COMPONENT_DESC[name]}</p></li>'
-        for name in ("coverage", "diversity", "recency", "novelty")
+        # Driven by what the SCORE actually produced, not a hand-kept list.
+        # The list went stale the day stakes was added: the formula line above
+        # named five dimensions and this rendered four.
+        for name in k if name in _COMPONENT_DESC
     )
     nov = winner.get("novelty_match", {})
     nov_note = ""

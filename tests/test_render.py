@@ -184,3 +184,16 @@ def test_email_escapes_feed_text(ranked):
     ranked["winner"]["hero"]["title"] = 'A <script>alert("x")</script> headline'
     _, html = email_render.build_email(ranked)
     assert "<script>" not in html
+
+
+def test_every_scored_dimension_appears_in_why_this_story():
+    """The list of dimensions used to be hand-kept here, and went stale the day
+    stakes was added - the formula line named five and the bars rendered four.
+    Assert the panel is driven by what the score actually produced."""
+    import render
+    from common import load_settings
+    names = list(load_settings()["weights"])
+    winner = {"components": {n: 0.5 for n in names}}
+    for n in names:
+        assert n in render._COMPONENT_DESC, \
+            f"{n!r} is weighted in settings but has no description in the panel"
