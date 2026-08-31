@@ -128,11 +128,41 @@ def test_gate_writes_only_key_value_to_github_output(tmp_path):
 # --------------------------------------------------------------------------- #
 # The workflow wiring itself                                                  #
 # --------------------------------------------------------------------------- #
-def test_both_dst_crons_are_registered():
+def test_the_ladder_publishes_before_he_looks_under_both_dst_regimes():
+    """The INVARIANT, not the [18, 19] pair this pinned until 31/08/2026.
+
+    That pin encoded one solution to the real requirement: SOME rung has to
+    arrive at or after 05:00 Sydney, in both DST regimes, whatever lateness
+    GitHub is running. It broke the moment the requirement was met a better
+    way. Measured over four repos on 31/08, scheduled runs were being created
+    2h05-2h50 after their cron against 16-31 min the week before, so the pair
+    only published on time because the 04:00-local rung was delivered late
+    enough to clear the gate. Assert the outcome instead.
+    """
+    from datetime import datetime, timedelta, timezone
+    from zoneinfo import ZoneInfo
+
     wf = yaml.safe_load(WORKFLOW.read_text(encoding="utf-8"))
     on = wf[True] if True in wf else wf["on"]        # PyYAML parses `on:` as True
-    hours = sorted(int(c["cron"].split()[1]) for c in on["schedule"])
-    assert hours == [18, 19], f"expected the AEDT/AEST pair, got {hours}"
+    crons = [(int(c["cron"].split()[1]), int(c["cron"].split()[0]))
+             for c in on["schedule"]]
+    syd = ZoneInfo("Australia/Sydney")
+
+    # A winter day and a summer day, so both UTC offsets are exercised.
+    for day in (datetime(2026, 8, 31, tzinfo=timezone.utc),
+                datetime(2027, 1, 15, tzinfo=timezone.utc)):
+        for late in (0, 20, 60, 140, 170):           # the observed range, and none
+            landed = None
+            for hour, minute in sorted(crons):
+                at = (day.replace(hour=hour, minute=minute)
+                      + timedelta(minutes=late)).astimezone(syd)
+                if at.hour >= 5:                     # what the gate asks
+                    landed = at
+                    break
+            assert landed is not None, f"nothing publishes {day:%b} at +{late}m"
+            # Charlie reads at 07:55. Publishing before 05:00 is impossible by
+            # construction; publishing after he has looked is the failure.
+            assert 5 <= landed.hour < 7,                 f"{day:%b} at +{late}m publishes {landed:%H:%M}, outside 05:00-07:00"
 
 
 def test_build_is_gated_and_gate_checks_out_the_repo():

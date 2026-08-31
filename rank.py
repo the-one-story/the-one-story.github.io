@@ -35,6 +35,7 @@ from cluster import build_clusters
 from common import load_feeds, load_settings, read_json, write_json
 from fetch import is_noise_format
 from ledger import load_ledger
+import stakes as stakes_mod
 
 
 # --------------------------------------------------------------------------- #
@@ -212,8 +213,10 @@ def score_clusters(clusters: list[dict], settings: dict, feeds: list[dict],
                          sc["country_share"], sc["lean_share"])
         rec = _recency(c["centroid_time"], now_utc, sc["recency_half_life_hours"])
         nov_pen = nov["penalty"]
+        stk, n_harmed = stakes_mod.stakes(c["members"])
         total = (cov ** w["coverage"]) * (div ** w["diversity"]) \
-            * (rec ** w["recency"]) * (nov_pen ** w["novelty"])
+            * (rec ** w["recency"]) * (nov_pen ** w["novelty"]) \
+            * (stk ** w.get("stakes", 0.0))
         hero = choose_hero(c["members"])
         scored.append({
             **c,
@@ -223,7 +226,9 @@ def score_clusters(clusters: list[dict], settings: dict, feeds: list[dict],
                 "diversity": round(div, 4),
                 "recency": round(rec, 4),
                 "novelty": round(nov_pen, 4),
+                "stakes": round(stk, 4),
             },
+            "casualties": n_harmed,
             "novelty_match": {"date": nov["matched_date"],
                               "cosine": round(nov["cosine"], 3)},
             "score": total,

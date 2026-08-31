@@ -41,6 +41,20 @@ weights:
   diversity: 1.6    # THE key term - spread across countries AND leans
   recency: 0.8
   novelty: 1.0
+  # stakes: how much the reporting itself says is at stake - whether people were
+  # harmed, and how many. Added 31/08/2026 because nothing else in the score can
+  # tell a mass-casualty event from a scheduled one: a NASA launch led that day
+  # on 0.180 while a ferry carrying 267 people capsized and came second on 0.166,
+  # with a THIRD more outlets. A launch is a diary event, so its coverage is
+  # broad, well-spread and punctual; deaths at sea get whoever picks up the wire.
+  #
+  # Weight chosen by REPLAY, not by taste: at 0.5, three of the forty archived
+  # days change winner, and all three replace a speculative political story with
+  # a mass-casualty one (a FIFA lawsuit -> a mass funeral for 112; a Zelensky
+  # leadership question -> a landfill collapse killing dozens; the telescope ->
+  # the ferry). Higher weights start burying quiet-day news that deserves to
+  # lead. It is a tiebreaker, and stakes.FLOOR keeps it from ever being one.
+  stakes: 0.5
 
 scoring:
   # diversity = (countries_norm ** country_share) * (leans_norm ** lean_share)
