@@ -12,8 +12,33 @@ name: Daily One Story
 # config/settings.yaml `update_hour_local` (5), season-independent, no upkeep here.
 on:
   schedule:
-    - cron: "0 18 * * *"   # 05:00 AEDT
-    - cron: "0 19 * * *"   # 05:00 AEST
+    #
+    # A LADDER, NOT TWO LINES - 31/08/2026. Every scheduled workflow on this estate
+    # is now created 2h05-2h50 after its cron, against 16-31 min through to 26/08.
+    # Not queue or quota: a job starts ~3s after its run is created, so the delay is
+    # entirely GitHub deciding when to create it. That did not break this workflow -
+    # the gate below is a latch, not a clock, so a late run still publishes - but it
+    # left almost no margin. On 30/08 the AEST edition went out at 07:52 Sydney, and
+    # Charlie reads at 07:55. It only lands at 06:07 on a normal day because the
+    # 18:00 rung, which is 04:00 AEST and too early to pass the gate, is delivered
+    # late enough to clear it. Publishing on time depended on the scheduler running
+    # late, which is not a design.
+    #
+    # Five rungs instead. The gate runs whichever one FIRST arrives at or after
+    # 05:00 Sydney and stops the rest in about ten seconds, so the ladder self-
+    # selects under either DST regime and under any lateness from zero to three
+    # hours. Worked through: at zero lateness the winner is 19:47 UTC (05:47 AEST)
+    # or 18:47 (05:47 AEDT); at the 2h20 now seen it is 16:47 UTC, landing 19:07
+    # (05:07 AEST) or 06:07 AEDT. Every case lands between 05:07 and 05:47 local,
+    # and losing any single rung to a drop costs an hour, not a morning.
+    #
+    # Odd minutes on purpose: GitHub drops on-the-hour jobs, and both old lines were
+    # on the hour. This repo is public, so the four extra gate jobs are free.
+    - cron: "47 16 * * *"
+    - cron: "47 17 * * *"
+    - cron: "47 18 * * *"
+    - cron: "47 19 * * *"
+    - cron: "47 20 * * *"
   workflow_dispatch:
   # Fired by the heartbeat Worker (site-stats/heartbeat) at 20:30 UTC, from
   # OUTSIDE GitHub Actions. On 26/08/2026 GitHub's scheduler went down and took
