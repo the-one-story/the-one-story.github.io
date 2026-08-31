@@ -238,6 +238,9 @@ _COMPONENT_DESC = {
                "fading (measured from the average time the coverage was published).",
     "novelty": "Penalises a story that already led on a recent day, easing back "
                "over ~4 days, so a repeat must bring bigger coverage to lead again.",
+    "stakes": "Whether the reporting says people were harmed, and how many, read "
+              "from the headlines themselves and log-scaled. Never zero: it breaks "
+              "ties rather than deciding.",
 }
 
 
@@ -327,8 +330,9 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
       <summary>Why this story?</summary>
       <div class="why-body">
         <p>The lead story is chosen by a fully deterministic score -
-           <code>coverage &times; diversity &times; recency &times; novelty</code> -
-           with no editorial judgement. Diversity (spread across countries
+           <code>coverage &times; diversity &times; recency &times; novelty
+           &times; stakes</code> - with nothing chosen by hand on the day.
+           Diversity (spread across countries
            <em>and</em> the political spectrum) carries the most weight, so a
            story that everyone agrees is big rises above one that is simply
            being shouted loudest in a single country's press.</p>
