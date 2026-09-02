@@ -247,13 +247,14 @@ _COMPONENT_DESC = {
 #: 02/09/2026: "stakes needs a better term".
 #:
 #: "stakes" says something is at risk, which is a claim about the future. The
-#: number is not that - it reads harm already reported, and how many people it
-#: happened to. "harm" is what the description underneath has always said, it is
-#: one plain word like the other four, and it cannot be misread as a bet.
+#: number is not that. "harm" was tried and Charlie said it still sounded off,
+#: and he was right: harm is a quality, and this is a COUNT - how many people were
+#: hurt, log-scaled. "toll" is the newspaper word for that exact quantity, one
+#: plain syllable like the other four, and it cannot be read as a bet or a mood.
 #:
 #: DISPLAY ONLY. The key stays "stakes" in config/weights, in stakes.py and in
 #: every stored record, so renaming the label costs no migration and no history.
-_COMPONENT_LABEL = {"stakes": "harm"}
+_COMPONENT_LABEL = {"stakes": "toll"}
 
 
 def _signup_form(form_url: str) -> str:
@@ -347,7 +348,7 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
       <div class="why-body">
         <p>The lead story is chosen by a fully deterministic score -
            <code>coverage &times; diversity &times; recency &times; novelty
-           &times; harm</code> - with nothing chosen by hand on the day.
+           &times; toll</code> - with nothing chosen by hand on the day.
            Diversity (spread across countries
            <em>and</em> the political spectrum) carries the most weight, so a
            story that everyone agrees is big rises above one that is simply
