@@ -243,6 +243,18 @@ _COMPONENT_DESC = {
               "ties rather than deciding.",
 }
 
+#: What the reader SEES, where that differs from the internal key. Charlie,
+#: 02/09/2026: "stakes needs a better term".
+#:
+#: "stakes" says something is at risk, which is a claim about the future. The
+#: number is not that - it reads harm already reported, and how many people it
+#: happened to. "harm" is what the description underneath has always said, it is
+#: one plain word like the other four, and it cannot be misread as a bet.
+#:
+#: DISPLAY ONLY. The key stays "stakes" in config/weights, in stakes.py and in
+#: every stored record, so renaming the label costs no migration and no history.
+_COMPONENT_LABEL = {"stakes": "harm"}
+
 
 def _signup_form(form_url: str) -> str:
     """Signup form (rendered only when an endpoint is configured).
@@ -296,7 +308,8 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
     k = winner["components"]
     weights = load_settings()["weights"]
     comp_rows = "".join(
-        f'<li><div class="chead"><span class="cname">{name}'
+        f'<li><div class="chead">'
+        f'<span class="cname">{_COMPONENT_LABEL.get(name, name)}'
         f' <span class="cwt">{weights.get(name, 1.0):.1f}&times; weight</span></span>'
         f'<span class="cscore">{k[name]:.2f}</span></div>'
         f'<div class="cbar"><span style="width:{max(0, min(100, round(k[name]*100)))}%">'
@@ -334,7 +347,7 @@ def _why_section(winner: dict, runners: list[dict]) -> str:
       <div class="why-body">
         <p>The lead story is chosen by a fully deterministic score -
            <code>coverage &times; diversity &times; recency &times; novelty
-           &times; stakes</code> - with nothing chosen by hand on the day.
+           &times; harm</code> - with nothing chosen by hand on the day.
            Diversity (spread across countries
            <em>and</em> the political spectrum) carries the most weight, so a
            story that everyone agrees is big rises above one that is simply
@@ -431,12 +444,30 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   }}
   .topbar {{
     display: flex; align-items: baseline; justify-content: space-between;
-    flex-wrap: wrap; gap: 0.5rem 1.25rem; margin: 0 0 2.5rem;
+    /* NOWRAP, deliberately. With wrap, the back-link drops to a line of its own
+       as soon as the kicker is a few pixels too wide - which is what the card
+       thumbnail kept showing, because it is cropped to the content column and so
+       renders much narrower than the 1280 viewport it is shot in. Tuning a
+       breakpoint would only move the width at which it breaks. With nowrap the
+       kicker shrinks and wraps INSIDE itself instead, and the back-link stays
+       beside its first line at every width. */
+    flex-wrap: nowrap; gap: 0.5rem 1.25rem; margin: 0 0 2.5rem;
   }}
   .kicker {{
     font-family: -apple-system, system-ui, sans-serif;
-    text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.82rem;
+    text-transform: uppercase; letter-spacing: 0.11em;
+    /* Shrinks at narrow widths so the whole kicker AND the back-link fit on one
+       line. The card thumbnail is cropped to the content column, so it renders far
+       narrower than the 1280 viewport it is shot in - at full size the kicker
+       pushed HOURS onto a second line there while looking fine on a desktop. */
+    font-size: clamp(0.68rem, 1.55vw, 0.82rem);
     color: var(--muted); margin: 0;
+    /* Let the LONG item shrink and wrap inside itself, so the short one stays on
+       the first line beside it. Without min-width:0 a flex child refuses to go
+       below its content width, so the whole kicker stayed intact and pushed the
+       back-link onto a line of its own - which is what the card screenshot kept
+       showing. */
+    flex: 1 1 auto; min-width: 0;
   }}
   .kicker b {{ color: var(--accent); font-weight: 700; }}
   h1 {{
@@ -580,6 +611,9 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   /* House standard: the back-link sits top right on every property. */
   .byline {{ text-align: right; margin: 0 0 0 auto;
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.85rem;
+    /* Never the item that wraps: it is three words and it belongs on the kicker's
+       first line. */
+    flex: 0 0 auto; white-space: nowrap;
   }}
   .byline a {{ color: var(--accent); font-weight: 600;
     text-decoration: underline; text-underline-offset: 3px;
