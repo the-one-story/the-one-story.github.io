@@ -472,7 +472,13 @@ def render_html(ranked: dict, stale: bool = False) -> str:
        1.90 is the largest that still fits on one line with DejaVu Sans standing in
        for the runner's wider sans; 2.05 wraps. Verified 700-1280px viewport, where
        the computed size now correctly stays put because the column does. */
-    font-size: clamp(0.60rem, 1.90cqi, 0.82rem);
+    font-size: clamp(0.58rem, 1.55cqi, 0.82rem);
+    /* 1.55, not 1.90. The ceiling is 0.82rem = 13.12px, so for the clamp to BIND
+       at all the middle term must come out below that - and the content column in
+       the shot card is about 700px, where 1.90cqi is 13.3px and clamp goes
+       straight back to its maximum. That is the same mistake as the vw version,
+       one step smaller: a clamp whose middle term never dips under the ceiling is
+       an expensive way to write a constant. 1.55cqi gives ~10.9px there. */
     color: var(--muted); margin: 0;
     /* Let the LONG item shrink and wrap inside itself, so the short one stays on
        the first line beside it. Without min-width:0 a flex child refuses to go
