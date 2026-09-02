@@ -453,6 +453,8 @@ def render_html(ranked: dict, stale: bool = False) -> str:
        kicker shrinks and wraps INSIDE itself instead, and the back-link stays
        beside its first line at every width. */
     flex-wrap: nowrap; gap: 0.5rem 1.25rem; margin: 0 0 2.5rem;
+    /* The kicker below is sized in cqi, so this row has to be a container. */
+    container-type: inline-size;
   }}
   .kicker {{
     font-family: -apple-system, system-ui, sans-serif;
@@ -461,12 +463,16 @@ def render_html(ranked: dict, stale: bool = False) -> str:
        line. The card thumbnail is cropped to the content column, so it renders far
        narrower than the 1280 viewport it is shot in - at full size the kicker
        pushed HOURS onto a second line there while looking fine on a desktop. */
-    /* Minimum 0.60rem, not 0.68. Tuned against a WIDE font on purpose: CI runs
-       Linux and its sans fallback sets noticeably wider than this laptop's, so a
-       size measured here is optimistic. At 0.68 the kicker still wrapped HOURS
-       onto a second line in the shot card while looking perfect locally. Checked
-       at 620-860px with DejaVu Sans standing in for the runner. */
-    font-size: clamp(0.60rem, 1.35vw, 0.82rem);
+    /* cqi, NOT vw. This wrapped for three attempts because vw measures the
+       VIEWPORT and the thing that is actually narrow is this max-width column. The
+       thumbnail shooter uses a 1280px viewport, so 1.35vw resolved to 17px, sailed
+       past the 0.82rem ceiling, and the clamp silently returned its MAXIMUM every
+       single time - the tuning was doing nothing at all. cqi measures the container,
+       which is the width that was always the constraint.
+       1.90 is the largest that still fits on one line with DejaVu Sans standing in
+       for the runner's wider sans; 2.05 wraps. Verified 700-1280px viewport, where
+       the computed size now correctly stays put because the column does. */
+    font-size: clamp(0.60rem, 1.90cqi, 0.82rem);
     color: var(--muted); margin: 0;
     /* Let the LONG item shrink and wrap inside itself, so the short one stays on
        the first line beside it. Without min-width:0 a flex child refuses to go
