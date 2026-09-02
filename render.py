@@ -461,7 +461,12 @@ def render_html(ranked: dict, stale: bool = False) -> str:
        line. The card thumbnail is cropped to the content column, so it renders far
        narrower than the 1280 viewport it is shot in - at full size the kicker
        pushed HOURS onto a second line there while looking fine on a desktop. */
-    font-size: clamp(0.68rem, 1.55vw, 0.82rem);
+    /* Minimum 0.60rem, not 0.68. Tuned against a WIDE font on purpose: CI runs
+       Linux and its sans fallback sets noticeably wider than this laptop's, so a
+       size measured here is optimistic. At 0.68 the kicker still wrapped HOURS
+       onto a second line in the shot card while looking perfect locally. Checked
+       at 620-860px with DejaVu Sans standing in for the runner. */
+    font-size: clamp(0.60rem, 1.35vw, 0.82rem);
     color: var(--muted); margin: 0;
     /* Let the LONG item shrink and wrap inside itself, so the short one stays on
        the first line beside it. Without min-width:0 a flex child refuses to go
