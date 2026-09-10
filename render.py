@@ -413,6 +413,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="One Story">
 <meta property="og:url" content="https://one-story.charlietrenorden.com/">
+<link rel="canonical" href="https://one-story.charlietrenorden.com/">
 <meta property="og:title" content="One Story">
 <meta name="description" content="One story a day: the most important thing that happened in the last 24 hours.">
   <meta property="og:description" content="One story a day: the most important thing that happened in the last 24 hours.">
