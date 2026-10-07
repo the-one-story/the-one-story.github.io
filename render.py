@@ -415,7 +415,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
 <meta property="og:url" content="https://one-story.charlietrenorden.com/">
 <link rel="canonical" href="https://one-story.charlietrenorden.com/">
 <meta property="og:title" content="One Story">
-<meta name="description" content="One story a day: the most important thing that happened in the last 24 hours.">
+<meta name="description" content="Today's most important news story, and only that one: picked each day by a formula, not an editor, from how widely outlets across countries and the political spectrum are covering it.">
   <meta property="og:description" content="One story a day: the most important thing that happened in the last 24 hours.">
 <meta property="og:image" content="https://one-story.charlietrenorden.com/assets/og.png">
 <meta property="og:image:secure_url" content="https://one-story.charlietrenorden.com/assets/og.png">
