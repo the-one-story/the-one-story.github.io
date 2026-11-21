@@ -646,6 +646,10 @@ def render_html(ranked: dict, stale: bool = False) -> str:
   }}
   a.hero:focus-visible, .why summary:focus-visible {{
     outline: 2px solid var(--accent); outline-offset: 3px; }}
+/* Phones: 16px stops iOS zooming into a field; the back link gets a finger-sized hit area. */
+@media (pointer: coarse) {{
+  input:not([type=checkbox]):not([type=radio]):not([type=range]), select, textarea {{ font-size: 16px !important; }}
+}}
 </style>
 {_BEACON}
 </head>
