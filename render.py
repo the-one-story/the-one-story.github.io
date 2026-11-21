@@ -639,6 +639,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     text-decoration-thickness: 1px; }}
   .byline a:hover {{ opacity: 0.7; }}
   .byline .ext {{ font-weight: 400; }}
+  .byline .arr {{ font-size: calc(1em + 1.5px); position: relative; top: -1.5px; }}
   .stale {{
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.85rem;
     background: var(--accent); color: var(--bg); padding: 0.6rem 1rem;
@@ -659,7 +660,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     <header class="topbar">
       <p class="kicker"><b>One Story</b> &nbsp;&middot;&nbsp; the most important
          story of the last {ranked['window_hours']} hours</p>
-      <p class="byline"><a href="https://charlietrenorden.com/">&larr;&nbsp;Other projects</a></p>
+      <p class="byline"><a href="https://charlietrenorden.com/"><span class="arr">&larr;</span>&nbsp;Other projects</a></p>
     </header>
     <h1>{headline}</h1>
     {snippet_html}
