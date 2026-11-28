@@ -51,7 +51,7 @@ _NOISE_TITLE = re.compile(
     # surface as off-topic "sources" (e.g. "the biggest news you missed this
     # weekend"). Kept conservative to avoid dropping single-story explainers.
     r"\bbiggest news\b|\byou missed\b|\bin case you missed\b|\bicymi\b|"
-    r"\bround-?up\b|\bweek in review\b|"
+    r"\bround-?up\b|\bweek in review\b|\bin photos\b|"
     # "<headline>. And, <unrelated headline>" - the NPR Up First signature, which
     # carries NO "newsletter"/"Up First" text in the feed title, so only the shape
     # gives it away. Two stories in one item: it bridges clusters and reads as a
@@ -66,9 +66,44 @@ _EMOJI_RE = re.compile(
     "\U0001F1E6-\U0001F1FF️‍⃣]")
 
 
+# Affiliate / commerce desks. These are not newsrooms: NBC Select files five
+# shopping posts a day under /select/shopping/, every one of them titled around
+# a product and a discount. They matter here for the same reason roundups do -
+# they share a seasonal vocabulary ("Black Friday") that bridges unrelated
+# stories during clustering - except they also arrive in volume from a single
+# outlet, which inflates a cluster's member count without adding a source.
+#
+# 28/11/2026: One Story led with "All the best Walmart Black Friday deals to
+# shop this weekend". The cluster behind it was eleven articles held together
+# by the phrase alone - AFR on retail weakness, Common Dreams on an Amazon
+# union win, Daily Maverick on SA inflation, and five NBC Select posts, one of
+# which supplied the headline.
+#
+# Measured against all 125,331 archived articles before being turned on: 278
+# hits, 0.22% of everything ever fetched, and every one of them commerce. A
+# title-word rule was tried first and rejected - "deal" is diplomatic far more
+# often than commercial, and it swallowed "Black Friday deals criticised over
+# safety" and "Retailers brace for rate rise blow to Black Friday sales",
+# which are news ABOUT the thing and belong in the pool.
+_COMMERCE_URL = re.compile(
+    r"(/select/shopping/|/shopping/|/deals?/|/best-deals|/gift-guide|"
+    r"/buying-guide|/reviews?/best-)", re.I)
+
+
 def is_noise_format(url: str, title: str) -> bool:
-    """True for non-article formats (podcast/liveblog/video/newsletter/roundup)."""
-    return bool(_NOISE_URL.search(url or "") or _NOISE_TITLE.search(title or ""))
+    """True for non-article formats (podcast/liveblog/video/newsletter/roundup)
+    and for affiliate commerce posts.
+
+    NOTE the URL half of this test is inert for feeds proxied through Google
+    News (6 of 35: Reuters, AP, AFR, MSNBC, CBC, AFP). Their links are an
+    opaque /rss/articles/CBMi... blob with the real path encrypted inside -
+    decoding was attempted across 51,288 proxied articles and recovered 0. For
+    those feeds only the TITLE patterns apply, so anything added to _NOISE_URL
+    or _COMMERCE_URL wants a title-side equivalent if it must catch them too.
+    """
+    return bool(_NOISE_URL.search(url or "")
+                or _COMMERCE_URL.search(url or "")
+                or _NOISE_TITLE.search(title or ""))
 # Google News site-scoped titles look like "Real headline - Reuters".
 _GNEWS_SUFFIX_RE = re.compile(r"\s+-\s+[^-]+$")
 # Connecting words we don't want a truncated snippet to end on.
@@ -149,7 +184,14 @@ def fetch_all(settings: dict, feeds: list[dict]) -> tuple[list[dict], dict]:
         "dropped_no_date": 0,
         "dropped_out_of_window": 0,
         "dropped_noise": 0,
+        "dropped_duplicate": 0,
     }
+    # One URL is one article, however many feeds carry it. Without this the same
+    # piece is counted twice inside a cluster, skewing the centroid time and the
+    # TF-IDF weights; it never showed up in the outlet count, which is distinct
+    # SOURCES, so nothing on the page ever revealed it. Measured across the
+    # archive on 28/11/2026: 500 duplicated entries on 128 of 129 days.
+    seen_urls: set[str] = set()
 
     for fc in feeds:
         is_gnews = fc.get("via") == "gnews"
@@ -173,6 +215,10 @@ def fetch_all(settings: dict, feeds: list[dict]) -> tuple[list[dict], dict]:
                 if is_noise_format(url, title):
                     report["dropped_noise"] += 1
                     continue
+                if url in seen_urls:
+                    report["dropped_duplicate"] += 1
+                    continue
+                seen_urls.add(url)
                 if is_gnews:
                     # Strip the " - Source" suffix; the GNews description is a
                     # junk anchor, so drop the snippet entirely.
@@ -213,6 +259,7 @@ def _print_report(articles: list[dict], report: dict) -> None:
     print(f"Dropped (no date): {report['dropped_no_date']}")
     print(f"Dropped (stale)  : {report['dropped_out_of_window']}")
     print(f"Dropped (noise)  : {report['dropped_noise']}")
+    print(f"Dropped (dupe)   : {report['dropped_duplicate']}")
     print(f"Articles in window: {len(articles)}")
     print("-" * 70)
     print(f"{'feed':<34}{'seen':>6}{'kept':>6}  status")

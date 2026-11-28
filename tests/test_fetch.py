@@ -77,3 +77,85 @@ def test_snippet_strips_html_and_collapses_whitespace():
 
 def test_snippet_handles_empty_input():
     assert _clean_snippet("", 25) == ""
+
+
+# --------------------------------------------------------------------------- #
+# Affiliate commerce (added 28/11/2026)                                        #
+# --------------------------------------------------------------------------- #
+# One Story led with "All the best Walmart Black Friday deals to shop this
+# weekend": a cluster of eleven articles held together by the phrase "Black
+# Friday", five of them NBC Select shopping posts. These pin the URL rule that
+# drops that desk, and - just as important - the news stories ABOUT retail that
+# must survive it, since a title-word rule was tried first and ate them.
+@pytest.mark.parametrize("url", [
+    "https://www.nbcnews.com/select/shopping/walmart-black-friday-deals-2026-rcna611473",
+    "https://www.nbcnews.com/select/shopping/best-black-friday-tv-deals-2026-rcna611453",
+    "https://www.foxnews.com/deals/kate-spade-outlet-handbags-73-off",
+    "https://example.com/gift-guide/music-lovers",
+    "https://example.com/reviews/best-mattresses-2026",
+])
+def test_affiliate_commerce_is_dropped(url):
+    assert is_noise_format(url, "Some product is on sale") is True
+
+
+@pytest.mark.parametrize("url,title", [
+    # Real reporting about the retail event. These share the commerce
+    # vocabulary and must stay in the pool.
+    ("https://www.nbcnews.com/news/us-news/black-friday-shoppers-head-brick-mortar-stores-us-rcna611564",
+     "Black Friday shoppers head to brick-and-mortar stores across the U.S."),
+    ("https://www.theguardian.com/world/2026/nov/27/bbl-adverts",
+     "Black Friday deals for liquid Brazilian butt lifts criticised over safety"),
+    ("https://www.afr.com/companies/retail/black-friday-fizzles",
+     "Australia's $450b retail sector's reckoning as Black Friday fizzles"),
+    ("https://www.commondreams.org/news/first-amazon-collective-bargaining-agreement",
+     "'Historic Breakthrough' for Amazon Warehouse Workers Celebrated on Black Friday"),
+    # "deal" is diplomatic far more often than commercial.
+    ("https://example.com/world/iran", "US signs landmark nuclear deal with Saudi Arabia"),
+    ("https://example.com/world/venezuela", "US, Venezuela announce 'historic' oil deal"),
+])
+def test_news_about_commerce_survives(url, title):
+    assert is_noise_format(url, title) is False
+
+
+def test_photo_galleries_are_dropped_by_title():
+    # AP's gallery arrived through the Google News proxy, where the real path is
+    # unreachable, so only the title could catch it - and "in pictures" was
+    # listed while "in photos" was not.
+    assert is_noise_format(
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcHYtYzBER0Fu",
+        "Black Friday's annual hunt for holiday deals, in photos") is True
+
+
+# --------------------------------------------------------------------------- #
+# Pool de-duplication (added 28/11/2026)                                       #
+# --------------------------------------------------------------------------- #
+def test_the_same_url_is_fetched_once(monkeypatch):
+    """500 duplicated entries sat in the archive across 128 of 129 days.
+
+    They never reached the outlet count, which is distinct SOURCES, so nothing
+    on the page revealed them - but inside a cluster the article was counted
+    twice, pulling the centroid time and the TF-IDF weights with it.
+    """
+    import time
+    import fetch as fetch_mod
+
+    now = time.gmtime()
+    entry = {"title": "One story, carried twice",
+             "link": "https://example.com/news/the-one-story",
+             "summary": "Body text.", "published_parsed": now}
+    other = {"title": "A different story",
+             "link": "https://example.com/news/another",
+             "summary": "Body text.", "published_parsed": now}
+    # Same URL arriving from two feeds, plus a repeat inside one feed.
+    monkeypatch.setattr(fetch_mod, "_fetch_one", lambda cfg: [entry, entry, other])
+
+    feeds = [{"name": "Feed A", "country": "US", "lean": "centre", "url": "a"},
+             {"name": "Feed B", "country": "GB", "lean": "centre", "url": "b"}]
+    settings = {"window_hours": 24, "snippet_cap_words": 25,
+                "fetch_timeout_secs": 5, "timezone": "Australia/Sydney"}
+
+    articles, report = fetch_mod.fetch_all(settings, feeds)
+    urls = [a["url"] for a in articles]
+    assert len(urls) == len(set(urls)), "a URL reached the pool twice"
+    assert len(articles) == 2
+    assert report["dropped_duplicate"] == 4
