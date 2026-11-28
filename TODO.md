@@ -408,10 +408,9 @@ daily job runs on its own.
   Node 20 deprecation warning (auto-run on Node 24). Cosmetic; bump only if it
   ever hard-fails. Still warning as of the 12/08/2026 run - confirmed, not fixed.
 
-## Archive-wide IDF: tested, rejected as a clustering fix, FILED as something else
+## Archive-wide IDF: tested twice, rejected twice - CLOSED
 
-- [ ] **Fitting TF-IDF over a trailing window instead of one day is an anti-rhetoric
-      term, and the measurement for it already exists.** *(28/11/2026. Scripts were
+- [x] **Fitting TF-IDF over a trailing window is NOT an anti-rhetoric term.** *(28/11/2026. Scripts were
       throwaway; the numbers below are the result, re-derive with `replay.py` plus a
       vectoriser fitted on `data/history/` for the preceding N days plus the day.)*
 
@@ -445,10 +444,33 @@ daily job runs on its own.
       over having happened.** Archive-IDF is the only lever tested so far that pushes
       back on it without costing breadth.
 
-      NEXT STEP IF PICKED UP: re-read those 18 changed days against the audit table
-      rather than on headline impressions, and decide whether the trade is good once
-      "political statement displaced by an event" is counted as a win rather than a
-      wash. Do NOT ship it as a Black Friday fix; it is not one.
+      RE-READ DONE, SAME EVENING, AND IT DOES NOT SURVIVE IT. Scoring all 18 changed
+      days on the audit's own axis - a STATEMENT or BACKGROUNDER replaced by an EVENT
+      is a win, the reverse is a loss:
+
+        WINS (5):  08/03 Trump "no new Iran strikes" -> Greek fire-brigade
+                   helicopters collide; 08/31 Trump hails a Venezuela oil deal ->
+                   the Cyprus ferry capsizing with 260 aboard; 10/12 a Trump "energy
+                   ceasefire" -> 12 killed at Riyadh airport; plus 08/01 and 09/28,
+                   better on stakes with no change of kind.
+        LOSSES (6): 10/24 Israel ordering home demolitions -> "White House says
+                   Melania Trump brokers truce"; 11/08 six killed in a Krakow
+                   shooting -> "Stephen Miller pledges total devotion"; 11/04 a US
+                   aid decision -> a footballer dying in an on-field collision;
+                   plus 09/05, 10/14, 11/21.
+        WASHES (7): both sides the same kind.
+
+      So it creates event-to-statement regressions at the same rate it fixes
+      statement-to-event, and the trade is not good. **The "nearly every improvement
+      was a disaster story" reading that got this filed was selection bias on my own
+      part**: I read the improvements, found disasters, and never checked whether the
+      regressions ran the same way in reverse. They do. The mechanism moves leads
+      around roughly at random with respect to the axis that matters.
+
+      CLOSED. Do not re-derive this. If the rhetoric bias in docs/lead-audit.md is
+      worth attacking - 20 of 128 leads were a figure saying something - it wants a
+      term that names the thing directly, not a vocabulary-frequency side effect that
+      happens to correlate with it on the days you look at first.
 
 ## Untested: the one path that only runs when something has already broken
 
