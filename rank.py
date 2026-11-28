@@ -25,6 +25,7 @@ emitted to data/ranked.json for the render step.
 from __future__ import annotations
 
 import math
+import re
 import sys
 from datetime import datetime, timezone
 
@@ -168,11 +169,48 @@ def _offtopic_flags(members: list[dict]) -> list[bool]:
     return [bool(s < cut) for s in sims]
 
 
+# A backgrounder is the wrong KIND of article about the right story. The cluster
+# is correct - an explainer genuinely belongs with the event it explains - but
+# featuring it means the page's one headline describes the coverage rather than
+# the news. Graded by hand across the 128 leads published to 28/11/2026, this
+# was 12 of them: "Who is Lula?", "How did Christa Pike survive two lethal
+# injections", "Why Nvidia CEO's affair matters", "Michigan race: all you need
+# to know". See docs/lead-audit.md.
+#
+# This demotes, it never DROPS. An explainer is real coverage by a real outlet
+# and must keep counting toward the outlet and country tallies; it just loses
+# the hero slot whenever the cluster also holds a straight news piece. Where a
+# cluster is nothing BUT backgrounders the sort is unaffected and one still wins.
+#
+# Measured on the corpus before being turned on: 3.14% of 122,821 titles, and 18
+# sampled at random were all explainers, features or reviews with no straight
+# news among them. Replayed over 129 days it changes 5 headlines, 4 of them to a
+# plain news story ("Who is Lula?" -> "Lula wins fourth term in dramatic Brazil
+# election comeback"). The fifth stays a backgrounder because its "Why" sits
+# after a kicker ("'No ordinary CEO': Why the AI race cannot do without..."),
+# and matching "why" mid-headline would start catching news ("He explained why
+# the deal collapsed"), so the anchor stays at the start.
+_BACKGROUNDER_TITLE = re.compile(
+    r"^(?:who|what)\s+(?:is|are|was|were)\b"
+    r"|^how\b"
+    r"|^why\b"
+    r"|\ball you need to know\b"
+    r"|\bwhat (?:we|you) (?:know|need to know)\b"
+    r"|\bhere'?s what\b"
+    r"|\bwhat happens? (?:now|next)\b"
+    # "| Explained" and "Explainer:" are section furniture. Bare "explained" is
+    # ordinary news prose - "Treasury explained why the deal collapsed" - and
+    # matching it cost a false positive the first time round.
+    r"|[|:]\s*explained\b|\bexplainer\b"
+    r"|^(?:could|should|has|have|is|are|will|can)\b.*\?\s*$",
+    re.I)
+
+
 def choose_hero(members: list[dict]) -> dict:
     """Best single write-up. Preference order: a straight article (never a
-    podcast/liveblog/roundup), on-topic for the cluster's dominant story, freely
-    readable, from an established international desk, with a clean link, neutral
-    lean, earliest to cover.
+    podcast/liveblog/roundup), on-topic for the cluster's dominant story, news
+    rather than a backgrounder about it, freely readable, from an established
+    international desk, with a clean link, neutral lean, earliest to cover.
 
     On-topic outranks the paywall/tier preferences deliberately: featuring the
     RIGHT story from a lesser outlet beats featuring the wrong story from Reuters.
@@ -182,6 +220,7 @@ def choose_hero(members: list[dict]) -> dict:
         range(len(members)),
         key=lambda i: (is_noise_format(members[i]["url"], members[i]["title"]),
                        offtopic[i],
+                       bool(_BACKGROUNDER_TITLE.search(members[i]["title"])),
                        _PAYWALL_RANK.get(members[i].get("paywall", "none"), 0),
                        members[i]["source"] not in _HERO_TIER1,
                        _is_gnews(members[i]["url"]),

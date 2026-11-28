@@ -59,11 +59,23 @@ def _inject_stale_banner() -> bool:
         return True  # already flagged on a previous failed run
     banner = ("<div class='stale'>Showing yesterday's story - today's update "
               "did not complete.</div>")
-    marker = '<div class="wrap">'
-    if marker in html_doc:
-        html_doc = html_doc.replace(marker, marker + "\n    " + banner, 1)
-        with open(path, "w", encoding="utf-8") as fh:
-            fh.write(html_doc)
+    # The anchor is render.py's page wrapper. If it is ever renamed or
+    # re-quoted this used to find nothing, write nothing and still return True:
+    # the run reported a stale fallback served, exited 0, and the reader got
+    # yesterday's story presented as today's with no banner at all. That is the
+    # one outcome this whole function exists to prevent, so there is now a
+    # second anchor and, failing both, a loud line in the job log.
+    # tests/test_run.py pins the coupling by asserting the primary anchor is
+    # still present in what render_html actually emits.
+    for marker in ('<div class="wrap">', "<body>"):
+        if marker in html_doc:
+            html_doc = html_doc.replace(marker, marker + "\n    " + banner, 1)
+            with open(path, "w", encoding="utf-8") as fh:
+                fh.write(html_doc)
+            return True
+    print("WARNING: no anchor found in the existing page - serving yesterday's "
+          "story WITHOUT a stale banner. Check render.py's wrapper markup.",
+          file=sys.stderr)
     return True
 
 

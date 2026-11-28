@@ -244,3 +244,65 @@ def test_offtopic_guard_is_inert_on_small_clusters():
 def test_offtopic_guard_survives_degenerate_vocabulary():
     members = [article("the and of") for _ in range(6)]
     assert rank._offtopic_flags(members) == [False] * 6
+
+
+# --------------------------------------------------------------------------- #
+# The hero is news, not a backgrounder about it (added 28/11/2026)             #
+# --------------------------------------------------------------------------- #
+def _member(title, source="Reuters", url="https://example.com/a", lean="centre",
+            published="2026-11-28T01:00:00+00:00", paywall="none"):
+    return {"title": title, "source": source, "url": url, "lean": lean,
+            "published_at": published, "paywall": paywall, "snippet": ""}
+
+
+@pytest.mark.parametrize("title", [
+    "Who is Lula? From ex-worker and prisoner to Brazil's president again",
+    "How did Christa Pike survive two lethal injections - and what happens now?",
+    "Why Nvidia CEO's affair with alleged Chinese spy matters",
+    "Michigan race: All you need to know about Abdul El-Sayed v Mike Rogers",
+    "What we know so far about deadly Spain train crash",
+    "FIFA wants to sell the World Cup to a Trump associate. Here's what we know",
+    "Poland's abortion law: What will the new bills change? | Explained",
+    "Could the ex-defence minister challenge Zelenskyy?",
+])
+def test_backgrounder_titles_are_recognised(title):
+    assert rank._BACKGROUNDER_TITLE.search(title) is not None
+
+
+@pytest.mark.parametrize("title", [
+    "Lula wins fourth term in dramatic Brazil election comeback",
+    "UEFA votes to boycott World Cup over FIFA investor plan",
+    "Dozens of people killed after high-speed trains collide in central Spain",
+    # "why" mid-headline is ordinary news prose and must not match.
+    "Treasury explained why the deal collapsed",
+    "Senate confirms attorney general",
+])
+def test_news_titles_are_not_treated_as_backgrounders(title):
+    assert rank._BACKGROUNDER_TITLE.search(title) is None
+
+
+def test_hero_prefers_news_over_a_backgrounder_about_it():
+    members = [_member("Who is Lula? From ex-worker and prisoner to president"),
+               _member("Lula wins fourth term in dramatic Brazil comeback")]
+    assert rank.choose_hero(members)["title"].startswith("Lula wins")
+
+
+def test_a_cluster_of_only_backgrounders_still_yields_a_hero():
+    # The rule demotes; it must never leave a cluster without a headline.
+    members = [_member("Why the AfD is so strong"),
+               _member("Who is Lula? From ex-worker to president")]
+    assert rank.choose_hero(members)["title"]
+
+
+def test_a_backgrounder_still_counts_as_coverage():
+    """It loses the hero slot, it does not leave the cluster.
+
+    An explainer is real reporting by a real outlet and must keep counting
+    toward the outlet and country tallies, which are the site's headline claim.
+    """
+    members = [_member("Why Nvidia CEO's affair matters", source="Deutsche Welle"),
+               _member("Nvidia reinstates Huang as CEO", source="Reuters")]
+    hero = rank.choose_hero(members)
+    assert hero["source"] == "Reuters"
+    assert len(members) == 2           # nothing was removed
+    assert {m["source"] for m in members} == {"Deutsche Welle", "Reuters"}
