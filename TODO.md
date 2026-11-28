@@ -168,7 +168,13 @@ daily job runs on its own.
 
 ## HIGH - test coverage
 
-- [ ] **Test the scoring pipeline. `tests/` currently holds one smoke script.**
+- [x] **Test the scoring pipeline.** DONE - verified 28/11/2026: 9 pytest modules,
+      141 tests, run in CI by `.github/workflows/tests.yml`. Every bullet below was
+      checked individually rather than assumed. `rank.py` pins the diversity term,
+      `cluster.py` covers both directions plus determinism, `fetch.py` runs off
+      fixtures with no network, `ledger.py` and `email_render.py` have their own
+      modules. **One piece is still untested and has been promoted to its own item
+      below: `run.py`'s stale-banner fallback.**
       *(added 07/08/2026, estate-wide test audit.)*
       `tests/smoke_site.py` checks the rendered site, not the decisions that
       produced it. Eleven modules run **unattended every day** and pick the single
@@ -443,6 +449,23 @@ daily job runs on its own.
       rather than on headline impressions, and decide whether the trade is good once
       "political statement displaced by an event" is counted as a win rather than a
       wash. Do NOT ship it as a Black Friday fix; it is not one.
+
+## Untested: the one path that only runs when something has already broken
+
+- [ ] **`run.py`'s stale-banner fallback has no test.** *(28/11/2026, found while
+      closing the test-coverage item above.)* It is the path that keeps yesterday's
+      page up when a run dies, plus the `_STALE_MARKER` idempotence guard that stops
+      the banner being injected twice across repeated failures. Nothing exercises
+      either, and by construction it only runs on a day that has already gone wrong,
+      which is the worst time to discover it does not work.
+
+      Three tests would cover it, all cheap because the function is file-level:
+        - a failed run with a prior `index.html` present leaves the content intact
+          and injects the banner exactly once;
+        - a second failed run on the same file does NOT inject it twice (the marker
+          is quote-agnostic text that must match the rendered banner in `render.py` -
+          if that copy is ever edited, this test is what catches the drift);
+        - no prior `index.html` at all exits non-zero with nothing published.
 
 ## Optional design ideas raised, not taken
 - **A generic "two sentence-clauses in one title" roundup guard - REJECTED on data
