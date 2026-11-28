@@ -402,6 +402,48 @@ daily job runs on its own.
   Node 20 deprecation warning (auto-run on Node 24). Cosmetic; bump only if it
   ever hard-fails. Still warning as of the 12/08/2026 run - confirmed, not fixed.
 
+## Archive-wide IDF: tested, rejected as a clustering fix, FILED as something else
+
+- [ ] **Fitting TF-IDF over a trailing window instead of one day is an anti-rhetoric
+      term, and the measurement for it already exists.** *(28/11/2026. Scripts were
+      throwaway; the numbers below are the result, re-derive with `replay.py` plus a
+      vectoriser fitted on `data/history/` for the preceding N days plus the day.)*
+
+      WHY IT WAS TRIED: on 28/11 the site led with a Black Friday shopping cluster -
+      eleven articles bound by the phrase alone. "Black Friday" is rare within one
+      day's corpus so TF-IDF scores it distinctive, and `cluster_distance_threshold`
+      of 0.92 merges anything above 0.08 similarity. Learning IDF across history
+      should make seasonal vocabulary cheap without a hand-maintained phrase list.
+
+      WHY IT FAILED ITS OWN CASE: the archive is four months old and Black Friday
+      recurs ANNUALLY, so across a 45-day window the phrase is still rare. Today's
+      cluster came back unchanged. It would need a year or more of history before
+      the seasonal vocabulary looked ordinary. Structural, not a tuning problem.
+
+      WHAT IT ACTUALLY DID, and why this is filed rather than dropped:
+        - 18 of 129 days changed lead; 7 better, 8 worse, 3 a wash.
+        - **It cost no coverage at all** - median winner 12 outlets before and after,
+          thin winners (<=6) 3 before and after. The 0.88 threshold experiment, by
+          contrast, dropped the median to 9 and doubled the thin days.
+        - Nearly every improvement was a disaster story surfacing past a political
+          one: the Cyprus ferry past a Venezuela oil deal, 27 killed in two South
+          African mass shootings past an arrest near an air base, 12 killed at Riyadh
+          airport past a Trump "energy ceasefire".
+
+      WHY THAT MATTERS: `docs/lead-audit.md` grades all 128 published leads by hand
+      and finds the largest non-event class is STATEMENT, 20 days - a figure said
+      something and nothing else happened. A presidential quote is reprinted by every
+      outlet within hours, so it scores maximum coverage, maximum spread and perfect
+      recency, which is the whole score. Two independent measurements, one mechanical
+      and one by hand, land on the same tilt: **the score rewards being talked about
+      over having happened.** Archive-IDF is the only lever tested so far that pushes
+      back on it without costing breadth.
+
+      NEXT STEP IF PICKED UP: re-read those 18 changed days against the audit table
+      rather than on headline impressions, and decide whether the trade is good once
+      "political statement displaced by an event" is counted as a win rather than a
+      wash. Do NOT ship it as a Black Friday fix; it is not one.
+
 ## Optional design ideas raised, not taken
 - **A generic "two sentence-clauses in one title" roundup guard - REJECTED on data
   (04/08/2026).** Tempting after two roundup formats slipped through (NBC, then NPR
