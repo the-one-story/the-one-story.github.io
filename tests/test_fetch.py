@@ -159,3 +159,36 @@ def test_the_same_url_is_fetched_once(monkeypatch):
     assert len(urls) == len(set(urls)), "a URL reached the pool twice"
     assert len(articles) == 2
     assert report["dropped_duplicate"] == 4
+
+
+# --------------------------------------------------------------------------- #
+# Commentary and games (added 28/11/2026)                                      #
+# --------------------------------------------------------------------------- #
+@pytest.mark.parametrize("url", [
+    "https://www.dailymaverick.co.za/opinionista/2026-11-02-parole-is-not-a-given/",
+    "https://www.thenationalnews.com/opinion/2026/09/01/ai-needs-more-than-market-forces/",
+    "https://www.japantimes.co.jp/comment/2026/08/14/europeans-must-choose/",
+    "https://www.thenationalnews.com/opinion/editorial/2026/07/30/uae-long-game/",
+    "https://www.thenationalnews.com/puzzles/sudoku/2026/09/12/your-daily-sudoku/",
+    "https://www.foxnews.com/outkick-betting/broncos-steelers-black-friday-under",
+])
+def test_commentary_and_games_are_dropped(url):
+    assert is_noise_format(url, "Some headline") is True
+
+
+@pytest.mark.parametrize("url,title", [
+    # The segment rule exists because substring matching ate this one: the slug
+    # contains "style", and it is a news story about border tensions.
+    ("https://www.theguardian.com/world/2026/aug/01/a-ceuta-style-surge-is-possible",
+     "'A Ceuta-style surge is possible': Border tensions on NATO's eastern flank"),
+    # Reporting that merely discusses an opinion, an editorial or a quiz.
+    ("https://www.bbc.co.uk/news/articles/abc123",
+     "Editorial board resigns after owner blocks endorsement"),
+    ("https://www.reuters.com/world/betting-markets-swing-after-poll-2026-11-04/",
+     "Betting markets swing after poll"),
+    # "/analysis/" is reporting and was deliberately left in.
+    ("https://www.abc.net.au/news/2026-10-12/analysis-kerch-bridge-attack/",
+     "Ukraine's Kerch bridge attack is proof Kyiv still has reach"),
+])
+def test_news_is_not_mistaken_for_commentary(url, title):
+    assert is_noise_format(url, title) is False

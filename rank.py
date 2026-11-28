@@ -299,6 +299,9 @@ def build_ranked_table(scored: list[dict], settings: dict,
         "update_hour_local": settings["update_hour_local"],
         "signup_form_url": (settings.get("newsletter") or {}).get(
             "signup_form_url", ""),
+        # Carried through so render can flag a weak field without reaching back
+        # into settings. See scoring.quiet_day_score for how it was derived.
+        "quiet_day_score": settings["scoring"].get("quiet_day_score"),
         "winner": scored[0],
         "runners_up": [
             {k: v for k, v in c.items() if k != "members"}

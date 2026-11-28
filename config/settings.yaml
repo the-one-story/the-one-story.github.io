@@ -75,9 +75,25 @@ scoring:
   novelty_decay_days: 4
   # a candidate must match a prior lead at cosine >= this to be penalised.
   novelty_match_threshold: 0.30
+  # Below this the day's winner is flagged on the page as a weak field rather
+  # than presented with the same confidence as a Nobel Prize. 0.099 is the 5th
+  # percentile of the 129 winners from 23/07 to 28/11/2026 (median 0.169), so
+  # it fires about one day in eighteen. Measured, not chosen: 28/11 led with a
+  # Black Friday shopping cluster on 0.083, the second-weakest day on record,
+  # 0.008 clear of the New Zealand election. Re-derive this if the feed list
+  # changes much, since the score's scale moves with the size of the pool.
+  quiet_day_score: 0.099
 
 # --- Decay ledger ---
-ledger_days: 7               # how many days of prior winners to remember
+# Was 7 until 28/11/2026, which was a number that had never been in effect:
+# _novelty_penalties skips any match with `age_days >= novelty_decay_days`, so
+# entries aged 4, 5 and 6 were stored, compared against, and then discarded.
+# The effective memory has always been 3 days. Corrected DOWNWARD rather than
+# extending the penalty, because a genuinely running story leading several
+# times looks defensible - Nvidia led 4 days out of 15 in November and each was
+# a real development. Keep this equal to novelty_decay_days: if you want a
+# longer memory, raise BOTH, and know that it suppresses running stories.
+ledger_days: 4               # days of prior winners to remember == decay window
 ledger_path: data/recent_leads.json
 
 # --- Output ---

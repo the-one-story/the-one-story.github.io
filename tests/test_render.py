@@ -7,6 +7,7 @@ from __future__ import annotations
 import pytest
 
 import email_render
+import render
 from render import _clean_source, _hyphenate, _next_update
 from conftest import article
 
@@ -197,3 +198,33 @@ def test_every_scored_dimension_appears_in_why_this_story():
     for n in names:
         assert n in render._COMPONENT_DESC, \
             f"{n!r} is weighted in settings but has no description in the panel"
+
+
+# --------------------------------------------------------------------------- #
+# The quiet-day note (added 28/11/2026)                                        #
+# --------------------------------------------------------------------------- #
+def _ranked_with_score(score, threshold=0.099):
+    return {"winner": {"score": score}, "quiet_day_score": threshold}
+
+
+def test_quiet_note_appears_on_a_weak_day():
+    # 28/11/2026 led with a Black Friday shopping cluster on 0.083, the
+    # second-weakest winner in 129 days, 0.008 clear of the runner-up.
+    out = render._quiet_note(_ranked_with_score(0.0828))
+    assert "quiet news day" in out
+    assert out.startswith('<p class="quiet">')
+
+
+def test_quiet_note_is_absent_on_an_ordinary_day():
+    # The median winner over the same 129 days scored 0.169.
+    assert render._quiet_note(_ranked_with_score(0.169)) == ""
+
+
+def test_quiet_note_is_absent_exactly_at_the_threshold():
+    assert render._quiet_note(_ranked_with_score(0.099)) == ""
+
+
+def test_quiet_note_is_silent_when_the_threshold_is_missing():
+    # An older ranked.json has no quiet_day_score. It must render, not raise.
+    assert render._quiet_note({"winner": {"score": 0.01}}) == ""
+    assert render._quiet_note({}) == ""

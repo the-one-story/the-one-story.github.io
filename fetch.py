@@ -23,6 +23,7 @@ import socket
 import sys
 from datetime import datetime, timedelta, timezone
 from urllib.error import URLError
+from urllib.parse import urlparse
 
 import feedparser
 
@@ -90,9 +91,52 @@ _COMMERCE_URL = re.compile(
     r"/buying-guide|/reviews?/best-)", re.I)
 
 
+# Commentary and games. A column is an argument ABOUT an event, not the event,
+# and this site's claim is to find the event. Puzzles, quizzes, horoscopes,
+# cartoons and betting promos are not news at any reading.
+#
+# Matched on path SEGMENTS, never substrings: "/world/a-ceuta-style-surge"
+# contains "style" and is a news story, which is how the first draft of this
+# rule nearly dropped it.
+#
+# Enumerated rather than guessed. Every path segment carrying >= 25 articles
+# across the 125,331-article archive was listed and read, 28/11/2026. Sport,
+# entertainment, lifestyle, travel and food were deliberately LEFT IN despite
+# being soft: they produced real leads (Messi retiring, Dolly Parton's death,
+# the Brand verdict), so cutting them changes the site's remit rather than
+# fixing a defect. "/analysis/" stays too - ABC and Guardian analysis pieces
+# are reporting.
+#
+# Measured before being turned on: 2,071 articles, 1.66% of the corpus, and
+# 20 sampled at random were all commentary, cartoons or betting promos with no
+# news among them. Replayed over 129 archived days it changes ONE lead, for the
+# better (a 9-outlet Xi story, 43% of it from a single outlet, gives way to a
+# 12-outlet Pope story). Note what it does NOT do: the theory that a column was
+# padding the outlet count turned out to be false, measured - columns appear in
+# 6 of 129 winning clusters and never once brought an outlet that was not
+# already covering the story. The case for this rule is bridging-prevention and
+# a cleaner pool, not a corrected coverage claim.
+_COMMENTARY_SEGMENTS = frozenset({
+    "opinion", "opinions", "opinionista", "comment", "commentary",
+    "editorial", "editorials", "op-ed", "oped", "columnists",
+    "puzzle", "puzzles", "crossword", "crosswords", "sudoku",
+    "quiz", "quizzes", "horoscope", "horoscopes", "cartoon", "cartoons",
+    "outkick-betting", "betting", "odds",
+})
+
+
+def _is_commentary(url: str) -> bool:
+    try:
+        path = urlparse(url or "").path
+    except ValueError:
+        return False
+    return any(seg.lower() in _COMMENTARY_SEGMENTS
+               for seg in path.split("/") if seg)
+
+
 def is_noise_format(url: str, title: str) -> bool:
-    """True for non-article formats (podcast/liveblog/video/newsletter/roundup)
-    and for affiliate commerce posts.
+    """True for non-article formats (podcast/liveblog/video/newsletter/roundup),
+    affiliate commerce posts, and commentary or games.
 
     NOTE the URL half of this test is inert for feeds proxied through Google
     News (6 of 35: Reuters, AP, AFR, MSNBC, CBC, AFP). Their links are an
@@ -103,6 +147,7 @@ def is_noise_format(url: str, title: str) -> bool:
     """
     return bool(_NOISE_URL.search(url or "")
                 or _COMMERCE_URL.search(url or "")
+                or _is_commentary(url)
                 or _NOISE_TITLE.search(title or ""))
 # Google News site-scoped titles look like "Real headline - Reuters".
 _GNEWS_SUFFIX_RE = re.compile(r"\s+-\s+[^-]+$")

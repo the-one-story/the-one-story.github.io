@@ -104,6 +104,27 @@ _COUNTRY_NAME = {"INT": "Wire services", "GB": "UK", "QA": "Qatar",
                  "ID": "Indonesia", "IT": "Italy", "ES": "Spain", "KE": "Kenya"}
 
 
+def _quiet_note(ranked: dict) -> str:
+    """One line, on the days when nothing much happened.
+
+    The site names a lead every morning whether or not the day produced one,
+    and until now it said so in exactly the same voice at 0.083 as at 0.405.
+    On 28/11/2026 that meant presenting a Black Friday shopping cluster as the
+    most important story of the last 24 hours, 0.008 clear of the New Zealand
+    election. The score already knows; the page just never said.
+
+    Deliberately NOT a disclaimer about the story, which may well be fine -
+    it is a statement about the field it won.
+    """
+    winner = ranked.get("winner") or {}
+    score = winner.get("score")
+    threshold = ranked.get("quiet_day_score")
+    if score is None or threshold is None or score >= threshold:
+        return ""
+    return ('<p class="quiet">A quiet news day: nothing that ran in the last '
+            '24 hours stood out from the rest by much.</p>')
+
+
 def _coverage_block(winner: dict) -> str:
     """A mechanical coverage visual, computed entirely from our own stats:
     a political-spectrum bar (lit where the story is being covered) and a chip
@@ -380,6 +401,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     hero_url = html.escape(winner["hero"]["url"], quote=True)
     hero_src = html.escape(_clean_source(winner["hero"]["source"]))
     coverage_block = _coverage_block(winner)
+    quiet_note = _quiet_note(ranked)
     sources_block = _sources_section(winner)
     signup_block = _signup_form(ranked.get("signup_form_url", ""))
 
@@ -510,6 +532,11 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     font-family: -apple-system, system-ui, sans-serif; font-size: 0.95rem;
     color: var(--muted); border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule); padding: 1.25rem 0; margin: 0 0 2rem;
+  }}
+  .quiet {{
+    font-family: -apple-system, system-ui, sans-serif; font-size: 0.9rem;
+    color: var(--muted); margin: 0 0 1.5rem; padding-left: 0.8rem;
+    border-left: 2px solid var(--rule);
   }}
   .cov-line {{ margin: 0 0 1rem; }}
   .cov-line b {{ color: var(--fg); font-weight: 700; }}
@@ -667,6 +694,7 @@ def render_html(ranked: dict, stale: bool = False) -> str:
     <a class="hero" href="{hero_url}" target="_blank" rel="noopener">
       Read the fullest account <span class="arrow">&rarr;</span>
       <span class="src">{hero_src}</span></a>
+    {quiet_note}
     {coverage_block}
     {sources_block}
     {_why_section(winner, runners)}
